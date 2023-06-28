@@ -14,7 +14,7 @@ const BannerSearchResult = () => {
         <>
             <div className="container_fluid">
                 <div className="main__container__text">
-                    <h2>¿Necesitas ayuda con tu reserva?</h2>
+                    <h2>¿Necesitas ayuda con tu reserva</h2>
                     <p>Contactate con nosotros a través del 0800-123-1234 (Venta) o al Whatsapp (PostVenta) para recibí atención personalizada</p>
                 </div>
                 <div className="main__container__img">
