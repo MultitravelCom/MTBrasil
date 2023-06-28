@@ -123,7 +123,7 @@ const LoMejorDe = () => {
                     seccion2="Voos"
                     url2="https://www.multitravel.com/flights/"
                     className2="dos__s3"
-                    seccion3="Asistencias"
+                    seccion3="Seguros"
                     url3="https://www.multitravel.com/insurances/"
                     className3="tres__s3"
                 />
