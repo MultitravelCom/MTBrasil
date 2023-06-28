@@ -1,18 +1,3 @@
-window.addEventListener('load', () => {
-
-    let buttonNewsletter = document.querySelector('button[data-target="#-newsletter-container"]');
-    let divNewsletter = buttonNewsletter.querySelector('.quicklink-elem-label');
-
-    divNewsletter.textContent = 'Suscribite a nuestro Newsletter ';
-
-    let modalNewsletter = document.querySelector('#-newsletter-container');
-    let titleNewsletter = modalNewsletter.querySelector('.content-title');
-
-    titleNewsletter.textContent = 'Suscribite a nuestro Newsletter ';
-
-});
-
-
 function addHideDuplicateButtonLogic() {
     const targetElementUser = document.querySelector('#main-menu-features');
 
