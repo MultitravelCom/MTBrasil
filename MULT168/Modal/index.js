@@ -2,7 +2,7 @@ function ocultarNacionalidad() {
     let div = document.getElementById("hotel-searcher-nationality").closest('.col-xs-12.col-sm-12.col-md-3');
     div.style.display = "none";
 }
-
+ocultarNacionalidad()
 
 function addHideDuplicateButtonLogic() {
     const targetElementUser = document.querySelector('#main-menu-features');
