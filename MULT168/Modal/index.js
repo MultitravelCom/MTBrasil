@@ -112,15 +112,15 @@ const Modal = ({ open, onClose }) => {
                     <ModalContactos
                         iconModal="glyphicon-phone"
                         ventasClass="blue"
-                        ventasText="Ventas <span>0800 348 0003</span>"
+                        ventasText="Vendas<span>XXXX XXX XXXX</span>"
                         horarioClass="blue"
-                        horarioText="Lunes a viernes de 10 a 20 hs"
+                        horarioText="De segunda a sexta das 10h às 20h"
                         diasClass="blue"
-                        diasText="Sábados de 10 a 15 hs"
-                        spanText="Llamá al número en pantalla para que nuestros especialistas te asesoren con tu compra."
+                        diasText="Sábados das 10h às 15h"
+                        spanText="Ligue para o número na tela para que nossos especialistas possam aconselhá-lo em sua compra."
                         buttonStyle="btn_Style_Venta_llamar"
-                        buttonLink="08003480003"
-                        buttonText="Llamar"
+                        buttonLink=""
+                        buttonText="Chamar"
                         callToPhone={true}
                     />
                     {/* <ModalContactos
