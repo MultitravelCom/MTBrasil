@@ -272,7 +272,7 @@ const App = () => {
                     onClick={() => setOpenModal(true)}
                 >
                     <div className="glyphicon-user-profile"></div>
-                    <div className="main__container__widget_text__ars">Iniciar sessão</div>
+                    <div className="main__container__widget_text__ars">Iniciar sessã</div>
                 </ButtonIngresar>
                 <ButtonARSEs />
                 <Modal open={openModal} onClose={() => setOpenModal(false)} />
