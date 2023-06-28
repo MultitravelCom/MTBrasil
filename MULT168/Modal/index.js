@@ -143,28 +143,28 @@ const Modal = ({ open, onClose }) => {
                     <ModalContactos
                         iconModal="glyphicon-phone"
                         ventasClass="blue"
-                        ventasText="Ventas <span>0800 348 0003</span>"
+                        ventasText="Vendas<span>XXXX XXX XXXX</span>"
                         horarioClass="blue"
-                        horarioText="Lunes a viernes de 10 a 20 hs"
+                        horarioText="De segunda a sexta das 10h às 20h"
                         diasClass="blue"
-                        diasText="Sábados de 10 a 15 hs"
-                        spanText="Llamá al número en pantalla para que nuestros especialistas te asesoren con tu compra."
+                        diasText="Sábados das 10h às 15h"
+                        spanText="Ligue para o número na tela para que nossos especialistas possam aconselhá-lo em sua compra."
                         buttonStyle="btn_Style_Venta_llamar"
-                        buttonLink="08003480003"
-                        buttonText="Llamar"
+                        buttonLink=""
+                        buttonText="Chamar"
                         callToPhone={true}
                     />
                     <ModalContactos
                         iconModal="glyphicon-whatsapp-bottomless"
                         ventasClass="green"
-                        ventasText="Consulta por ventas <span>11 4979 1877</span>"
+                        ventasText="Depois das vendas<span>XX XXXX XXXX</span>"
                         horarioClass="green"
-                        horarioText="Fuera de horario de venta telefónica"
+                        horarioText="Segunda a domingo 24 horas"
                         diasClass="green"
-                        spanText="Dejanos tu consulta y nos contactaremos en nuestro horario de atención."
+                        spanText="Escreva para o whatsapp para que nossos especialistas o ajudem."
                         buttonStyle="btn_Style_Venta_Contactarme"
                         buttonLink="https://wa.link/5s5eba"
-                        buttonText="Enviar mensaje"
+                        buttonText="Enviar mensagem"
                     />
                     {/* <ModalContactos
                         iconModal="glyphicon-whatsapp-bottomless"
@@ -189,7 +189,7 @@ const Modal = ({ open, onClose }) => {
             <div id="overlay" className="overlay">
                 <div className="container__modal">
                     <div className='emcabezadoModal'>
-                        <h3>Tu especialista en viajes</h3>
+                        <h3>Atenção personalizada</h3>
                         <button className="close-button" onClick={onClose}><span>X</span></button>
                     </div>
                     <div className="container-fluid-modal">
