@@ -1,16 +1,10 @@
-function ocultarNacionalidad() {
-    let div = document.getElementById("hotel-searcher-nationality").closest('.col-xs-12.col-sm-12.col-md-3');
-    div.style.display = "none";
-}
-ocultarNacionalidad()
-
 function addHideDuplicateButtonLogic() {
     const targetElementUser = document.querySelector('#main-menu-features');
 
     const buttonHTML = `
       <div class="upper-menu_quicklinks btn-toolbar visible-xs-block visible-sm-block">
         <button type="button" class="btn upper-menu__newsletter-button features_item js-login-box-modal btn-user">
-          <span class="glyphicon glyphicon-user-profile" aria-hidden="true"></span>
+          <span class="glyphicon glyphicon-agent" aria-hidden="true"></span>
           <span class="sr-only">Ingreso</span>
           <span class="quicklink-elem-label">Ingreso</span>
         </button>
@@ -34,13 +28,13 @@ function ButtonARSEs() {
             <div className="main_container__buttonARSEs__ARS">
                 <div>
                     <img src="https://multitravelcom.github.io/components/MULT168/icons/IconoPesos.png"></img>
-                    <span>BRL</span>
+                    <span>ARS</span>
                 </div>
             </div>
             <div className="main_container__buttonARSEs__Es">
                 <div>
-                    <img src="https://multitravelcom.github.io/MTBrasil/MULT168/icons/Brazil.svg"></img>
-                    <span>BR</span>
+                    <img src="https://multitravelcom.github.io/components/MULT168/icons/iconoArgentina.png"></img>
+                    <span>ES</span>
                 </div>
             </div>
         </div>
@@ -118,15 +112,15 @@ const Modal = ({ open, onClose }) => {
                     <ModalContactos
                         iconModal="glyphicon-phone"
                         ventasClass="blue"
-                        ventasText="Vendas<span>XXXX XXX XXXX</span>"
+                        ventasText="Ventas <span>0800 348 0003</span>"
                         horarioClass="blue"
-                        horarioText="De segunda a sexta das 10h às 20h"
+                        horarioText="Lunes a viernes de 10 a 20 hs"
                         diasClass="blue"
-                        diasText="Sábados das 10h às 15h"
-                        spanText="Ligue para o número na tela para que nossos especialistas possam aconselhá-lo em sua compra."
+                        diasText="Sábados de 10 a 15 hs"
+                        spanText="Llamá al número en pantalla para que nuestros especialistas te asesoren con tu compra."
                         buttonStyle="btn_Style_Venta_llamar"
-                        buttonLink=""
-                        buttonText="Chamar"
+                        buttonLink="08003480003"
+                        buttonText="Llamar"
                         callToPhone={true}
                     />
                     {/* <ModalContactos
@@ -149,28 +143,28 @@ const Modal = ({ open, onClose }) => {
                     <ModalContactos
                         iconModal="glyphicon-phone"
                         ventasClass="blue"
-                        ventasText="Vendas<span>XXXX XXX XXXX</span>"
+                        ventasText="Ventas <span>0800 348 0003</span>"
                         horarioClass="blue"
-                        horarioText="De segunda a sexta das 10h às 20h"
+                        horarioText="Lunes a viernes de 10 a 20 hs"
                         diasClass="blue"
-                        diasText="Sábados das 10h às 15h"
-                        spanText="Ligue para o número na tela para que nossos especialistas possam aconselhá-lo em sua compra."
+                        diasText="Sábados de 10 a 15 hs"
+                        spanText="Llamá al número en pantalla para que nuestros especialistas te asesoren con tu compra."
                         buttonStyle="btn_Style_Venta_llamar"
-                        buttonLink=""
-                        buttonText="Chamar"
+                        buttonLink="08003480003"
+                        buttonText="Llamar"
                         callToPhone={true}
                     />
                     <ModalContactos
                         iconModal="glyphicon-whatsapp-bottomless"
                         ventasClass="green"
-                        ventasText="Depois das vendas<span>XX XXXX XXXX</span>"
+                        ventasText="Consulta por ventas <span>11 4979 1877</span>"
                         horarioClass="green"
-                        horarioText="Segunda a domingo 24 horas"
+                        horarioText="Fuera de horario de venta telefónica"
                         diasClass="green"
-                        spanText="Escreva para o whatsapp para que nossos especialistas o ajudem."
+                        spanText="Dejanos tu consulta y nos contactaremos en nuestro horario de atención."
                         buttonStyle="btn_Style_Venta_Contactarme"
                         buttonLink="https://wa.link/5s5eba"
-                        buttonText="Enviar mensagem"
+                        buttonText="Enviar mensaje"
                     />
                     {/* <ModalContactos
                         iconModal="glyphicon-whatsapp-bottomless"
@@ -195,7 +189,7 @@ const Modal = ({ open, onClose }) => {
             <div id="overlay" className="overlay">
                 <div className="container__modal">
                     <div className='emcabezadoModal'>
-                        <h3>Atenção personalizada</h3>
+                        <h3>Tu especialista en viajes</h3>
                         <button className="close-button" onClick={onClose}><span>X</span></button>
                     </div>
                     <div className="container-fluid-modal">
@@ -270,7 +264,7 @@ const App = () => {
                     onClick={() => setOpenModal(true)}
                 >
                     <div className="glyphicon glyphicon-agent agentWidget"></div>
-                    <div className="main__container__widget_text">Atenção</div>
+                    <div className="main__container__widget_text">Atención</div>
                 </ButtonModal>
                 <ButtonIngresar
                     id="container__widget__ars"
@@ -278,7 +272,7 @@ const App = () => {
                     onClick={() => setOpenModal(true)}
                 >
                     <div className="glyphicon-user-profile"></div>
-                    <div className="main__container__widget_text__ars">Iniciar sessão</div>
+                    <div className="main__container__widget_text__ars">Ingresar</div>
                 </ButtonIngresar>
                 <ButtonARSEs />
                 <Modal open={openModal} onClose={() => setOpenModal(false)} />
