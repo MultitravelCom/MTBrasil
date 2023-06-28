@@ -28,12 +28,12 @@ function ButtonARSEs() {
             <div className="main_container__buttonARSEs__ARS">
                 <div>
                     <img src="https://multitravelcom.github.io/components/MULT168/icons/IconoPesos.png"></img>
-                    <span>ARS</span>
+                    <span>BRL</span>
                 </div>
             </div>
             <div className="main_container__buttonARSEs__Es">
                 <div>
-                    <img src="https://multitravelcom.github.io/components/MULT168/icons/iconoArgentina.png"></img>
+                    <img src="https://multitravelcom.github.io/components/MULT168/icons/Brazil.svg"></img>
                     <span>BR</span>
                 </div>
             </div>
