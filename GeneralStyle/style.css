@@ -814,3 +814,7 @@ body.home.home--default .home-v5__searcher,
     display: none;
   }
 
+/* **** Ocultar Cuponera ****** */
+.confirm-booking__promocodes{
+  display: none;
+}
