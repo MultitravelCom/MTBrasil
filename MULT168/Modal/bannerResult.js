@@ -14,7 +14,7 @@ const BannerSearchResult = () => {
         <>
             <div className="container_fluid">
                 <div className="main__container__text">
-                    <h2>¿NVocê precisa de ajuda com sua reserva?</h2>
+                    <h2>¿Você precisa de ajuda com sua reserva?</h2>
                     <p>Entre em contato através do XXXX-XXX-XXXX (Venda) ou Whatsapp (Pós-Venda) para receber atendimento personalizado</p>
                 </div>
                 <div className="main__container__img">
