@@ -1,0 +1,112 @@
+
+.booking-paxes__baggage-selection.baggage-selection{
+    justify-content: space-around;
+    margin-bottom: 2rem;
+    display: none;
+}
+
+  .main__bookingPaxes{
+    display: flex;
+    padding: 6px 16px;
+    gap: 12px;
+    max-width: 578px;
+    min-height: 116px;
+    background: #EAF4FC;
+    border: 1px solid #0D3C61;
+    border-radius: 8px;
+    flex-direction: column;
+}
+
+.bookingPaxes__p{
+    color:#0D3C61;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: 0.15px;
+    margin: 0 !important;
+}
+
+.main__bookingPaxes__span>span {
+    color:#0D3C61;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.15px;
+}
+.main__bookingPaxes__text{
+    display: flex;
+}
+.main__bookingPaxes__btn{
+    border: none;
+    background: #EAF4FC;
+    color: #0D3C61;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    wight: 82px;
+}
+.main__bookingPaxes__span{
+    padding: 0 32px;
+}
+.baggage-selection__bag.baggage-selection__bag--included{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #EAF4FC;
+    border: 1px solid #0D3C61;
+    border-radius: 8px;
+    height: 116px;
+}
+.baggage-selection__bag{
+padding: 16px !important;
+}
+.main__bookingPaxes__style{
+    width: 177px;
+}
+.glyphicon-baggage,
+.baggage-selection__bag--name{
+    color: #0D3C61 !important;
+}
+.baggage-selection__bag-section{
+    display: none;
+}
+.baggage-selection__bag--included{
+    margin: 0 !important;
+}
+.glyphicon-lock{
+    display: none;
+}
+.baggage-selection__journey--route-name {
+    display: none;
+}
+
+@media(max-width: 767px){
+    .booking-paxes__baggage-selection.baggage-selection{
+    flex-direction: column;
+    }
+    .main__bookingPaxes__text{
+        align-items: center;
+    }
+    .main__bookingPaxes__style{
+        width: 100%;
+    }
+    .main__bookingPaxes__btn{
+        width: 88px;
+    }
+    .baggage-selection__bag--included{
+        width: 100%;
+        margin: 10px 0 !important;
+    }
+    .baggage-selection__optional-ph{
+        padding: 6px;
+    }
+}
+
+@media (min-width: 102px) {
+    .baggage-selection{
+        gap: 12px;
+    }
+}
