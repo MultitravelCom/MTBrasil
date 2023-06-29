@@ -1,3 +1,816 @@
+/* Estilos generales de la web */
+/* *** Fechas calendario *** */
+.ui-icon:before {
+  color: #DF0032 !important;
+}
+
+/* nuevo espacio */
+#home-content-5 {
+  display: block !important;
+}
+
+#home-top {
+  margin-bottom: 2rem !important;
+}
+
+.hotel-result {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.home-content-4>.home-row {
+  margin-bottom: 0 !important;
+}
+
+/* Banner general */
+.main_conteiner__s1_medio__paquetes {
+  border-radius: 8px 40px 8px 40px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.page-header-bar {
+  padding: 0 !important;
+}
+
+.home-row {
+  margin-bottom: 24px !important;
+}
+
+/****** Caja de busqueda*********** */
+#home-carousel>.carousel-inner {
+  height: 260px;
+}
+
+/* Estilos newsletter */
+.fix-margin>.newsletter__container {
+  background: #f7f7f7 !important;
+  display: none;
+}
+
+/* ************** B1 ************************ */
+/* Ocultar comentarios pax */
+.booking-data__notes {
+  display: none !important;
+}
+
+.booking-paxes__fidelity {
+  display: none !important;
+}
+
+/************ Seccion Cards *****************/
+/* Titulos */
+.sliding-offers-v3>.offer-title {
+  margin: 0 !important;
+}
+
+.text-center {
+  text-align: left !important;
+}
+
+.title {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-size: 20px !important;
+  letter-spacing: 0.1px;
+}
+
+.subtitle {
+  margin-bottom: -10px !important;
+}
+
+.sliding-offers-v3 .panel {
+  margin-bottom: 0 !important;
+}
+
+/* Estilo cards Juniper */
+.sliding-offers__image-holder>picture>img {
+  padding: 6px !important;
+  border-radius: 1rem !important;
+}
+
+.sliding-offers__image-holder img {
+  width: 100%;
+}
+
+.sliding-offers__image-holder {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem !important;
+}
+
+.caption>.force-pull-left {
+  position: absolute;
+  bottom: 28px;
+}
+
+.sliding-offers__image-holder picture {
+  position: inherit !important;
+  top: 0 !important;
+}
+
+@media (max-width: 564px) {
+  #home-content-1>.home-row {
+    margin-bottom: 10px !important;
+  }
+
+  /* Scroll Cards Juniper */
+  .sliding-offers-v3>.panel {
+    overflow-x: scroll;
+    white-space: nowrap;
+    margin-bottom: 0 !important;
+  }
+
+  .panel .thumbnail {
+    min-height: 378px !important;
+  }
+
+  .sliding-offers-v3>.panel::-webkit-scrollbar {
+    width: 0;
+  }
+
+  body.home.home--default .home-v5 .sliding-offers-v3 .panel .row {
+    display: block;
+    margin-left: -3px;
+  }
+
+  .col-inline-block {
+    max-width: 255px;
+    margin: auto;
+  }
+
+  .sliding-offers-v3 .panel .caption.main {
+    min-height: 212px !important;
+  }
+
+  .sliding-offers-v3 .panel .caption.main p.price {
+    bottom: 11px !important;
+  }
+
+  .scrollable-step {
+    padding: 0 !important;
+    padding-left: 3px !important;
+  }
+}
+
+@media (max-width: 767px) {
+
+  /* Icono calendario */
+  .ui-icon:before {
+    font-size: 2.2rem !important;
+  }
+}
+
+#bannerRedes,
+#loMejorDe {
+  margin-top: 3rem;
+}
+
+/* ******************************************************************* */
+/* Medios de pago */
+.main__conteiner__s2__pagos__card {
+  border: var(--border-solid-card);
+  overflow: hidden;
+}
+
+.main__conteiner__s2__pagos {
+  display: flex;
+  border-radius: 8px;
+  gap: 15px;
+  justify-content: center;
+  height: 272px;
+  overflow: hidden;
+}
+
+.uno__s2 {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.dos__s2 {
+  width: 377px;
+  height: 100%;
+  border-radius: 8px 40px 8px 40px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  border: 0;
+}
+
+.tres__s2 {
+  width: 100%;
+  height: 120px;
+  border-radius: 8px 40px 8px 40px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  border: 0;
+  margin-top: 2rem;
+}
+
+.main__conteiner__s2__pagos__card__texto {
+  width: 320px;
+  height: 100%;
+  padding: 5rem 1rem 1rem 2rem;
+  position: relative;
+}
+
+.main__conteiner__s2__pagos__card__texto>h4 {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.main__conteiner__s2__pagos__btn {
+  position: absolute;
+  left: 28px;
+  bottom: 26%;
+  border-radius: 100px;
+  background-color: var(--fondo-btn);
+  color: white;
+  padding: 10px;
+  width: 102px;
+  height: 40px;
+  border: transparent;
+}
+
+.main__conteiner__s2__pagos__btn:hover {
+  background-color: var(--fondo-btn-hover);
+}
+
+.main__conteiner__s2__pagos__card__img {
+  width: 542px;
+  height: 100%;
+  background-color: gainsboro;
+  border-radius: 136px 8px 8px 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.main__conteiner__s2__pagos__card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mobile {
+  display: none;
+}
+
+@media (max-width: 564px) {
+
+  /* SECCION 2 */
+  .main__conteiner__s2 {
+    margin-bottom: 3rem;
+  }
+
+  .main__conteiner__s2__pagos {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .uno__s2 {
+    height: 216px;
+    width: 100%;
+  }
+
+  .dos__s2 {
+    height: 128px;
+    width: 100%;
+  }
+
+  .tres__s2 {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .main__conteiner__s2__pagos__card__texto {
+    padding: 3rem 1rem;
+  }
+
+  .main__conteiner__s2__pagos__btn {
+    left: 12px;
+    bottom: 10%;
+  }
+
+  .main__conteiner__s2__pagos__card__img {
+    width: 200px;
+    height: 100%;
+    background-position: -110px;
+  }
+
+  .mobile {
+    display: block;
+  }
+}
+
+/* ******************************************************** */
+
+/* Multitravel.com piensa en todo */
+.main__conteiner__s3__piensa {
+  height: 248px;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 4rem;
+}
+
+.main__conteiner__s3>.container {
+  padding: 0;
+}
+
+.uno__s3 {
+  background-image: url(https://multitravelcom.github.io/MT/Secciones/EnTodo/product-alojamiento.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 8px 8px 8px 40px;
+  height: 100%;
+  padding-inline: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.dos__s3 {
+  background-image: url(https://multitravelcom.github.io/MT/Secciones/EnTodo/product-vuelo.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  height: 100%;
+  padding-inline: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.tres__s3 {
+  background-image: url(https://multitravelcom.github.io/MT/Secciones/EnTodo/product-paquetes.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 8px 40px 8px 8px;
+  height: 100%;
+  padding-inline: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hover__s3:hover {
+  box-shadow: var(--box-shadow);
+}
+
+.main__conteiner__s3__piensa__parrafo {
+  background-color: #1B88E7;
+  font-size: 18px;
+  opacity: 90%;
+  width: 100%;
+  height: 61px;
+  text-align: inherit;
+  padding: 1.2rem;
+  color: white;
+  font-weight: 600;
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+  padding-left: 40px;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 564px) {
+
+  /*  Piensa en todo */
+
+  .main__conteiner__s3__piensa {
+    flex-direction: column;
+  }
+
+  .uno__s3,
+  .dos__s3,
+  .tres__s3 {
+    border-radius: 8px;
+    background-position-y: -65px;
+  }
+
+  .main__conteiner__s3__piensa__parrafo {
+    height: 100%;
+    left: 0;
+  }
+
+  .main__conteiner__s3__piensa__parrafo>p {
+    padding: 9px;
+  }
+
+  .main__conteiner__s2__doble {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .main__conteiner__s3__triple {
+    flex-direction: column;
+  }
+
+  .main__conteiner__s3__triple__card {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 77px;
+  }
+
+  .main__conteiner__s3__triple__card__texto {
+    width: 100%;
+  }
+
+  .main__conteiner__s3__triple__card__img {
+    border-radius: 0 8px;
+    width: 147px;
+  }
+}
+
+/* *************************************************** */
+/* Banner Resultado de busqueda */
+.container_fluid {
+  width: 100%;
+  height: 112px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #F0F7FF;
+  border: 1px solid #0D4E88;
+  border-radius: 8px 8px 40px 8px;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.main__container__text {
+  color: #0A3964;
+  max-width: 358px;
+  padding: 1.5rem;
+}
+
+.main__container__text>h2 {
+  font-weight: 600;
+}
+
+.main__container__text>p {
+  font-size: 12px;
+}
+
+.main__container__img {
+  width: 333px;
+  position: relative;
+}
+
+.main__container__img__img {
+  width: 100%;
+  height: 112px;
+  border-radius: 40px 8px 40px 8px;
+  object-fit: cover;
+}
+
+.btnStyleBannerSearch {
+  width: 124px;
+  height: 37px;
+  position: absolute;
+  border-radius: 40px;
+  bottom: 35%;
+  background: #2A8BFE;
+  color: #FFFFFF;
+  border: #2A8BFE;
+  box-shadow: 9px 9px 5px -6px rgba(0, 0, 0, 0.52);
+  -webkit-box-shadow: 9px 9px 5px -6px rgba(0, 0, 0, 0.26);
+  -moz-box-shadow: 9px 9px 5px -6px rgba(0, 0, 0, 0.52);
+}
+
+@media (max-width: 767px) {
+  .container_fluid {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
+  .main__container__text {
+    width: 100%;
+  }
+
+  .main__container__img {
+    width: 100%;
+  }
+
+  .main__container__img__img {
+    width: 100%;
+    height: 91px;
+    border-radius: 40px 8px 40px 8px;
+    object-fit: cover;
+  }
+
+  .btnStyleBannerSearch {
+    right: 7%;
+    top: 30%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .btnStyleBannerSearch {
+    right: 74%;
+    top: 35%;
+  }
+}
+
+@media (width: 1024px) {
+  .btnStyleBannerSearch {
+    right: 71%;
+    bottom: 34%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .btnStyleBannerSearch {
+    right: 85%;
+    bottom: 34%;
+  }
+}
+
+/* Atencion personalizada. */
+.summaryStyle {
+  display: flex;
+  border: 1px solid #1C5B94;
+  border-radius: 40px;
+  color: #295A81;
+  width: 217px;
+}
+
+/* ******************************************************* */
+
+/* ****************************************************** */
+/* BannerTop PreViaje4 */
+.rowStyle {
+  display: flex;
+  gap: 20px;
+}
+
+.main__container__left,
+.main__container__right {
+  border-radius: 40px 8px;
+  overflow: hidden;
+  box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.main__container__right {
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .rowStyle {
+    flex-direction: column;
+  }
+
+  .main__container__left {
+    display: none;
+  }
+
+  .main__container__right {
+    max-width: 334px;
+    margin: auto;
+
+  }
+
+}
+
+/* ************************************************ */
+/* MULT-220 */
+.booking-data__login {
+  display: none;
+}
+
+/* ****************************************** */
+/* MULT-139 */
+.booking-data__cross-selling,
+.booking-data__section-side-title {
+  display: none;
+}
+
+/* ******************************************  */
+/* MULT-150 */
+.confirm-booking__insurances {
+  display: none;
+}
+
+/* ************************************************************** */
+/* MULT-127 */
+#flights-searcher-more-options>.searcher-row:nth-of-type(1)>.col-xs-6.col-sm-4.col-md-4:nth-child(2),
+#flights-searcher-more-options>.searcher-row:nth-of-type(2)>.col-xs-12.col-sm-4.col-md-4:nth-child(1),
+#flights-searcher-more-options>.searcher-row:nth-of-type(2)>.col-xs-12.col-sm-4.col-md-4:nth-child(2),
+#flight-searcher-more-options>.searcher-row:nth-of-type(1)>.col-xs-6.col-sm-4.col-md-4:nth-child(2),
+#flight-searcher-more-options>.searcher-row:nth-of-type(2)>.col-xs-12.col-sm-4.col-md-4:nth-child(1),
+#flight-searcher-more-options>.searcher-row:nth-of-type(2)>.col-xs-12.col-sm-4.col-md-4:nth-child(2) {
+  display: none;
+}
+
+#flights-searcher-more-options>.searcher-row:nth-of-type(1)>.col-xs-6.col-sm-4.col-md-4:nth-child(1),
+#flight-searcher-more-options>.searcher-row:nth-of-type(1)>.col-xs-6.col-sm-4.col-md-4:nth-child(1),
+#flights-searcher-more-options>.searcher-row:nth-of-type(2)>.col-xs-12.col-sm-4:nth-child(3),
+#flight-searcher-more-options>.searcher-row:nth-of-type(2)>.col-xs-12.col-sm-4:nth-child(3) {
+  width: 100%;
+}
+
+.btn-more-options {
+  display: none;
+}
+
+.radio {
+  display: none;
+}
+
+.col-xs-5.col-sm-3.col-md-2.singledestination-only.supsearcher {
+  margin-bottom: 0 !important;
+  width: 100% !important;
+}
+
+/* .singledestination-only>.checkbox {
+  margin-top: 4px !important;
+  margin-bottom: 10px !important;
+}
+/* ****************** MULT-209 *************** */
+.main__DivCpyTax {
+  max-width: 314px;
+  min-height: 79px;
+  background: #EAF4FC;
+  border-radius: 8px;
+
+}
+
+.glyphicon-info-circle {
+  color: #2196F3;
+  font-size: 19px;
+  min-width: 32px;
+}
+
+.main__DivCpyTaxc__icon>p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 144%;
+}
+
+/* Ocultar precio final - Mult- */
+.renderPriceTagStyle {
+  display: none;
+}
+
+/* **************** MULT-235 ***************/
+.label.label-default.more-master-selector-options.supsearcher {
+  display: none;
+}
+
+/* ********** MULT-230 ********************** */
+.booking-payment__info.prepayment>p {
+  display: none;
+}
+
+/* ************ MULT-252 ************ */
+.booking-details__action-item:first-child {
+  display: none;
+}
+
+.footer-bottom__link>.glyphicon-whatsapp-bottomless {
+  display: none;
+}
+
+/* *************** MULT-257 ********************** */
+body.home.home--default .home-v5 .multi-searcher__content {
+  position: initial !important;
+}
+
+body.home.home--default .home-v5__searcher,
+.multi-searcher__content {
+  background-color: #eeeeee !important;
+  padding: 1rem 0;
+}
+
+#home-carousel>.carousel-inner {
+  height: 260px;
+}
+
+.home-v5__carousel .hidden-xs .hidden-sm {
+  display: none;
+}
+
+#home-carousel {
+  display: none !important;
+}
+
+#flight-searcher,
+#master-searcher,
+#flights-searcher,
+#hotel-searcher,
+#super-package-searcher,
+#service-searcher,
+#transfer-searcher,
+#insurance-searcher {
+  position: inherit !important;
+
+}
+
+.dropdown .show-more .pull-right {
+  display: none !important;
+}
+
+.multi-searcher__content {
+  border-radius: 0;
+}
+
+.multi-searcher .dropdown.show-more {
+  display: none !important;
+
+}
+
+.tab-content {
+  margin-top: 0 !important;
+}
+
+@media (max-width: 767px) {
+  body.home.home--default .home-v5 .multi-searcher .tab-content .searcher {
+    border-radius: 15px;
+  }
+
+  #flights-searcher {
+    margin: 0;
+  }
+
+  .dropdown .show-more .pull-right {
+    display: none;
+  }
+
+  .pull-right {
+    width: 100% !important;
+  }
+
+  body.home.home--default .home-v5__searcher,
+  .multi-searcher__content {
+    padding: 0;
+  }
+
+  #flight-searcher,
+  #master-searcher,
+  #flights-searcher,
+  #hotel-searcher,
+  #super-package-searcher,
+  #service-searcher,
+  #transfer-searcher,
+  #insurance-searcher {
+    border-radius: 1rem;
+    margin: 8px 5px;
+  }
+}
+
+/* *************** MULT-271 ********************** */
+/* .flight-selection__box .flight-selection__breakdown>*:not(:nth-last-child(-n+3)) {
+  display: none;
+} */
+
+/* *************** MULT- 283 *********************** */
+.js-infinite-scroll-affix-top-anchor>.results-list__pagination.js-results-pagination {
+  display: none;
+}
+
+/* ********************************************************** */
+.checkbox.fancy-checkbox.searcher__on-product-fixed-hidden {
+  display: none;
+}
+
+/* **************** MULT-265 **************** */
+.upper-menu__login-button {
+  display: none;
+}
+
+/* ***************** MULT-305 **************** */
+.main-footer .footer__text .glyphicon {
+  color: rgba(255, 255, 255, .85) !important;
+  font-size: 1.5rem !important;
+}
+
+/* ************************ MULT-313 ****************** */
+@media (min-width: 1200px) {
+  .flight-selection__box> :nth-child(2) {
+    margin-top: 1rem;
+  }
+
+  .result-option--extended .result-option__extended-heading,
+  .result-option--extended .result-option__heading {
+    width: 60% !important;
+  }
+}
+
+/* ********************** MULT-336 ************* */
+#main-menu-products .nav-elem:nth-child(8) {
+  display: none;
+}
+
 .footer-col.col-xs-12.col-sm-12.col-md-6 .footer__text:nth-child(3) {
     display: none;
   }
+
