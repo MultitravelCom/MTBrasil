@@ -83,45 +83,15 @@ function addHeaderLinks() {
         const copyBaggageStyle = document.createElement('link');
         const copyBaggageScript = document.createElement('script');
 
-        copyBaggageScript.src = 'https://multitravelcom.github.io/style/General/components/Equipaje/baggageComponente.js';
+        copyBaggageScript.src = 'https://multitravelcom.github.io/MTBrasil/Equipaje/baggageComponente.js';
         copyBaggageScript.type = "text/babel";
 
-        copyBaggageStyle.href = "https://multitravelcom.github.io/style/General/components/Equipaje/baggageComponenteStyle.css";
+        copyBaggageStyle.href = "https://multitravelcom.github.io/MTBrasil/Equipaje/baggageComponenteStyle.css";
         copyBaggageStyle.rel = "stylesheet";
 
         head.appendChild(copyBaggageScript);
         head.appendChild(copyBaggageStyle);
     }
-
-    // const transferenciaComponent = path.includes('/confirmBooking');
-    // if (transferenciaComponent) {
-    //     const transferenciaComponentStyle = document.createElement('link');
-    //     const transferenciaComponentScript = document.createElement('script');
-
-    //     transferenciaComponentScript.src = 'https://multitravelcom.github.io/style/General/Transferencias/transferencia.js';
-    //     transferenciaComponentScript.type = "text/babel";
-
-    //     transferenciaComponentStyle.href = "https://multitravelcom.github.io/style/General/Transferencias/styletransferencia.css";
-    //     transferenciaComponentStyle.rel = "stylesheet";
-
-    //     head.appendChild(transferenciaComponentStyle);
-    //     head.appendChild(transferenciaComponentScript);
-    // }
-
-    // const cuponSeccion = path.includes('/booking/');
-    // if(cuponSeccion){
-    //     const cuponSeccionScript = document.createElement('script');
-    //     const cuponSeccionStyle = document.createElement('link');
-
-    //     cuponSeccionScript.src = 'https://multitravelcom.github.io/style/General/components/CuponSeccion/cuponSeccion.js';
-
-
-    //     cuponSeccionStyle.href = "https://multitravelcom.github.io/style/General/components/CuponSeccion/cuponSeccion.css";
-    //     cuponSeccionStyle.rel = "stylesheet";
-
-    //     head.appendChild(cuponSeccionStyle);
-    //     head.appendChild(cuponSeccionScript);
-    // }
 
     // ******************************** MULT-258 ****************************************************************
 
@@ -136,22 +106,5 @@ function addHeaderLinks() {
 
 }
 addHeaderLinks();
-
-//************************************ MULT-213*************************************************************** */
-window.addEventListener('load', () => {
-
-    let buttonNewsletter = document.querySelector('button[data-target="#-newsletter-container"]');
-    let divNewsletter = buttonNewsletter.querySelector('.quicklink-elem-label');
-
-    divNewsletter.textContent = 'Suscribite a nuestro Newsletter ';
-
-    let modalNewsletter = document.querySelector('#-newsletter-container');
-    let titleNewsletter = modalNewsletter.querySelector('.content-title');
-
-    titleNewsletter.textContent = 'Suscribite a nuestro Newsletter ';
-
-});
-
-//*************************************************************************************************** */
 
 
