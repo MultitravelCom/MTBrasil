@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (liElement) {
         liElement.childNodes.forEach(node => {
-            if (node.nodeType === Node.TEXT_NODE && node.textContent.trim() === 'Transferencia') {
-                node.textContent = 'Transferencia / Efectivo';
+            if (node.nodeType === Node.TEXT_NODE && node.textContent.trim() === 'Transferência Bancária') {
+                node.textContent = 'Transferência / Dinheiro';
                 bookingPaymentOptions.style.display = 'inline-block';
             }
         });
