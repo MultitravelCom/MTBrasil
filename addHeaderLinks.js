@@ -17,27 +17,18 @@ function addHeaderLinks() {
     const path = window.location.pathname;
 
 
-    const copyTaxRg = path.includes('/flights') || path.includes('/booking/') || path.includes('/hotels/');
-    if (copyTaxRg) {
-        const copyTaxRegStyle = document.createElement('link');
-        const copyTaxRegJs = document.createElement('script');
+    // const copyTaxRg = path.includes('/flights') || path.includes('/booking/') || path.includes('/hotels/');
+    // if (copyTaxRg) {
+    //     const copyTaxRegStyle = document.createElement('link');
+    //     const copyTaxRegJs = document.createElement('script');
 
-        copyTaxRegJs.src = 'https://multitravelcom.github.io/style/General/components/CopyTaxMult209/copyTaxRg.js';
+    //     copyTaxRegJs.src = 'https://multitravelcom.github.io/style/General/components/CopyTaxMult209/copyTaxRg.js';
 
-        copyTaxRegStyle.href = "https://multitravelcom.github.io/style/General/components/CopyTaxMult209/copyTaxRgStyle.css";
-        copyTaxRegStyle.rel = "stylesheet";
+    //     copyTaxRegStyle.href = "https://multitravelcom.github.io/style/General/components/CopyTaxMult209/copyTaxRgStyle.css";
+    //     copyTaxRegStyle.rel = "stylesheet";
 
-        head.appendChild(copyTaxRegStyle);
-        head.appendChild(copyTaxRegJs);
-    }
-    const copyTaxRgComponent = path.includes('/flights/results');
-
-    // if (copyTaxRgComponent) {
-    //     const copyTaxRgComponentJs = document.createElement('script');
-    //     copyTaxRgComponentJs.src = 'https://multitravelcom.github.io/style/General/components/CopyTaxMult209/copyTaxRgComponent.js';
-    //     copyTaxRgComponentJs.type = "text/babel";
-
-    //     head.appendChild(copyTaxRgComponentJs);
+    //     head.appendChild(copyTaxRegStyle);
+    //     head.appendChild(copyTaxRegJs);
     // }
 
     const priceFinalFlight = path.includes('/results');
