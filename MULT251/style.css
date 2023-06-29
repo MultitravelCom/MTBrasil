@@ -1,7 +1,6 @@
 /* **** MULT-251 ******* */
 .booking-payment__options>.booking-payment__options-pos,
 .booking-payment__options-prepayment {
-    width: 170px;
     background: #FFFFFF;
     border: 1px solid #0D4E88;
     border-radius: 8px;
@@ -34,6 +33,10 @@ margin-top: 2px;
 
 .booking-payment__options li.on .glyphicon {
     color: #FFFFFF;
+}
+.booking-payment__options>.booking-payment__options-pos{
+    width: 170px;
+
 }
 @media (max-width: 767px) {
     .booking-payment__options li,
