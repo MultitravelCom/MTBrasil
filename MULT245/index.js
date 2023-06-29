@@ -27,21 +27,21 @@ function removeDataTarget(resultsListPage) {
 }
 
 async function cargarEstilosYModales() {
-    const link = document.querySelector('link[href="https://multitravelcom.github.io/components/MULT245/style.css"]');
-    const scriptReact = document.querySelector('script[src="https://multitravelcom.github.io/components/MULT245/modalShare.js"]');
+    const link = document.querySelector('link[href="https://multitravelcom.github.io/MTBrasil/MULT245/style.css"]');
+    const scriptReact = document.querySelector('script[src="https://multitravelcom.github.io/MTBrasil/MULT245/modalShare.js"]');
 
     // Forzar la recarga del archivo CSS
     if (link) {
         link.href = '';
         await wait(1000);
-        link.href = 'https://multitravelcom.github.io/components/MULT245/style.css';
+        link.href = 'https://multitravelcom.github.io/MTBrasil/MULT245/style.css';
     }
 
     // Forzar la recarga del script de los modales de React
     if (scriptReact) {
         scriptReact.src = '';
         await wait(100);
-        scriptReact.src = 'https://multitravelcom.github.io/components/MULT245/modalShare.js';
+        scriptReact.src = 'https://multitravelcom.github.io/MTBrasil/MULT245/modalShare.js';
     }
 }
 
@@ -126,14 +126,6 @@ async function changeCopyButton(resultsListPage) {
         const buttonElement = item.querySelector('.info-card__options-toggle');
         buttonElement.textContent = 'Comprar';
         buttonElement.style.display = 'block';
-
-        // buttonElement.addEventListener('click', (event) => {
-        //     event.preventDefault();
-        //     const link = item.querySelector('a.abs');
-        //     if (link) {
-        //         window.open(link.href, '_blank');
-        //     }
-        // });
     });
 
     const checkResultsListPage = () => {
