@@ -70,9 +70,9 @@ const BannerMensageCardApp = () => {
     return (
         <>
             {hasBestPriceTaxIncluded ? (
-                <BannerMensageCard text_p={"Pagá hasta en 12 cuotas fijas"} />
+                <BannerMensageCard text_p={"Pague agora e congele o preço"} />
             ) : (
-                <BannerMensageCard text_p={"Comprá ahora y congela el precio en pesos"} />
+                <BannerMensageCard text_p={"Pague agora e congele o preço"} />
             )}
         </>
     );
