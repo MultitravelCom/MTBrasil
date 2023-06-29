@@ -1,0 +1,107 @@
+.results-list__view-selector.js-view-selector-placeholder .view-selector div:nth-child(3) {
+  display: none;
+}
+
+.results-list__order-by .results-list__order-by-label {
+  color: black !important;
+  font-weight: bold !important;
+}
+
+.results-list__order-by .select2.select2-container.select2-container--default .select2-selection {
+  border-radius: 8px;
+  border: 1px solid;
+}
+
+@media (max-width: 767px) {
+  .whatsAppFixes {
+    display: none;
+  }
+
+  .view-selector {
+    display: none;
+  }
+
+  .results-list__filter-toggle-wrapper {
+    display: none;
+  }
+
+  .results-list__order-by {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .results-list__order-by-label {
+    display: block;
+  }
+}
+
+/* BOTONES FILTER / MAP */
+.main__container__newsButtons--mobile {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.main__container__newsButtons {
+  width: 310px;
+  height: 34px;
+  display: none;
+  position: fixed;
+  bottom: 39px;
+  text-align: center;
+  background: #0D4E88;
+  border: 1px solid #F3F3F3;
+  border-radius: 200px;
+  color: #F3F3F3;
+  margin: 0 5px;
+  box-shadow: 10px 10px 5px -5px rgba(0, 0, 0, 0.23);
+  -webkit-box-shadow: 10px 10px 5px -5px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: 10px 10px 5px -5px rgba(0, 0, 0, 0.23);
+  z-index: 4;
+  overflow: hidden;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.main__container__newsButtons p {
+  margin: 0 5px;
+  font-size: 12px;
+  font-weight: bolder;
+}
+
+.main__container__newsButtons .glyphicon {
+  color: white;
+}
+
+.button__map {
+  border-right: 1px solid #F3F3F3;
+}
+
+.buttonStyleHotels {
+  display: flex;
+  align-items: center;
+  width: 155px;
+  height: 100%;
+  justify-content: center;
+  color: white;
+}
+
+.buttonStyleHotels:hover {
+  background-color: #283747;
+  color: white;
+  text-decoration: none;
+}
+
+.buttonStyleHotels:hover {
+  background-color: #283747;
+  color: white;
+  text-decoration: none;
+}
+
+@media (max-width: 767px) {
+  /* .main__container__newsButtons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  } */
+}
