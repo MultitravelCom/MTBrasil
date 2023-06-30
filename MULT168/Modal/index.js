@@ -24,12 +24,9 @@ function ocultarNacionalidad() {
     const parent = element.closest('.col-xs-12.col-sm-12.col-md-3');
     parent.style.display = 'none';
 
-    const fixedProductElement = document.querySelector('.searcher__fixed-product');
-    const previousElement = fixedProductElement.previousElementSibling;
-
-    if (previousElement) {
-        previousElement.style.width = '45%';
-    }
+    const elementFixedProduct = document.querySelector('.searcher__fixed-product');
+    const parentFixedProduct = elementFixedProduct.closest('.col-xs-12.col-sm-12.col-md-3');
+    parentFixedProduct.style.width = '45%';
 }
 ocultarNacionalidad()
 addHideDuplicateButtonLogic();
