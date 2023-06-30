@@ -4,10 +4,10 @@ function addHeaderLinks() {
     const bannerNoResultStyle = document.createElement('link');
     const bannerNoResult = document.createElement('script');
 
-    bannerNoResult.src = 'https://multitravelcom.github.io/style/General/bannerNoResult.js';
+    bannerNoResult.src = 'https://multitravelcom.github.io/MTBrasil/NoResult/bannerNoResult.js';
     bannerNoResult.type = "text/babel";
 
-    bannerNoResultStyle.href = "https://multitravelcom.github.io/style/General/noResultStyle.css";
+    bannerNoResultStyle.href = "https://multitravelcom.github.io/MTBrasil/NoResult/noResultStyle.css";
     bannerNoResultStyle.rel = "stylesheet";
 
     head.appendChild(bannerNoResultStyle);
@@ -16,20 +16,6 @@ function addHeaderLinks() {
 
     const path = window.location.pathname;
 
-
-    // const copyTaxRg = path.includes('/flights') || path.includes('/booking/') || path.includes('/hotels/');
-    // if (copyTaxRg) {
-    //     const copyTaxRegStyle = document.createElement('link');
-    //     const copyTaxRegJs = document.createElement('script');
-
-    //     copyTaxRegJs.src = 'https://multitravelcom.github.io/style/General/components/CopyTaxMult209/copyTaxRg.js';
-
-    //     copyTaxRegStyle.href = "https://multitravelcom.github.io/style/General/components/CopyTaxMult209/copyTaxRgStyle.css";
-    //     copyTaxRegStyle.rel = "stylesheet";
-
-    //     head.appendChild(copyTaxRegStyle);
-    //     head.appendChild(copyTaxRegJs);
-    // }
 
     const priceFinalFlight = path.includes('/results');
     if (priceFinalFlight) {
