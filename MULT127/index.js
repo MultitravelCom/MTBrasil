@@ -42,5 +42,21 @@ window.addEventListener('load', () => {
     // // cambiar el texto del label
     label.text('Multidestino');
     document.querySelector('.radio').style.display = 'inline-block';
+
+      // MULT-114
+  const calendarContainers = document.querySelectorAll('.js-calendar-container');
+  calendarContainers.forEach((container) => {
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        const filterButton = document.querySelector('.results-list__filter-toggle-wrapper');
+        filterButton.style.display = mutation.target.classList.contains('closed') ? 'block' : 'none';
+      });
+    });
+    observer.observe(container, { attributes: true });
+  });
+
+  // Cambiar texto al botón Filtrar
+  const textBtn = document.querySelector('.btn-tertiary');
+  textBtn.textContent = 'filtro';
     // *************************************************************************************************
 });
