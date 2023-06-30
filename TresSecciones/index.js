@@ -10,15 +10,15 @@ const BannerRedes = () => {
                     <a href="https://www.instagram.com/multitravelcom/" target="_blank">
                         <picture>
                             <source media="(min-width: 1024px)" srcSet="
-          https://multitravelcom.github.io/MTBrasil-Img/MediosPagos/Banner-MKT-Redes-1.jpg
+          https://multitravelcom.github.io/MTBrasil-Img/RedesSociales/Banner-MKT-Redes-1.jpg
         " />
                             <source media="(min-width: 768px) and (max-width: 1023px)" srcSet="
-          https://multitravelcom.github.io/MTBrasil-Img/MediosPagos/Banner-MKT-Redes-2.jpg
+          https://multitravelcom.github.io/MTBrasil-Img/RedesSociales/Banner-MKT-Redes-2.jpg
         " />
                             <source media="(max-width: 767px)" srcSet="
-          https://multitravelcom.github.io/MTBrasil-Img/MediosPagos/Banner-MKT-Redes-3.jpg
+          https://multitravelcom.github.io/MTBrasil-Img/RedesSociales/Banner-MKT-Redes-3.jpg
         " />
-                            <img src="https://multitravelcom.github.io/MTBrasil-Img/MediosPagos/Banner-MKT-Redes-1.jpg"
+                            <img src="https://multitravelcom.github.io/MTBrasil-Img/RedesSociales/Banner-MKT-Redes-1.jpg"
                                 alt="Redes sociais de promoção de banner de imagem" />
                         </picture>
                     </a>
