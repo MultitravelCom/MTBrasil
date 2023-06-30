@@ -818,6 +818,3 @@ body.home.home--default .home-v5__searcher,
 .confirm-booking__promocodes{
   display: none;
 }
-.searcher__fixed-product + * {
-  width: 45%;
-}
