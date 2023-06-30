@@ -818,7 +818,3 @@ body.home.home--default .home-v5__searcher,
 .confirm-booking__promocodes{
   display: none;
 }
-/* Ocultar nacionalidad */
-.col-xs-12:has(label[for="hotel-searcher-nationality"]) {
-  display: none;
-}
