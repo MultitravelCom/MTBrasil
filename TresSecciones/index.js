@@ -10,16 +10,16 @@ const BannerRedes = () => {
                     <a href="https://www.instagram.com/multitravelcom/" target="_blank">
                         <picture>
                             <source media="(min-width: 1024px)" srcSet="
-          https://multitravelcom.github.io/MT/Secciones/RedesSociales/Banner-MKT-Redes-1.jpg
+          https://multitravelcom.github.io/MTBrasil-Img/MediosPagos/Banner-MKT-Redes-1.jpg
         " />
                             <source media="(min-width: 768px) and (max-width: 1023px)" srcSet="
-          https://multitravelcom.github.io/MT/Secciones/RedesSociales/Banner-MKT-Redes-2.jpg
+          https://multitravelcom.github.io/MTBrasil-Img/MediosPagos/Banner-MKT-Redes-2.jpg
         " />
                             <source media="(max-width: 767px)" srcSet="
-          https://multitravelcom.github.io/MT/Secciones/RedesSociales/Banner-MKT-Redes-3.jpg
+          https://multitravelcom.github.io/MTBrasil-Img/MediosPagos/Banner-MKT-Redes-3.jpg
         " />
-                            <img src="https://multitravelcom.github.io/MT/Secciones/RedesSociales/Banner-MKT-Redes-1.jpg"
-                                alt="Imagen banner promocion redes sociales" />
+                            <img src="https://multitravelcom.github.io/MTBrasil-Img/MediosPagos/Banner-MKT-Redes-1.jpg"
+                                alt="Redes sociais de promoção de banner de imagem" />
                         </picture>
                     </a>
                 </div>
@@ -45,10 +45,10 @@ const MediosDePagos = () => {
                         </button>
                     </div>
                     <div className="main__conteiner__s2__pagos__card__img">
-                        <source media="(min-width: 1024px)" srcSet="https://multitravelcom.github.io/MT/Secciones/MediosPagos/mediospagos-01.webp" />
-                        <source media="(min-width: 768px) and (max-width: 1023px)" srcSet="https://multitravelcom.github.io/MT/Secciones/MediosPagos/mediospagos-02.webp" />
-                        <source media="(max-width: 767px)" srcSet="https://multitravelcom.github.io/MT/Secciones/MediosPagos/mediospagos-03.webp" />
-                        <img alt={`Imagen banner`} src="https://multitravelcom.github.io/MT/Secciones/MediosPagos/mediospagos-01.webp" />
+                        <source media="(min-width: 1024px)" srcSet="https://multitravelcom.github.io/MTBrasil-Img/MediosPagos/mediospagos-01.webp" />
+                        <source media="(min-width: 768px) and (max-width: 1023px)" srcSet="https://multitravelcom.github.io/MTBrasil-Img/MediosPagos/mediospagos-02.webp" />
+                        <source media="(max-width: 767px)" srcSet="https://multitravelcom.github.io/MTBrasil-Img/MediosPagos/mediospagos-03.webp" />
+                        <img alt={`Imagen banner`} src="https://multitravelcom.github.io/MTBrasil-Img/MediosPagos/mediospagos-01.webp" />
                     </div>
                 </div>
                 <div className="main__conteiner__s2__pagos__card dos__s2">
