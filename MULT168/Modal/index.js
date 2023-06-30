@@ -23,6 +23,13 @@ function ocultarNacionalidad() {
     const element = document.querySelector('label[for="hotel-searcher-nationality"]');
     const parent = element.closest('.col-xs-12.col-sm-12.col-md-3');
     parent.style.display = 'none';
+
+    const fixedProductElement = document.querySelector('.searcher__fixed-product');
+    const previousElement = fixedProductElement.previousElementSibling;
+
+    if (previousElement) {
+        previousElement.style.width = '45%';
+    }
 }
 ocultarNacionalidad()
 addHideDuplicateButtonLogic();
