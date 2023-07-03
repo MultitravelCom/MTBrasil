@@ -227,18 +227,24 @@ function observarCambiosCheckAndRender() {
             requestAnimationFrame(() => {
                 const resultsSidebar = document.querySelector('.results__sidebar');
                 if (resultsSidebar) {
-                    reemplazarTextos(resultsSidebar);
+                    const placeholder = resultsSidebar.querySelector('.js-filter-by-boards-placeholder');
+                    if (placeholder) {
+                        reemplazarTextos(placeholder);
+                    }
                 }
             });
         },
-        queries: [{ element: '.results__sidebar' }],
+        queries: [{ element: '.results__sidebar' }, { element: '.js-filter-by-boards-placeholder' }],
     };
 
     const observer = new MutationSummary(observerConfig);
 
     const resultsSidebar = document.querySelector('.results__sidebar');
     if (resultsSidebar) {
-        reemplazarTextos(resultsSidebar);
+        const placeholder = resultsSidebar.querySelector('.js-filter-by-boards-placeholder');
+        if (placeholder) {
+            reemplazarTextos(placeholder);
+        }
     }
 }
 
