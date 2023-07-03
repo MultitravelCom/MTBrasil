@@ -198,9 +198,9 @@ function obtenerHrefMapa() {
         }
     });
 }
-function reemplazarTextos() {
+function reemplazarTextos(resultsSidebar) {
     var intervalo = setInterval(function () {
-        var placeholders = document.querySelectorAll('.results-sidebar__placeholder .filter-by-board__text');
+        var placeholders = resultsSidebar.querySelectorAll('.filter-by-board__text');
 
         if (placeholders.length > 0) {
             clearInterval(intervalo);
@@ -218,6 +218,28 @@ function reemplazarTextos() {
             });
         }
     }, 120);
+}
+
+function observarCambiosCheckAndRender() {
+    const observerConfig = {
+        rootNode: document.documentElement,
+        callback: () => {
+            requestAnimationFrame(() => {
+                const resultsSidebar = document.querySelector('.results__sidebar');
+                if (resultsSidebar) {
+                    reemplazarTextos(resultsSidebar);
+                }
+            });
+        },
+        queries: [{ element: '.results__sidebar' }],
+    };
+
+    const observer = new MutationSummary(observerConfig);
+
+    const resultsSidebar = document.querySelector('.results__sidebar');
+    if (resultsSidebar) {
+        reemplazarTextos(resultsSidebar);
+    }
 }
 
 document.addEventListener('DOMContentLoaded', async function () {
