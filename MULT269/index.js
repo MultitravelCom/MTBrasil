@@ -247,4 +247,5 @@ document.addEventListener('DOMContentLoaded', async function () {
     cambiarTextoMapaYBoton();
     agregarNewsButtons();
     reemplazarTextos();
+    observarCambiosCheckAndRender();
 });
