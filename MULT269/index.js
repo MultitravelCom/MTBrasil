@@ -5,7 +5,7 @@ function cambiarTextoMapaYBoton() {
         const span = element.querySelector('span.btn.btn-secondary');
 
         if (span && span.innerText === 'Abrir mapa') {
-            span.innerText = 'Ver en mapa';
+            span.innerText = 'Explorar mapa';
             return; // Salir de la función forEach una vez que se haya realizado el cambio
         }
     });
@@ -19,7 +19,7 @@ function cambiarTextoMapaYBoton() {
             if (label.innerText === 'Vista por mapa') {
                 label.innerText = 'Ver en mapa';
             } else if (label.innerText === 'Vista resumo') {
-                label.innerText = 'Ver en lista';
+                label.innerText = 'Ver na lista';
             }
         }
     });
