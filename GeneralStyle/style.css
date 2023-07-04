@@ -818,3 +818,7 @@ body.home.home--default .home-v5__searcher,
 .confirm-booking__promocodes{
   display: none;
 }
+/* FOOTER */
+.footer-content .footer-col .col-xs-12 .col-sm-12 .col-md-2{
+  width: 18.666667% !important;
+}
