@@ -40,7 +40,7 @@ const MediosDePagos = () => {
                         <h4>Você decide</h4>
                         <p>Encontre todos os meios de pagamento exclusivos para você </p>
                         <button className="main__conteiner__s2__pagos__btn">
-                            <a href="https://onefiveb2b.juniper.es/formas-de-pagamento" target="_blank"
+                            <a href="https://onefiveb2b.juniperbetemp.com/formas-de-pagamento" target="_blank"
                                 style={{ color: "white", textDecoration: "none" }}>Descobrir</a>
                         </button>
                     </div>
@@ -52,7 +52,7 @@ const MediosDePagos = () => {
                     </div>
                 </div>
                 <div className="main__conteiner__s2__pagos__card dos__s2">
-                    <a href="https://onefiveb2b.juniper.es" target="_blank">
+                    <a href="https://onefiveb2b.juniperbetemp.com" target="_blank">
                         <source media="(min-width: 1024px)" srcSet="https://multitravelcom.github.io/MTBrasil-Img/MediosPagos/ahora12/ahora12-01.webp" />
                         <source media="(min-width: 768px) and (max-width: 1023px)" srcSet="https://multitravelcom.github.io/MTBrasil-Img/MediosPagos/ahora12/ahora12-02.webp" />
                         <source media="(max-width: 767px)" srcSet="https://multitravelcom.github.io/MTBrasil-Img/MediosPagos/ahora12/ahora12-03.webp" />
@@ -102,13 +102,13 @@ const LoMejorDe = () => {
             <>
                 <Ofertas
                     seccion1="Acomodações"
-                    url1="https://onefiveb2b.juniper.es/hotels/"
+                    url1="https://onefiveb2b.juniperbetemp.com/hotels/"
                     className1="uno__s3"
                     seccion2="Pacotes"
-                    url2="https://onefiveb2b.juniper.es/packages/flighthotel/"
+                    url2="https://onefiveb2b.juniperbetemp.com/packages/flighthotel/"
                     className2="dos__s3"
                     seccion3="Seguros"
-                    url3="https://onefiveb2b.juniper.es/insurances/"
+                    url3="https://onefiveb2b.juniperbetemp.com/insurances/"
                     className3="tres__s3"
                 />
             </>
@@ -118,13 +118,13 @@ const LoMejorDe = () => {
             <>
                 <Ofertas
                     seccion1="Pacotes"
-                    url1="https://onefiveb2b.juniper.es/hotels/"
+                    url1="https://onefiveb2b.juniperbetemp.com/hotels/"
                     className1="uno__s3"
                     seccion2="Voos"
-                    url2="https://onefiveb2b.juniper.es/flights/"
+                    url2="https://onefiveb2b.juniperbetemp.com/flights/"
                     className2="dos__s3"
                     seccion3="Seguros"
-                    url3="https://onefiveb2b.juniper.es/insurances/"
+                    url3="https://onefiveb2b.juniperbetemp.com/insurances/"
                     className3="tres__s3"
                 />
             </>
@@ -134,13 +134,13 @@ const LoMejorDe = () => {
             <>
                 <Ofertas
                     seccion1="Acomodações"
-                    url1="https://onefiveb2b.juniper.es/hotels/"
+                    url1="https://onefiveb2b.juniperbetemp.com/hotels/"
                     className1="uno__s3"
                     seccion2="Voos"
-                    url2="https://onefiveb2b.juniper.es/flights/"
+                    url2="https://onefiveb2b.juniperbetemp.com/flights/"
                     className2="dos__s3"
                     seccion3="Seguros"
-                    url3="https://onefiveb2b.juniper.es/insurances/"
+                    url3="https://onefiveb2b.juniperbetemp.com/insurances/"
                     className3="tres__s3"
                 />
             </>
@@ -150,13 +150,13 @@ const LoMejorDe = () => {
             <>
                 <Ofertas
                     seccion1="Acomodações"
-                    url1="https://onefiveb2b.juniper.es/hotels/"
+                    url1="https://onefiveb2b.juniperbetemp.com/hotels/"
                     className1="uno__s3"
                     seccion2="Voos"
-                    url2="https://onefiveb2b.juniper.es/flights/"
+                    url2="https://onefiveb2b.juniperbetemp.com/flights/"
                     className2="dos__s3"
                     seccion3="Pacotes"
-                    url3="https://onefiveb2b.juniper.es/packages/flighthotel/"
+                    url3="https://onefiveb2b.juniperbetemp.com/packages/flighthotel/"
                     className3="tres__s3"
                 />
             </>
