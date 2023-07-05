@@ -422,3 +422,6 @@
 .footer-col.col-xs-12.col-sm-12.col-md-6 .footer__text:nth-child(3) {
     display: none;
 }
+.footer-content div:first-child {
+    width: 18.666667% !important;
+  }

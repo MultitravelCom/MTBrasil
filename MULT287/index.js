@@ -11,7 +11,6 @@ function ocultarNacionalidad() {
     }
 }
 
-
 document.addEventListener('DOMContentLoaded', async function () {
     ocultarNacionalidad()
 });
