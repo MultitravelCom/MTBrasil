@@ -220,43 +220,43 @@ function reemplazarTextos(resultsSidebar) {
     }, 120);
 }
 
-function observarCambiosCheckAndRender() {
-    const observerConfig = {
-        rootNode: document.documentElement,
-        callback: (mutationsList) => {
-            for (let mutation of mutationsList) {
-                if (mutation.target.classList.contains('js-filter-by-boards-placeholder')) {
-                    const resultsSidebar = document.querySelector('.results__sidebar');
-                    if (resultsSidebar) {
-                        const placeholder = resultsSidebar.querySelector('.js-filter-by-boards-placeholder');
-                        if (placeholder) {
-                            reemplazarTextos(placeholder);
-                        }
-                    }
-                    break;
-                }
-            }
-        },
-        queries: [{ element: '.results__sidebar' }, { element: '.js-filter-by-boards-placeholder' }],
-    };
+// function observarCambiosCheckAndRender() {
+//     const observerConfig = {
+//         rootNode: document.documentElement,
+//         callback: (mutationsList) => {
+//             for (let mutation of mutationsList) {
+//                 if (mutation.target.classList.contains('js-filter-by-boards-placeholder')) {
+//                     const resultsSidebar = document.querySelector('.results__sidebar');
+//                     if (resultsSidebar) {
+//                         const placeholder = resultsSidebar.querySelector('.js-filter-by-boards-placeholder');
+//                         if (placeholder) {
+//                             reemplazarTextos(placeholder);
+//                         }
+//                     }
+//                     break;
+//                 }
+//             }
+//         },
+//         queries: [{ element: '.results__sidebar' }, { element: '.js-filter-by-boards-placeholder' }],
+//     };
 
-    const observer = new MutationObserver(observerConfig.callback);
+//     const observer = new MutationObserver(observerConfig.callback);
 
-    const resultsSidebar = document.querySelector('.results__sidebar');
-    if (resultsSidebar) {
-        const placeholder = resultsSidebar.querySelector('.js-filter-by-boards-placeholder');
-        if (placeholder) {
-            reemplazarTextos(placeholder);
-        }
-    }
+//     const resultsSidebar = document.querySelector('.results__sidebar');
+//     if (resultsSidebar) {
+//         const placeholder = resultsSidebar.querySelector('.js-filter-by-boards-placeholder');
+//         if (placeholder) {
+//             reemplazarTextos(placeholder);
+//         }
+//     }
 
-    observer.observe(observerConfig.rootNode, { childList: true, subtree: true });
-}
+//     observer.observe(observerConfig.rootNode, { childList: true, subtree: true });
+// }
 
 document.addEventListener('DOMContentLoaded', async function () {
     observarSidebarFilters();
     cambiarTextoMapaYBoton();
     agregarNewsButtons();
     reemplazarTextos();
-    observarCambiosCheckAndRender();
+    // observarCambiosCheckAndRender();
 });
