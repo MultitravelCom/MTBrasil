@@ -10,5 +10,9 @@ function ocultarNacionalidad() {
         parentFixedProduct.style.width = '45%';
     }
 }
-ocultarNacionalidad()
-addHideDuplicateButtonLogic();
+
+
+document.addEventListener('DOMContentLoaded', async function () {
+    ocultarNacionalidad()
+    addHideDuplicateButtonLogic();
+});
