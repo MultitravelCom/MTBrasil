@@ -257,6 +257,6 @@ document.addEventListener('DOMContentLoaded', async function () {
     observarSidebarFilters();
     cambiarTextoMapaYBoton();
     agregarNewsButtons();
-    reemplazarTextos();
+    // reemplazarTextos();
     // observarCambiosCheckAndRender();
 });
