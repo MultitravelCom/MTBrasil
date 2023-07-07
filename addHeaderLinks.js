@@ -44,15 +44,11 @@ function addHeaderLinks() {
     const recomendadoHotels = path.includes('/hotels/');
     if (recomendadoHotels) {
         const recomendadoHotelsStyle = document.createElement('link');
-        const recomendadoHotelsJs = document.createElement('script');
-
-        recomendadoHotelsJs.src = 'https://multitravelcom.github.io/style/General/components/RecomendadoHotels/recomendadosHotels.js';
 
         recomendadoHotelsStyle.href = "https://multitravelcom.github.io/style/General/components/RecomendadoHotels/recomendadosHotels.css";
         recomendadoHotelsStyle.rel = "stylesheet";
 
         head.appendChild(recomendadoHotelsStyle);
-        head.appendChild(recomendadoHotelsJs);
     }
 
     const copyBaggage = path.includes('/flights/booking');

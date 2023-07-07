@@ -93,7 +93,7 @@ function agregarNewsButtons() {
         <div class="main__container__newsButtons">
       <a href="#" class="button__map buttonStyleHotels view-selector__item js-view-selector-toggle" data-view="map" >
           <div class="glyphicon glyphicon-view-map"></div>
-          <p>Ver en mapa</p>
+          <p>Explorar mapa </p>
       </a>
     <div class="buttonStyleHotels button__filter js-results-list-filter-toggle">
         <div class="glyphicon glyphicon-loungroom"></div>
@@ -160,7 +160,7 @@ function agregarNewsButtons() {
 
         function toggleButtonText() {
             let isMapVisible = mapButton.getAttribute('href') === hrefMap;
-            mapButton.querySelector('p').innerHTML = isMapVisible ? 'Ver en mapa' : 'Ver en lista';
+            mapButton.querySelector('p').innerHTML = isMapVisible ? 'explorar mapa ' : 'Ver en lista';
             mapButton.querySelector('.glyphicon').className = isMapVisible ? 'glyphicon glyphicon-view-map' : 'glyphicon glyphicon-view-resumed';
         }
 
