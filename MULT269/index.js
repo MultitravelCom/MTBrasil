@@ -17,7 +17,7 @@ function cambiarTextoMapaYBoton() {
 
         if (label) {
             if (label.innerText === 'Vista por mapa') {
-                label.innerText = 'Ver en mapa';
+                label.innerText = 'Explorar mapa ';
             } else if (label.innerText === 'Vista resumo') {
                 label.innerText = 'Ver na lista';
             }
