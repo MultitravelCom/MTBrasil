@@ -25,14 +25,14 @@ async function cargarEstilosYModales() {
     }
     */
 
-    function changeDropdownDetailsFlight() {
-        let dropdownsFlight = document.querySelectorAll('flight-selection__segments-toggle');
-        console.log("-->: ", dropdownsFlight)
-        //let divToMove = document.getElementsByClassName("flight-selection__segments-toggle")[0];
-        //let divDestination = document.getElementsByClassName("singledestination-only")[0];
-    }
 }
 
+function changeDropdownDetailsFlight() {
+    let dropdownsFlight = document.querySelectorAll('flight-selection__segments-toggle');
+    console.log("-->: ", dropdownsFlight)
+    //let divToMove = document.getElementsByClassName("flight-selection__segments-toggle")[0];
+    //let divDestination = document.getElementsByClassName("singledestination-only")[0];
+}
 
 /*
 const targetElementUser = document.querySelector('#main-menu-features');
