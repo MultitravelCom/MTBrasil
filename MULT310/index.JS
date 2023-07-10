@@ -27,13 +27,10 @@ async function cargarEstilosYModales() {
 
 }
 
-function changeDropdownDetailsFlight() {
-    const elements = document.getElementsByClassName('flight-result__segments-toggle'); 
-    elements.forEach((element) => {
-            element.style.display = 'none';
-   
-        });
-      }
+const elements = document.getElementsByClassName('flight-result__segments-toggle');
+Array.from(elements).forEach((element) => {
+  element.style.display = 'none';
+});
 
     //let divToMove = document.getElementsByClassName("flight-selection__segments-toggle")[0];
     //let divDestination = document.getElementsByClassName("singledestination-only")[0];
