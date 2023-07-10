@@ -30,9 +30,16 @@ async function cargarEstilosYModales() {
 function changeDropdownDetailsFlight() {
     let dropdownsFlight = document.querySelectorAll('flight-selection__segments-toggle');
     console.log("-->: ", dropdownsFlight)
+    dropdownsFlight.forEach((element) => {
+            element.style.display = 'none';
+   
+        });
+        observer.observe(container, { attributes: true });
+      }
+
     //let divToMove = document.getElementsByClassName("flight-selection__segments-toggle")[0];
     //let divDestination = document.getElementsByClassName("singledestination-only")[0];
-}
+
 
 /*
 const targetElementUser = document.querySelector('#main-menu-features');
