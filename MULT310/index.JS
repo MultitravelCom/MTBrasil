@@ -28,13 +28,11 @@ async function cargarEstilosYModales() {
 }
 
 function changeDropdownDetailsFlight() {
-    let dropdownsFlight = document.querySelectorAll('flight-selection__segments-toggle');
-    console.log("-->: ", dropdownsFlight)
-    dropdownsFlight.forEach((element) => {
+    const elements = document.getElementsByClassName('flight-result__segments-toggle'); 
+    elements.forEach((element) => {
             element.style.display = 'none';
    
         });
-        observer.observe(container, { attributes: true });
       }
 
     //let divToMove = document.getElementsByClassName("flight-selection__segments-toggle")[0];
