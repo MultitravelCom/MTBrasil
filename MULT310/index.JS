@@ -1,56 +1,41 @@
 document.addEventListener('DOMContentLoaded', async function () {
+
     observarCambiosCheckAndRender();
     changeDropdownDetailsFlight();
 });
 
-
-async function cargarEstilosYModales() {
-
-    /*
-    const link = document.querySelector('link[href="https://multitravelcom.github.io/MTBrasil/MULT245/style.css"]');
-    const scriptReact = document.querySelector('script[src="https://multitravelcom.github.io/MTBrasil/MULT245/modalShare.js"]');
-
-    // Forzar la recarga del archivo CSS
-    if (link) {
-        link.href = '';
-        await wait(1000);
-        link.href = 'https://multitravelcom.github.io/MTBrasil/MULT245/style.css';
-    }
-
-    // Forzar la recarga del script de los modales de React
-    if (scriptReact) {
-        scriptReact.src = '';
-        await wait(100);
-        scriptReact.src = 'https://multitravelcom.github.io/MTBrasil/MULT245/modalShare.js';
-    }
-    */
-
-}
 
 const elements = document.getElementsByClassName('flight-result__segments-toggle');
 Array.from(elements).forEach((element) => {
   element.style.display = 'none';
 });
 
-    //let divToMove = document.getElementsByClassName("flight-selection__segments-toggle")[0];
-    //let divDestination = document.getElementsByClassName("singledestination-only")[0];
 
+// Step 1: Select the target elements
+const claseSinEscalas = document.querySelectorAll('.flight-result__stops');
+// Create a new image element
+const imageElement = document.createElement('img');
 
-/*
-const targetElementUser = document.querySelector('#main-menu-features');
+// Step 2 and 3: Add SVG element before the text
+claseSinEscalas.forEach(element => {
 
-const buttonHTML = `
-  <div class="upper-menu_quicklinks btn-toolbar visible-xs-block visible-sm-block">
-    <button type="button" class="btn upper-menu__newsletter-button features_item js-login-box-modal btn-user">
-      <span class="glyphicon glyphicon-agent" aria-hidden="true"></span>
-      <span class="sr-only">Ingreso</span>
-      <span class="quicklink-elem-label">Ingreso</span>
-    </button>
-  </div>
-`;
+    // Create a new image element
+    
+    imageElement.setAttribute('src', 'https://multitravelcom.github.io/components/MULT310/icons/SinEscalas.svg'
+ );
+    imageElement.setAttribute('alt', 'Icono Sin Escalas');
+    imageElement.style.display = 'inline-block'
 
-targetElementUser.insertAdjacentHTML('beforeend', buttonHTML);
-
-const buttonsBtnUser = targetElementUser.querySelectorAll('.btn-user');
-
+    /*
+    const paragraphElement = document.createElement('p');
+paragraphElement.textContent = 'Hola';
+paragraphElement.style.display = 'inline-block'
 */
+//element.insertBefore(paragraphElement, textElement);
+    // Insert the image element before the text within the stops element
+    element.insertBefore(imageElement, element.firstChild);
+});
+
+
+
+
