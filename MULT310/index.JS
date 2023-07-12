@@ -21,8 +21,7 @@ const imageElement2 = document.createElement('img');
 claseSinEscalas2.forEach(element => {
 
     // Create a new image element
-    
-    imageElement2.setAttribute('src', 'https://https://multitravelcom.github.io/MTBrasil/MULT310/icons/SinEscalas.svg'
+    imageElement2.setAttribute('src', 'https://multitravelcom.github.io/MTBrasil/MULT310/icons/SinEscalas.svg'
  );
     imageElement2.setAttribute('alt', 'Icono Sin Escalas');
     imageElement2.style.display = 'inline-block'
