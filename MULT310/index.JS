@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 });
 
 
+//ocultamos el dropdown gris
 const elements = document.getElementsByClassName('flight-result__segments-toggle');
 Array.from(elements).forEach((element) => {
   element.style.display = 'none';
@@ -26,15 +27,16 @@ claseSinEscalas.forEach(element => {
     imageElement.setAttribute('alt', 'Icono Sin Escalas');
     imageElement.style.display = 'inline-block'
 
-    /*
-    const paragraphElement = document.createElement('p');
-paragraphElement.textContent = 'Hola';
-paragraphElement.style.display = 'inline-block'
-*/
+    
+  //  const paragraphElement = document.createElement('p');
+//paragraphElement.textContent = 'Hola';
+//paragraphElement.style.display = 'inline-block'
+
 //element.insertBefore(paragraphElement, textElement);
     // Insert the image element before the text within the stops element
     element.insertBefore(imageElement, element.firstChild);
 });
+
 
 
 
