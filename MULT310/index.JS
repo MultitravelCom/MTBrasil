@@ -41,7 +41,7 @@ claseSinEscalas.forEach(element => {
 */
 const FlightResultsDetails = () => {
     return (
-        <>
+        
         <div className="result-option__content">
             <div className="flight-result__info">
                 <div className="flight-result__airline hidden-sm hidden-md hidden-lg">
@@ -80,11 +80,13 @@ const FlightResultsDetails = () => {
 
             </div>
         </div>
-        </>
+        
     );
 };
 
-
+/*
 const flightResultsDetails = document.querySelector('.result-option__content');
 ReactDOM.render(<FlightResultsDetails />, flightResultsDetails);
+*/
+ReactDOM.createRoot(document.querySelector('.result-option__content')).render(<FlightResultsDetails />);
 
