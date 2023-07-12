@@ -13,19 +13,19 @@ Array.from(elements).forEach((element) => {
 
 
 // Step 1: Select the target elements
-const claseSinEscalas = document.querySelectorAll('.flight-result__stops');
+const claseSinEscalas2 = document.querySelectorAll('.flight-result__stops');
 // Create a new image element
-const imageElement = document.createElement('img');
+const imageElement2 = document.createElement('img');
 
 // Step 2 and 3: Add SVG element before the text
-claseSinEscalas.forEach(element => {
+claseSinEscalas2.forEach(element => {
 
     // Create a new image element
     
-    imageElement.setAttribute('src', 'https://multitravelcom.github.io/components/MULT310/icons/SinEscalas.svg'
+    imageElement2.setAttribute('src', 'https://https://multitravelcom.github.io/MTBrasil/MULT310/icons/SinEscalas.svg'
  );
-    imageElement.setAttribute('alt', 'Icono Sin Escalas');
-    imageElement.style.display = 'inline-block'
+    imageElement2.setAttribute('alt', 'Icono Sin Escalas');
+    imageElement2.style.display = 'inline-block'
 
     
   //  const paragraphElement = document.createElement('p');
@@ -34,7 +34,7 @@ claseSinEscalas.forEach(element => {
 
 //element.insertBefore(paragraphElement, textElement);
     // Insert the image element before the text within the stops element
-    element.insertBefore(imageElement, element.firstChild);
+    element.insertBefore(imageElement2, element.firstChild);
 });
 
 
