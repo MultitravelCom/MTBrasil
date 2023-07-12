@@ -88,5 +88,7 @@ const FlightResultsDetails = () => {
 const flightResultsDetails = document.querySelector('.result-option__content');
 ReactDOM.render(<FlightResultsDetails />, flightResultsDetails);
 */
-ReactDOM.createRoot(document.querySelector('.result-option__content')).render(<FlightResultsDetails />);
+
+
+//ReactDOM.createRoot(document.querySelector('.result-option__content')).render(<FlightResultsDetails />);
 
