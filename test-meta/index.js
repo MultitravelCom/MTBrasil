@@ -1,3 +1,6 @@
-<meta property="og:image" content="https://multitravelcomoutlook-my.sharepoint.com/personal/orlando_balladares_multitravel_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Forlando%5Fballadares%5Fmultitravel%5Fcom%2FDocuments%2FArchivos%20de%20chat%20de%20Microsoft%20Teams%2Flogotipo%2Dsolo%2Epng&amp;parent=%2Fpersonal%2Forlando%5Fballadares%5Fmultitravel%5Fcom%2FDocuments%2FArchivos%20de%20chat%20de%20Microsoft%20Teams&amp;ga=1" />
+<>
+<meta property="og:image" content="https://http2.mlstatic.com/static/org-img/homesnw/mercado-libre.png?v=2" data-head-react="true" />
+<meta name="twitter:image"  content="https://http2.mlstatic.com/static/org-img/homesnw/mercado-libre.png?v=2" data-head-react="true"/>
+</>
 var titleTag = document.querySelector('title');
 titleTag.textContent = 'New Title';
