@@ -3,10 +3,7 @@
 */
 
 
-Apologies for the confusion caused by my previous response. The updated code you provided is actually incorrect. The changes made to the changeDescriptionIteration() function introduce an infinite loop. Here's a corrected version of the code:
 
-javascript
-Copy code
 // Step 1: Select all occurrences of the element
 function changeDescription() {
   const elementsSinEscalas = document.querySelectorAll('.flight-result__stops');
