@@ -25,19 +25,23 @@ function changeDescription() {
 }
 
 changeOrderOfDescriptionElements() {
+  const elementsDescription = document.querySelectorAll('.flight-result__info');
 
-  const flightInfo = document.querySelector('.flight-result__info');
+  // Step 2: Iterate through each occurrence
+  elementsDescription.forEach(element => {
 
-  // Get references to the child div elements
-  const airlineHiddenSm = document.querySelector('.flight-result__airline.hidden-sm');
-  const stops = document.querySelector('.flight-result__stops');
-  const duration = document.querySelector('.flight-result__duration');
-  const airlineHiddenXs = document.querySelector('.flight-result__airline.hidden-xs');
-  
-  // Append the child div elements in the desired order
-  flightInfo.insertBefore(airlineHiddenSm, duration);
-  flightInfo.insertBefore(stops, duration);
-  flightInfo.insertBefore(airlineHiddenXs, duration);
+
+    // Get references to the child div elements
+    const airlineHiddenSm = document.querySelector('.flight-result__airline.hidden-sm');
+    const stops = document.querySelector('.flight-result__stops');
+    const duration = document.querySelector('.flight-result__duration');
+    const airlineHiddenXs = document.querySelector('.flight-result__airline.hidden-xs');
+    
+    // Append the child div elements in the desired order
+    element.insertBefore(airlineHiddenSm, duration);
+    element.insertBefore(stops, duration);
+    element.insertBefore(airlineHiddenXs, duration);
+  });
 }
 
 // Run the changeDescription() function when the element is available
