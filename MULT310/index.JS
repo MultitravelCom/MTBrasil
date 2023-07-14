@@ -34,29 +34,4 @@ function waitForElementToLoad() {
   }
 }
 
-//document.addEventListener('DOMContentLoaded', waitForElementToLoad);
-
-function handleNewElement(mutationsList, observer) {
-  mutationsList.forEach(mutation => {
-    if (mutation.type === 'childList') {
-      const newElements = mutation.addedNodes;
-      newElements.forEach(element => {
-        if (element.classList.contains('flight-result__stops')) {
-          // Disconnect the observer to stop further observations
-          observer.disconnect();
-          
-          // Execute your function here
-          changeDescription();
-        }
-      });
-    }
-  });
-}
-
-function observeElementAppearance() {
-  const targetNode = document.documentElement; // Observe changes in the entire document
-  const observer = new MutationObserver(handleNewElement);
-  observer.observe(targetNode, { childList: true, subtree: true });
-}
-
-observeElementAppearance();
+document.addEventListener('DOMContentLoaded', waitForElementToLoad);
