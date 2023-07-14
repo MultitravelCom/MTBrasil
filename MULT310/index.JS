@@ -32,10 +32,10 @@ function changeOrderOfDescriptionElements() {
 
 
     // Get references to the child div elements
-    const airlineHiddenSm = document.querySelector('.flight-result__airline.hidden-sm');
+    const airlineHiddenSm = document.querySelector('.flight-result__airline');
     const stops = document.querySelector('.flight-result__stops');
     const duration = document.querySelector('.flight-result__duration');
-    const airlineHiddenXs = document.querySelector('.flight-result__airline.hidden-xs');
+    const airlineHiddenXs = document.querySelector('.flight-result__airline');
     
     // Append the child div elements in the desired order
     element.insertBefore(airlineHiddenSm, duration);
