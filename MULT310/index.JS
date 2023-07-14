@@ -105,4 +105,4 @@ function observarCambiosCheckAndRender() {
   waitForElementToLoad();
 }
 
-observarCambiosCheckAndRender();
+document.addEventListener('DOMContentLoaded', observarCambiosCheckAndRender);
