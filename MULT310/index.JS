@@ -144,5 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
     observer.observe(targetElement, waitForElementToLoad);
   }
-
-  observeElementChanges('results-list__body');
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    observeElementChanges('results-list__body');
+  });
