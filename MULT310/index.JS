@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function observeElementChanges(targetClass, callback) {
     const targetElements = document.querySelectorAll(targetClass);
-  
+  console.log(targetElements)
     if (!targetElements.length) {
       console.error(`No elements with class "${targetClass}" found.`);
       return;
