@@ -18,6 +18,7 @@ function changeDescription() {
 
   // Step 4: Create a new image element
   const image = document.createElement('img');
+  image.classList.add('stops-image-escalas');
   image.src = 'https://multitravelcom.github.io/MTBrasil/MULT310/icons/SinEscalas.svg';
   image.alt = 'Image Description';
 
@@ -47,12 +48,33 @@ function changeOrderOfDescriptionElements() {
   });
 }
 
+function copyButtonAndMove() {
+  
+  
+  // Step 1: Select all occurrences of the element escalas
+  const elementsSinEscalas = document.querySelectorAll('.flight-result__info');
+
+  // Step 2: Iterate through each occurrence
+  elementsSinEscalas.forEach(element => {
+  // Step 3: Hide the button
+  const escalas = element.querySelector('.flight-result__stops');
+  copiaEscalas = escalas.cloneNode(true);
+  const imageChildElement = copiaEscalas.querySelector('stops-image-escalas');
+  imageChildElement.style.display = 'none';
+  const button = copiaEscalas.querySelector('.flight-result__segments-toggle');
+  button.style.display = 'block';
+  console.log(copiaEscalas)
+  element.appendChild(copiaEscalas);
+  });
+}
+
 // Run the changeDescription() function when the element is available
 function waitForElementToLoad() {
   const actionsContainer = document.querySelector('.flight-result__stops');
   if (actionsContainer) {
     changeDescription();
     changeOrderOfDescriptionElements();
+    copyButtonAndMove();
   } else {
     setTimeout(waitForElementToLoad, 10);
   }
