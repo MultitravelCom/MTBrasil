@@ -30,8 +30,26 @@ function waitForElementToLoad() {
   if (actionsContainer) {
     changeDescription();
   } else {
-    setTimeout(waitForElementToLoad, 100);
+    setTimeout(waitForElementToLoad, 10);
   }
 }
 
-document.addEventListener('DOMContentLoaded', waitForElementToLoad);
+//document.addEventListener('DOMContentLoaded', waitForElementToLoad);
+
+function handleNewElement(mutationsList, observer) {
+  mutationsList.forEach(mutation => {
+    if (mutation.type === 'childList') {
+      const newElements = mutation.addedNodes;
+      newElements.forEach(element => {
+        if (element.classList.contains('.flight-result__stops')) {
+          changeDescription();
+        }
+      });
+    }
+  });
+}
+
+const observer = new MutationObserver(handleNewElement);
+
+// Start observing the entire document
+observer.observe(document, { childList: true, subtree: true });
