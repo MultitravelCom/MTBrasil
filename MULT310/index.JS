@@ -95,7 +95,7 @@ function observarCambiosCheckAndRender() {
       rootNode: document.documentElement,
       callback: () => {
 
-          requestAnimationFrame(waitForElementToLoad());
+          requestAnimationFrame(waitForElementToLoad);
       },
       queries: [{ element: '.results-list' },{ element: '.flight-result__route-selection' }],
   };
