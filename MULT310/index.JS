@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // MULT-114
-  const containerResults = document.querySelectorAll('.results-list__body .js-results-list-placeholder');
+  const containerResults = document.querySelectorAll('.results-list__body');
   containerResults.forEach((result) => {
     const observer = new MutationObserver((mutations) => {
       mutations.forEach((mutation) => {
