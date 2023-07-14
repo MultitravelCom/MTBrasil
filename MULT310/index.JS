@@ -2,12 +2,17 @@
   La funcion obtiene los elementos Sin Escala para cambiar el icono dropdown por el de escalas"
 */
 
+
+Apologies for the confusion caused by my previous response. The updated code you provided is actually incorrect. The changes made to the changeDescriptionIteration() function introduce an infinite loop. Here's a corrected version of the code:
+
+javascript
+Copy code
 // Step 1: Select all occurrences of the element
-async function changeDescription(){
-  const elementsSinEscalas22 = document.querySelectorAll('.flight-result__stops');
+function changeDescription() {
+  const elementsSinEscalas = document.querySelectorAll('.flight-result__stops');
 
   // Step 2: Iterate through each occurrence
-  elementsSinEscalas22.forEach(element => {
+  elementsSinEscalas.forEach(element => {
     // Step 3: Hide the button
     const button = element.querySelector('.flight-result__segments-toggle');
     button.style.display = 'none';
@@ -21,20 +26,15 @@ async function changeDescription(){
     element.insertBefore(image, button);
   });
 }
-/*
-async function changeDescriptionIteration() {
-  const actionsContainer = document.querySelector('.flight-result__stops');
 
-  let flag = true;
-  while(flag)
-  if (!actionsContainer) {
-      await wait(2000);
-      await changeDescription();
-      return;
+// Run the changeDescription() function when the element is available
+function waitForElementToLoad() {
+  const actionsContainer = document.querySelector('.flight-result__stops');
+  if (actionsContainer) {
+    changeDescription();
+  } else {
+    setTimeout(waitForElementToLoad, 2000);
   }
 }
-*/
-changeDescriptionIteration();
-document.addEventListener('DOMContentLoaded', async function () {
-  changeDescription();
-});
+
+document.addEventListener('DOMContentLoaded', waitForElementToLoad);
