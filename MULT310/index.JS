@@ -60,7 +60,7 @@ function copyButtonAndMove() {
   const escalas = element.querySelector('.flight-result__stops');
   copiaEscalas = escalas.cloneNode(true);
   console.log(copiaEscalas)
-  const imageChildElement = copiaEscalas.querySelector('stops-image-escalas');
+  const imageChildElement = copiaEscalas.querySelector('.stops-image-escalas');
   imageChildElement.style.display = 'none';
   const button = copiaEscalas.querySelector('.flight-result__segments-toggle');
   button.style.display = 'block';
@@ -68,7 +68,6 @@ function copyButtonAndMove() {
   element.appendChild(copiaEscalas);
   });
 }
-
 // Run the changeDescription() function when the element is available
 function waitForElementToLoad() {
   const actionsContainer = document.querySelector('.flight-result__stops');
