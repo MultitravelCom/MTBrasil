@@ -37,6 +37,7 @@ function waitForElementToLoad() {
 //document.addEventListener('DOMContentLoaded', waitForElementToLoad);
 
 function handleNewElement(mutationsList, observer) {
+  console.log("1")
   mutationsList.forEach(mutation => {
     if (mutation.type === 'childList') {
       const newElements = mutation.addedNodes;
