@@ -87,3 +87,21 @@ document.onreadystatechange = function () {
     waitForElementToLoad();
   }
 };
+
+
+function observarCambiosCheckAndRender() {
+  const observerConfig = {
+      rootNode: document.documentElement,
+      callback: () => {
+
+          requestAnimationFrame(checkAndRender);
+      },
+      queries: [{ element: '.results-list' }],
+  };
+
+  const observer = new MutationSummary(observerConfig);
+
+  checkAndRender();
+}
+
+observarCambiosCheckAndRender();
