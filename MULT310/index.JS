@@ -30,7 +30,7 @@ function waitForElementToLoad() {
   if (actionsContainer) {
     changeDescription();
   } else {
-    setTimeout(waitForElementToLoad, 2000);
+    setTimeout(waitForElementToLoad, 100);
   }
 }
 
