@@ -125,26 +125,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
   */
 
-
   function observeElementChanges(targetClass, callback) {
-    const targetElement = document.querySelector(targetClass);
+    const targetElements = document.querySelectorAll(targetClass);
   
-    if (!targetElement) {
-      console.error(`Element with class "${targetClass}" not found.`);
+    if (!targetElements.length) {
+      console.error(`No elements with class "${targetClass}" found.`);
       return;
     }
   
-    const observer = new MutationObserver(() => {
-      callback();
+    targetElements.forEach((targetElement) => {
+      const observer = new MutationObserver(() => {
+        callback();
+      });
+  
+      const observerConfig = {
+        childList: true,
+      };
+  
+      observer.observe(targetElement, observerConfig);
     });
-  
-    const observerConfig = {
-      childList: true,
-    };
-  
-    observer.observe(targetElement, observerConfig);
   }
   
   document.addEventListener('DOMContentLoaded', () => {
-    //observeElementChanges('dsfsdf', waitForElementToLoad);
+    observeElementChanges('.results-list__item', waitForElementToLoad);
   });
