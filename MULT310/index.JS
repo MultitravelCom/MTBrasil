@@ -37,12 +37,15 @@ function waitForElementToLoad() {
 //document.addEventListener('DOMContentLoaded', waitForElementToLoad);
 
 function handleNewElement(mutationsList, observer) {
-  console.log("1")
   mutationsList.forEach(mutation => {
     if (mutation.type === 'childList') {
       const newElements = mutation.addedNodes;
       newElements.forEach(element => {
         if (element.classList.contains('.flight-result__stops')) {
+          // Disconnect the observer to stop further observations
+          observer.disconnect();
+          
+          // Execute your function here
           changeDescription();
         }
       });
@@ -50,7 +53,10 @@ function handleNewElement(mutationsList, observer) {
   });
 }
 
-const observer = new MutationObserver(handleNewElement);
+function observeElementAppearance() {
+  const targetNode = document.documentElement; // Observe changes in the entire document
+  const observer = new MutationObserver(handleNewElement);
+  observer.observe(targetNode, { childList: true, subtree: true });
+}
 
-// Start observing the entire document
-observer.observe(document, { childList: true, subtree: true });
+observeElementAppearance();
