@@ -24,7 +24,7 @@ function changeDescription() {
   });
 }
 
-changeOrderOfDescriptionElements() {
+function changeOrderOfDescriptionElements() {
   const elementsDescription = document.querySelectorAll('.flight-result__info');
 
   // Step 2: Iterate through each occurrence
