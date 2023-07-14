@@ -4,26 +4,25 @@
 
 
 
-// Step 1: Select all occurrences of the element
-let clonedButton = null;
 function changeDescription() {
+  
+  
+  // Step 1: Select all occurrences of the element escalas
   const elementsSinEscalas = document.querySelectorAll('.flight-result__stops');
 
   // Step 2: Iterate through each occurrence
   elementsSinEscalas.forEach(element => {
-    // Step 3: Hide the button
-    const button = element.querySelector('.flight-result__segments-toggle');
-    clonedButton = button.cloneNode(true);
-    
-    button.style.display = 'none';
+  // Step 3: Hide the button
+  const button = element.querySelector('.flight-result__segments-toggle');
+  button.style.display = 'none';
 
-    // Step 4: Create a new image element
-    const image = document.createElement('img');
-    image.src = 'https://multitravelcom.github.io/MTBrasil/MULT310/icons/SinEscalas.svg';
-    image.alt = 'Image Description';
+  // Step 4: Create a new image element
+  const image = document.createElement('img');
+  image.src = 'https://multitravelcom.github.io/MTBrasil/MULT310/icons/SinEscalas.svg';
+  image.alt = 'Image Description';
 
-    // Step 5: Insert the new image element
-    element.insertBefore(image, button);
+  // Step 5: Insert the new image element
+  element.insertBefore(image, button);
   });
 }
 
@@ -44,8 +43,7 @@ function changeOrderOfDescriptionElements() {
     //element.insertBefore(estaVaPrimero, estaVaSegundo);
     element.insertBefore(duracion, aerolinea);
     element.insertBefore(escalas,duracion);
-    element.insertBefore(escalas,duracion);
-    element.appendChild(clonedButton);
+    
   });
 }
 
