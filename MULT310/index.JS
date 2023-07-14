@@ -32,15 +32,16 @@ function changeOrderOfDescriptionElements() {
 
 
     // Get references to the child div elements
-    const airlineHiddenSm = document.querySelector('.flight-result__airline');
-    const stops = document.querySelector('.flight-result__stops');
-    const duration = document.querySelector('.flight-result__duration');
+    const aerolinea = document.querySelector('.flight-result__airline');
+    const escalas = document.querySelector('.flight-result__stops');
+    const duracion = document.querySelector('.flight-result__duration');
     const airlineHiddenXs = document.querySelector('.flight-result__airline');
     
     // Append the child div elements in the desired order
-    element.insertBefore(airlineHiddenSm, duration);
-    element.insertBefore(stops, duration);
-    element.insertBefore(airlineHiddenXs, duration);
+    //element.insertBefore(estaVaPrimero, estaVaSegundo);
+    element.insertBefore(escalas, duracion);
+    element.insertBefore(aerolinea, duracion);
+
   });
 }
 
