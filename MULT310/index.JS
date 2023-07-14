@@ -41,7 +41,7 @@ function handleNewElement(mutationsList, observer) {
     if (mutation.type === 'childList') {
       const newElements = mutation.addedNodes;
       newElements.forEach(element => {
-        if (element.classList.contains('.flight-result__stops')) {
+        if (element.classList.contains('flight-result__stops')) {
           // Disconnect the observer to stop further observations
           observer.disconnect();
           
