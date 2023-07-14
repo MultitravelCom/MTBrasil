@@ -125,6 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   */
 
+
   function observeElementChanges(targetClass, callback) {
     const targetElement = document.querySelector(targetClass);
   
@@ -142,9 +143,9 @@ document.addEventListener('DOMContentLoaded', () => {
       subtree: true,
     };
   
-    observer.observe(targetElement, waitForElementToLoad);
+    observer.observe(targetElement, observerConfig);
   }
   
   document.addEventListener('DOMContentLoaded', () => {
-    observeElementChanges('.results-list__body');
+    observeElementChanges('.results-list__body', waitForElementToLoad);
   });
