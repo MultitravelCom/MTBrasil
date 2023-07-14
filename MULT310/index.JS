@@ -112,8 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 */
 
-
-  // MULT-114
+/*
   const containerResults = document.querySelectorAll('.results-list__body');
   containerResults.forEach((result) => {
     const observer = new MutationObserver((mutations) => {
@@ -123,3 +122,27 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     observer.observe(result, { attributes: true });
   });
+
+  */
+
+  function observeElementChanges(targetClass, callback) {
+    const targetElement = document.querySelector(`.${targetClass}`);
+  
+    if (!targetElement) {
+      console.error(`Element with class "${targetClass}" not found.`);
+      return;
+    }
+  
+    const observer = new MutationObserver(() => {
+      callback();
+    });
+  
+    const observerConfig = {
+      childList: true,
+      subtree: true,
+    };
+  
+    observer.observe(targetElement, waitForElementToLoad);
+  }
+
+  observeElementChanges('results-list__body');
