@@ -90,6 +90,8 @@ document.onreadystatechange = function () {
 */
 
 
+/*
+
 function observarCambiosCheckAndRender() {
   const observer = new MutationObserver(() => {
     waitForElementToLoad();
@@ -108,3 +110,16 @@ function observarCambiosCheckAndRender() {
 document.addEventListener('DOMContentLoaded', () => {
   observarCambiosCheckAndRender();
 });
+*/
+
+
+  // MULT-114
+  const containerResults = document.querySelectorAll('.results-list__body .js-results-list-placeholder');
+  containerResults.forEach((result) => {
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        waitForElementToLoad();
+      });
+    });
+    observer.observe(result, { attributes: true });
+  });
