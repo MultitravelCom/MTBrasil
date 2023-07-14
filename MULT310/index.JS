@@ -5,6 +5,7 @@
 
 
 // Step 1: Select all occurrences of the element
+let clonedButton = null;
 function changeDescription() {
   const elementsSinEscalas = document.querySelectorAll('.flight-result__stops');
 
@@ -12,6 +13,8 @@ function changeDescription() {
   elementsSinEscalas.forEach(element => {
     // Step 3: Hide the button
     const button = element.querySelector('.flight-result__segments-toggle');
+    clonedButton = button.cloneNode(true);
+    
     button.style.display = 'none';
 
     // Step 4: Create a new image element
@@ -32,16 +35,17 @@ function changeOrderOfDescriptionElements() {
 
 
     // Get references to the child div elements
-    const aerolinea = document.querySelector('.flight-result__airline');
-    const escalas = document.querySelector('.flight-result__stops');
-    const duracion = document.querySelector('.flight-result__duration');
-    const airlineHiddenXs = document.querySelector('.flight-result__airline');
-    
+    const aerolinea = element.querySelector('.flight-result__airline');
+    const duracion = element.querySelector('.flight-result__duration');
+    const escalas = element.querySelector('.flight-result__stops');
+
+
     // Append the child div elements in the desired order
     //element.insertBefore(estaVaPrimero, estaVaSegundo);
-    element.insertBefore(escalas, duracion);
-    element.insertBefore(aerolinea, duracion);
-
+    element.insertBefore(duracion, aerolinea);
+    element.insertBefore(escalas,duracion);
+    element.insertBefore(escalas,duracion);
+    element.appendChild(clonedButton);
   });
 }
 
