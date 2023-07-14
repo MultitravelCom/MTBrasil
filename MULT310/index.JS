@@ -59,12 +59,10 @@ function copyButtonAndMove() {
   // Step 3: Hide the button
   const escalas = element.querySelector('.flight-result__stops');
   copiaEscalas = escalas.cloneNode(true);
-  console.log(copiaEscalas)
   const imageChildElement = copiaEscalas.querySelector('.stops-image-escalas');
   imageChildElement.style.display = 'none';
   const button = copiaEscalas.querySelector('.flight-result__segments-toggle');
   button.style.display = 'block';
-  console.log(copiaEscalas)
   element.appendChild(copiaEscalas);
   });
 }
@@ -94,14 +92,14 @@ function observarCambiosCheckAndRender() {
       rootNode: document.documentElement,
       callback: () => {
 
-          requestAnimationFrame(checkAndRender);
+          requestAnimationFrame(waitForElementToLoad);
       },
       queries: [{ element: '.results-list' }],
   };
-
+  
   const observer = new MutationSummary(observerConfig);
 
-  checkAndRender();
+  waitForElementToLoad();
 }
 
 observarCambiosCheckAndRender();
