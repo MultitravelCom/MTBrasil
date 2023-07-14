@@ -3,7 +3,7 @@
 */
 
 // Step 1: Select all occurrences of the element
-function changeDescription(){
+async function changeDescription(){
   const elementsSinEscalas22 = document.querySelectorAll('.flight-result__stops');
 
   // Step 2: Iterate through each occurrence
@@ -21,17 +21,20 @@ function changeDescription(){
     element.insertBefore(image, button);
   });
 }
+/*
+async function changeDescriptionIteration() {
+  const actionsContainer = document.querySelector('.flight-result__stops');
 
-async function changeDescription() {
-  const actionsContainer = resultsListPage.querySelector('.flight-result__stops');
-
+  let flag = true;
+  while(flag)
   if (!actionsContainer) {
       await wait(2000);
-      await changeDescription(resultsListPage);
+      await changeDescription();
       return;
   }
 }
-
+*/
+changeDescriptionIteration();
 document.addEventListener('DOMContentLoaded', async function () {
   changeDescription();
 });
