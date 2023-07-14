@@ -70,6 +70,7 @@ function copyButtonAndMove() {
 function waitForElementToLoad() {
   const actionsContainer = document.querySelector('.flight-result__stops');
   if (actionsContainer) {
+    console.log("-----------> SE EJECUTA LA FUNCION")
     changeDescription();
     changeOrderOfDescriptionElements();
     copyButtonAndMove();
