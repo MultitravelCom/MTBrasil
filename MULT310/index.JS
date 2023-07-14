@@ -140,7 +140,6 @@ document.addEventListener('DOMContentLoaded', () => {
   
     const observerConfig = {
       childList: true,
-      subtree: true,
     };
   
     observer.observe(targetElement, observerConfig);
