@@ -91,18 +91,20 @@ document.onreadystatechange = function () {
 
 
 function observarCambiosCheckAndRender() {
-  const observerConfig = {
-      rootNode: document.documentElement,
-      callback: () => {
+  const observer = new MutationObserver(() => {
+    waitForElementToLoad();
+  });
 
-          requestAnimationFrame(waitForElementToLoad);
-      },
-      queries: [{ element: '.results-list' },{ element: '.flight-result__route-selection' }],
+  const observerConfig = {
+    childList: true,
+    subtree: true,
   };
-  
-  const observer = new MutationSummary(observerConfig);
+
+  observer.observe(document.documentElement, observerConfig);
 
   waitForElementToLoad();
 }
 
-observarCambiosCheckAndRender();
+document.addEventListener('DOMContentLoaded', () => {
+  observarCambiosCheckAndRender();
+});
