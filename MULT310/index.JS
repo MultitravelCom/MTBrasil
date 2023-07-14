@@ -34,4 +34,10 @@ function waitForElementToLoad() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', waitForElementToLoad);
+//document.addEventListener('DOMContentLoaded', waitForElementToLoad);
+document.onreadystatechange = function () {
+  if (document.readyState === 'interactive') {
+    // DOM is ready and interactive
+    waitForElementToLoad();
+  }
+};
