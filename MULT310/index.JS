@@ -97,7 +97,7 @@ function observarCambiosCheckAndRender() {
 
           requestAnimationFrame(waitForElementToLoad);
       },
-      queries: [{ element: '.results-list' }],
+      queries: [{ element: '.results-list' },{ element: '.flight-result__route-selection' }],
   };
   
   const observer = new MutationSummary(observerConfig);
