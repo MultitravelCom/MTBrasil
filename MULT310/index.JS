@@ -146,5 +146,5 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   
   document.addEventListener('DOMContentLoaded', () => {
-    observeElementChanges('.results-list__body', waitForElementToLoad);
+    observeElementChanges('dsfsdf', waitForElementToLoad);
   });
