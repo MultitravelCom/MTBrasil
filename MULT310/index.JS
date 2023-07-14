@@ -79,6 +79,7 @@ function waitForElementToLoad() {
   }
 }
 
+/*
 //document.addEventListener('DOMContentLoaded', waitForElementToLoad);
 document.onreadystatechange = function () {
   if (document.readyState === 'interactive') {
@@ -86,6 +87,7 @@ document.onreadystatechange = function () {
     waitForElementToLoad();
   }
 };
+*/
 
 
 function observarCambiosCheckAndRender() {
