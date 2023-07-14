@@ -1,42 +1,21 @@
-document.addEventListener('DOMContentLoaded', async function () {
+/*
+  La funcion obtiene los elementos Sin Escala para cambiar el icono dropdown por el de escalas"
+*/
 
-    observarCambiosCheckAndRender();
-    changeDropdownDetailsFlight();
+// Step 1: Select all occurrences of the element
+const elementsSinEscalas = document.querySelectorAll('.flight-result__stops');
+
+// Step 2: Iterate through each occurrence
+elementsSinEscalas.forEach(element => {
+  // Step 3: Hide the button
+  const button = element.querySelector('.flight-result__segments-toggle');
+  button.style.display = 'none';
+
+  // Step 4: Create a new image element
+  const image = document.createElement('img');
+  image.src = 'https://multitravelcom.github.io/MTBrasil/MULT310/icons/SinEscalas.svg';
+  image.alt = 'Image Description';
+
+  // Step 5: Insert the new image element
+  element.insertBefore(image, button);
 });
-
-
-//ocultamos el dropdown gris
-const elements = document.getElementsByClassName('flight-result__segments-toggle');
-Array.from(elements).forEach((element) => {
-  element.style.display = 'none';
-});
-
-
-// Step 1: Select the target elements
-const claseSinEscalas2 = document.querySelectorAll('.flight-result__stops');
-// Create a new image element
-const imageElement2 = document.createElement('img');
-
-// Step 2 and 3: Add SVG element before the text
-claseSinEscalas2.forEach(element => {
-
-    // Create a new image element
-    imageElement2.setAttribute('src', 'https://multitravelcom.github.io/MTBrasil/MULT310/icons/SinEscalas.svg'
- );
-    imageElement2.setAttribute('alt', 'Icono Sin Escalas');
-    imageElement2.style.display = 'inline-block'
-
-    
-  //  const paragraphElement = document.createElement('p');
-//paragraphElement.textContent = 'Hola';
-//paragraphElement.style.display = 'inline-block'
-
-//element.insertBefore(paragraphElement, textElement);
-    // Insert the image element before the text within the stops element
-    element.insertBefore(imageElement2, element.firstChild);
-});
-
-
-
-
-
