@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
   */
 
   function observeElementChanges(targetClass, callback) {
-    const targetElement = document.querySelector(`.${targetClass}`);
+    const targetElement = document.querySelector(targetClass);
   
     if (!targetElement) {
       console.error(`Element with class "${targetClass}" not found.`);
@@ -146,5 +146,5 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   
   document.addEventListener('DOMContentLoaded', () => {
-    observeElementChanges('results-list__body');
+    observeElementChanges('.results-list__body');
   });
