@@ -131,18 +131,25 @@ document.addEventListener('DOMContentLoaded', () => {
     return false;
   }
 
-  function observeElementChanges(targetClass, callback) {
+  function observeElementChanges(targetClass, counter, callback) {
     let targetElements = document.querySelectorAll(targetClass);
   console.log(targetElements)
-    if (!targetElements.length) {
-      console.error(`No elements with class "${targetClass}" found.`);
-      let resultOfInterval = endLoopfter5Seconds(interval);
-      if(resultOfInterval === true){
-        console.log("Pasaron los 5 segundos: ", resultOfInterval)
-        return;
-      }
-      interval = setTimeout(observeElementChanges, 10);
-    }
+
+
+
+  // Call your function here
+  console.log('Function called');
+
+  counter += 10; // Increment the counter by the interval duration (10 milliseconds)
+
+  if (counter >= 5000) {
+    return; // Stop the interval after 5 seconds (5000 milliseconds)
+  }
+  if (!targetElements.length) {
+    console.error(`No elements with class "${targetClass}" found.`);
+    
+    return setTimeout(observeElementChanges, 10);
+  }
   
     targetElements.forEach((targetElement) => {
       const observer = new MutationObserver(() => {
@@ -158,10 +165,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   
-  
   document.addEventListener('DOMContentLoaded', () => {
     console.log("DOMContentLoaded")
-    observeElementChanges('.results-list__item', waitForElementToLoad);
+    observeElementChanges('.results-list__item', 0, waitForElementToLoad);
   });
 
   //tengo que lograr ahora que al volver correrse NO se agreguen mas de una vez las cosas que hago
