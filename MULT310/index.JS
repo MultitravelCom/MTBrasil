@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //codigo para correr la función solo 5 segundos
     const startTime = Date.now();
     const elapsedTime = Date.now() - startTime;
-    if (elapsedTime >= 5000) {
+    if (elapsedTime >= 10000) {
      return true; // Stop running after approximately 5 seconds
     }
     return false;
