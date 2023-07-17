@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   */
 
-  function clearIntervalAfter5Seconds(interval){
+  function endLoopfter5Seconds(interval){
     //codigo para correr la función solo 5 segundos
     const startTime = Date.now();
     const elapsedTime = Date.now() - startTime;
