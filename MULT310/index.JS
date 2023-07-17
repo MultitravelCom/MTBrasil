@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log('Function called');
 
   counter += 10; // Increment the counter by the interval duration (10 milliseconds)
-
+console.log("Counter added 10: ", counter)
   if (counter >= 5000) {
     return; // Stop the interval after 5 seconds (5000 milliseconds)
   }
