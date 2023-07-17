@@ -121,14 +121,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
   */
 
-
+  function clearIntervalAfter5Seconds(interval){
+    //codigo para correr la función solo 5 segundos
+    const startTime = Date.now();
+    const elapsedTime = Date.now() - startTime;
+    if (elapsedTime >= 5000) {
+     return true; // Stop running after approximately 5 seconds
+    }
+    return false;
+  }
 
   function observeElementChanges(targetClass, callback) {
     let targetElements = document.querySelectorAll(targetClass);
   console.log(targetElements)
     if (!targetElements.length) {
       console.error(`No elements with class "${targetClass}" found.`);
-      setTimeout(observeElementChanges, 10);
+      
+      if(endLoopfter5Seconds(interval) === true)return;
+      interval = setTimeout(observeElementChanges, 10);
     }
   
     targetElements.forEach((targetElement) => {
