@@ -147,5 +147,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   
   document.addEventListener('DOMContentLoaded', () => {
+    console.log("DOMContentLoaded")
     observeElementChanges('.results-list__item', waitForElementToLoad);
   });
+
+  //tengo que lograr ahora que al volver correrse NO se agreguen mas de una vez las cosas que hago
