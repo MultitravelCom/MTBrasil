@@ -68,15 +68,11 @@ function copyButtonAndMove() {
 }
 // Run the changeDescription() function when the element is available
 function waitForElementToLoad() {
-  const actionsContainer = document.querySelector('.flight-result__stops');
-  if (actionsContainer) {
+  
     console.log("-----------> SE EJECUTA LA FUNCION")
     changeDescription();
     changeOrderOfDescriptionElements();
     copyButtonAndMove();
-  } else {
-    setTimeout(waitForElementToLoad, 10);
-  }
 }
 
 /*
@@ -125,12 +121,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   */
 
+
+
   function observeElementChanges(targetClass, callback) {
     const targetElements = document.querySelectorAll(targetClass);
   console.log(targetElements)
     if (!targetElements.length) {
       console.error(`No elements with class "${targetClass}" found.`);
-      return;
+      setTimeout(observeElementChanges, 10);
     }
   
     targetElements.forEach((targetElement) => {
@@ -145,6 +143,8 @@ document.addEventListener('DOMContentLoaded', () => {
       observer.observe(targetElement, observerConfig);
     });
   }
+
+  
   
   document.addEventListener('DOMContentLoaded', () => {
     console.log("DOMContentLoaded")
