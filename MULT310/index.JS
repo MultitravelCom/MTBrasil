@@ -136,8 +136,11 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log(targetElements)
     if (!targetElements.length) {
       console.error(`No elements with class "${targetClass}" found.`);
-      
-      if(endLoopfter5Seconds(interval) === true)return;
+      let resultOfInterval = endLoopfter5Seconds(interval);
+      if(resultOfInterval === true){
+        console.log("Pasaron los 5 segundos: ", resultOfInterval)
+        return;
+      }
       interval = setTimeout(observeElementChanges, 10);
     }
   
