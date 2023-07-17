@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!targetElements.length) {
     console.error(`No elements with class "${targetClass}" found.`);
     
-    return setTimeout(observeElementChanges, 10);
+    return setTimeout(observeElementChanges(targetClass, counter, callback), 10);
   }
   
     targetElements.forEach((targetElement) => {
