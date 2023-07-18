@@ -83,6 +83,7 @@ function waitForElementToLoad() {
 
 // Loop through the selected elements and add event listeners
 targetElements.forEach((element) => {
+  console.log("se disparo el event click")
   element.addEventListener('click', changeDescriptionElementFunctions);
 });
 }
