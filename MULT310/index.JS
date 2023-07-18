@@ -166,13 +166,16 @@ console.log("Counter added 10: ", counter)
 
   */
 
-  function observeElementChanges(targetClass, callback) {
+  function observeElementChanges(targetClasses, callback) {
     const observer = new MutationObserver((mutationsList, observer) => {
       for (let mutation of mutationsList) {
         if (mutation.addedNodes && mutation.addedNodes.length) {
           for (let addedNode of mutation.addedNodes) {
-            if (addedNode.nodeType === Node.ELEMENT_NODE && addedNode.matches(targetClass)) {
-              //observer.disconnect(); // Stop observing once the target element is found
+            if (
+              addedNode.nodeType === Node.ELEMENT_NODE &&
+              targetClasses.some((targetClass) => addedNode.matches(targetClass))
+            ) {
+              // observer.disconnect(); // Stop observing once the target element is found
               callback(); // Perform your desired actions
               return; // Exit the function
             }
@@ -188,6 +191,9 @@ console.log("Counter added 10: ", counter)
   }
   
   document.addEventListener('DOMContentLoaded', () => {
-    console.log('DOMContentLoaded')
-    observeElementChanges('.results-list__item', waitForElementToLoad);
+    console.log('DOMContentLoaded');
+    observeElementChanges(
+      ['.results-list__item', 'flight-result__route-selection'],
+      waitForElementToLoad
+    );
   });
