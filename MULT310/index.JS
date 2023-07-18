@@ -67,13 +67,24 @@ function copyButtonAndMove() {
   element.appendChild(copiaEscalas);
   });
 }
+function changeDescriptionElementFunctions() {
+  changeDescription();
+  changeOrderOfDescriptionElements();
+  copyButtonAndMove();
+
+}
 // Run the changeDescription() function when the element is available
 function waitForElementToLoad() {
   
     console.log("-----------> SE EJECUTA LA FUNCION")
-    changeDescription();
-    changeOrderOfDescriptionElements();
-    copyButtonAndMove();
+    changeDescriptionElementFunctions();
+
+    const targetElements = document.querySelectorAll('.results-list__item, .flight-result__route-selection');
+
+// Loop through the selected elements and add event listeners
+targetElements.forEach((element) => {
+  element.addEventListener('click', changeDescriptionElementFunctions);
+});
 }
 
 /*
@@ -209,4 +220,11 @@ console.log("Counter added 10: ", counter)
       ['.results-list__item', 'flight-result__route-selection'],
       waitForElementToLoad
     );
+
+    const targetElements = document.querySelectorAll('.my-target-element');
+
+// Loop through the selected elements and add event listeners
+targetElements.forEach((element) => {
+  element.addEventListener('click', myFunction);
+});
   });
