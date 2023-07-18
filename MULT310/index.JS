@@ -85,25 +85,23 @@ function copyButtonAndMove() {
   
   console.log("--------> copyButtonAndMove running")
   // Step 1: Select all occurrences of the element escalas
-  const elementsSinEscalas = document.querySelectorAll('.flight-result__info');
+  const elementsSinEscalas = document.querySelector('.flight-result__info');
 
   // Step 2: Iterate through each occurrence
-  elementsSinEscalas.forEach(element => {
 console.log("---------> CHEKCING STATE OF ELEMENT BEFORE ADDING BUTTON: ")
-console.log("---------> element: ", element)
     //if(checkIfFirstTimeChanging(element, true)){
 
   // Step 3: Hide the button
-  const escalas = element.querySelector('.flight-result__stops');
+  const escalas = elementsSinEscalas.querySelector('.flight-result__stops');
   copiaEscalas = escalas.cloneNode(true);
   const imageChildElement = copiaEscalas.querySelector('.stops-image-escalas');
   imageChildElement.style.display = 'none';
   const button = copiaEscalas.querySelector('.flight-result__segments-toggle');
   button.style.display = 'block';
 
-  element.appendChild(copiaEscalas);
+  elementsSinEscalas.appendChild(copiaEscalas);
       // }
-  });
+  
 }
 function changeDescriptionElementFunctions() {
   changeDescription();
