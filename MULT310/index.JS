@@ -177,7 +177,7 @@ console.log("Counter added 10: ", counter)
             ) {
               // observer.disconnect(); // Stop observing once the target element is found
               callback(); // Perform your desired actions
-              return; // Exit the function
+              //return; // Exit the function
             }
           }
         }
