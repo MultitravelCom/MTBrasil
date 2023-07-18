@@ -5,6 +5,7 @@ function checkIfFirstTimeChanging(elementsToCheck){
 console.log("---------> RUNNING checkIfFirstTimeChanging")
 if (!elementsToCheck.classList.contains('class_changed') ) {
   // Step 3: Add the "class_changed" class to the parent element
+  console.log("Changed class");
   elementsToCheck.classList.add('class_changed');
   return true;
 }
