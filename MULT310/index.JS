@@ -89,7 +89,8 @@ function copyButtonAndMove() {
 
   // Step 2: Iterate through each occurrence
   elementsSinEscalas.forEach(element => {
-
+console.log("---------> CHEKCING STATE OF ELEMENT BEFORE ADDING BUTTON: ")
+console.log("---------> element: ", element)
     //if(checkIfFirstTimeChanging(element, true)){
 
   // Step 3: Hide the button
