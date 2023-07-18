@@ -171,7 +171,7 @@ console.log("Counter added 10: ", counter)
         if (mutation.addedNodes && mutation.addedNodes.length) {
           for (let addedNode of mutation.addedNodes) {
             if (addedNode.nodeType === Node.ELEMENT_NODE && addedNode.matches(targetClass)) {
-              observer.disconnect(); // Stop observing once the target element is found
+              //observer.disconnect(); // Stop observing once the target element is found
               callback(); // Perform your desired actions
               return; // Exit the function
             }
