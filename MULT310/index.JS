@@ -2,8 +2,8 @@
   La funcion obtiene los elementos Sin Escala para cambiar el icono dropdown por el de escalas"
 */
 function checkIfFirstTimeChanging(elementsToCheck){
-
-    if (!element.classList.contains('class_changed')) {
+console.log("---------> RUNNING checkIfFirstTimeChanging")
+    if (!elementsToCheck.classList.contains('class_changed')) {
       // Step 3: Add the "class_changed" class to the parent element
       element.parentNode.classList.add('class_changed');
     return true;
