@@ -63,6 +63,7 @@ function copyButtonAndMove() {
   imageChildElement.style.display = 'none';
   const button = copiaEscalas.querySelector('.flight-result__segments-toggle');
   button.style.display = 'block';
+
   element.appendChild(copiaEscalas);
   });
 }
@@ -187,5 +188,6 @@ console.log("Counter added 10: ", counter)
   }
   
   document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOMContentLoaded')
     observeElementChanges('.results-list__item', waitForElementToLoad);
   });
