@@ -60,7 +60,7 @@ function changeOrderOfDescriptionElements() {
   // Step 2: Iterate through each occurrence
   elementsDescription.forEach(element => {
     if(checkIfFirstTimeChanging(element, "order")){
-
+console.log("---> changeOrderOfDescriptionElements RUNNING")
 
     // Get references to the child div elements
     const aerolinea = element.querySelector('.flight-result__airline');
