@@ -74,7 +74,7 @@ function changeOrderOfDescriptionElements() {
     element.insertBefore(escalas,duracion);
 
 
-    copyButtonAndMove();
+    //copyButtonAndMove();
   }
   });
 
