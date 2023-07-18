@@ -222,10 +222,4 @@ console.log("Counter added 10: ", counter)
       waitForElementToLoad
     );
 
-    const targetElements = document.querySelectorAll('.my-target-element');
-
-// Loop through the selected elements and add event listeners
-targetElements.forEach((element) => {
-  element.addEventListener('click', myFunction);
-});
   });
