@@ -169,15 +169,26 @@ console.log("Counter added 10: ", counter)
   function observeElementChanges(targetClasses, callback) {
     const observer = new MutationObserver((mutationsList, observer) => {
       for (let mutation of mutationsList) {
-        if (mutation.addedNodes && mutation.addedNodes.length) {
-          for (let addedNode of mutation.addedNodes) {
-            if (
-              addedNode.nodeType === Node.ELEMENT_NODE &&
-              targetClasses.some((targetClass) => addedNode.matches(targetClass))
-            ) {
-              // observer.disconnect(); // Stop observing once the target element is found
-              callback(); // Perform your desired actions
-              //return; // Exit the function
+        if (
+          mutation.type === 'childList' ||
+          mutation.type === 'attributes' ||
+          mutation.type === 'characterData'
+        ) {
+          const addedNodes = mutation.addedNodes;
+          const removedNodes = mutation.removedNodes;
+          
+          if (
+            addedNodes.length > 0 ||
+            removedNodes.length > 0 ||
+            mutation.type === 'attributes'
+          ) {
+            for (let node of addedNodes) {
+              if (
+                node.nodeType === Node.ELEMENT_NODE &&
+                targetClasses.some((targetClass) => node.matches(targetClass))
+              ) {
+                callback(); // Perform your desired actions for each change
+              }
             }
           }
         }
@@ -187,6 +198,8 @@ console.log("Counter added 10: ", counter)
     observer.observe(document.documentElement, {
       childList: true,
       subtree: true,
+      attributes: true,
+      characterData: true,
     });
   }
   
