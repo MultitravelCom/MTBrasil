@@ -5,7 +5,7 @@ function checkIfFirstTimeChanging(elementsToCheck, type){
 console.log("---------> RUNNING checkIfFirstTimeChanging")
 console.log("elementsToCheck.classList: ", elementsToCheck.classList)
 if (type === "description") {
-  if (elementsToCheck.classList.contains('class_changed_description') ) {
+  if (!elementsToCheck.classList.contains('class_changed_description') ) {
     // Step 3: Add the "class_changed" class to the parent element
     console.log("Changed class description");
     elementsToCheck.classList.add('class_changed_description');
@@ -14,8 +14,8 @@ if (type === "description") {
 }
 else if (type === "order"){
   console.log("type === order", type === "order")
-  if (elementsToCheck.classList.contains('class_changed_order') ) {
-    console.log("!elementsToCheck.classList.contains('class_changed_order': ", !elementsToCheck.classList.contains('class_changed_order'))
+  console.log("!elementsToCheck.classList.contains('class_changed_order': ", !elementsToCheck.classList.contains('class_changed_order'))
+  if (!elementsToCheck.classList.contains('class_changed_order') ) {
     // Step 3: Add the "class_changed" class to the parent element
     console.log("Changed class order");
     elementsToCheck.classList.add('class_changed_order');
