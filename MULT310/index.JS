@@ -79,104 +79,12 @@ function waitForElementToLoad() {
     console.log("-----------> SE EJECUTA LA FUNCION")
     changeDescriptionElementFunctions();
 
-    const targetElements = document.querySelectorAll('.results-list__item, .flight-result__route-selection');
+    //const targetElements = document.querySelectorAll('.results-list__item, .flight-result__route-selection');
 
-// Loop through the selected elements and add event listeners
-targetElements.forEach((element) => {
-  console.log("se disparo el event click")
-  element.addEventListener('click', changeDescriptionElementFunctions);
-});
+
 }
 
-/*
-//document.addEventListener('DOMContentLoaded', waitForElementToLoad);
-document.onreadystatechange = function () {
-  if (document.readyState === 'interactive') {
-    // DOM is ready and interactive
-    waitForElementToLoad();
-  }
-};
-*/
 
-
-/*
-
-function observarCambiosCheckAndRender() {
-  const observer = new MutationObserver(() => {
-    waitForElementToLoad();
-  });
-
-  const observerConfig = {
-    childList: true,
-    subtree: true,
-  };
-
-  observer.observe(document.documentElement, observerConfig);
-
-  waitForElementToLoad();
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  observarCambiosCheckAndRender();
-});
-*/
-
-/*
-  const containerResults = document.querySelectorAll('.results-list__body');
-  containerResults.forEach((result) => {
-    const observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        waitForElementToLoad();
-      });
-    });
-    observer.observe(result, { attributes: true });
-  });
-
-  */
-/*
-
-  function observeElementChanges(targetClass, counter, callback) {
-    let targetElements = document.querySelectorAll(targetClass);
-  console.log(targetElements)
-
-
-
-  // Call your function here
-  console.log('Function called');
-
-  counter += 10; // Increment the counter by the interval duration (10 milliseconds)
-console.log("Counter added 10: ", counter)
-  if (counter >= 100000) {
-    return; // Stop the interval after 5 seconds (5000 milliseconds)
-  }
-  if (!targetElements.length) {
-    console.error(`No elements with class "${targetClass}" found.`);
-    
-    return setTimeout(observeElementChanges(targetClass, counter, callback), 10);
-  }
-  
-    targetElements.forEach((targetElement) => {
-      const observer = new MutationObserver(() => {
-        callback();
-      });
-  
-      const observerConfig = {
-        childList: true,
-      };
-  
-      observer.observe(targetElement, observerConfig);
-    });
-  }
-
-  
-  document.addEventListener('DOMContentLoaded', () => {
-    console.log("DOMContentLoaded")
-    observeElementChanges('.results-list__item', 0, waitForElementToLoad);
-  });
-
-  //tengo que lograr ahora que al volver correrse NO se agreguen mas de una vez las cosas que hago
-
-  */
 
   function observeElementChanges(targetClasses, callback) {
     const observer = new MutationObserver((mutationsList, observer) => {
@@ -218,9 +126,13 @@ console.log("Counter added 10: ", counter)
   
   document.addEventListener('DOMContentLoaded', () => {
     console.log('DOMContentLoaded');
+
     observeElementChanges(
       ['.results-list__item', 'flight-result__route-selection'],
       waitForElementToLoad
     );
+
+    document.addEventListener('click', changeDescriptionElementFunctions);
+    
 
   });
