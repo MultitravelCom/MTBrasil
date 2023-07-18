@@ -1,13 +1,23 @@
 /*
   La funcion obtiene los elementos Sin Escala para cambiar el icono dropdown por el de escalas"
 */
-function checkIfFirstTimeChanging(elementsToCheck){
+function checkIfFirstTimeChanging(elementsToCheck, type){
 console.log("---------> RUNNING checkIfFirstTimeChanging")
-if (!elementsToCheck.classList.contains('class_changed') ) {
-  // Step 3: Add the "class_changed" class to the parent element
-  console.log("Changed class");
-  elementsToCheck.classList.add('class_changed');
-  return true;
+if (type === "description") {
+  if (!elementsToCheck.classList.contains('class_changed_description') ) {
+    // Step 3: Add the "class_changed" class to the parent element
+    console.log("Changed class description");
+    elementsToCheck.classList.add('class_changed_description');
+    return true;
+  }
+}
+else if (type === "order"){
+  if (!elementsToCheck.classList.contains('class_changed_order') ) {
+    // Step 3: Add the "class_changed" class to the parent element
+    console.log("Changed class order");
+    elementsToCheck.classList.add('class_changed_order');
+    return true;
+  }
 }
 return false;
 }
@@ -21,7 +31,7 @@ function changeDescription() {
   
   // Step 2: Iterate through each occurrence
   elementsSinEscalas.forEach(element => {
-    if(checkIfFirstTimeChanging(element)){
+    if(checkIfFirstTimeChanging(element,"description")){
 
       
       //we chekc 
@@ -46,7 +56,7 @@ function changeOrderOfDescriptionElements() {
 
   // Step 2: Iterate through each occurrence
   elementsDescription.forEach(element => {
-    if(checkIfFirstTimeChanging(element)){
+    if(checkIfFirstTimeChanging(element, "order")){
 
 
     // Get references to the child div elements
