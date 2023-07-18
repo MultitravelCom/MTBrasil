@@ -3,10 +3,10 @@
 */
 function checkIfFirstTimeChanging(elementsToCheck){
 console.log("---------> RUNNING checkIfFirstTimeChanging")
-    if (!elementsToCheck.classList.contains('class_changed')) {
-      // Step 3: Add the "class_changed" class to the parent element
-      elementsToCheck.classList.add('class_changed');
-    return true;
+if (!elementsToCheck.classList.contains('class_changed') ) {
+  // Step 3: Add the "class_changed" class to the parent element
+  elementsToCheck.classList.add('class_changed');
+  return true;
 }
 return false;
 }
@@ -58,21 +58,25 @@ function changeOrderOfDescriptionElements() {
     //element.insertBefore(estaVaPrimero, estaVaSegundo);
     element.insertBefore(duracion, aerolinea);
     element.insertBefore(escalas,duracion);
-    
+
+
+    copyButtonAndMove();
   }
   });
+
+  
 }
 
 function copyButtonAndMove() {
   
-  
+  console.log("--------> copyButtonAndMove running")
   // Step 1: Select all occurrences of the element escalas
   const elementsSinEscalas = document.querySelectorAll('.flight-result__info');
 
   // Step 2: Iterate through each occurrence
   elementsSinEscalas.forEach(element => {
 
-    if(checkIfFirstTimeChanging(element)){
+    //if(checkIfFirstTimeChanging(element, true)){
 
   // Step 3: Hide the button
   const escalas = element.querySelector('.flight-result__stops');
@@ -83,13 +87,13 @@ function copyButtonAndMove() {
   button.style.display = 'block';
 
   element.appendChild(copiaEscalas);
-    }
+      // }
   });
 }
 function changeDescriptionElementFunctions() {
   changeDescription();
   changeOrderOfDescriptionElements();
-  copyButtonAndMove();
+  //copyButtonAndMove();
 
 }
 // Run the changeDescription() function when the element is available
