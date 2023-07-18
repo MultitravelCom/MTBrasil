@@ -30,12 +30,12 @@ function changeDescription() {
   
   // Step 1: Select all occurrences of the element escalas
   const elementsSinEscalas = document.querySelectorAll('.flight-result__stops');
-
+console.log("elementsSinEscalas for description: ", elementsSinEscalas)
   
   // Step 2: Iterate through each occurrence
   elementsSinEscalas.forEach(element => {
     if(checkIfFirstTimeChanging(element,"description")){
-
+      console.log("element changing description: ", element)
       
       //we chekc 
     // Step 3: Hide the button
