@@ -200,6 +200,7 @@ console.log("Counter added 10: ", counter)
                 targetClasses.some((targetClass) => node.matches(targetClass))
               ) {
                 callback(); // Perform your desired actions for each change
+                return;
               }
             }
           }
