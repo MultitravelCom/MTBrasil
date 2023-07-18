@@ -1,8 +1,15 @@
 /*
   La funcion obtiene los elementos Sin Escala para cambiar el icono dropdown por el de escalas"
 */
+function checkIfFirstTimeChanging(elementsToCheck){
 
-
+    if (!element.classList.contains('class_changed')) {
+      // Step 3: Add the "class_changed" class to the parent element
+      element.parentNode.classList.add('class_changed');
+    return true;
+}
+return false;
+}
 
 function changeDescription() {
   
@@ -10,20 +17,26 @@ function changeDescription() {
   // Step 1: Select all occurrences of the element escalas
   const elementsSinEscalas = document.querySelectorAll('.flight-result__stops');
 
+  
   // Step 2: Iterate through each occurrence
   elementsSinEscalas.forEach(element => {
-  // Step 3: Hide the button
-  const button = element.querySelector('.flight-result__segments-toggle');
-  button.style.display = 'none';
+    if(checkIfFirstTimeChanging(element)){
 
-  // Step 4: Create a new image element
-  const image = document.createElement('img');
-  image.classList.add('stops-image-escalas');
-  image.src = 'https://multitravelcom.github.io/MTBrasil/MULT310/icons/SinEscalas.svg';
-  image.alt = 'Image Description';
-
-  // Step 5: Insert the new image element
-  element.insertBefore(image, button);
+      
+      //we chekc 
+    // Step 3: Hide the button
+    const button = element.querySelector('.flight-result__segments-toggle');
+    button.style.display = 'none';
+  
+    // Step 4: Create a new image element
+    const image = document.createElement('img');
+    image.classList.add('stops-image-escalas');
+    image.src = 'https://multitravelcom.github.io/MTBrasil/MULT310/icons/SinEscalas.svg';
+    image.alt = 'Image Description';
+  
+    // Step 5: Insert the new image element
+    element.insertBefore(image, button);
+    }
   });
 }
 
@@ -32,6 +45,7 @@ function changeOrderOfDescriptionElements() {
 
   // Step 2: Iterate through each occurrence
   elementsDescription.forEach(element => {
+    if(checkIfFirstTimeChanging(element)){
 
 
     // Get references to the child div elements
@@ -45,6 +59,7 @@ function changeOrderOfDescriptionElements() {
     element.insertBefore(duracion, aerolinea);
     element.insertBefore(escalas,duracion);
     
+  }
   });
 }
 
@@ -56,6 +71,9 @@ function copyButtonAndMove() {
 
   // Step 2: Iterate through each occurrence
   elementsSinEscalas.forEach(element => {
+
+    if(checkIfFirstTimeChanging(element)){
+
   // Step 3: Hide the button
   const escalas = element.querySelector('.flight-result__stops');
   copiaEscalas = escalas.cloneNode(true);
@@ -65,6 +83,7 @@ function copyButtonAndMove() {
   button.style.display = 'block';
 
   element.appendChild(copiaEscalas);
+    }
   });
 }
 function changeDescriptionElementFunctions() {
