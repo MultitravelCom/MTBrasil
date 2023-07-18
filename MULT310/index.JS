@@ -106,6 +106,7 @@ console.log("---------> element: ", element)
   });
 }
 function changeDescriptionElementFunctions() {
+  console.log("-----> CALLING changeDescriptionElementFunctions")
   changeDescription();
   changeOrderOfDescriptionElements();
   //copyButtonAndMove();
@@ -114,7 +115,7 @@ function changeDescriptionElementFunctions() {
 // Run the changeDescription() function when the element is available
 function waitForElementToLoad() {
   
-    console.log("-----------> SE EJECUTA LA FUNCION")
+    console.log("-----------> SE EJECUTA LA FUNCION waitForElementToLoad")
     changeDescriptionElementFunctions();
 
     //const targetElements = document.querySelectorAll('.results-list__item, .flight-result__route-selection');
@@ -145,7 +146,9 @@ function waitForElementToLoad() {
                 node.nodeType === Node.ELEMENT_NODE &&
                 targetClasses.some((targetClass) => node.matches(targetClass))
               ) {
+                console.log("Calling callback from observer")
                 callback(); // Perform your desired actions for each change
+                
                 return;
               }
             }
