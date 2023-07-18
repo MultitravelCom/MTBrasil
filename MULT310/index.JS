@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   */
-
+/*
 
   function observeElementChanges(targetClass, counter, callback) {
     let targetElements = document.querySelectorAll(targetClass);
@@ -162,3 +162,30 @@ console.log("Counter added 10: ", counter)
   });
 
   //tengo que lograr ahora que al volver correrse NO se agreguen mas de una vez las cosas que hago
+
+  */
+
+  function observeElementChanges(targetClass, callback) {
+    const observer = new MutationObserver((mutationsList, observer) => {
+      for (let mutation of mutationsList) {
+        if (mutation.addedNodes && mutation.addedNodes.length) {
+          for (let addedNode of mutation.addedNodes) {
+            if (addedNode.nodeType === Node.ELEMENT_NODE && addedNode.matches(targetClass)) {
+              observer.disconnect(); // Stop observing once the target element is found
+              callback(); // Perform your desired actions
+              return; // Exit the function
+            }
+          }
+        }
+      }
+    });
+  
+    observer.observe(document.documentElement, {
+      childList: true,
+      subtree: true,
+    });
+  }
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    observeElementChanges('.results-list__item', waitForElementToLoad);
+  });
