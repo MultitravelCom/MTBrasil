@@ -54,13 +54,14 @@ console.log("elementsSinEscalas for description: ", elementsSinEscalas)
   });
 }
 
-function changeOrderOfDescriptionElements() {
+function v() {
   const elementsDescription = document.querySelectorAll('.flight-result__info');
 
   // Step 2: Iterate through each occurrence
+  console.log("--------> changeOrderOfDescriptionElements RUNNING")
   elementsDescription.forEach(element => {
     if(checkIfFirstTimeChanging(element, "order")){
-console.log("---> changeOrderOfDescriptionElements RUNNING")
+console.log("---> changeOrderOfDescriptionElements AND IS ORDER")
 
     // Get references to the child div elements
     const aerolinea = element.querySelector('.flight-result__airline');
