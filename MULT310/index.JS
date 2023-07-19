@@ -101,7 +101,15 @@ console.log("---------> element: ", element)
   imageChildElement.style.display = 'none';
   const button = copiaEscalas.querySelector('.flight-result__segments-toggle');
   button.style.display = 'block';
-  copiaEscalas.textContent = "Ver detalle"
+  for (let i = 0; i < copiaEscalas.childNodes.length; i++) {
+    const childNode = copiaEscalas.childNodes[i];
+  
+    // Check if the child node is a text node
+    if (childNode.nodeType === Node.TEXT_NODE) {
+      // Modify the text content of the text node
+      childNode.textContent = 'Ver detalles';
+    }
+  }
 
   element.appendChild(copiaEscalas);
       // }
