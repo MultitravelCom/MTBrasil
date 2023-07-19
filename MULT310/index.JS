@@ -135,6 +135,7 @@ function changeDescriptionElementFunctions() {
 
 
 
+
   function observeElementChanges(targetClasses, callback) {
     const observer = new MutationObserver((mutationsList, observer) => {
       for (let mutation of mutationsList) {
@@ -186,3 +187,30 @@ function changeDescriptionElementFunctions() {
     
 
   });
+
+
+
+
+  ////////////////////
+
+
+
+
+  function onDivAdded(mutationsList) {
+  mutationsList.forEach((mutation) => {
+    if (mutation.type === 'childList') {
+      mutation.addedNodes.forEach((node) => {
+        if (node.nodeName === 'DIV') {
+          // Call your function or perform any action here
+          console.log('New <div> element added:', node);
+        }
+      });
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const observer = new MutationObserver(onDivAdded);
+  const observerConfig = { childList: true, subtree: true };
+  observer.observe(document.documentElement, observerConfig);
+});
