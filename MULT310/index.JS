@@ -103,11 +103,13 @@ console.log("---------> element: ", element)
   button.style.display = 'block';
   for (let i = 0; i < copiaEscalas.childNodes.length; i++) {
     console.log(copiaEscalas.childNodes[i]);
-  
+    copiaEscalas.removeChild(copiaEscalas.childNodes[i]);
   
   }
-  const textNode = copiaEscalas.childNodes[3];
-  textNode.textContent = 'Ver detalles';
+  const newText = document.createTextNode('Ver detalles');
+
+// Insert the new text node after the button element
+copiaEscalas.insertBefore(newText, button.nextSibling);
 
   element.appendChild(copiaEscalas);
       // }
