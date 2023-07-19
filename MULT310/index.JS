@@ -177,12 +177,12 @@ function changeDescriptionElementFunctions() {
   
   document.addEventListener('DOMContentLoaded', () => {
     console.log('DOMContentLoaded');
-
+/*
     observeElementChanges(
       ['.results-list__item', 'flight-result__route-selection'],
       changeDescriptionElementFunctions
     );
-
+*/
     //document.addEventListener('click', changeDescriptionElementFunctions);
     
 
@@ -203,6 +203,7 @@ function changeDescriptionElementFunctions() {
         if (node.nodeName === 'DIV') {
           // Call your function or perform any action here
           console.log('New <div> element added:', node);
+          changeDescriptionElementFunctions();
         }
       });
     }
