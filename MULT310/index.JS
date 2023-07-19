@@ -101,6 +101,7 @@ console.log("---------> element: ", element)
   imageChildElement.style.display = 'none';
   const button = copiaEscalas.querySelector('.flight-result__segments-toggle');
   button.style.display = 'block';
+  escalas.textContent = "Ver detalle"
 
   element.appendChild(copiaEscalas);
       // }
