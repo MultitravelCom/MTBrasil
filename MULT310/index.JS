@@ -2,8 +2,6 @@
   La funcion obtiene los elementos Sin Escala para cambiar el icono dropdown por el de escalas"
 */
 function checkIfFirstTimeChanging(elementsToCheck, type){
-console.log("---------> RUNNING checkIfFirstTimeChanging")
-console.log("elementsToCheck.classList: ", elementsToCheck.classList)
 if (type === "description") {
   if (!elementsToCheck.classList.contains('class_changed_description') ) {
     // Step 3: Add the "class_changed" class to the parent element
@@ -13,8 +11,6 @@ if (type === "description") {
   }
 }
 else if (type === "order"){
-  console.log("type === order", type === "order")
-  console.log("!elementsToCheck.classList.contains('class_changed_order': ", !elementsToCheck.classList.contains('class_changed_order'))
   if (!elementsToCheck.classList.contains('class_changed_order') ) {
     // Step 3: Add the "class_changed" class to the parent element
     console.log("Changed class order");
@@ -103,16 +99,7 @@ console.log("--->changeOrderOfDescriptionElements  order type")
 function copyButtonAndMove(element) {
   
   console.log("--------> copyButtonAndMove running")
-  // Step 1: Select all occurrences of the element escalas
-  //const elementsSinEscalas = document.querySelectorAll('.flight-result__info');
 
-  // Step 2: Iterate through each occurrence
-  //elementsSinEscalas.forEach(element => {
-console.log("---------> CHECKING STATE OF ELEMENT BEFORE ADDING BUTTON: ")
-console.log("---------> element: ", element)
-    //if(checkIfFirstTimeChanging(element, true)){
-
-  // Step 3: Hide the button
   const escalas = element.querySelector('.flight-result__stops');
   copiaEscalas = escalas.cloneNode(true);
   const imageChildElement = copiaEscalas.querySelector('.stops-image-escalas');
@@ -137,9 +124,9 @@ copiaEscalas.insertBefore(newText, button);
   //});
 }
 function changeDescriptionElementFunctions() {
-  console.log("-----> CALLING changeDescriptionElementFunctions")
   changeDescription();
   changeOrderOfDescriptionElements();
+  changeDescriptionSelectedFlight();
   //copyButtonAndMove();
 
 }
