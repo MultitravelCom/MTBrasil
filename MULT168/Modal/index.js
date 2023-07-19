@@ -75,6 +75,9 @@ function ButtonModal(props) {
 }
 
 const ButtonWidget = () => {
+    if(window.innerWidth <= 768){
+       return null;
+    }
     return (
         <div className="main__container__buttonWidget">
             <div className="glyphicon glyphicon-agent agentWidget"></div>
@@ -297,10 +300,5 @@ const targetDivMobile = document.querySelector('.pull-left.hidden-xs');
 ReactDOM.render(<App />, targetDivMobile);
 
 // ************************************************************
-const targetDivWidgetFixe = document.querySelector('#home > div.whatsAppFixes');
 const widgetFixeComponent = <ButtonWidget />;
-if (window.innerWidth > 768) {
-    const widgetFixeElement = document.createElement('div');
-    ReactDOM.render(widgetFixeComponent, widgetFixeElement);
-    targetDivWidgetFixe.appendChild(widgetFixeElement);
-}
+ReactDOM.render(<ButtonWidget />, widgetFixeComponent);
