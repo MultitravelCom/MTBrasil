@@ -101,9 +101,14 @@ console.log("---------> element: ", element)
   imageChildElement.style.display = 'none';
   const button = copiaEscalas.querySelector('.flight-result__segments-toggle');
   button.style.display = 'block';
-  const textNode = copiaEscalas.childNodes[0];
-  textNode.textContent = 'Modified text content';
+  for (let i = 0; i < copiaEscalas.childNodes.length; i++) {
+    console.log(copiaEscalas.childNodes[i]);
   
+  
+  }
+  const textNode = copiaEscalas.childNodes[3];
+  textNode.textContent = 'Ver detalles';
+
   element.appendChild(copiaEscalas);
       // }
   //});
