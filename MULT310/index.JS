@@ -102,10 +102,11 @@ console.log("---------> element: ", element)
   const button = copiaEscalas.querySelector('.flight-result__segments-toggle');
   button.style.display = 'block';
   for (let i = 0; i < copiaEscalas.childNodes.length; i++) {
-    console.log(copiaEscalas.childNodes[i]);
+    if (copiaEscalas.childNodes[i] === Node.TEXT_NODE) {
     copiaEscalas.removeChild(copiaEscalas.childNodes[i]);
-  
+    }
   }
+  console.log(copiaEscalas.childNodes);
   const newText = document.createTextNode('Ver detalles');
 
 // Insert the new text node after the button element
