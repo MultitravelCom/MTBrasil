@@ -24,7 +24,7 @@ return false;
 function changeDescriptionSelectedFlight() {
 
   const elementsSinEscalas = document.querySelectorAll('.flight-selection__info');
-  console.log("elementsSinEscalas ---> :", elementsSinEscalas)
+  console.log("changeDescriptionSelectedFlight elementsSinEscalas ---> :", elementsSinEscalas)
   elementsSinEscalas.forEach(element => {
     console.log("Iterating element ---> :", element)
 //seleccionamos el horario, para isnertar antes las escalas
@@ -187,10 +187,10 @@ function waitForElementToLoad() {
 
     observeElementChanges(
       ['.results-list__item', 'flight-result__route-selection'],
-      waitForElementToLoad
+      changeDescriptionElementFunctions
     );
 
-    document.addEventListener('click', changeDescriptionElementFunctions);
+    //document.addEventListener('click', changeDescriptionElementFunctions);
     
 
   });
