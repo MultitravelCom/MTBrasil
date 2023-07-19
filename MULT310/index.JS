@@ -124,22 +124,14 @@ copiaEscalas.insertBefore(newText, button);
   //});
 }
 function changeDescriptionElementFunctions() {
+  console.log("----------> changeDescriptionElementFunctions")
   changeDescription();
   changeOrderOfDescriptionElements();
   changeDescriptionSelectedFlight();
   //copyButtonAndMove();
 
 }
-// Run the changeDescription() function when the element is available
-function waitForElementToLoad() {
-  
-    console.log("-----------> SE EJECUTA LA FUNCION waitForElementToLoad")
-    changeDescriptionElementFunctions();
 
-    //const targetElements = document.querySelectorAll('.results-list__item, .flight-result__route-selection');
-
-
-}
 
 
 
