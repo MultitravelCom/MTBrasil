@@ -412,8 +412,9 @@
     }
 
 }
+
 /* ****************** Widget Style ************************* */
-.main__container__buttonWidget{
+.main__container__buttonWidget {
     width: 204px;
     height: 48px;
     border-radius: 64px;
@@ -425,22 +426,30 @@
     align-items: center;
     gap: 8px;
 }
-.main__container__buttonWidget:hover{
+
+.main__container__buttonWidget:hover {
     background-color: #0D4E88;
     color: white;
 }
-.main__container__buttonWidget:active{
+
+.main__container__buttonWidget:active {
     background-color: #283747;
     color: white;
 }
 
-.whatsAppFixes > a {
+.whatsAppFixes>a {
     display: none;
 }
 
-.whatsAppFixes{
+.whatsAppFixes {
     height: inherit !important;
     width: inherit !important;
+}
+
+@media (max-width:767px) {
+    .whatsAppFixes>a {
+        display: block;
+    }
 }
 
 /* ***************** MULT-305 **************** */
@@ -452,6 +461,7 @@
 .footer-col.col-xs-12.col-sm-12.col-md-6 .footer__text:nth-child(3) {
     display: none;
 }
+
 .footer-content div:first-child {
     width: 18.666667% !important;
-  }
+}
