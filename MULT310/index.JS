@@ -102,7 +102,7 @@ console.log("---------> element: ", element)
   const button = copiaEscalas.querySelector('.flight-result__segments-toggle');
   button.style.display = 'block';
   for (let i = 0; i < copiaEscalas.childNodes.length; i++) {
-    if (copiaEscalas.childNodes[i] === Node.TEXT_NODE) {
+    if (copiaEscalas.childNodes[i].nodeType === Node.TEXT_NODE) {
     copiaEscalas.removeChild(copiaEscalas.childNodes[i]);
     console.log("deleteing text node?")
     }
