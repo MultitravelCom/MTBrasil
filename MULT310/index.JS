@@ -111,7 +111,7 @@ console.log("---------> element: ", element)
   const newText = document.createTextNode('Ver detalles');
 
 // Insert the new text node after the button element
-copiaEscalas.insertBefore(newText, button.nextSibling);
+copiaEscalas.insertBefore(newText, button);
 
   element.appendChild(copiaEscalas);
       // }
