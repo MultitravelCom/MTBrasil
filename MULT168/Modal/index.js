@@ -74,6 +74,15 @@ function ButtonModal(props) {
     );
 }
 
+const ButtonWidget = () => {
+    return (
+        <div className="main__container__buttonWidget">
+            <div className="glyphicon glyphicon-agent agentWidget"></div>
+            <div className="main__container__widget_text">Atención personalizada</div>
+        </div>
+    )
+}
+
 const ModalContactos = ({ ventasClass, ventasText, horarioClass, horarioText, diasClass, diasText, spanText, iconModal, buttonStyle, buttonLink, buttonText, callToPhone }) => {
     return (
         <div className="main__container__modalContactos">
@@ -287,3 +296,11 @@ ReactDOM.render(<App />, targetDivDesktop);
 const targetDivMobile = document.querySelector('.pull-left.hidden-xs');
 ReactDOM.render(<App />, targetDivMobile);
 
+// ************************************************************
+const targetDivWidgetFixe = document.querySelector('#home > div.whatsAppFixes');
+const widgetFixeComponent = <ButtonWidge />;
+if (window.innerWidth > 768) {
+    const widgetFixeElement = document.createElement('div');
+    ReactDOM.render(widgetFixeComponent, widgetFixeElement);
+    targetDivWidgetFixe.appendChild(widgetFixeElement);
+}

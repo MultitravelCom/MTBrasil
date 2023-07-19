@@ -147,7 +147,7 @@ const BannerTop = () => {
                             }
                         />
                     </picture>
-                    {showPackageImages && (<Button style="btn btnStyleBannerPre" link="#"ext="Ver Más" />)};
+                    {showPackageImages && (<Button style="btn btnStyleBannerPre" link="#" text="Ver Más" />)};
                 </div>
             </div>
         </>
