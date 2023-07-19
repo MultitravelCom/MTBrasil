@@ -446,6 +446,17 @@
     width: inherit !important;
 }
 
+@media (max-width:767px) {
+    .main__container__buttonWidget {
+        width: 60px;
+        height: 60px;
+    }
+
+    #home > div.whatsAppFixes > div > div.glyphicon.glyphicon-agent.agentWidget {
+        font-size: 29px;
+    }
+}
+
 /* ***************** MULT-305 **************** */
 .footer__text .glyphicon.glyphicon-whatsapp-bottomless {
     background: transparent;
