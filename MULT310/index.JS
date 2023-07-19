@@ -25,17 +25,35 @@ else if (type === "order"){
 return false;
 }
 
+function changeDescriptionSelectedFlight() {
+
+  const elementsSinEscalas = document.querySelectorAll('.flight-selection__info');
+  console.log("elementsSinEscalas ---> :", elementsSinEscalas)
+  elementsSinEscalas.forEach(element => {
+    console.log("Iterating element ---> :", element)
+//seleccionamos el horario, para isnertar antes las escalas
+const time = element.querySelector('.flight-selection__duration');
+console.log("Time ---> :", time)
+
+
+    const image = document.createElement('img');
+    image.classList.add('stops-image-escalas');
+    image.src = 'https://multitravelcom.github.io/MTBrasil/MULT310/icons/SinEscalas.svg';
+    image.alt = 'Image Description';
+    element.insertBefore(image, time);
+
+  })
+}
+
 function changeDescription() {
   
   
   // Step 1: Select all occurrences of the element escalas
   const elementsSinEscalas = document.querySelectorAll('.flight-result__stops');
-console.log("elementsSinEscalas for description: ", elementsSinEscalas)
   
   // Step 2: Iterate through each occurrence
   elementsSinEscalas.forEach(element => {
     if(checkIfFirstTimeChanging(element,"description")){
-      console.log("element changing description: ", element)
       
       //we chekc 
     // Step 3: Hide the button
@@ -162,7 +180,6 @@ function waitForElementToLoad() {
                 console.log("Calling callback from observer")
                 callback(); // Perform your desired actions for each change
                 
-                return;
               }
             }
           }
