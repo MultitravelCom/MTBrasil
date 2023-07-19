@@ -75,21 +75,21 @@ console.log("--->changeOrderOfDescriptionElements  order type")
     element.insertBefore(escalas,duracion);
 
 
-    //copyButtonAndMove();
+    copyButtonAndMove(element);
   }
   });
 
   
 }
 
-function copyButtonAndMove() {
+function copyButtonAndMove(element) {
   
   console.log("--------> copyButtonAndMove running")
   // Step 1: Select all occurrences of the element escalas
-  const elementsSinEscalas = document.querySelectorAll('.flight-result__info');
+  //const elementsSinEscalas = document.querySelectorAll('.flight-result__info');
 
   // Step 2: Iterate through each occurrence
-  elementsSinEscalas.forEach(element => {
+  //elementsSinEscalas.forEach(element => {
 console.log("---------> CHECKING STATE OF ELEMENT BEFORE ADDING BUTTON: ")
 console.log("---------> element: ", element)
     //if(checkIfFirstTimeChanging(element, true)){
@@ -104,7 +104,7 @@ console.log("---------> element: ", element)
 
   element.appendChild(copiaEscalas);
       // }
-  });
+  //});
 }
 function changeDescriptionElementFunctions() {
   console.log("-----> CALLING changeDescriptionElementFunctions")
