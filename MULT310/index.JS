@@ -104,6 +104,7 @@ console.log("---------> element: ", element)
   for (let i = 0; i < copiaEscalas.childNodes.length; i++) {
     if (copiaEscalas.childNodes[i] === Node.TEXT_NODE) {
     copiaEscalas.removeChild(copiaEscalas.childNodes[i]);
+    console.log("deleteing text node?")
     }
   }
   console.log(copiaEscalas.childNodes);
