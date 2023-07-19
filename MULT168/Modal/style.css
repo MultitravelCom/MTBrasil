@@ -446,12 +446,6 @@
     width: inherit !important;
 }
 
-@media (max-width:767px) {
-    .whatsAppFixes>a {
-        display: block;
-    }
-}
-
 /* ***************** MULT-305 **************** */
 .footer__text .glyphicon.glyphicon-whatsapp-bottomless {
     background: transparent;
