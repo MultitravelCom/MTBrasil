@@ -426,6 +426,10 @@
     gap: 8px;
 }
 
+.whatsAppFixes > a {
+    display: none;
+}
+
 .whatsAppFixes{
     height: inherit !important;
     width: inherit !important;
