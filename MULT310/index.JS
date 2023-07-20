@@ -91,6 +91,7 @@ function changeStyleDesktop () {
   const elementsDescription = document.querySelectorAll('.result-option__main');
   elementsDescription.forEach(element => {
     if(checkIfFirstTimeChanging(element, "changeStyleDesktop")){
+      /*
     element.style.display = 'flex';
     element.style.tableLayout = 'auto';
     resultOptionContent = element.querySelector('.result-option__content')
@@ -109,6 +110,7 @@ function changeStyleDesktop () {
     console.log("||| .result-option__main : ", element)
     console.log("||| resultOptionContent : ", resultOptionContent)
     console.log("||| flightResultInfo : ", flightResultInfo)
+    */
     }
   })
 }

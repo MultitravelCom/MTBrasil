@@ -1,8 +1,46 @@
 .flight-result__segments-toggle {
     display: none;
-    background-color: red;
 }
 
 .result-option--selectable {
     border: 2px solid #fcdf98;
+}
+
+/* Add specific styles for mobile screens */
+@media screen and (max-width: 767px) {
+    /* Your CSS rules for mobile go here */
+    body {
+      font-size: 14px; /* Adjust font size for smaller screens */
+    }
+  }
+
+  /* Add specific styles for tablet screens */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    /* Your CSS rules for tablet go here */
+    .header {
+      height: 60px; /* Adjust height for tablets */
+    }
+  }
+
+  /* Add specific styles for desktop screens */
+@media screen and (min-width: 1024px) {
+    /* Your CSS rules for desktop go here */
+    .result-option__main {
+        display: flex;
+        table-layout: auto;
+    }
+    .result-option__content {
+        display: flex;
+        table-layout : auto;
+        flex-grow : 1;
+    }
+    .flight-result__info {
+        display: flex;
+        align-items: center;
+        table-layout : auto;
+        flex-grow : 1;
+    }
+    .flight-result__stops {
+        flex-grow: 1;
+    }
 }
