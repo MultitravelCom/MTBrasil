@@ -218,7 +218,7 @@ function changeDescriptionElementFunctions() {
   const elements = document.querySelectorAll('.flight-selection');
     if (elements.length === 0) {
       
-      setTimeout(()=>{onDivAdded(mutationsList)}, 5000); // Retry after 100 milliseconds
+      setTimeout(()=>{onDivAdded(mutationsList)}, 100); // Retry after 100 milliseconds
     }
 }
 
