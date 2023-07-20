@@ -23,6 +23,13 @@ else if (type === "description_selected"){
     return true;
   }
 }
+else if (type === "changeStyleDesktop"){
+  if (!elementsToCheck.classList.contains('class_changed_desktop_style') ) {
+    console.log("Changed class desktop style");
+    elementsToCheck.classList.add('class_changed_desktop_style');
+    return true;
+  }
+}
 return false;
 }
 
@@ -83,6 +90,7 @@ function changeDescription() {
 function changeStyleDesktop () {
   const elementsDescription = document.querySelectorAll('.result-option__main');
   elementsDescription.forEach(element => {
+    if(checkIfFirstTimeChanging(element, "changeStyleDesktop")){
     element.style.display = 'flex';
     element.style.tableLayout = 'auto';
     resultOptionContent = element.querySelector('.result-option__content')
@@ -101,7 +109,7 @@ function changeStyleDesktop () {
     console.log("||| .result-option__main : ", element)
     console.log("||| resultOptionContent : ", resultOptionContent)
     console.log("||| flightResultInfo : ", flightResultInfo)
-
+    }
   })
 }
 
