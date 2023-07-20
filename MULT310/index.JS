@@ -91,6 +91,7 @@ function changeStyleDesktop () {
     resultOptionContent.style.flexGrow = '1';
     flightResultInfo = element.querySelector('.flight-result__info');
     flightResultInfo.style.display = 'flex';
+    flightResultInfo.style.alignItems = 'center';
     flightResultInfo.style.tableLayout = 'auto';
     flightResultInfo.style.flexGrow = '1';
     flightResultInfo = element.querySelector('.flight-result__stops');
