@@ -37,12 +37,15 @@ function changeDescriptionSelectedFlight() {
 const time = element.querySelector('.flight-selection__duration');
 console.log("Time ---> :", time)
 
-
+    const divEscalas = document.createElement('div');
     const image = document.createElement('img');
     image.classList.add('stops-image-escalas');
     image.src = 'https://multitravelcom.github.io/MTBrasil/MULT310/icons/SinEscalas.svg';
     image.alt = 'Image Description';
-    element.insertBefore(image, time);
+    const text = document.createTextNode('Your text goes here');
+    divEscalas.appendChild(image);
+    divEscalas.appendChild(text);
+    element.insertBefore(divEscalas, time);
     }
   })
 }
