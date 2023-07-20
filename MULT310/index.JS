@@ -4,7 +4,6 @@
 function checkIfFirstTimeChanging(elementsToCheck, type){
 if (type === "description") {
   if (!elementsToCheck.classList.contains('class_changed_description') ) {
-    // Step 3: Add the "class_changed" class to the parent element
     console.log("Changed class description");
     elementsToCheck.classList.add('class_changed_description');
     return true;
@@ -12,9 +11,15 @@ if (type === "description") {
 }
 else if (type === "order"){
   if (!elementsToCheck.classList.contains('class_changed_order') ) {
-    // Step 3: Add the "class_changed" class to the parent element
     console.log("Changed class order");
     elementsToCheck.classList.add('class_changed_order');
+    return true;
+  }
+}
+else if (type === "description_selected"){
+  if (!elementsToCheck.classList.contains('class_changed_description_selected') ) {
+    console.log("Changed class description selection");
+    elementsToCheck.classList.add('class_changed_description_selected');
     return true;
   }
 }
@@ -26,6 +31,7 @@ function changeDescriptionSelectedFlight() {
   const elementsSinEscalas = document.querySelectorAll('.flight-selection__info');
   console.log("changeDescriptionSelectedFlight elementsSinEscalas ---> :", elementsSinEscalas)
   elementsSinEscalas.forEach(element => {
+    if(checkIfFirstTimeChanging(element,"description_selected")){
     console.log("Iterating element ---> :", element)
 //seleccionamos el horario, para isnertar antes las escalas
 const time = element.querySelector('.flight-selection__duration');
@@ -37,7 +43,7 @@ console.log("Time ---> :", time)
     image.src = 'https://multitravelcom.github.io/MTBrasil/MULT310/icons/SinEscalas.svg';
     image.alt = 'Image Description';
     element.insertBefore(image, time);
-
+    }
   })
 }
 
@@ -209,10 +215,11 @@ function changeDescriptionElementFunctions() {
     }
   });
 
-  
+  const elements = document.querySelectorAll('.flight-selection');
+    if (elements.length === 0) {
+      
       setTimeout(()=>{onDivAdded(mutationsList)}, 5000); // Retry after 100 milliseconds
-    //falta aca 
-
+    }
 }
 
 
