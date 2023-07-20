@@ -81,7 +81,7 @@ function changeDescription() {
 }
 
 function changeOrderOfDescriptionElements() {
-  const elementsDescription = document.querySelectorAll('.flight-result__info');
+  const elementsDescription = document.querySelectorAll('.flight-result__info, .flight-selection__info');
 
   // Step 2: Iterate through each occurrence
   console.log("-------->  changeOrderOfDescriptionElements RUNNING")
@@ -112,11 +112,11 @@ function copyButtonAndMove(element) {
   
   console.log("--------> copyButtonAndMove running")
 
-  const escalas = element.querySelector('.flight-result__stops');
+  const escalas = element.querySelector('.flight-result__stops, .flight-selection__stops');
   copiaEscalas = escalas.cloneNode(true);
   const imageChildElement = copiaEscalas.querySelector('.stops-image-escalas');
   imageChildElement.style.display = 'none';
-  const button = copiaEscalas.querySelector('.flight-result__segments-toggle');
+  const button = copiaEscalas.querySelector('.flight-result__segments-toggle, .flight-selection__segments-toggle');
   button.style.display = 'inline-block';
   button.style.margin = '0rem 1rem';
   for (let i = 0; i < copiaEscalas.childNodes.length; i++) {
