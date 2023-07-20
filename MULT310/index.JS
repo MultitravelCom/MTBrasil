@@ -210,10 +210,11 @@ function changeDescriptionElementFunctions() {
   });
 
   
-      setTimeout(onDivAdded, 5000); // Retry after 100 milliseconds
+      setTimeout(onDivAdded(mutationsList), 5000); // Retry after 100 milliseconds
     //falta aca 
 
 }
+
 
 document.addEventListener('DOMContentLoaded', () => {
   const observer = new MutationObserver(onDivAdded);
