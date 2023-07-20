@@ -138,6 +138,7 @@ function copyButtonAndMove(element) {
     copiaEscalas.insertBefore(newText, button);
   }
   copiaEscalas.style.textAlign= 'right'; 
+  copiaEscalas.style.flexGrow= '1'; 
   element.appendChild(copiaEscalas);
       // }
   //});
