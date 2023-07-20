@@ -220,10 +220,13 @@ function changeDescriptionElementFunctions() {
 
   const elements = document.querySelectorAll('.flight-selection');
     if (elements.length === 0 ) {
+      console.log("***** NO .flight-selection FOUND")
       if (repetition && repetition < 5000) {
+        console.log("*****  repetition FOUND")
       repetition +=100;
       setTimeout(()=>{onDivAdded(mutationsList,repetition)}, 100); // Retry after 100 milliseconds
       }else  {
+        console.log("***** **NO** repetition FOUND")
         let repetition =100;
         setTimeout(()=>{onDivAdded(mutationsList,repetition)}, 100); // Retry after 100 milliseconds
         }
