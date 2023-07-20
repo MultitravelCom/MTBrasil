@@ -91,12 +91,15 @@ console.log("--->changeOrderOfDescriptionElements  order type")
 
     // Get references to the child div elements
     const aerolinea = element.querySelector('.flight-result__airline');
-    const duracion = element.querySelector('.flight-result__duration');
-    const escalas = element.querySelector('.flight-result__stops');
+    const duracion = element.querySelector('.flight-result__duration, .flight-selection__duration');
+    const escalas = element.querySelector('.flight-result__stops, .flight-selection__stops');
 
-
+console.log("---> aerolinea: ", aerolinea)
+console.log("---> duracion: ", duracion)
+console.log("---> escalas: ", escalas)
     // Append the child div elements in the desired order
     //element.insertBefore(estaVaPrimero, estaVaSegundo);
+    if(aerolinea)
     element.insertBefore(duracion, aerolinea);
     element.insertBefore(escalas,duracion);
 
