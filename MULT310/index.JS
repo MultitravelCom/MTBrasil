@@ -204,11 +204,15 @@ function changeDescriptionElementFunctions() {
           // Call your function or perform any action here
           console.log('New <div> element added:', node);
           changeDescriptionElementFunctions();
-          setTimeout(() => changeDescriptionElementFunctions(mutationsList), 5000);
         }
       });
     }
   });
+
+  
+      setTimeout(changeDescriptionElementFunctions, 5000); // Retry after 100 milliseconds
+    
+
 }
 
 document.addEventListener('DOMContentLoaded', () => {
