@@ -86,6 +86,8 @@ function changeOrderOfDescriptionElements() {
   // Step 2: Iterate through each occurrence
   console.log("-------->  changeOrderOfDescriptionElements RUNNING")
   elementsDescription.forEach(element => {
+    //next line is to be able to use absolute position in last child (dropdown)
+    element.style.position = 'relative';
     if(checkIfFirstTimeChanging(element, "order")){
 console.log("--->changeOrderOfDescriptionElements  order type")
 
@@ -114,7 +116,6 @@ console.log("---> escalas: ", escalas)
 function copyButtonAndMove(element) {
   
   console.log("--------> copyButtonAndMove running")
-
   const escalas = element.querySelector('.flight-result__stops, .flight-selection__stops');
   copiaEscalas = escalas.cloneNode(true);
   const imageChildElement = copiaEscalas.querySelector('.stops-image-escalas');
