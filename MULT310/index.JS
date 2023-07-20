@@ -205,7 +205,7 @@ function changeDescriptionElementFunctions() {
 
 
 
-  function onDivAdded(mutationsList) {
+  function onDivAdded(mutationsList, repetition) {
   mutationsList.forEach((mutation) => {
     if (mutation.type === 'childList') {
       mutation.addedNodes.forEach((node) => {
@@ -219,9 +219,9 @@ function changeDescriptionElementFunctions() {
   });
 
   const elements = document.querySelectorAll('.flight-selection');
-    if (elements.length === 0) {
-      
-      setTimeout(()=>{onDivAdded(mutationsList)}, 100); // Retry after 100 milliseconds
+    if (elements.length === 0 && repetition < 5000) {
+      repetition +=100;
+      setTimeout(()=>{onDivAdded(mutationsList,repetition)}, 100); // Retry after 100 milliseconds
     }
 }
 
