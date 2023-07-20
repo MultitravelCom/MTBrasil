@@ -97,6 +97,10 @@ function changeStyleDesktop () {
     //flightResultInfo.style.display = 'flex';
     //flightResultInfo.style.tableLayout = 'auto';
     flightResultInfo.style.flexGrow = 'auto';
+    console.log("||| .result-option__main : ", element)
+    console.log("||| resultOptionContent : ", resultOptionContent)
+    console.log("||| flightResultInfo : ", flightResultInfo)
+
   })
 }
 
