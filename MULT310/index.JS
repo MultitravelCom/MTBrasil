@@ -28,6 +28,8 @@ return false;
 
 function changeDescriptionSelectedFlight() {
 
+
+  /*
   const elementsSinEscalas = document.querySelectorAll('.flight-selection__info');
   console.log("changeDescriptionSelectedFlight elementsSinEscalas ---> :", elementsSinEscalas)
   elementsSinEscalas.forEach(element => {
@@ -48,6 +50,7 @@ console.log("Time ---> :", time)
     element.insertBefore(divEscalas, time);
     }
   })
+  */
 }
 
 function changeDescription() {
@@ -62,7 +65,7 @@ function changeDescription() {
       
       //we chekc 
     // Step 3: Hide the button
-    const button = element.querySelector('.flight-result__segments-toggle');
+    const button = element.querySelector('.flight-result__segments-toggle, .flight-selection__segments-toggle');
     button.style.display = 'none';
   
     // Step 4: Create a new image element
