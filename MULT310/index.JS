@@ -133,7 +133,6 @@ function copyButtonAndMove(element) {
   
   if (button.classList.contains('flight-selection__segments-toggle')) {
     copiaEscalas.style.margin= '0rem 1rem';
-  }else {
     const newText = document.createTextNode('Ver detalles');
     // Insert the new text node after the button element
     copiaEscalas.insertBefore(newText, button);
