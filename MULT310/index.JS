@@ -226,9 +226,7 @@ function changeDescriptionElementFunctions() {
       repetition +=100;
       setTimeout(()=>{onDivAdded(mutationsList,repetition)}, 100); // Retry after 100 milliseconds
       }else if  (repetition && repetition >= 5000){
-        console.log("***** **NO** repetition FOUND")
-        let repetition =100;
-        setTimeout(()=>{onDivAdded(mutationsList,repetition)}, 100); // Retry after 100 milliseconds
+        console.log("**-----------> END LOOP FOR querySelectorAll('.flight-selection') ")
         }
       else  {
         console.log("***** **NO** repetition FOUND")
