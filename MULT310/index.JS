@@ -57,7 +57,7 @@ function changeDescription() {
   
   
   // Step 1: Select all occurrences of the element escalas
-  const elementsSinEscalas = document.querySelectorAll('.flight-result__stops');
+  const elementsSinEscalas = document.querySelectorAll('.flight-result__stops, .flight-selection__stops');
   
   // Step 2: Iterate through each occurrence
   elementsSinEscalas.forEach(element => {
@@ -228,7 +228,7 @@ function changeDescriptionElementFunctions() {
         console.log("*****  repetition FOUND")
       repetition +=100;
       setTimeout(()=>{onDivAdded(mutationsList,repetition)}, 100); // Retry after 100 milliseconds
-      }else if  (repetition && repetition >= 5000){
+      }else if  (repetition && repetition >= 3000){
         console.log("**-----------> END LOOP FOR querySelectorAll('.flight-selection') ")
         }
       else  {
