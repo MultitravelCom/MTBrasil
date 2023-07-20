@@ -2,9 +2,6 @@
     display: none;
 }
 
-.result-option--selectable {
-    border: 2px solid white;
-}
 
 /* Add specific styles for mobile screens */
 @media screen and (max-width: 767px) {
@@ -25,12 +22,15 @@
   /* Add specific styles for desktop screens */
 @media screen and (min-width: 1024px) {
     /* Your CSS rules for desktop go here */
+
+
+    /*CONTROL THIS ONE*/
     .result-option__main {
-        display: flex;
-        table-layout: auto;
+        display: flex!important;
+        table-layout: auto!important;
     }
     .result-option__content {
-        display: flex;
+        display: flex!important;
         table-layout : auto;
         flex-grow : 1;
     }
@@ -42,5 +42,9 @@
     }
     .flight-result__stops {
         flex-grow: 1;
+    }
+    .result-option .result-option--selectable .result-option--selectable--selected {
+        box-shadow: inset 0 0 0 2px;
+        border: 0px solid white;
     }
 }
