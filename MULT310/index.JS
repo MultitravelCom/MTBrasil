@@ -80,6 +80,26 @@ function changeDescription() {
   });
 }
 
+function changeStyleDesktop () {
+  const elementsDescription = document.querySelectorAll('.result-option__main');
+  elementsDescription.forEach(element => {
+    element.style.display = 'flex';
+    element.style.tableLayout = 'auto';
+    resultOptionContent = element.querySelector('.result-option__content')
+    resultOptionContent.style.display = 'flex';
+    resultOptionContent.style.tableLayout = 'auto';
+    resultOptionContent.style.flexGrow = '1';
+    flightResultInfo = element.querySelector('flight-result__info');
+    flightResultInfo.style.display = 'flex';
+    flightResultInfo.style.tableLayout = 'auto';
+    flightResultInfo.style.flexGrow = '1';
+    flightResultInfo = element.querySelector('flight-result__stops');
+    //flightResultInfo.style.display = 'flex';
+    //flightResultInfo.style.tableLayout = 'auto';
+    flightResultInfo.style.flexGrow = 'auto';
+  })
+}
+
 function changeOrderOfDescriptionElements() {
   const elementsDescription = document.querySelectorAll('.flight-result__info, .flight-selection__info');
 
@@ -105,6 +125,11 @@ console.log("---> escalas: ", escalas)
     element.insertBefore(duracion, aerolinea);
     element.insertBefore(escalas,duracion);
 
+    //PART FOR NOT MOBILE
+    if(window.innerWidther > 1023){
+
+
+    }
 
     copyButtonAndMove(element);
   }
@@ -149,6 +174,7 @@ function changeDescriptionElementFunctions() {
   changeDescription();
   changeOrderOfDescriptionElements();
   changeDescriptionSelectedFlight();
+  changeStyleDesktop();
   //copyButtonAndMove();
 
 }
