@@ -225,7 +225,12 @@ function changeDescriptionElementFunctions() {
         console.log("*****  repetition FOUND")
       repetition +=100;
       setTimeout(()=>{onDivAdded(mutationsList,repetition)}, 100); // Retry after 100 milliseconds
-      }else  {
+      }else if  (repetition && repetition >= 5000){
+        console.log("***** **NO** repetition FOUND")
+        let repetition =100;
+        setTimeout(()=>{onDivAdded(mutationsList,repetition)}, 100); // Retry after 100 milliseconds
+        }
+      else  {
         console.log("***** **NO** repetition FOUND")
         let repetition =100;
         setTimeout(()=>{onDivAdded(mutationsList,repetition)}, 100); // Retry after 100 milliseconds
