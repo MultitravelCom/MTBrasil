@@ -204,6 +204,7 @@ function changeDescriptionElementFunctions() {
           // Call your function or perform any action here
           console.log('New <div> element added:', node);
           changeDescriptionElementFunctions();
+          setTimeout(() => onDivAdded(mutationsList), 5000);
         }
       });
     }
