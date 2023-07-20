@@ -89,11 +89,11 @@ function changeStyleDesktop () {
     resultOptionContent.style.display = 'flex';
     resultOptionContent.style.tableLayout = 'auto';
     resultOptionContent.style.flexGrow = '1';
-    flightResultInfo = element.querySelector('flight-result__info');
+    flightResultInfo = element.querySelector('.flight-result__info');
     flightResultInfo.style.display = 'flex';
     flightResultInfo.style.tableLayout = 'auto';
     flightResultInfo.style.flexGrow = '1';
-    flightResultInfo = element.querySelector('flight-result__stops');
+    flightResultInfo = element.querySelector('.flight-result__stops');
     //flightResultInfo.style.display = 'flex';
     //flightResultInfo.style.tableLayout = 'auto';
     flightResultInfo.style.flexGrow = 'auto';
