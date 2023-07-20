@@ -2,3 +2,7 @@
     display: none;
     background-color: red;
 }
+
+.result-option--selectable {
+    border: 2px solid #fcdf98;
+}
