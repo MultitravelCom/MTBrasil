@@ -137,7 +137,7 @@ function copyButtonAndMove(element) {
     // Insert the new text node after the button element
     copiaEscalas.insertBefore(newText, button);
   }
-  copiaEscalas.style.flexGrow= '1'; 
+  copiaEscalas.style.textAlign= 'right'; 
   element.appendChild(copiaEscalas);
       // }
   //});
