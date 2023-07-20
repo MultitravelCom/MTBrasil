@@ -219,9 +219,14 @@ function changeDescriptionElementFunctions() {
   });
 
   const elements = document.querySelectorAll('.flight-selection');
-    if (elements.length === 0 && repetition < 5000) {
+    if (elements.length === 0 ) {
+      if (repetition && repetition < 5000) {
       repetition +=100;
       setTimeout(()=>{onDivAdded(mutationsList,repetition)}, 100); // Retry after 100 milliseconds
+      }else  {
+        let repetition =100;
+        setTimeout(()=>{onDivAdded(mutationsList,repetition)}, 100); // Retry after 100 milliseconds
+        }
     }
 }
 
