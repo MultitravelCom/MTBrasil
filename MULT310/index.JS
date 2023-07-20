@@ -210,8 +210,8 @@ function changeDescriptionElementFunctions() {
   });
 
   
-      setTimeout(changeDescriptionElementFunctions, 5000); // Retry after 100 milliseconds
-    
+      setTimeout(onDivAdded, 5000); // Retry after 100 milliseconds
+    //falta aca 
 
 }
 
