@@ -799,11 +799,6 @@ body.home.home--default .home-v5__searcher,
   .flight-selection__box> :nth-child(2) {
     margin-top: 1rem;
   }
-
-  .result-option--extended .result-option__extended-heading,
-  .result-option--extended .result-option__heading {
-    width: 60% !important;
-  }
 }
 
 /* ********************** MULT-336 ************* */
