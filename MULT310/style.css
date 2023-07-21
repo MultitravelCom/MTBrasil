@@ -7,21 +7,21 @@
   margin: 0rem 1rem;
   background-color: #0d4e88;
 }
+.flight-info__empty-div {
+    flex-grow: 5;
+    padding: 0;
+}
 
 /* Add specific styles for mobile screens */
 @media screen and (max-width: 767px) {
     /* Your CSS rules for mobile go here */
-    body {
-      font-size: 14px; /* Adjust font size for smaller screens */
-    }
+ 
   }
 
   /* Add specific styles for tablet screens */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     /* Your CSS rules for tablet go here */
-    .header {
-      height: 60px; /* Adjust height for tablets */
-    }
+  
   }
 
   /* Add specific styles for desktop screens */

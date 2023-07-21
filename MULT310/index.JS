@@ -150,7 +150,6 @@ console.log("---> escalas: ", escalas)
     */
      const emptyDiv = document.createElement('div');
      emptyDiv.classList.add('.flight-info__empty-div');
-     emptyDiv.style.flexGrow = '5'
      // Get the first child element of the container
      const firstChild = element.firstChild;
       
