@@ -122,7 +122,7 @@ function changeOrderOfDescriptionElements() {
   console.log("-------->  changeOrderOfDescriptionElements RUNNING")
   elementsDescription.forEach(element => {
     //next line is to be able to use absolute position in last child (dropdown)
-    element.style.position = 'relative';
+    //element.style.position = 'relative';
     if(checkIfFirstTimeChanging(element, "order")){
 console.log("--->changeOrderOfDescriptionElements  order type")
 
