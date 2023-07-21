@@ -65,7 +65,7 @@
     .result-option--selectable .result-option--selectable--selected
     /* SELECTED FLIGHT*/
 
-    .result-option__heading {
+    .result-option__heading, .result-option--extended .result-option__extended-heading, .result-option--extended .result-option__heading {
         width: auto!important; 
     }
 
