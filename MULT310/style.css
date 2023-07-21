@@ -77,7 +77,7 @@
         display: flex;
     }
     .flight-selection__info {
-        display: flex;
+        display: flex!important;
         align-items: center;
         padding-left: 1.5rem;
     }
