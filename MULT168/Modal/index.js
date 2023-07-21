@@ -75,8 +75,35 @@ function ButtonModal(props) {
 }
 
 const ButtonWidget = () => {
-    if(window.innerWidth <= 768){
-       return null;
+    React.useEffect(() => {
+        const button = document.querySelector('.main__container__buttonWidget');
+        const footer = document.querySelector('footer');
+
+        const handleScroll = () => {
+            const buttonRect = button.getBoundingClientRect();
+            const footerRect = footer.getBoundingClientRect();
+
+            if (buttonRect.bottom >= footerRect.top) {
+                // El botón está superponiéndose con el footer, cambiar su posición
+                button.style.position = 'absolute';
+                button.style.bottom = '20px'; // O la separación deseada para que no se superponga completamente
+            } else {
+                // El botón no se superpone con el footer, restaurar su posición fija
+                button.style.position = 'fixed';
+                button.style.bottom = '20px'; // O la separación deseada con respecto al borde inferior de la ventana
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+
+    if (window.innerWidth <= 768) {
+        return null;
     }
     return (
         <div className="main__container__buttonWidget">
