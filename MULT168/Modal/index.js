@@ -76,7 +76,7 @@ function ButtonModal(props) {
 
 const ButtonWidget = () => {
     React.useEffect(() => {
-        const button = document.querySelector('.main__container__buttonWidget');
+        const button = document.querySelector('.whatsAppFixes');
         const footer = document.querySelector('footer');
 
         const handleScroll = () => {
@@ -84,13 +84,11 @@ const ButtonWidget = () => {
             const footerRect = footer.getBoundingClientRect();
 
             if (buttonRect.bottom >= footerRect.top) {
-                // El botón está superponiéndose con el footer, cambiar su posición
-                button.style.position = 'absolute';
-                button.style.bottom = '20px'; // O la separación deseada para que no se superponga completamente
+                // El botón está superponiéndose con el footer, ocultarlo
+                button.style.display = 'none';
             } else {
-                // El botón no se superpone con el footer, restaurar su posición fija
-                button.style.position = 'fixed';
-                button.style.bottom = '20px'; // O la separación deseada con respecto al borde inferior de la ventana
+                // El botón no se superpone con el footer, restaurar su estilo original
+                button.style.display = 'block'; // O cualquier valor que corresponda a su estilo original
             }
         };
 
