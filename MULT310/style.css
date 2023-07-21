@@ -2,6 +2,11 @@
     display: none;
 }
 
+.flight-result__segments-toggle, .flight-selection__segments-toggle {
+  display: inline-block;
+  margin: 0rem 1rem;
+  background-color: #0d4e88;
+}
 
 /* Add specific styles for mobile screens */
 @media screen and (max-width: 767px) {
