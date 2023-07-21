@@ -50,8 +50,8 @@
         flex-grow : 1;
         text-align : center;
     }
-    .flight-result__stops .something {
-        flex-grow : 20;
+    .flight-result__stops .modified_blue_dropdown {
+        flex-grow : 5;
     }
     .result-option .result-option--selectable .result-option--selectable--selected {
         box-shadow: inset 0 0 0 2px;
@@ -66,6 +66,7 @@
 
     .flight-selection__airline {
         display: flex;
+        
     }
 
     .result-option__heading {
@@ -78,6 +79,6 @@
     .flight-selection__info {
         display: flex;
         align-items: center;
-        padding-left: 1rem;
+        padding-left: 1.5rem;
     }
 }

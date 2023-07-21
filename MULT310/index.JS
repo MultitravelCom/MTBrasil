@@ -125,6 +125,11 @@ function changeOrderOfDescriptionElements() {
     //element.style.position = 'relative';
     if(checkIfFirstTimeChanging(element, "order")){
 console.log("--->changeOrderOfDescriptionElements  order type")
+   
+
+
+
+
 
     // Get references to the child div elements
     const aerolinea = element.querySelector('.flight-result__airline');
@@ -139,6 +144,19 @@ console.log("---> escalas: ", escalas)
     if(aerolinea)
     element.insertBefore(duracion, aerolinea);
     element.insertBefore(escalas,duracion);
+
+    /*
+    Create empty div so it takes up empty space with flex grow property
+    */
+     const emptyDiv = document.createElement('div');
+     emptyDiv.classList.add('.flight-info__empty-div');
+     emptyDiv.style.flexGrow = '5'
+     // Get the first child element of the container
+     const firstChild = element.firstChild;
+      
+     // Insert the empty div before the first child element inside the container
+     element.insertBefore(emptyDiv, firstChild);
+
 
     //PART FOR NOT MOBILE
     if(window.innerWidther > 1023){
@@ -158,6 +176,7 @@ function copyButtonAndMove(element) {
   console.log("--------> copyButtonAndMove running")
   const escalas = element.querySelector('.flight-result__stops, .flight-selection__stops');
   copiaEscalas = escalas.cloneNode(true);
+  copiaEscalas.classList.add('modified_blue_dropdown');
   const imageChildElement = copiaEscalas.querySelector('.stops-image-escalas');
   imageChildElement.style.display = 'none';
   const button = copiaEscalas.querySelector('.flight-result__segments-toggle, .flight-selection__segments-toggle');
