@@ -58,11 +58,11 @@
     .flight-result__stops .modified_blue_dropdown {
         flex-grow : 5;
     }
-    .result-option .result-option--selectable .result-option--selectable--selected {
+    .result-option--selectable .result-option--selectable--selected {
         box-shadow: inset 0 0 0 2px #fcdf98;
         border: 0px solid white!important;
     }
-
+    .result-option--selectable .result-option--selectable--selected
     /* SELECTED FLIGHT*/
 
     .result-option__heading {
