@@ -180,8 +180,8 @@ function copyButtonAndMove(element) {
   const imageChildElement = copiaEscalas.querySelector('.stops-image-escalas');
   imageChildElement.style.display = 'none';
   const button = copiaEscalas.querySelector('.flight-result__segments-toggle, .flight-selection__segments-toggle');
-  /*
   button.style.display = 'inline-block';
+  /*
   button.style.margin = '0rem 1rem';
   button.style.backgroundColor = '#0d4e88';
   */
