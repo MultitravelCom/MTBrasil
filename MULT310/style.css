@@ -12,10 +12,16 @@
     padding: 0;
 }
 
+
+.flight-result__duration .glyphicon, .flight-result__places .glyphicon, .flight-selection__duration .glyphicon, .flight-selection__places .glyphicon {
+    padding-right: 0.2rem;
+}
 /* Add specific styles for mobile screens */
 @media screen and (max-width: 767px) {
     /* Your CSS rules for mobile go here */
- 
+    .flight-info__empty-div {
+        display: none;
+    }
   }
 
   /* Add specific styles for tablet screens */
