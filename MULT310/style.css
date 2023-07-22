@@ -73,6 +73,7 @@
 
     .result-option__heading, .result-option--extended .result-option__extended-heading, .result-option--extended .result-option__heading {
         width: auto!important; 
+        max-width: 40%;
     }
 
     .flight-selection__option {
