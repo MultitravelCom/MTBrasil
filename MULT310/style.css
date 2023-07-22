@@ -75,6 +75,10 @@
         width: auto!important; 
     }
 
+    .flight-selection__option {
+        padding-right: 0px;
+    }
+
     .flight-selection__airline {
         display: flex;
         
@@ -91,5 +95,9 @@
         display: flex!important;
         align-items: center;
         padding-left: 1.5rem;
+    }
+
+    .flight-selection__stops .class_changed_description .modified_blue_dropdown {
+        margin-right: 0rem;
     }
 }
