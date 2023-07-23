@@ -84,36 +84,37 @@ function checkIfTheresZeroBaggage(resultInfoElement) {
   const baggageElement = resultInfoElement.querySelector('.flight-result__baggage, .flight-selection__baggage');
   if(!baggageElement){
    // Step 1: Create the outermost <span> element with the class "flight-result__baggage"
-const outerSpan = document.createElement("span");
-outerSpan.classList.add("flight-result__baggage");
+  const outerSpan = document.createElement("span");
+  outerSpan.classList.add("flight-result__baggage");
 
-// Step 2: Create the innermost <span> element with the class "glyphicon glyphicon-baggage"
-const innerSpan = document.createElement("span");
-innerSpan.classList.add("glyphicon", "glyphicon-baggage");
+  // Step 2: Create the innermost <span> element with the class "glyphicon glyphicon-baggage"
+  const innerSpan = document.createElement("span");
+  innerSpan.classList.add("glyphicon", "glyphicon-baggage");
 
-// Step 3: Set the title attribute for the innermost <span> element
-innerSpan.setAttribute("data-toggle", "tooltip");
-innerSpan.setAttribute("data-placement", "top");
-innerSpan.setAttribute("title", "Included 1 Bagagem (LUGG)");
+  // Step 3: Set the title attribute for the innermost <span> element
+  innerSpan.setAttribute("data-toggle", "tooltip");
+  innerSpan.setAttribute("data-placement", "top");
+  innerSpan.setAttribute("title", "Included 1 Bagagem (LUGG)");
 
-// Set the text content of the innermost <span> element
-const innerSpanText = document.createElement("span");
-innerSpanText.textContent = "× 0";
+  // Set the text content of the innermost <span> element
+  const innerSpanText = document.createElement("span");
+  innerSpanText.textContent = "× 0";
 
-// Step 4: Append the innermost <span> element to the outermost <span> element
-outerSpan.appendChild(innerSpan);
-outerSpan.appendChild(innerSpanText);
+  // Step 4: Append the innermost <span> element to the outermost <span> element
+  outerSpan.appendChild(innerSpan);
+  outerSpan.appendChild(innerSpanText);
 
-//we check to check if  in result duration there is already a baggage span
-const durationElementDiv = resultInfoElement.querySelector('.flight-result__duration');
-//const getBaggageFromDuration = durationElementDiv.querySelector('.flight-result__baggage');
-if(durationElementDiv){
-  durationElementDiv.appendChild(outerSpan);
-}else{
+  //we check to check if  in result duration there is already a baggage span
+  const durationElementDiv = resultInfoElement.querySelector('.flight-result__duration');
+  //const getBaggageFromDuration = durationElementDiv.querySelector('.flight-result__baggage');
+  if(durationElementDiv){
+    durationElementDiv.appendChild(outerSpan);
+  }else{
 
-// Now you have the entire HTML element programmatically created. You can append it to an existing element in your HTML, for example:
-resultInfoElement.appendChild(outerSpan);
-}
+    // Now you have the entire HTML element programmatically created. You can append it to an existing element in your HTML, for example:
+    resultInfoElement.appendChild(outerSpan);
+  }
+  }
 }
 
 function changeOrderOfDescriptionElements() {
