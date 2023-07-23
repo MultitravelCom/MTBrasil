@@ -124,13 +124,13 @@ console.log("--->changeOrderOfDescriptionElements  order type")
 
 
 
+checkIfTheresZeroBaggage(element);
 
     // Get references to the child div elements
     const aerolinea = element.querySelector('.flight-result__airline');
     const duracion = element.querySelector('.flight-result__duration, .flight-selection__duration');
     const escalas = element.querySelector('.flight-result__stops, .flight-selection__stops');
 
-    checkIfTheresZeroBaggage(duracion);
 console.log("---> aerolinea: ", aerolinea)
 console.log("---> duracion: ", duracion)
 console.log("---> escalas: ", escalas)
