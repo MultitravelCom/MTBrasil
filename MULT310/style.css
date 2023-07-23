@@ -38,6 +38,10 @@
     .flight-result__stops.class_changed_description.modified_blue_dropdown {
         padding-right: 10px;
     }
+
+    .flight-selection__option.result-option result-option--extended .result-option__heading {
+        width: 30%;
+    }
   }
 
   /* Add specific styles for desktop screens */
