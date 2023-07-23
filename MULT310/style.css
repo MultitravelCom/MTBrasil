@@ -4,12 +4,12 @@
 
 .flight-result__segments-toggle, .flight-selection__segments-toggle {
   display: inline-block;
-  margin: 0rem 1rem;
+  margin: 0rem 0rem;
   background-color: #0d4e88;
 }
 .flight-info__empty-div {
     flex-grow: 5;
-    padding: 0;
+    padding: 0!important;
 }
 
 
