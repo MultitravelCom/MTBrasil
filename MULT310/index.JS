@@ -174,7 +174,7 @@ function copyButtonAndMove(element) {
   const imageChildElement = copiaEscalas.querySelector('.stops-image-escalas');
   imageChildElement.style.display = 'none';
   const button = copiaEscalas.querySelector('.flight-result__segments-toggle, .flight-selection__segments-toggle');
-  button.style.padding
+  
   button.style.display = 'inline-block';
   /*
   button.style.margin = '0rem 1rem';
@@ -191,6 +191,7 @@ function copyButtonAndMove(element) {
   if (button.classList.contains('flight-selection__segments-toggle')) {
     copiaEscalas.style.margin= '0rem 1rem';
     const newText = document.createTextNode('Ver detalles');
+    button.style.marginLeft = '0.5rem';
     // Insert the new text node after the button element
     copiaEscalas.insertBefore(newText, button);
   }
