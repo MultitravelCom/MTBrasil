@@ -23,13 +23,6 @@ else if (type === "description_selected"){
     return true;
   }
 }
-else if (type === "changeStyleDesktop"){
-  if (!elementsToCheck.classList.contains('class_changed_desktop_style') ) {
-    console.log("Changed class desktop style");
-    elementsToCheck.classList.add('class_changed_desktop_style');
-    return true;
-  }
-}
 return false;
 }
 
@@ -87,32 +80,31 @@ function changeDescription() {
   });
 }
 
-function changeStyleDesktop () {
-  const elementsDescription = document.querySelectorAll('.result-option__main');
-  elementsDescription.forEach(element => {
-    if(checkIfFirstTimeChanging(element, "changeStyleDesktop")){
-      /*
-    element.style.display = 'flex';
-    element.style.tableLayout = 'auto';
-    resultOptionContent = element.querySelector('.result-option__content')
-    resultOptionContent.style.display = 'flex';
-    resultOptionContent.style.tableLayout = 'auto';
-    resultOptionContent.style.flexGrow = '1';
-    flightResultInfo = element.querySelector('.flight-result__info');
-    flightResultInfo.style.display = 'flex';
-    flightResultInfo.style.alignItems = 'center';
-    flightResultInfo.style.tableLayout = 'auto';
-    flightResultInfo.style.flexGrow = '1';
-    flightResultInfo = element.querySelector('.flight-result__stops');
-    //flightResultInfo.style.display = 'flex';
-    //flightResultInfo.style.tableLayout = 'auto';
-    flightResultInfo.style.flexGrow = 'auto';
-    console.log("||| .result-option__main : ", element)
-    console.log("||| resultOptionContent : ", resultOptionContent)
-    console.log("||| flightResultInfo : ", flightResultInfo)
-    */
-    }
-  })
+function checkIfTheresZeroBaggage(durationElement) {
+  const baggageElement = durationElement.querySelector('.flight-result__baggage');
+  if(!baggageElement){
+   // Step 1: Create the outermost <span> element with the class "flight-result__baggage"
+const outerSpan = document.createElement("span");
+outerSpan.classList.add("flight-result__baggage");
+
+// Step 2: Create the innermost <span> element with the class "glyphicon glyphicon-baggage"
+const innerSpan = document.createElement("span");
+innerSpan.classList.add("glyphicon", "glyphicon-baggage");
+
+// Step 3: Set the title attribute for the innermost <span> element
+innerSpan.setAttribute("data-toggle", "tooltip");
+innerSpan.setAttribute("data-placement", "top");
+innerSpan.setAttribute("title", "Included 1 Bagagem (LUGG)");
+
+// Set the text content of the innermost <span> element
+innerSpan.textContent = "× 1";
+
+// Step 4: Append the innermost <span> element to the outermost <span> element
+outerSpan.appendChild(innerSpan);
+
+// Now you have the entire HTML element programmatically created. You can append it to an existing element in your HTML, for example:
+durationElement.appendChild(outerSpan);
+  }
 }
 
 function changeOrderOfDescriptionElements() {
@@ -136,6 +128,7 @@ console.log("--->changeOrderOfDescriptionElements  order type")
     const duracion = element.querySelector('.flight-result__duration, .flight-selection__duration');
     const escalas = element.querySelector('.flight-result__stops, .flight-selection__stops');
 
+    checkIfTheresZeroBaggage(duracion);
 console.log("---> aerolinea: ", aerolinea)
 console.log("---> duracion: ", duracion)
 console.log("---> escalas: ", escalas)
@@ -179,6 +172,7 @@ function copyButtonAndMove(element) {
   const imageChildElement = copiaEscalas.querySelector('.stops-image-escalas');
   imageChildElement.style.display = 'none';
   const button = copiaEscalas.querySelector('.flight-result__segments-toggle, .flight-selection__segments-toggle');
+  button.style.padding
   button.style.display = 'inline-block';
   /*
   button.style.margin = '0rem 1rem';
@@ -209,7 +203,6 @@ function changeDescriptionElementFunctions() {
   changeDescription();
   changeOrderOfDescriptionElements();
   changeDescriptionSelectedFlight();
-  changeStyleDesktop();
   //copyButtonAndMove();
 
 }
