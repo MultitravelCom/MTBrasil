@@ -177,7 +177,6 @@ function copyButtonAndMove(element) {
 function changeDescriptionElementFunctions() {
   changeDescription();
   changeOrderOfDescriptionElements();
-  changeDescriptionSelectedFlight();
 }
 
 
