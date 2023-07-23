@@ -1,24 +1,22 @@
+
 /*
-  La funcion obtiene los elementos Sin Escala para cambiar el icono dropdown por el de escalas"
+  Función para ver si ya se cambio el elemento y no volver a cambiarlo
 */
 function checkIfFirstTimeChanging(elementsToCheck, type){
 if (type === "description") {
   if (!elementsToCheck.classList.contains('class_changed_description') ) {
-    console.log("Changed class description");
     elementsToCheck.classList.add('class_changed_description');
-    return true;
+    return true;s
   }
 }
 else if (type === "order"){
   if (!elementsToCheck.classList.contains('class_changed_order') ) {
-    console.log("Changed class order");
     elementsToCheck.classList.add('class_changed_order');
     return true;
   }
 }
 else if (type === "description_selected"){
   if (!elementsToCheck.classList.contains('class_changed_description_selected') ) {
-    console.log("Changed class description selection");
     elementsToCheck.classList.add('class_changed_description_selected');
     return true;
   }
@@ -26,35 +24,7 @@ else if (type === "description_selected"){
 return false;
 }
 
-function changeDescriptionSelectedFlight() {
-
-
-  /*
-  const elementsSinEscalas = document.querySelectorAll('.flight-selection__info');
-  console.log("changeDescriptionSelectedFlight elementsSinEscalas ---> :", elementsSinEscalas)
-  elementsSinEscalas.forEach(element => {
-    if(checkIfFirstTimeChanging(element,"description_selected")){
-    console.log("Iterating element ---> :", element)
-//seleccionamos el horario, para isnertar antes las escalas
-const time = element.querySelector('.flight-selection__duration');
-console.log("Time ---> :", time)
-
-    const divEscalas = document.createElement('div');
-    const image = document.createElement('img');
-    image.classList.add('stops-image-escalas');
-    image.src = 'https://multitravelcom.github.io/MTBrasil/MULT310/icons/SinEscalas.svg';
-    image.alt = 'Image Description';
-    const text = document.createTextNode('Your text goes here');
-    divEscalas.appendChild(image);
-    divEscalas.appendChild(text);
-    element.insertBefore(divEscalas, time);
-    }
-  })
-  */
-}
-
 function changeDescription() {
-  
   
   // Step 1: Select all occurrences of the element escalas
   const elementsSinEscalas = document.querySelectorAll('.flight-result__stops, .flight-selection__stops');
@@ -80,6 +50,9 @@ function changeDescription() {
   });
 }
 
+/*
+  Dependiendo de si hay ono baggage se agrega 0 baggage 
+*/
 function checkIfTheresZeroBaggage(resultInfoElement) {
   const baggageElement = resultInfoElement.querySelector('.flight-result__baggage, .flight-selection__baggage');
   if(!baggageElement){
@@ -117,31 +90,29 @@ function checkIfTheresZeroBaggage(resultInfoElement) {
   }
 }
 
+/*
+  reordena los elementos dentro de .flight-result__info, .flight-selection__info
+*/
 function changeOrderOfDescriptionElements() {
   const elementsDescription = document.querySelectorAll('.flight-result__info, .flight-selection__info');
 
   // Step 2: Iterate through each occurrence
-  console.log("-------->  changeOrderOfDescriptionElements RUNNING")
   elementsDescription.forEach(element => {
     //next line is to be able to use absolute position in last child (dropdown)
     //element.style.position = 'relative';
     if(checkIfFirstTimeChanging(element, "order")){
-console.log("--->changeOrderOfDescriptionElements  order type")
    
 
 
 
 
-checkIfTheresZeroBaggage(element);
+    checkIfTheresZeroBaggage(element);
 
     // Get references to the child div elements
     const aerolinea = element.querySelector('.flight-result__airline');
     const duracion = element.querySelector('.flight-result__duration, .flight-selection__duration');
     const escalas = element.querySelector('.flight-result__stops, .flight-selection__stops');
 
-console.log("---> aerolinea: ", aerolinea)
-console.log("---> duracion: ", duracion)
-console.log("---> escalas: ", escalas)
     // Append the child div elements in the desired order
     //element.insertBefore(estaVaPrimero, estaVaSegundo);
     if(aerolinea)
@@ -173,9 +144,11 @@ console.log("---> escalas: ", escalas)
   
 }
 
+/*
+  La funcion obtiene los elementos Sin Escala para cambiar el icono dropdown por el de escalas"
+*/
 function copyButtonAndMove(element) {
   
-  console.log("--------> copyButtonAndMove running")
   const escalas = element.querySelector('.flight-result__stops, .flight-selection__stops');
   copiaEscalas = escalas.cloneNode(true);
   copiaEscalas.classList.add('modified_blue_dropdown');
@@ -184,17 +157,11 @@ function copyButtonAndMove(element) {
   const button = copiaEscalas.querySelector('.flight-result__segments-toggle, .flight-selection__segments-toggle');
   
   button.style.display = 'inline-block';
-  /*
-  button.style.margin = '0rem 1rem';
-  button.style.backgroundColor = '#0d4e88';
-  */
   for (let i = 0; i < copiaEscalas.childNodes.length; i++) {
     if (copiaEscalas.childNodes[i].nodeType === Node.TEXT_NODE) {
     copiaEscalas.removeChild(copiaEscalas.childNodes[i]);
-    console.log("deleteing text node?")
     }
   }
-  console.log(copiaEscalas.childNodes);
   
   if (button.classList.contains('flight-selection__segments-toggle')) {
     copiaEscalas.style.margin= '0rem 1rem';
@@ -206,16 +173,11 @@ function copyButtonAndMove(element) {
   copiaEscalas.style.textAlign= 'right'; 
   copiaEscalas.style.flexGrow= '1'; 
   element.appendChild(copiaEscalas);
-      // }
-  //});
 }
 function changeDescriptionElementFunctions() {
-  console.log("----------> changeDescriptionElementFunctions")
   changeDescription();
   changeOrderOfDescriptionElements();
   changeDescriptionSelectedFlight();
-  //copyButtonAndMove();
-
 }
 
 
@@ -243,9 +205,7 @@ function changeDescriptionElementFunctions() {
                 node.nodeType === Node.ELEMENT_NODE &&
                 targetClasses.some((targetClass) => node.matches(targetClass))
               ) {
-                console.log("Calling callback from observer")
                 callback(); // Perform your desired actions for each change
-                
               }
             }
           }
@@ -261,34 +221,12 @@ function changeDescriptionElementFunctions() {
     });
   }
   
-  document.addEventListener('DOMContentLoaded', () => {
-    console.log('DOMContentLoaded');
-/*
-    observeElementChanges(
-      ['.results-list__item', 'flight-result__route-selection'],
-      changeDescriptionElementFunctions
-    );
-*/
-    //document.addEventListener('click', changeDescriptionElementFunctions);
-    
-
-  });
-
-
-
-
-  ////////////////////
-
-
-
-
   function onDivAdded(mutationsList, repetition) {
   mutationsList.forEach((mutation) => {
     if (mutation.type === 'childList') {
       mutation.addedNodes.forEach((node) => {
         if (node.nodeName === 'DIV') {
           // Call your function or perform any action here
-          console.log('New <div> element added:', node);
           changeDescriptionElementFunctions();
         }
       });
@@ -297,16 +235,12 @@ function changeDescriptionElementFunctions() {
 
   const elements = document.querySelectorAll('.flight-selection');
     if (elements.length === 0 ) {
-      console.log("***** NO .flight-selection FOUND")
       if (repetition && repetition < 5000) {
-        console.log("*****  repetition FOUND")
       repetition +=100;
       setTimeout(()=>{onDivAdded(mutationsList,repetition)}, 100); // Retry after 100 milliseconds
       }else if  (repetition && repetition >= 3000){
-        console.log("**-----------> END LOOP FOR querySelectorAll('.flight-selection') ")
         }
       else  {
-        console.log("***** **NO** repetition FOUND")
         let repetition =100;
         setTimeout(()=>{onDivAdded(mutationsList,repetition)}, 100); // Retry after 100 milliseconds
         }
