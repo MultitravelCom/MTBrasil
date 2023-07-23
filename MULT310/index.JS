@@ -81,7 +81,7 @@ function changeDescription() {
 }
 
 function checkIfTheresZeroBaggage(durationElement) {
-  const baggageElement = durationElement.querySelector('.flight-result__baggage');
+  const baggageElement = durationElement.querySelector('.flight-result__baggage, .flight-selection__baggage');
   if(!baggageElement){
    // Step 1: Create the outermost <span> element with the class "flight-result__baggage"
 const outerSpan = document.createElement("span");
