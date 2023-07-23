@@ -85,6 +85,10 @@
         max-width: 40%;
     }
 
+
+    .flight-selection__info .class_changed_order div {
+        padding-left: 1rem;
+    }
     .flight-selection__option {
         padding-right: 0px;
     }
