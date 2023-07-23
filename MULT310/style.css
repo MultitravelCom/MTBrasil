@@ -111,7 +111,7 @@
         padding-left: 1.5rem;
     }
 
-    .flight-selection__stops .class_changed_description .modified_blue_dropdown {
+    .flight-selection__stops.class_changed_description.modified_blue_dropdown {
         margin-right: 0rem;
     }
 }
