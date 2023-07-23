@@ -80,8 +80,8 @@ function changeDescription() {
   });
 }
 
-function checkIfTheresZeroBaggage(durationElement) {
-  const baggageElement = durationElement.querySelector('.flight-result__baggage, .flight-selection__baggage');
+function checkIfTheresZeroBaggage(resultInfoElement) {
+  const baggageElement = resultInfoElement.querySelector('.flight-result__baggage, .flight-selection__baggage');
   if(!baggageElement){
    // Step 1: Create the outermost <span> element with the class "flight-result__baggage"
 const outerSpan = document.createElement("span");
@@ -104,9 +104,16 @@ innerSpanText.textContent = "× 0";
 outerSpan.appendChild(innerSpan);
 outerSpan.appendChild(innerSpanText);
 
+//we check to check if  in result duration there is already a baggage span
+const durationElementDiv = resultInfoElement.querySelector('.flight-result__duration');
+//const getBaggageFromDuration = durationElementDiv.querySelector('.flight-result__baggage');
+if(durationElementDiv){
+  durationElementDiv.appendChild(outerSpan);
+}else{
+
 // Now you have the entire HTML element programmatically created. You can append it to an existing element in your HTML, for example:
-durationElement.appendChild(outerSpan);
-  }
+resultInfoElement.appendChild(outerSpan);
+}
 }
 
 function changeOrderOfDescriptionElements() {
