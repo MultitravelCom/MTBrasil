@@ -23,6 +23,13 @@
         display: none;
         padding: 0!important;
     }
+    .flight-selection__segments-toggle {
+        background: #656565;
+        border-radius: 4px;
+        border: 0;
+        display: flex;
+        padding: 1px 2px;
+    }
   }
 
   /* Add specific styles for tablet screens */
