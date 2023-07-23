@@ -97,10 +97,12 @@ innerSpan.setAttribute("data-placement", "top");
 innerSpan.setAttribute("title", "Included 1 Bagagem (LUGG)");
 
 // Set the text content of the innermost <span> element
+const innerSpanText = document.createElement("span");
 innerSpan.textContent = "× 1";
 
 // Step 4: Append the innermost <span> element to the outermost <span> element
 outerSpan.appendChild(innerSpan);
+outerSpan.appendChild(innerSpanText);
 
 // Now you have the entire HTML element programmatically created. You can append it to an existing element in your HTML, for example:
 durationElement.appendChild(outerSpan);
