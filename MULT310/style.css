@@ -33,9 +33,17 @@
 
   /* Add specific styles for desktop screens */
 @media screen and (min-width: 1024px) {
+    .container {
+        width: 1260px;
+    }
     /* Your CSS rules for desktop go here */
 
-
+    body.results .results__sidebar {
+        width: 22%;
+    }
+    body.results .results__list {
+        width: 78%;
+    }
     /*CONTROL THIS ONE*/
     .result-option__main {
         display: flex!important;
