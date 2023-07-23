@@ -119,6 +119,7 @@
     }
 
     .flight-selection__stops.class_changed_description.modified_blue_dropdown {
-        margin-right: 0rem;
+        margin-right: 0rem!important;
     }
+
 }
