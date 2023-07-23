@@ -98,7 +98,7 @@ innerSpan.setAttribute("title", "Included 1 Bagagem (LUGG)");
 
 // Set the text content of the innermost <span> element
 const innerSpanText = document.createElement("span");
-innerSpanText.textContent = "× 1";
+innerSpanText.textContent = "× 0";
 
 // Step 4: Append the innermost <span> element to the outermost <span> element
 outerSpan.appendChild(innerSpan);
