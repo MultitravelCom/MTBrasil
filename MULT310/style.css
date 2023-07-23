@@ -21,6 +21,7 @@
     /* Your CSS rules for mobile go here */
     .flight-info__empty-div {
         display: none;
+        padding: 0!important;
     }
   }
 
