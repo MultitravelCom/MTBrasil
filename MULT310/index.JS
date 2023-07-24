@@ -46,7 +46,7 @@ function changeDescription() {
     image.alt = 'Image Description';
     */
     const escalasDiv = document.createElement('div');
-    escalasDiv.classList.add('glyphicon glyphicon-miles');
+    escalasDiv.classList.add('glyphicon', 'glyphicon-miles');
     escalasDiv.alt = 'Image Description';
     // Step 5: Insert the new image element
     element.insertBefore(escalasDiv, button);
