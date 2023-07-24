@@ -12,7 +12,6 @@
     padding: 0!important;
 }
 
-
 .flight-result__duration .glyphicon, .flight-result__places .glyphicon, .flight-selection__duration .glyphicon, .flight-selection__places .glyphicon {
     padding-right: 0.2rem;
 }
@@ -124,5 +123,4 @@
     .flight-selection__stops.class_changed_description.modified_blue_dropdown {
         margin-right: 0rem!important;
     }
-
 }

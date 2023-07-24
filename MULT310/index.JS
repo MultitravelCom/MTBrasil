@@ -1,4 +1,3 @@
-
 /*
   Función para ver si ya se cambio el elemento y no volver a cambiarlo
 */
@@ -6,7 +5,7 @@ function checkIfFirstTimeChanging(elementsToCheck, type){
 if (type === "description") {
   if (!elementsToCheck.classList.contains('class_changed_description') ) {
     elementsToCheck.classList.add('class_changed_description');
-    return true;s
+    return true;
   }
 }
 else if (type === "order"){
@@ -25,26 +24,14 @@ return false;
 }
 
 function changeDescription() {
-  
-  // Step 1: Select all occurrences of the element escalas
   const elementsSinEscalas = document.querySelectorAll('.flight-result__stops, .flight-selection__stops');
-  
   // Step 2: Iterate through each occurrence
   elementsSinEscalas.forEach(element => {
     if(checkIfFirstTimeChanging(element,"description")){
-      
-      //we chekc 
     // Step 3: Hide the button
     const button = element.querySelector('.flight-result__segments-toggle, .flight-selection__segments-toggle');
     button.style.display = 'none';
-  
-    /*
-    // Step 4: Create a new image element
-    const image = document.createElement('img');
-    image.classList.add('stops-image-escalas');
-    image.src = 'https://multitravelcom.github.io/MTBrasil/MULT310/icons/SinEscalas.svg';
-    image.alt = 'Image Description';
-    */
+    //Step 4: Insert new stops/escalas image
     const escalasDiv = document.createElement('div');
     escalasDiv.classList.add('glyphicon', 'glyphicon-miles');
     escalasDiv.alt = 'Image Description';
@@ -55,7 +42,7 @@ function changeDescription() {
 }
 
 /*
-  Dependiendo de si hay ono baggage se agrega 0 baggage 
+  Dependiendo de si hay o no baggage se agrega "0" baggage 
 */
 function checkIfTheresZeroBaggage(resultInfoElement) {
   const baggageElement = resultInfoElement.querySelector('.flight-result__baggage, .flight-selection__baggage');
@@ -63,31 +50,24 @@ function checkIfTheresZeroBaggage(resultInfoElement) {
    // Step 1: Create the outermost <span> element with the class "flight-result__baggage"
   const outerSpan = document.createElement("span");
   outerSpan.classList.add("flight-result__baggage");
-
   // Step 2: Create the innermost <span> element with the class "glyphicon glyphicon-baggage"
   const innerSpan = document.createElement("span");
   innerSpan.classList.add("glyphicon", "glyphicon-baggage");
-
   // Step 3: Set the title attribute for the innermost <span> element
   innerSpan.setAttribute("data-toggle", "tooltip");
   innerSpan.setAttribute("data-placement", "top");
   innerSpan.setAttribute("title", "Included 1 Bagagem (LUGG)");
-
   // Set the text content of the innermost <span> element
   const innerSpanText = document.createElement("span");
   innerSpanText.textContent = "× 0";
-
   // Step 4: Append the innermost <span> element to the outermost <span> element
   outerSpan.appendChild(innerSpan);
   outerSpan.appendChild(innerSpanText);
-
   //we check to check if  in result duration there is already a baggage span
   const durationElementDiv = resultInfoElement.querySelector('.flight-result__duration');
-  //const getBaggageFromDuration = durationElementDiv.querySelector('.flight-result__baggage');
   if(durationElementDiv){
     durationElementDiv.appendChild(outerSpan);
   }else{
-
     // Now you have the entire HTML element programmatically created. You can append it to an existing element in your HTML, for example:
     resultInfoElement.appendChild(outerSpan);
   }
@@ -103,49 +83,29 @@ function changeOrderOfDescriptionElements() {
   // Step 2: Iterate through each occurrence
   elementsDescription.forEach(element => {
     //next line is to be able to use absolute position in last child (dropdown)
-    //element.style.position = 'relative';
     if(checkIfFirstTimeChanging(element, "order")){
-   
+      checkIfTheresZeroBaggage(element);
+      // Get references to the child div elements
+      const aerolinea = element.querySelector('.flight-result__airline');
+      const duracion = element.querySelector('.flight-result__duration, .flight-selection__duration');
+      const escalas = element.querySelector('.flight-result__stops, .flight-selection__stops');
+      // Append the child div elements in the desired order
+      if(aerolinea)
+      element.insertBefore(duracion, aerolinea);
+      element.insertBefore(escalas,duracion);
 
-
-
-
-    checkIfTheresZeroBaggage(element);
-
-    // Get references to the child div elements
-    const aerolinea = element.querySelector('.flight-result__airline');
-    const duracion = element.querySelector('.flight-result__duration, .flight-selection__duration');
-    const escalas = element.querySelector('.flight-result__stops, .flight-selection__stops');
-
-    // Append the child div elements in the desired order
-    //element.insertBefore(estaVaPrimero, estaVaSegundo);
-    if(aerolinea)
-    element.insertBefore(duracion, aerolinea);
-    element.insertBefore(escalas,duracion);
-
-    /*
-    Create empty div so it takes up empty space with flex grow property
-    */
-     const emptyDiv = document.createElement('div');
-     emptyDiv.classList.add('flight-info__empty-div');
-     // Get the first child element of the container
-     const firstChild = element.firstChild;
-      
-     // Insert the empty div before the first child element inside the container
-     element.insertBefore(emptyDiv, firstChild);
-
-
-    //PART FOR NOT MOBILE
-    if(window.innerWidther > 1023){
-
-
+      /*
+      Create empty div so it takes up empty space with flex grow property
+      */
+      const emptyDiv = document.createElement('div');
+      emptyDiv.classList.add('flight-info__empty-div');
+      // Get the first child element of the container
+      const firstChild = element.firstChild;
+      // Insert the empty div before the first child element inside the container
+      element.insertBefore(emptyDiv, firstChild);
+      copyButtonAndMove(element);
     }
-
-    copyButtonAndMove(element);
-  }
   });
-
-  
 }
 
 /*
@@ -159,14 +119,12 @@ function copyButtonAndMove(element) {
   const imageChildElement = copiaEscalas.querySelector('.glyphicon-miles');
   imageChildElement.style.display = 'none';
   const button = copiaEscalas.querySelector('.flight-result__segments-toggle, .flight-selection__segments-toggle');
-  
   button.style.display = 'inline-block';
   for (let i = 0; i < copiaEscalas.childNodes.length; i++) {
     if (copiaEscalas.childNodes[i].nodeType === Node.TEXT_NODE) {
     copiaEscalas.removeChild(copiaEscalas.childNodes[i]);
     }
   }
-  
   if (button.classList.contains('flight-selection__segments-toggle')) {
     copiaEscalas.style.margin= '0rem 1rem';
     const newText = document.createTextNode('Ver detalles');
@@ -182,10 +140,6 @@ function changeDescriptionElementFunctions() {
   changeDescription();
   changeOrderOfDescriptionElements();
 }
-
-
-
-
 
   function observeElementChanges(targetClasses, callback) {
     const observer = new MutationObserver((mutationsList, observer) => {
@@ -223,7 +177,9 @@ function changeDescriptionElementFunctions() {
       characterData: true,
     });
   }
-  
+  /*
+    Tiene la logica para volver a repetir el scrip cada cierto tiempo hasta que aparezca el div que se quiere modificar
+  */
   function onDivAdded(mutationsList, repetition) {
   mutationsList.forEach((mutation) => {
     if (mutation.type === 'childList') {
@@ -249,7 +205,6 @@ function changeDescriptionElementFunctions() {
         }
     }
 }
-
 
 document.addEventListener('DOMContentLoaded', () => {
   const observer = new MutationObserver(onDivAdded);
