@@ -208,7 +208,8 @@ function changeDescriptionElementFunctions() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  if (window.location.href === 'https://example.com/specific-page') {
+  console.log("window.location.href ------->>>>> ", window.location.href)
+  if (window.location.href.includes('https://onefiveb2b.juniperbetemp.com/flights/results.aspx')) {
     // Your script code here
     console.log('Script is running on the specific page.');
     
