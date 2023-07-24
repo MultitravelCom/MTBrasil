@@ -156,7 +156,7 @@ function copyButtonAndMove(element) {
   const escalas = element.querySelector('.flight-result__stops, .flight-selection__stops');
   copiaEscalas = escalas.cloneNode(true);
   copiaEscalas.classList.add('modified_blue_dropdown');
-  const imageChildElement = copiaEscalas.querySelector('.stops-image-escalas');
+  const imageChildElement = copiaEscalas.querySelector('.glyphicon-miles');
   imageChildElement.style.display = 'none';
   const button = copiaEscalas.querySelector('.flight-result__segments-toggle, .flight-selection__segments-toggle');
   
