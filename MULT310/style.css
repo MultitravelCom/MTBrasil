@@ -41,6 +41,9 @@
     .flight-selection__option.result-option result-option--extended .result-option__heading {
         width: 30%;
     }
+    .flight-selection__info.class_changed_order div {
+        padding-right: 1rem;
+    }
   }
 
   /* Add specific styles for desktop screens */
