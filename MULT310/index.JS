@@ -23,6 +23,7 @@ else if (type === "description_selected"){
 return false;
 }
 
+
 function changeDescription() {
   const elementsSinEscalas = document.querySelectorAll('.flight-result__stops, .flight-selection__stops');
   // Step 2: Iterate through each occurrence
