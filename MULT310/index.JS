@@ -208,7 +208,14 @@ function changeDescriptionElementFunctions() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const observer = new MutationObserver(onDivAdded);
-  const observerConfig = { childList: true, subtree: true };
-  observer.observe(document.documentElement, observerConfig);
+  if (window.location.href === 'https://example.com/specific-page') {
+    // Your script code here
+    console.log('Script is running on the specific page.');
+    
+    // Add your script code here, for example:
+    // document.getElementById('someElement').classList.add('active');
+    const observer = new MutationObserver(onDivAdded);
+    const observerConfig = { childList: true, subtree: true };
+    observer.observe(document.documentElement, observerConfig);
+  }
 });
