@@ -12,8 +12,11 @@
     padding: 0!important;
 }
 
-.flight-result__duration .glyphicon, .flight-result__places .glyphicon, .flight-selection__duration .glyphicon, .flight-selection__places .glyphicon {
+.flight-result__duration.glyphicon, .flight-result__places.glyphicon, .flight-selection__duration.glyphicon, .flight-selection__places.glyphicon {
     padding-right: 0.2rem;
+}
+.glyphicon-miles {
+    top: 0.1rem;
 }
 /* Add specific styles for mobile screens */
 @media screen and (max-width: 767px) {
