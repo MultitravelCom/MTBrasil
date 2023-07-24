@@ -38,14 +38,18 @@ function changeDescription() {
     const button = element.querySelector('.flight-result__segments-toggle, .flight-selection__segments-toggle');
     button.style.display = 'none';
   
+    /*
     // Step 4: Create a new image element
     const image = document.createElement('img');
     image.classList.add('stops-image-escalas');
     image.src = 'https://multitravelcom.github.io/MTBrasil/MULT310/icons/SinEscalas.svg';
     image.alt = 'Image Description';
-  
+    */
+    const escalasDiv = document.createElement('div');
+    escalasDiv.classList.add('glyphicon-miles');
+    escalasDiv.alt = 'Image Description';
     // Step 5: Insert the new image element
-    element.insertBefore(image, button);
+    element.insertBefore(escalasDiv, button);
     }
   });
 }
