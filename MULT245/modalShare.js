@@ -106,6 +106,7 @@ const checkAndRender = () => {
         infoCardContent.appendChild(nuevoDivIconImg);
   
         nuevoDivBannerMensage.classList.add('main__container__bannerMensageCard__App');
+        nuevoDivIconIme.classList.add('main__container__IconImg');
   
         ReactDOM.render(<IconImg />, nuevoDivIconImg);
         ReactDOM.render(<CompartirAlojamiento />, nuevoDiv);
