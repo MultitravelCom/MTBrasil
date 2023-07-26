@@ -341,7 +341,7 @@
   overflow: hidden;
   text-align: center;
   width: 595px;
-  max-height: 656px;
+  height: 656px;
   border-radius: 1rem;
   margin: auto;
 }
@@ -389,7 +389,7 @@
 }
 
 .modal .modal-header {
-  width: 581px;
+  width: 600px;
   background-color: transparent;
   font-size: 1.286rem;
   padding: 10px;
@@ -401,9 +401,6 @@
   text-align: center;
   justify-content: flex-start;
   margin: auto;
-  top: 25%;
-}
-.results .gallery__canvas{
   top: 25%;
 }
 
@@ -421,7 +418,7 @@
   width: 88px;
   height: 35px;
   position: absolute;
-  right: 0;
+  right: 8px;
 }
 .modal-open .modal-gallery .close-icon{
   display: none;
