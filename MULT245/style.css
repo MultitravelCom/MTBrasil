@@ -355,7 +355,8 @@
 
 .modal-open .modal-gallery .gallery {
   background: transparent !important;
-  height: 100vh;
+  height: 700px;
+
 }
 
 .gallery__control.carousel-control .glyphicon {
@@ -374,19 +375,6 @@
   border-radius: 100%;
   justify-content: center;
 }
-
-/* .carousel-control.left {
-  left: 19%;
-}
-.carousel-control.right{
-  right: 19%;
-}
-.gallery__control.carousel-control.left .glyphicon {
-  right: 0;
-}
-.gallery__control.carousel-control.right .glyphicon {
-  left: 47px;
-} */
 
 .modal .modal-header {
   width: 600px;
@@ -420,12 +408,11 @@
   position: absolute;
   right: 8px;
 }
+.modal .modal-content{
+  padding: 67px 10px 15px !important;
+}
 .modal-open .modal-gallery .close-icon{
   display: none;
-}
-
-.gallery__main {
-  position: relative;
 }
 
 .gallery__control {
