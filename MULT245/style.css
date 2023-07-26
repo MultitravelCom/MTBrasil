@@ -314,6 +314,9 @@
 .modal-open .modal-gallery__category {
   display: none;
 }
+.modal-open .modal-gallery{
+  padding-left: 0 !important;
+}
 
 
 @media (max-width: 767px) {
