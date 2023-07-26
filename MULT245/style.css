@@ -341,7 +341,7 @@
   overflow: hidden;
   text-align: center;
   width: 595px;
-  height: 656px;
+  max-height: 656px;
   border-radius: 1rem;
   margin: auto;
 }
@@ -405,4 +405,7 @@
   height: 35px;
   position: absolute;
   right: 0;
+}
+.modal-open .modal-gallery .close-icon{
+  display: none;
 }
