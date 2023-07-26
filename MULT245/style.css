@@ -369,16 +369,16 @@
 }
 
 .carousel-control.left {
-  left: 25%;
+  left: 19%;
 }
 .carousel-control.right{
-  right: 25%;
+  right: 19%;
 }
-.gallery__control.carousel-control.right {
-  right: 26%;
+.gallery__control.carousel-control.left .glyphicon {
+  right: 0;
 }
-.gallery__control.carousel-control.left {
-  left: 42%;
+.gallery__control.carousel-control.right .glyphicon {
+  left: 47px;
 }
 
 .modal .modal-header {
