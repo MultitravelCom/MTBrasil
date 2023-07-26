@@ -337,7 +337,7 @@
 
 /* Galery picture */
 
-.carousel-inner>.item {
+.gallery__image-wrapper {
   overflow: hidden;
   text-align: center;
   width: 595px;
