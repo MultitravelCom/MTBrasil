@@ -18,7 +18,6 @@ const IconImg = () => {
                 <path d="M10.5 8H13.5" stroke="#0D4E88" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                 <path d="M12 18C13.79 18 15.25 16.54 15.25 14.75C15.25 12.96 13.79 11.5 12 11.5C10.21 11.5 8.75 12.96 8.75 14.75C8.75 16.54 10.21 18 12 18Z" stroke="#0D4E88" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
-
         </>
     );
 }
@@ -89,38 +88,36 @@ const BannerMensageCardApp = () => {
     );
 };
 
-const [renderedContainers, setRenderedContainers] = React.useState(new Set());
-
-const checkAndRender = () => {
+const checkAndRender = async () => {
     console.log("checkAndRender");
-    const infoCardContents = document.querySelectorAll('.info-card__content');
+    let infoCardContents = document.querySelectorAll('.info-card__content');
+
+    while (infoCardContents.length === 0) {
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        infoCardContents = document.querySelectorAll('.info-card__content');
+    }
 
     infoCardContents.forEach(infoCardContent => {
-        if (!renderedContainers.has(infoCardContent)) {
-            const nuevoDiv = document.createElement('div');
-            const nuevoDivBannerMensage = document.createElement('div');
-            const nuevoDivIconImg = document.createElement('div');
+        const nuevoDiv = document.createElement('div');
+        const nuevoDivBannerMensage = document.createElement('div');
+        const nuevoDivIconImg = document.createElement('div');
 
-            infoCardContent.appendChild(nuevoDiv);
-            infoCardContent.appendChild(nuevoDivBannerMensage);
-            infoCardContent.appendChild(nuevoDivIconImg);
+        infoCardContent.appendChild(nuevoDiv);
+        infoCardContent.appendChild(nuevoDivBannerMensage);
+        infoCardContent.appendChild(nuevoDivIconImg);
 
-            nuevoDivBannerMensage.classList.add('main__container__bannerMensageCard__App');
-            nuevoDivIconImg.classList.add("main__container__iconImg");
+        nuevoDivBannerMensage.classList.add('main__container__bannerMensageCard__App');
+        nuevoDivIconImg.classList.add("main__container__iconImg")
 
-            ReactDOM.render(<IconImg />, nuevoDivIconImg);
-            ReactDOM.render(<CompartirAlojamiento />, nuevoDiv);
-            ReactDOM.render(<BannerMensageCardApp />, nuevoDivBannerMensage);
-
-            // Agregamos el contenedor al conjunto de contenedores renderizados
-            setRenderedContainers(prevSet => new Set(prevSet).add(infoCardContent));
-        }
+        ReactDOM.render(<IconImg />, nuevoDivIconImg);
+        ReactDOM.render(<CompartirAlojamiento />, nuevoDiv);
+        ReactDOM.render(<BannerMensageCardApp />, nuevoDivBannerMensage);
     });
 };
 checkAndRender();
 
 function observarCambiosCheckAndRender() {
-    console.log("observarCambiosCheckAndRender");
+    console.log("checkAndRender");
     const observerConfig = {
         rootNode: document.documentElement,
         callback: () => {
