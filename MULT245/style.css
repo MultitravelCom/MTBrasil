@@ -461,6 +461,9 @@
   .modal .modal-header{
     width: 400px;
   }
+  .modal-open .modal-gallery .gallery{
+    height: 100%;
+  }
 }
 
 @media (min-width: 1024px) and (max-width: 1439px) {
