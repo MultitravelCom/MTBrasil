@@ -90,25 +90,30 @@ const BannerMensageCardApp = () => {
 const checkAndRender = async () => {
     console.log("checkAndRender");
     let infoCardContents = document.querySelectorAll('.info-card__content');
+    let infoCardImgContents = document.querySelectorAll('.info-card__image');
 
     while (infoCardContents.length === 0) {
         await new Promise(resolve => setTimeout(resolve, 1000));
         infoCardContents = document.querySelectorAll('.info-card__content');
+        infoCardImgContents = document.querySelectorAll('.info-card__image');
     }
+
+    infoCardImgContents.forEach(infoCardImgContent => {
+        const nuevoDivIconImg = document.createElement('div');
+        infoCardImgContent.appendChild(nuevoDivIconImg);
+        nuevoDivIconImg.classList.add("main__container__iconImg")
+        ReactDOM.render(<IconImg />, nuevoDivIconImg);
+    });
 
     infoCardContents.forEach(infoCardContent => {
         const nuevoDiv = document.createElement('div');
         const nuevoDivBannerMensage = document.createElement('div');
-        const nuevoDivIconImg = document.createElement('div');
 
         infoCardContent.appendChild(nuevoDiv);
         infoCardContent.appendChild(nuevoDivBannerMensage);
-        infoCardContent.appendChild(nuevoDivIconImg);
 
         nuevoDivBannerMensage.classList.add('main__container__bannerMensageCard__App');
-        nuevoDivIconImg.classList.add("main__container__iconImg")
 
-        ReactDOM.render(<IconImg />, nuevoDivIconImg);
         ReactDOM.render(<CompartirAlojamiento />, nuevoDiv);
         ReactDOM.render(<BannerMensageCardApp />, nuevoDivBannerMensage);
     });
