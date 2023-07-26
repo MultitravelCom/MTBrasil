@@ -366,9 +366,43 @@
   border-radius: 100%;
   justify-content: center;
 }
-.gallery__control.carousel-control.left .glyphicon{
+
+.gallery__control.carousel-control.left .glyphicon {
   left: 72%;
 }
-.gallery__control.carousel-control.right .glyphicon{
-  right: 143%; 
+
+.gallery__control.carousel-control.right .glyphicon {
+  right: 143%;
+}
+
+.modal .modal-header {
+  width: 527px;
+  background-color: transparent;
+  font-size: 1.286rem;
+  padding: 10px;
+  border: none;
+  margin-bottom: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: flex-start;
+  margin: auto;
+}
+
+.modal-open .modal-gallery .close-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-open .modal-gallery .close {
+  color: #FFFFFF;
+  text-shadow: none;
+  border-radius: 8px;
+  border: 1px solid #FFF;
+  width: 88px;
+  height: 35px;
+  position: absolute;
+  right: 0;
 }
