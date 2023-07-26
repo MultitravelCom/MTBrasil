@@ -1,4 +1,16 @@
 /* MULT-71 // MULT-245*/
+/* IConImg */
+.main__container__iconImg {
+  position: absolute;
+  border-radius: 8px;
+  background: #FFF;
+  right: 16px;
+  bottom: 16px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .recomendado {
   box-sizing: border-box;
   border: solid #1585e6;
@@ -459,17 +471,4 @@
   .carousel-control.right {
     right: 2%;
   }
-}
-
-/* IConImg */
-.main__container__iconImg {
-  position: absolute;
-  border-radius: 8px;
-  background: #FFF;
-  right: 16px;
-  bottom: 16px;
-  padding: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
