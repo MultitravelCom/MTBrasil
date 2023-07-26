@@ -446,6 +446,9 @@
   .carousel-control.right {
     right: -9%;
   }
+  .modal .modal-header{
+    width: 400px;
+  }
 }
 
 @media (min-width: 1024px) and (max-width: 1439px) {
