@@ -88,33 +88,35 @@ const BannerMensageCardApp = () => {
     );
 };
 
-const checkAndRender = async () => {
-    console.log("checkAndRender");
-    let infoCardContents = document.querySelectorAll('.info-card__content');
+const renderedContainersState = {};
 
-    while (infoCardContents.length === 0) {
-        await new Promise(resolve => setTimeout(resolve, 1000));
-        infoCardContents = document.querySelectorAll('.info-card__content');
+const checkAndRender = () => {
+  console.log("checkAndRender");
+  const infoCardContents = document.querySelectorAll('.info-card__content');
+
+  infoCardContents.forEach(infoCardContent => {
+    const isRendered = renderedContainersState[infoCardContent.id];
+
+    if (!isRendered) {
+      const nuevoDiv = document.createElement('div');
+      const nuevoDivBannerMensage = document.createElement('div');
+      const nuevoDivIconImg = document.createElement('div');
+
+      infoCardContent.appendChild(nuevoDiv);
+      infoCardContent.appendChild(nuevoDivBannerMensage);
+      infoCardContent.appendChild(nuevoDivIconImg);
+
+      nuevoDivBannerMensage.classList.add('main__container__bannerMensageCard__App');
+
+      ReactDOM.render(<IconImg />, nuevoDivIconImg);
+      ReactDOM.render(<CompartirAlojamiento />, nuevoDiv);
+      ReactDOM.render(<BannerMensageCardApp />, nuevoDivBannerMensage);
+
+      // Marcar el contenedor como renderizado en el estado
+      renderedContainersState[infoCardContent.id] = true;
     }
-
-    infoCardContents.forEach(infoCardContent => {
-        const nuevoDiv = document.createElement('div');
-        const nuevoDivBannerMensage = document.createElement('div');
-        const nuevoDivIconImg = document.createElement('div');
-
-        infoCardContent.appendChild(nuevoDiv);
-        infoCardContent.appendChild(nuevoDivBannerMensage);
-        infoCardContent.appendChild(nuevoDivIconImg);
-
-        nuevoDivBannerMensage.classList.add('main__container__bannerMensageCard__App');
-        nuevoDivIconImg.classList.add("main__container__iconImg")
-
-        ReactDOM.render(<IconImg />, nuevoDivIconImg);
-        ReactDOM.render(<CompartirAlojamiento />, nuevoDiv);
-        ReactDOM.render(<BannerMensageCardApp />, nuevoDivBannerMensage);
-    });
+  });
 };
-checkAndRender();
 
 function observarCambiosCheckAndRender() {
     console.log("checkAndRender");
@@ -132,4 +134,5 @@ function observarCambiosCheckAndRender() {
     checkAndRender();
 }
 
+checkAndRender();
 observarCambiosCheckAndRender();
