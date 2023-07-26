@@ -88,7 +88,7 @@ const BannerMensageCardApp = () => {
     );
 };
 
-const renderedContainersState = {};
+const renderedContainers = [];
 
 const checkAndRender = () => {
     console.log("checkAndRender");
