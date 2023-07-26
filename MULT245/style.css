@@ -425,9 +425,8 @@
 }
 
 .gallery__control--left {
-  left: 10px; /* Ajusta la distancia izquierda */
+  left: 26%;
 }
-
 .gallery__control--right {
-  right: 10px; /* Ajusta la distancia derecha */
+  right: 16%;
 }
