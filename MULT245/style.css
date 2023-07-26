@@ -336,6 +336,9 @@
 }
 
 /* Galery picture */
+.results .gallery__canvas{
+  top: 0;
+}
 
 .gallery__image-wrapper {
   overflow: hidden;
@@ -356,7 +359,6 @@
 .modal-open .modal-gallery .gallery {
   background: transparent !important;
   height: 700px;
-
 }
 
 .gallery__control.carousel-control .glyphicon {
