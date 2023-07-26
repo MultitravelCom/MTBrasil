@@ -91,6 +91,7 @@ const BannerMensageCardApp = () => {
 };
 
 const checkAndRender = async () => {
+    console.log("checkAndRender");
     let infoCardContents = document.querySelectorAll('.info-card__content');
 
     while (infoCardContents.length === 0) {
@@ -117,6 +118,7 @@ const checkAndRender = async () => {
 checkAndRender();
 
 function observarCambiosCheckAndRender() {
+    console.log("observarCambiosCheckAndRender");
     const observerConfig = {
         rootNode: document.documentElement,
         callback: () => {
