@@ -295,7 +295,7 @@
   left: 26%;
 }
 
-.gallery__control--right {
+.carousel-control.right {
   right: 16%;
 }
 
@@ -432,7 +432,7 @@
     left: 6%;
   }
 
-  .gallery__control--right {
+  .carousel-control.right {
     right: -9%;
   }
 }
@@ -442,7 +442,7 @@
     left: 17%;
   }
 
-  .gallery__control--right {
+  .carousel-control.right {
     right: 2%;
   }
 }
