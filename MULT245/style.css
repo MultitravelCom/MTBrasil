@@ -394,6 +394,7 @@
   text-align: center;
   justify-content: flex-start;
   margin: auto;
+  top: 63px;
 }
 
 .modal-open .modal-gallery .close-text {
