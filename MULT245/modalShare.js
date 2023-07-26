@@ -91,32 +91,31 @@ const BannerMensageCardApp = () => {
 const renderedContainersState = {};
 
 const checkAndRender = () => {
-  console.log("checkAndRender");
-  const infoCardContents = document.querySelectorAll('.info-card__content');
-
-  infoCardContents.forEach(infoCardContent => {
-    const isRendered = renderedContainersState[infoCardContent.id];
-
-    if (!isRendered) {
-      const nuevoDiv = document.createElement('div');
-      const nuevoDivBannerMensage = document.createElement('div');
-      const nuevoDivIconImg = document.createElement('div');
-
-      infoCardContent.appendChild(nuevoDiv);
-      infoCardContent.appendChild(nuevoDivBannerMensage);
-      infoCardContent.appendChild(nuevoDivIconImg);
-
-      nuevoDivBannerMensage.classList.add('main__container__bannerMensageCard__App');
-
-      ReactDOM.render(<IconImg />, nuevoDivIconImg);
-      ReactDOM.render(<CompartirAlojamiento />, nuevoDiv);
-      ReactDOM.render(<BannerMensageCardApp />, nuevoDivBannerMensage);
-
-      // Marcar el contenedor como renderizado en el estado
-      renderedContainersState[infoCardContent.id] = true;
-    }
-  });
-};
+    console.log("checkAndRender");
+    const infoCardContents = document.querySelectorAll('.info-card__content');
+  
+    infoCardContents.forEach(infoCardContent => {
+      // Verificamos si el contenedor ya ha sido renderizado
+      if (!renderedContainers.includes(infoCardContent)) {
+        const nuevoDiv = document.createElement('div');
+        const nuevoDivBannerMensage = document.createElement('div');
+        const nuevoDivIconImg = document.createElement('div');
+  
+        infoCardContent.appendChild(nuevoDiv);
+        infoCardContent.appendChild(nuevoDivBannerMensage);
+        infoCardContent.appendChild(nuevoDivIconImg);
+  
+        nuevoDivBannerMensage.classList.add('main__container__bannerMensageCard__App');
+  
+        ReactDOM.render(<IconImg />, nuevoDivIconImg);
+        ReactDOM.render(<CompartirAlojamiento />, nuevoDiv);
+        ReactDOM.render(<BannerMensageCardApp />, nuevoDivBannerMensage);
+  
+        // Agregamos el contenedor a la lista de contenedores renderizados
+        renderedContainers.push(infoCardContent);
+      }
+    });
+  };
 
 function observarCambiosCheckAndRender() {
     console.log("observarCambiosCheckAndRender");
