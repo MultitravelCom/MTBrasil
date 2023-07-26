@@ -13,13 +13,12 @@ function ButtonModalShare(props) {
 const IconImg = () => {
     return (
         <>
-            <div className="main__container__iconImg">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M6.75992 22H17.2399C19.9999 22 21.0999 20.31 21.2299 18.25L21.7499 9.99C21.8899 7.83 20.1699 6 17.9999 6C17.3899 6 16.8299 5.65 16.5499 5.11L15.8299 3.66C15.3699 2.75 14.1699 2 13.1499 2H10.8599C9.82992 2 8.62992 2.75 8.16992 3.66L7.44992 5.11C7.16992 5.65 6.60992 6 5.99992 6C3.82992 6 2.10992 7.83 2.24992 9.99L2.76992 18.25C2.88992 20.31 3.99992 22 6.75992 22Z" stroke="#0D4E88" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M10.5 8H13.5" stroke="#0D4E88" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M12 18C13.79 18 15.25 16.54 15.25 14.75C15.25 12.96 13.79 11.5 12 11.5C10.21 11.5 8.75 12.96 8.75 14.75C8.75 16.54 10.21 18 12 18Z" stroke="#0D4E88" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M6.75992 22H17.2399C19.9999 22 21.0999 20.31 21.2299 18.25L21.7499 9.99C21.8899 7.83 20.1699 6 17.9999 6C17.3899 6 16.8299 5.65 16.5499 5.11L15.8299 3.66C15.3699 2.75 14.1699 2 13.1499 2H10.8599C9.82992 2 8.62992 2.75 8.16992 3.66L7.44992 5.11C7.16992 5.65 6.60992 6 5.99992 6C3.82992 6 2.10992 7.83 2.24992 9.99L2.76992 18.25C2.88992 20.31 3.99992 22 6.75992 22Z" stroke="#0D4E88" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M10.5 8H13.5" stroke="#0D4E88" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M12 18C13.79 18 15.25 16.54 15.25 14.75C15.25 12.96 13.79 11.5 12 11.5C10.21 11.5 8.75 12.96 8.75 14.75C8.75 16.54 10.21 18 12 18Z" stroke="#0D4E88" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+
         </>
     );
 }
@@ -90,29 +89,32 @@ const BannerMensageCardApp = () => {
     );
 };
 
-const checkAndRender = async () => {
-    console.log("checkAndRender");
-    let infoCardContents = document.querySelectorAll('.info-card__content');
+const [renderedContainers, setRenderedContainers] = React.useState(new Set());
 
-    while (infoCardContents.length === 0) {
-        await new Promise(resolve => setTimeout(resolve, 1000));
-        infoCardContents = document.querySelectorAll('.info-card__content');
-    }
+const checkAndRender = () => {
+    console.log("checkAndRender");
+    const infoCardContents = document.querySelectorAll('.info-card__content');
 
     infoCardContents.forEach(infoCardContent => {
-        const nuevoDiv = document.createElement('div');
-        const nuevoDivBannerMensage = document.createElement('div');
-        const nuevoDivIconImg = document.createElement('div');
+        if (!renderedContainers.has(infoCardContent)) {
+            const nuevoDiv = document.createElement('div');
+            const nuevoDivBannerMensage = document.createElement('div');
+            const nuevoDivIconImg = document.createElement('div');
 
-        infoCardContent.appendChild(nuevoDiv);
-        infoCardContent.appendChild(nuevoDivBannerMensage);
-        infoCardContent.appendChild(nuevoDivIconImg);
+            infoCardContent.appendChild(nuevoDiv);
+            infoCardContent.appendChild(nuevoDivBannerMensage);
+            infoCardContent.appendChild(nuevoDivIconImg);
 
-        nuevoDivBannerMensage.classList.add('main__container__bannerMensageCard__App');
+            nuevoDivBannerMensage.classList.add('main__container__bannerMensageCard__App');
+            nuevoDivIconImg.classList.add("main__container__iconImg");
 
-        ReactDOM.render(<IconImg />, nuevoDivIconImg);
-        ReactDOM.render(<CompartirAlojamiento />, nuevoDiv);
-        ReactDOM.render(<BannerMensageCardApp />, nuevoDivBannerMensage);
+            ReactDOM.render(<IconImg />, nuevoDivIconImg);
+            ReactDOM.render(<CompartirAlojamiento />, nuevoDiv);
+            ReactDOM.render(<BannerMensageCardApp />, nuevoDivBannerMensage);
+
+            // Agregamos el contenedor al conjunto de contenedores renderizados
+            setRenderedContainers(prevSet => new Set(prevSet).add(infoCardContent));
+        }
     });
 };
 checkAndRender();
