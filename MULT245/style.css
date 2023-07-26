@@ -196,7 +196,8 @@
 .result-option__offer-info {
   display: none !important;
 }
-.abs{
+
+.abs {
   display: inline-block;
 }
 
@@ -327,8 +328,9 @@
   }
 
 }
-@media (min-width: 767px) and (max-width: 1024px){
-  .main__container__bannerMensageCard__App{
+
+@media (min-width: 767px) and (max-width: 1024px) {
+  .main__container__bannerMensageCard__App {
     width: 260px;
   }
 }
@@ -343,9 +345,11 @@
   border-radius: 1rem;
   margin: auto;
 }
+
 .modal-open .modal-gallery .gallery {
   background: transparent !important;
 }
+
 .gallery__control.carousel-control .glyphicon {
   position: absolute;
   top: 50%;
@@ -358,4 +362,13 @@
   height: 48px;
   display: flex;
   align-items: center;
+  background: #1585E6;
+  border-radius: 100%;
+  justify-content: center;
+}
+.gallery__control.carousel-control.left .glyphicon{
+  left: 72%;
+}
+.gallery__control.carousel-control.right .glyphicon{
+  right: 143%; 
 }
