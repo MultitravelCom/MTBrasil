@@ -348,6 +348,7 @@
 
 .modal-open .modal-gallery .gallery {
   background: transparent !important;
+  height: 100vh;
 }
 
 .gallery__control.carousel-control .glyphicon {
@@ -367,12 +368,12 @@
   justify-content: center;
 }
 
-.gallery__control.carousel-control.left .glyphicon {
-  left: 72%;
+.carousel-control.left,
+.carousel-control.right {
+  left: 25%;
 }
-
 .gallery__control.carousel-control.right .glyphicon {
-  right: 143%;
+  right: 26%;
 }
 
 .modal .modal-header {
