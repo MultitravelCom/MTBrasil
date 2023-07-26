@@ -368,9 +368,11 @@
   justify-content: center;
 }
 
-.carousel-control.left,
-.carousel-control.right {
+.carousel-control.left {
   left: 25%;
+}
+.carousel-control.right{
+  right: 25%;
 }
 .gallery__control.carousel-control.right .glyphicon {
   right: 26%;
