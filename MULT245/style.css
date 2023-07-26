@@ -337,7 +337,7 @@
 
 /* Galery picture */
 .results .gallery__canvas{
-  top: 0;
+  top: 0 !important;
 }
 
 .gallery__image-wrapper {
