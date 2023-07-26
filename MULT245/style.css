@@ -428,15 +428,21 @@
 }
 
 @media (min-width: 767px) and (max-width: 1023px) {
-  .main__container__bannerMensageCard__App {
-    width: 260px;
-  }
-
   .gallery__control--left {
-    left: 71px;
+    left: 6%;
   }
 
   .gallery__control--right {
-    right: 0;
+    right: -9%;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .gallery__control--left {
+    left: 17%;
+  }
+
+  .gallery__control--right {
+    right: 2%;
   }
 }
