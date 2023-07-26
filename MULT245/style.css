@@ -394,7 +394,10 @@
   text-align: center;
   justify-content: flex-start;
   margin: auto;
-  top: 63px;
+  top: 25%;
+}
+.results .gallery__canvas{
+  top: 25%;
 }
 
 .modal-open .modal-gallery .close-text {
