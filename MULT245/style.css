@@ -290,6 +290,7 @@
 
 .modal .modal-content {
   padding: 67px 10px 15px !important;
+  box-shadow: none !important;
 }
 
 .modal-open .modal-gallery .close-icon {
@@ -315,7 +316,7 @@
   display: none;
 }
 .modal-open .modal-gallery{
-  padding-left: 0 !important;
+  padding-left: 0;
 }
 
 
