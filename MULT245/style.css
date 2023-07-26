@@ -375,7 +375,7 @@
   justify-content: center;
 }
 
-.carousel-control.left {
+/* .carousel-control.left {
   left: 19%;
 }
 .carousel-control.right{
@@ -386,7 +386,7 @@
 }
 .gallery__control.carousel-control.right .glyphicon {
   left: 47px;
-}
+} */
 
 .modal .modal-header {
   width: 600px;
@@ -422,4 +422,24 @@
 }
 .modal-open .modal-gallery .close-icon{
   display: none;
+}
+
+.gallery__main {
+  position: relative;
+}
+
+.gallery__control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  /* Ajusta la distancia horizontal (izquierda y derecha) para las flechas según tus necesidades */
+}
+
+.gallery__control--left {
+  left: 10px; /* Ajusta la distancia izquierda */
+}
+
+.gallery__control--right {
+  right: 10px; /* Ajusta la distancia derecha */
 }
