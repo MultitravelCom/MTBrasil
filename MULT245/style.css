@@ -374,8 +374,11 @@
 .carousel-control.right{
   right: 25%;
 }
-.gallery__control.carousel-control.right .glyphicon {
+.gallery__control.carousel-control.right {
   right: 26%;
+}
+.gallery__control.carousel-control.left {
+  left: 42%;
 }
 
 .modal .modal-header {
