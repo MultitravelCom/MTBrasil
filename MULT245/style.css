@@ -446,3 +446,16 @@
     right: 2%;
   }
 }
+
+/* IConImg */
+.main__container__iconImg {
+  position: absolute;
+  border-radius: 8px;
+  background: #FFF;
+  left: -46px;
+  bottom: 16px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
