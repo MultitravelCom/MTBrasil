@@ -31,7 +31,6 @@ const ModalShare = ({ open }) => {
 
     return null;
 };
-
 const CompartirAlojamiento = () => {
     const [openModal, setOpenModal] = React.useState(false);
     return (
@@ -50,7 +49,7 @@ const CompartirAlojamiento = () => {
             </div>
         </>
     )
-}
+};
 const BannerMensageCard = ({ text_p }) => {
     return (
         <div className="main__container__bannerMensageCard">
@@ -58,7 +57,7 @@ const BannerMensageCard = ({ text_p }) => {
             <p>{text_p}</p>
         </div>
     )
-}
+};
 
 const BannerMensageCardApp = () => {
     const [hasBestPriceTaxIncluded, setHasBestPriceTaxIncluded] = React.useState(true);
@@ -88,38 +87,35 @@ const BannerMensageCardApp = () => {
     );
 };
 
-const renderedContainers = [];
-
-const checkAndRender = () => {
+const checkAndRender = async () => {
     console.log("checkAndRender");
-    const infoCardContents = document.querySelectorAll('.info-card__content');
-  
+    let infoCardContents = document.querySelectorAll('.info-card__content');
+
+    while (infoCardContents.length === 0) {
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        infoCardContents = document.querySelectorAll('.info-card__content');
+    }
+
     infoCardContents.forEach(infoCardContent => {
-      // Verificamos si el contenedor ya ha sido renderizado
-      if (!renderedContainers.includes(infoCardContent)) {
         const nuevoDiv = document.createElement('div');
         const nuevoDivBannerMensage = document.createElement('div');
         const nuevoDivIconImg = document.createElement('div');
-  
+
         infoCardContent.appendChild(nuevoDiv);
         infoCardContent.appendChild(nuevoDivBannerMensage);
         infoCardContent.appendChild(nuevoDivIconImg);
-  
+
         nuevoDivBannerMensage.classList.add('main__container__bannerMensageCard__App');
-        nuevoDivIconIme.classList.add('main__container__IconImg');
-  
+        nuevoDivIconImg.classList.add("main__container__iconImg")
+
         ReactDOM.render(<IconImg />, nuevoDivIconImg);
         ReactDOM.render(<CompartirAlojamiento />, nuevoDiv);
         ReactDOM.render(<BannerMensageCardApp />, nuevoDivBannerMensage);
-  
-        // Agregamos el contenedor a la lista de contenedores renderizados
-        renderedContainers.push(infoCardContent);
-      }
     });
-  };
+};
 
 function observarCambiosCheckAndRender() {
-    console.log("observarCambiosCheckAndRender");
+    console.log("checkAndRender");
     const observerConfig = {
         rootNode: document.documentElement,
         callback: () => {
@@ -132,7 +128,7 @@ function observarCambiosCheckAndRender() {
     const observer = new MutationSummary(observerConfig);
 
     checkAndRender();
-}
+};
 
-checkAndRender();
+
 observarCambiosCheckAndRender();
