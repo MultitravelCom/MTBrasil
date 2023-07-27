@@ -75,30 +75,6 @@ function ButtonModal(props) {
 }
 
 const ButtonWidget = () => {
-    React.useEffect(() => {
-        const button = document.querySelector('.whatsAppFixes');
-        const footer = document.querySelector('footer');
-
-        const handleScroll = () => {
-            const buttonRect = button.getBoundingClientRect();
-            const footerRect = footer.getBoundingClientRect();
-
-            if (buttonRect.bottom >= footerRect.top) {
-                // El botón está superponiéndose con el footer, ocultarlo
-                button.style.display = 'none';
-            } else {
-                // El botón no se superpone con el footer, restaurar su estilo original
-                button.style.display = 'block'; // O cualquier valor que corresponda a su estilo original
-            }
-        };
-
-        window.addEventListener('scroll', handleScroll);
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
-
 
     if (window.innerWidth <= 768) {
         return null;
