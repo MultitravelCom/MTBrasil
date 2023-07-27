@@ -206,13 +206,29 @@ function changeDescriptionElementFunctions() {
         }
     }
 }
+function changeWidthOfContainer() {
+  const styleElement = document.createElement('style');
+
+  const cssRules = `
+      @media screen and (min-width: 1024px) {
+          .container {
+              width: 1260px;
+          }
+      }
+  `;
+
+  styleElement.appendChild(document.createTextNode(cssRules));
+  document.head.appendChild(styleElement);
+}
+
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log("window.location.href ------->>>>> ", window.location.href)
   if (window.location.href.includes('https://onefiveb2b.juniperbetemp.com/flights/results.aspx')) {
     // Your script code here
     console.log('Script is running on the specific page.');
-    
+    changeWidthOfContainer();
+
     // Add your script code here, for example:
     // document.getElementById('someElement').classList.add('active');
     const observer = new MutationObserver(onDivAdded);
