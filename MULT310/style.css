@@ -11,7 +11,9 @@
     flex-grow: 5;
     padding: 0!important;
 }
-
+.flight-selection__duration {
+    padding-right: 0.5rem;
+}
 .flight-result__duration.glyphicon, .flight-result__places.glyphicon, .flight-selection__duration.glyphicon, .flight-selection__places.glyphicon {
     padding-right: 0.2rem;
 }
@@ -52,7 +54,7 @@
     .container {
         width: 1260px;
     }
-    
+
     */
     /* Your CSS rules for desktop go here */
 
