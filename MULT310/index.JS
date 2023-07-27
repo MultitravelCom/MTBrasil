@@ -221,6 +221,10 @@ function changeWidthOfContainer() {
   document.head.appendChild(styleElement);
 }
 
+function changeStyleBooking(){
+  const selectionDuration = element.querySelector('.flight-selection__duration');
+  selectionDuration.style.marginRight = '5rem'
+}
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log("window.location.href ------->>>>> ", window.location.href)
@@ -234,5 +238,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const observer = new MutationObserver(onDivAdded);
     const observerConfig = { childList: true, subtree: true };
     observer.observe(document.documentElement, observerConfig);
+  }else if (window.location.href.includes('/flights/booking')){
+    changeStyleBooking();
   }
 });
