@@ -289,7 +289,7 @@
 }
 
 .modal .modal-content {
-  padding: 67px 10px 15px !important;
+  padding: 3% 10px 15px !important;
   box-shadow: none !important;
 }
 
@@ -468,9 +468,6 @@
   }
   .modal-open .modal-gallery .gallery{
     height: 100%;
-  }
-  .modal .modal-content {
-    padding: 20px 10px 15px !important;
   }
 }
 
