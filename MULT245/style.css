@@ -299,10 +299,6 @@
   display: none;
 }
 
-.gallery {
-  position: relative;
-}
-
 .gallery__control {
   position: absolute;
   top: 50%;
