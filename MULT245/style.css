@@ -222,7 +222,7 @@
   overflow: hidden;
   text-align: center;
   width: 595px;
-  height: 656px;
+  height: 80vh;
   border-radius: 1rem;
   margin: auto;
 }
@@ -236,7 +236,6 @@
 
 .modal-open .modal-gallery .gallery {
   background: transparent !important;
-  height: 700px;
 }
 
 .gallery__control.carousel-control .glyphicon {

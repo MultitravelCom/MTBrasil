@@ -148,8 +148,6 @@ async function changeCopyButton(resultsListPage) {
 
     checkResultsListPage();
 };
-
-
 function aplicarModificaciones(resultsListPage) {
     removeDataTarget(resultsListPage);
     removeImageLinks(resultsListPage);
