@@ -30,6 +30,7 @@ function createHeader(headerOriginal) {
 
 function hideHeader () {
 
+    console.log("---------> CORRE hideHeader")
     const headerOriginal = element.querySelector('.main-header');
     const container = headerOriginal.querySelector('.container');
     container.style.display = 'none';
@@ -37,8 +38,9 @@ function hideHeader () {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    console.log("---------> CORRE DomContentLoaded")
     console.log("window.location.href ------->>>>> ", window.location.href)
     if (window.location.href.includes('https://onefiveb2b.juniperbetemp.com/insurances/')) {
-        hideHeader
+        hideHeader()
     }
   });
