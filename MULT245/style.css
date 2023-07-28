@@ -236,6 +236,7 @@
 
 .modal-open .modal-gallery .gallery {
   background: transparent !important;
+  height: 80vh;
 }
 
 .gallery__control.carousel-control .glyphicon {
