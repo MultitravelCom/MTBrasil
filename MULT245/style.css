@@ -304,13 +304,13 @@
   z-index: 1;
 }
 
-.gallery__control--left {
+/* .gallery__control--left {
   left: 26%;
 }
 
 .carousel-control.right {
   right: 18%;
-}
+} */
 
 .modal-open .modal-gallery__category {
   display: none;
@@ -456,27 +456,24 @@
     height: 456px;
   } */
 
-  .gallery__control--left {
+  /* .gallery__control--left {
     left: 6%;
-  }
+  } */
 
-  .carousel-control.right {
+  /* .carousel-control.right {
     right: -9%;
-  }
+  } */
   .modal .modal-header{
     width: 400px;
-  }
-  .modal-open .modal-gallery .gallery{
-    height: 100%;
   }
 }
 
 @media (min-width: 1024px) and (max-width: 1439px) {
-  .gallery__control--left {
+  /* .gallery__control--left {
     left: 17%;
   }
 
   .carousel-control.right {
     right: 2%;
-  }
+  } */
 }
