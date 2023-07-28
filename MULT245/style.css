@@ -309,7 +309,7 @@
 }
 
 .carousel-control.right {
-  right: 11%;
+  right: 18%;
 }
 
 .modal-open .modal-gallery__category {
@@ -451,10 +451,10 @@
 }
 
 @media (min-width: 767px) and (max-width: 1023px) {
-  .gallery__image-wrapper {
+  /* .gallery__image-wrapper {
     width: 395px;
     height: 456px;
-  }
+  } */
 
   .gallery__control--left {
     left: 6%;
