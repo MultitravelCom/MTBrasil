@@ -225,6 +225,7 @@
   height: 80vh;
   border-radius: 1rem;
   margin: auto;
+  position: relative;
 }
 
 .gallery__image-wrapper img {
@@ -311,6 +312,14 @@
 .carousel-control.right {
   right: 18%;
 } */
+
+.gallery__control--left {
+  left: 45px; /* Posicionar a 45px a la izquierda de la imagen */
+}
+
+.gallery__control--right {
+  right: 45px; /* Posicionar a 45px a la derecha de la imagen */
+}
 
 .modal-open .modal-gallery__category {
   display: none;
