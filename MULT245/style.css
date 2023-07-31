@@ -226,7 +226,7 @@
   height: 80vh;
   border-radius: 1rem;
   margin: auto;
-  position: relative;
+  /* position: relative; */
 }
 
 .gallery__image-wrapper img {
@@ -293,6 +293,9 @@
 .modal .modal-content {
   padding: 3% 10px 15px !important;
   box-shadow: none !important;
+  width: 750px;
+  margin: auto;
+  border: transparent;
 }
 
 .modal-open .modal-gallery .close-icon {
