@@ -462,24 +462,6 @@
   }
 }
 
-@media (min-width: 767px) and (max-width: 1023px) {
-  /* .gallery__image-wrapper {
-    width: 395px;
-    height: 456px;
-  } */
-
-  /* .gallery__control--left {
-    left: 6%;
-  } */
-
-  /* .carousel-control.right {
-    right: -9%;
-  } */
-  .modal .modal-header {
-    width: 400px;
-  }
-}
-
 @media (min-width: 1024px) and (max-width: 1439px) {
   /* .gallery__control--left {
     left: 17%;
