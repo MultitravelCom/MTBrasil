@@ -309,17 +309,16 @@
   width: 30px;
   height: 30px;
   z-index: 1;
-  /* Asegura que las flechas estén por encima de la imagen */
 }
 
 .gallery__control--left {
-  left: 23px;
-  /* Posicionar a 45px a la izquierda de la imagen */
+  left: 29px;
+
 }
 
 .gallery__control--right {
   right: 45px;
-  /* Posicionar a 45px a la derecha de la imagen */
+ 
 }
 
 .modal-open .modal-gallery__category {
@@ -460,14 +459,4 @@
   .main__container__iconImg {
     display: none;
   }
-}
-
-@media (min-width: 1024px) and (max-width: 1439px) {
-  /* .gallery__control--left {
-    left: 17%;
-  }
-
-  .carousel-control.right {
-    right: 2%;
-  } */
 }
