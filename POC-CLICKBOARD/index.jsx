@@ -1,4 +1,5 @@
    
+/*
 const ClipBoardButton = () => {
     const [openModal, setOpenModal] = React.useState(false);
     return (
@@ -26,7 +27,7 @@ console.log("------------->:  ", bannerContainer)
     ReactDOM.render(<ClipBoardButton />, nuevoDiv);
 }
 
-
+*/
 document.addEventListener('DOMContentLoaded', () => {
     console.log("window.location.href ------->>>>> ", window.location.href)
     if (window.location.href.includes('https://onefiveb2b.juniperbetemp.com/flights/')) {
@@ -37,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   
-
+/*
   const insertNewDivSearchResult = async () => {
     const observer = new MutationSummary({
         callback: addClipboard,
@@ -48,3 +49,4 @@ document.addEventListener('DOMContentLoaded', () => {
 };
 
 insertNewDivSearchResult();
+*/
