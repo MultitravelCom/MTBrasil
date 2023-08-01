@@ -227,10 +227,8 @@ function changeStyleBooking(){
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  console.log("window.location.href ------->>>>> ", window.location.href)
   if (window.location.href.includes('https://onefiveb2b.juniperbetemp.com/flights/results.aspx')) {
     // Your script code here
-    console.log('Script is running on the specific page.');
     changeWidthOfContainer();
 
     // Add your script code here, for example:
