@@ -10,6 +10,7 @@ function ButtonModalShare(props) {
         </button>
     );
 }
+
 const IconImg = () => {
     return (
         <>
@@ -21,6 +22,7 @@ const IconImg = () => {
         </>
     );
 }
+
 const ModalShare = ({ open }) => {
     React.useEffect(() => {
         const modalElement = document.getElementById("modal-social");
@@ -116,6 +118,7 @@ const checkAndRender = async () => {
 
         ReactDOM.render(<CompartirAlojamiento />, nuevoDiv);
         ReactDOM.render(<BannerMensageCardApp />, nuevoDivBannerMensage);
+        
     });
 };
 
