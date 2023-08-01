@@ -9,7 +9,7 @@ const CompartirAlojamiento = () => {
         <span className="new-window__text">Copia el codigo de tu cupon!</span>
     </div>
     </>
-    )
+    );
 };
 
 
