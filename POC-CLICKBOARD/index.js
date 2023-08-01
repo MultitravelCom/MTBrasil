@@ -3,13 +3,10 @@
 const CompartirAlojamiento = () => {
     const [openModal, setOpenModal] = React.useState(false);
     return (
-            <div className="div__clickboard">
-                
-                        <span className="glyphicon glyphicon-new-window new-window__icon"></span>
-                        <span className="new-window__text">Copia el codigo de tu cupon!</span>
-                    
-               
-            </div>
+    <div className="div__clickboard">
+        <span className="glyphicon glyphicon-new-window new-window__icon"></span>
+        <span className="new-window__text">Copia el codigo de tu cupon!</span>
+    </div>
     )
 };
 
