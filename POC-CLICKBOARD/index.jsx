@@ -1,5 +1,5 @@
    
-const CompartirAlojamiento = () => {
+const ClipBoardButton = () => {
     const [openModal, setOpenModal] = React.useState(false);
     return (
         <>
@@ -11,7 +11,20 @@ const CompartirAlojamiento = () => {
     );
 };
 
+function addClipboard () {
+    let bannerContainer = document.querySelector('.bannerTop__center');
+   
+    const nuevoDiv = document.createElement('div');
 
+    bannerContainer.appendChild(v);
+
+    nuevoDiv.classList.add('container_clickboard');
+    nuevoDiv.style.height = '100px';
+    nuevoDiv.style.width = '100px';
+    nuevoDiv.style.backgroundColor= 'blue';
+
+    ReactDOM.render(<ClipBoardButton />, nuevoDiv);
+}
 
 /*
 document.addEventListener('DOMContentLoaded', () => {
@@ -27,22 +40,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const insertNewDivSearchResult = async () => {
     const observer = new MutationSummary({
-        callback: handleDOMChanges,
+        callback: addClipboard,
         queries: [{ element: '.bannerTop__center' }]
     });
 
-    let bannerContainer = document.querySelector('.bannerTop__center');
-   
-    const nuevoDiv = document.createElement('div');
-
-    bannerContainer.appendChild(v);
-
-    nuevoDiv.classList.add('container_clickboard');
-    nuevoDiv.style.height = '100px';
-    nuevoDiv.style.width = '100px';
-    nuevoDiv.style.backgroundColor= 'blue';
-
-    ReactDOM.render(<CompartirAlojamiento />, nuevoDiv);
+    
 };
 
 insertNewDivSearchResult();
