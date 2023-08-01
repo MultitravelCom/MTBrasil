@@ -1,7 +1,7 @@
 
 
 const CompartirAlojamiento = () => {
-    //const [openModal, setOpenModal] = React.useState(false);
+    const [openModal, setOpenModal] = React.useState(false);
     return (
             <div className="div__clickboard">
                 
