@@ -13,18 +13,6 @@ const CompartirAlojamiento = () => {
 
 
 
-const agregarClickboardButton = async () => {
-    console.log("checkAndRender ------------> is RUNNING");
-    /*
-    let infoCardContents = document.querySelectorAll('.info-card__content');
-    let infoCardImgContents = document.querySelectorAll('.info-card__image');
-    */
-    
-    
-};
-
-
-
 /*
 document.addEventListener('DOMContentLoaded', () => {
     console.log("window.location.href ------->>>>> ", window.location.href)
