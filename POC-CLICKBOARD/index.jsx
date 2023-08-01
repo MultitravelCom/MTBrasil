@@ -13,7 +13,7 @@ const ClipBoardButton = () => {
 
 function addClipboard () {
     let bannerContainer = document.querySelector('.bannerTop__center');
-   
+console.log("------------->:  ", bannerContainer)
     const nuevoDiv = document.createElement('div');
 
     bannerContainer.appendChild(v);
@@ -26,17 +26,17 @@ function addClipboard () {
     ReactDOM.render(<ClipBoardButton />, nuevoDiv);
 }
 
-/*
+
 document.addEventListener('DOMContentLoaded', () => {
     console.log("window.location.href ------->>>>> ", window.location.href)
     if (window.location.href.includes('https://onefiveb2b.juniperbetemp.com/flights/')) {
-        agregarClickboardButton();
+        addClipboard();
     }else if (window.location.href.includes('/flights/booking')){
       changeStyleBooking();
     }
   });
 
-  */
+  
 
   const insertNewDivSearchResult = async () => {
     const observer = new MutationSummary({
