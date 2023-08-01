@@ -3,7 +3,7 @@
 const CompartirAlojamiento = () => {
     //const [openModal, setOpenModal] = React.useState(false);
     return (
-        <>
+        
             <div className="div__clickboard">
                 
                         <span className="glyphicon glyphicon-new-window new-window__icon"></span>
@@ -11,7 +11,7 @@ const CompartirAlojamiento = () => {
                     
                
             </div>
-        </>
+        
     )
 };
 
