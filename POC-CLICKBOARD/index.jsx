@@ -29,12 +29,14 @@ console.log("------------->:  ", bannerContainer)
 
 */
 document.addEventListener('DOMContentLoaded', () => {
-    console.log("window.location.href ------->>>>> ", window.location.href)
+    console.log("----------->>>>>>>>>>>>>>>>>>>")
+   /* console.log("window.location.href ------->>>>> ", window.location.href)
     if (window.location.href.includes('https://onefiveb2b.juniperbetemp.com/flights/')) {
         addClipboard();
     }else if (window.location.href.includes('/flights/booking')){
       changeStyleBooking();
     }
+    */
   });
 
   
