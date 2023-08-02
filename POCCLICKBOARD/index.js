@@ -64,7 +64,8 @@ function copyToClipboard(text) {
         button.addEventListener('click', () => {
             console.log("inside the event")
           // Get the key ID associated with this button
-          const keyId = button.previousElementSibling.textContent.trim();
+          const keyIdElement = button.querySelector('.new-window__text');
+      const keyId = keyIdElement.textContent.trim();
     
           // Copy the key ID to the clipboard
           copyToClipboard(keyId);
