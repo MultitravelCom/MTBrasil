@@ -1,0 +1,21 @@
+.container_clickboard {
+    height: 100px;
+    width: 250px;
+    background-color: blue;
+    align-items: center;
+    display: flex;
+    margin-top: 20px;
+}
+.div__clickboard_descripcion {
+    text-align: center ;
+}
+.div__clickboard {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.new-window__icon{
+    margin-right: 8px;
+    cursor: pointer;
+}

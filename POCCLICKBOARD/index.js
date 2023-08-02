@@ -3,9 +3,12 @@
 const ClipBoardButton = () => {
     return (
         <>
+            <div className="div__clickboard_descripcion">
+             Copia el codigo de tu cupon!
+            </div>
             <div className="div__clickboard">
                 <span className="glyphicon glyphicon-new-window new-window__icon"></span>
-                <span className="new-window__text">Copia el codigo de tu cupon!</span>
+                <span className="new-window__text">SDASFS5F43T3JJJ42322</span>
             </div>
         </>
     );
