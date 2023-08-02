@@ -10,7 +10,9 @@
     background-color: grey;
     align-items: center;
     display: flex;
-    margin-top: 20px;
+    margin: 40px;
+    border:white solid 1px;
+    background-color: rgb(12, 93, 120)
 }
 .div__clickboard_descripcion {
     text-align: center ;
@@ -24,4 +26,8 @@
 .new-window__icon{
     margin-right: 8px;
     cursor: pointer;
+}
+
+.row {
+    display: flex;
 }
