@@ -58,6 +58,7 @@ function copyToClipboard(text) {
       // Get all the copy buttons
   const copyButtons = document.querySelectorAll('.glyphicon.glyphicon-new-window.new-window__icon');
     copyButtons.forEach(button => {
+        console.log("Button:", button)
         button.addEventListener('click', () => {
             console.log("inside the event")
           // Get the key ID associated with this button

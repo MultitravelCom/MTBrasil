@@ -8,8 +8,8 @@
     height: 100px;
     width: 250px;
     align-items: center;
-    display: flex;
-    margin: 40px;
+    padding: 20px;
+    margin: 15px;
     border:white solid 1px;
     background-color: rgb(12, 93, 120)
 }
