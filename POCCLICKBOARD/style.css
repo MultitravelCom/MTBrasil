@@ -28,6 +28,11 @@
     cursor: pointer;
 }
 
+.glyphicon-new-window {
+    margin-right: 8px;
+    cursor: pointer;
+}
+
 .row {
     display: flex;
 }

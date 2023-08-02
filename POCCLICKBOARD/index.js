@@ -44,6 +44,32 @@ console.log("------------->:  ", bannerContainer)
     bannerContainer.insertBefore(nuevoDiv, firstChild);
 }
 
+function copyToClipboard(text) {
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+  }
+
+  function addClckListenerToCopyButtons () {
+      // Get all the copy buttons
+  const copyButtons = document.querySelectorAll('.glyphicon.glyphicon-new-window.new-window__icon');
+    copyButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          // Get the key ID associated with this button
+          const keyId = button.previousElementSibling.textContent.trim();
+    
+          // Copy the key ID to the clipboard
+          copyToClipboard(keyId);
+    
+          // (Optional) Show a message to indicate successful copy (can be done with a tooltip or a simple alert)
+          alert('Key ID copied to clipboard: ' + keyId);
+        });
+      });
+  }
+
 
 console.log("holaaaaaaaaaaa")
 
