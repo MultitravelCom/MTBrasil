@@ -17,7 +17,7 @@ const CardCupon = () => {
 };
 
 function addClipboard () {
-    let bannerContainer = document.querySelector('.home-content-5');
+    let bannerContainer = document.querySelector('.home-v5');
 console.log("------------->:  ", bannerContainer)
     const nuevoDiv = document.createElement('div');
     const firstChild = bannerContainer.firstChild;
