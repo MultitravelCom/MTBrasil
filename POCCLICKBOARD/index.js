@@ -77,19 +77,8 @@ function copyToClipboard(text) {
   }
 
 
-console.log("holaaaaaaaaaaa")
-
-document.addEventListener('DOMContentLoaded', () => {
-    console.log("----------->>>>>>>>>>>>>>>>>>>DOMContentLoaded")
-    console.log("window.location.href ------->>>>> ", window.location.href)
-    //addContainerCards();
-    
-  });
-
   window.addEventListener('load', () => {
-    console.log("----------->>>>>>>>>>>>>>>>>>>load");
-    console.log("----------->>>>>>>>>>>>>>>>>>>load")
-    console.log("window.location.href ------->>>>> ", window.location.href)
+   
     addContainerCards();
     
   });
