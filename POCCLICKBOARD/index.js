@@ -1,6 +1,6 @@
    
 
-/*const ClipBoardButton = () => {
+const ClipBoardButton = () => {
     return (
         <>
             <div className="div__clickboard">
@@ -26,18 +26,22 @@ console.log("------------->:  ", bannerContainer)
     ReactDOM.render(<ClipBoardButton />, nuevoDiv);
 }
 
-*/
+
 console.log("holaaaaaaaaaaa")
 
 document.addEventListener('DOMContentLoaded', () => {
-    console.log("----------->>>>>>>>>>>>>>>>>>>")
+    console.log("----------->>>>>>>>>>>>>>>>>>>DOMContentLoaded")
     console.log("window.location.href ------->>>>> ", window.location.href)
-    addClipboard();
+    //addClipboard();
     
   });
 
   window.addEventListener('load', () => {
-    console.log("----------->>>>>>>>>>>>>>>>>>>");
+    console.log("----------->>>>>>>>>>>>>>>>>>>load");
+    console.log("----------->>>>>>>>>>>>>>>>>>>load")
+    console.log("window.location.href ------->>>>> ", window.location.href)
+    addClipboard();
+    
   });
 /*
   const insertNewDivSearchResult = async () => {
