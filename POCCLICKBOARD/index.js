@@ -18,7 +18,6 @@ const CardCupon = () => {
 
 function addClipboard () {
     let bannerContainer = document.querySelector('.home-v5');
-console.log("------------->:  ", bannerContainer)
     const nuevoDiv = document.createElement('div');
     const firstChild = bannerContainer.firstChild;
     
@@ -42,6 +41,7 @@ console.log("------------->:  ", bannerContainer)
       }
     ///////////////////////
     bannerContainer.insertBefore(nuevoDiv, firstChild);
+    addClickListenerToCopyButtons();
 }
 
 function copyToClipboard(text) {
@@ -54,7 +54,7 @@ function copyToClipboard(text) {
     document.body.removeChild(textarea);
   }
 
-  function addClckListenerToCopyButtons () {
+  function addClickListenerToCopyButtons () {
       // Get all the copy buttons
       const cards = document.querySelectorAll('.clipboardButtonContainer');
 
