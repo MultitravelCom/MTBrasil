@@ -1,6 +1,6 @@
    
 
-const ClipBoardButton = () => {
+/*const ClipBoardButton = () => {
     return (
         <>
             <div className="div__clickboard">
@@ -26,7 +26,7 @@ console.log("------------->:  ", bannerContainer)
     ReactDOM.render(<ClipBoardButton />, nuevoDiv);
 }
 
-
+*/
 console.log("holaaaaaaaaaaa")
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -36,7 +36,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
   });
 
-  
+  window.addEventListener('load', () => {
+    console.log("----------->>>>>>>>>>>>>>>>>>>");
+  });
 /*
   const insertNewDivSearchResult = async () => {
     const observer = new MutationSummary({
