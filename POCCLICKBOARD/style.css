@@ -1,7 +1,13 @@
-.container_clickboard {
+.container_cards_clickboard{
+    margin:50px;
+    padding: 50px;
+    background-color: rgb(51, 51, 217);
+}
+
+.card_cupon {
     height: 100px;
     width: 250px;
-    background-color: blue;
+    background-color: grey;
     align-items: center;
     display: flex;
     margin-top: 20px;

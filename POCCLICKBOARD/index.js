@@ -1,8 +1,9 @@
    
 
-const ClipBoardButton = () => {
+const CardCupon = () => {
     return (
         <>
+        <div className="card_cupon">
             <div className="div__clickboard_descripcion">
              Copia el codigo de tu cupon!
             </div>
@@ -10,6 +11,7 @@ const ClipBoardButton = () => {
                 <span className="glyphicon glyphicon-new-window new-window__icon"></span>
                 <span className="new-window__text">SDASFS5F43T3JJJ42322</span>
             </div>
+        </div>
         </>
     );
 };
@@ -18,15 +20,29 @@ function addClipboard () {
     let bannerContainer = document.querySelector('.main__container__bannerTop');
 console.log("------------->:  ", bannerContainer)
     const nuevoDiv = document.createElement('div');
-
-    bannerContainer.appendChild(nuevoDiv);
-
-    nuevoDiv.classList.add('container_clickboard');
-    nuevoDiv.style.height = '100px';
-    nuevoDiv.style.width = '100px';
-    nuevoDiv.style.backgroundColor= 'blue';
-
-    ReactDOM.render(<ClipBoardButton />, nuevoDiv);
+    const firstChild = bannerContainer.firstChild;
+    
+    nuevoDiv.classList.add('container_cards_clickboard');
+    ///////////////////////////////
+    for (let row = 0; row < 2; row++) {
+        const rowDiv = document.createElement('div');
+        rowDiv.classList.add('row');
+      
+        for (let col = 0; col < 4; col++) {
+          const clipboardButtonDiv = document.createElement('div');
+          clipboardButtonDiv.classList.add('clipboardButtonContainer');
+      
+          // Render the ClipboardButton component and append it to the row
+          ReactDOM.render(<ClipboardButton />, clipboardButtonDiv);
+          rowDiv.appendChild(clipboardButtonDiv);
+        }
+      
+        // Append the row to nuevoDiv
+        nuevoDiv.appendChild(rowDiv);
+      }
+    ///////////////////////
+    ReactDOM.render(<CardCupon />, nuevoDiv);
+    bannerContainer.insertBefore(nuevoDiv, firstChild);
 }
 
 
