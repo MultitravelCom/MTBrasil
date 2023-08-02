@@ -1,7 +1,6 @@
    
-/*
+
 const ClipBoardButton = () => {
-    const [openModal, setOpenModal] = React.useState(false);
     return (
         <>
             <div className="div__clickboard">
@@ -13,11 +12,11 @@ const ClipBoardButton = () => {
 };
 
 function addClipboard () {
-    let bannerContainer = document.querySelector('.bannerTop__center');
+    let bannerContainer = document.querySelector('.main__container__bannerTop');
 console.log("------------->:  ", bannerContainer)
     const nuevoDiv = document.createElement('div');
 
-    bannerContainer.appendChild(v);
+    bannerContainer.appendChild(nuevoDiv);
 
     nuevoDiv.classList.add('container_clickboard');
     nuevoDiv.style.height = '100px';
@@ -27,17 +26,13 @@ console.log("------------->:  ", bannerContainer)
     ReactDOM.render(<ClipBoardButton />, nuevoDiv);
 }
 
-*/
+
 console.log("holaaaaaaaaaaa")
 document.addEventListener('DOMContentLoaded', () => {
     console.log("----------->>>>>>>>>>>>>>>>>>>")
-   /* console.log("window.location.href ------->>>>> ", window.location.href)
-    if (window.location.href.includes('https://onefiveb2b.juniperbetemp.com/flights/')) {
-        addClipboard();
-    }else if (window.location.href.includes('/flights/booking')){
-      changeStyleBooking();
-    }
-    */
+    console.log("window.location.href ------->>>>> ", window.location.href)
+    addClipboard();
+    
   });
 
   
