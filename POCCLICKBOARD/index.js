@@ -58,7 +58,7 @@ function copyToClipboard(text) {
       // Get all the copy buttons
       const cards = document.querySelectorAll('.clipboardButtonContainer');
 
-    copyButtons.forEach(button => {
+      cards.forEach(button => {
         const copyButton = button.querySelector('.glyphicon.glyphicon-new-window.new-window__icon');
         console.log("Button:", copyButton)
         button.addEventListener('click', () => {
