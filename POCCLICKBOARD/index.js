@@ -16,7 +16,7 @@ const CardCupon = () => {
     );
 };
 
-function addClipboard () {
+function addContainerCards () {
     let bannerContainer = document.querySelector('.home-v5');
     const nuevoDiv = document.createElement('div');
     const firstChild = bannerContainer.firstChild;
@@ -61,7 +61,7 @@ function copyToClipboard(text) {
       cards.forEach(button => {
         const copyButton = button.querySelector('.glyphicon.glyphicon-new-window.new-window__icon');
         console.log("Button:", copyButton)
-        button.addEventListener('click', () => {
+        copyButton.addEventListener('click', () => {
             console.log("inside the event")
           // Get the key ID associated with this button
           const keyIdElement = button.querySelector('.new-window__text');
@@ -82,7 +82,7 @@ console.log("holaaaaaaaaaaa")
 document.addEventListener('DOMContentLoaded', () => {
     console.log("----------->>>>>>>>>>>>>>>>>>>DOMContentLoaded")
     console.log("window.location.href ------->>>>> ", window.location.href)
-    //addClipboard();
+    //addContainerCards();
     
   });
 
@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log("----------->>>>>>>>>>>>>>>>>>>load");
     console.log("----------->>>>>>>>>>>>>>>>>>>load")
     console.log("window.location.href ------->>>>> ", window.location.href)
-    addClipboard();
+    addContainerCards();
     
   });
 /*
