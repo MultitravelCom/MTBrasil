@@ -33,7 +33,7 @@ console.log("------------->:  ", bannerContainer)
           clipboardButtonDiv.classList.add('clipboardButtonContainer');
       
           // Render the ClipboardButton component and append it to the row
-          ReactDOM.render(<ClipboardButton />, clipboardButtonDiv);
+          ReactDOM.render(<CardCupon />, clipboardButtonDiv);
           rowDiv.appendChild(clipboardButtonDiv);
         }
       
@@ -41,7 +41,6 @@ console.log("------------->:  ", bannerContainer)
         nuevoDiv.appendChild(rowDiv);
       }
     ///////////////////////
-    ReactDOM.render(<CardCupon />, nuevoDiv);
     bannerContainer.insertBefore(nuevoDiv, firstChild);
 }
 
