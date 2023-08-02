@@ -26,7 +26,7 @@ console.log("------------->:  ", bannerContainer)
     ///////////////////////////////
     for (let row = 0; row < 2; row++) {
         const rowDiv = document.createElement('div');
-        rowDiv.classList.add('row');
+        rowDiv.classList.add('row-cards');
       
         for (let col = 0; col < 4; col++) {
           const clipboardButtonDiv = document.createElement('div');
@@ -47,6 +47,7 @@ console.log("------------->:  ", bannerContainer)
 function copyToClipboard(text) {
     const textarea = document.createElement('textarea');
     textarea.value = text;
+    console.log(text)
     document.body.appendChild(textarea);
     textarea.select();
     document.execCommand('copy');
@@ -58,6 +59,7 @@ function copyToClipboard(text) {
   const copyButtons = document.querySelectorAll('.glyphicon.glyphicon-new-window.new-window__icon');
     copyButtons.forEach(button => {
         button.addEventListener('click', () => {
+            console.log("inside the event")
           // Get the key ID associated with this button
           const keyId = button.previousElementSibling.textContent.trim();
     

@@ -7,7 +7,6 @@
 .card_cupon {
     height: 100px;
     width: 250px;
-    background-color: grey;
     align-items: center;
     display: flex;
     margin: 40px;
@@ -33,6 +32,6 @@
     cursor: pointer;
 }
 
-.row {
+.row-cards {
     display: flex;
 }
