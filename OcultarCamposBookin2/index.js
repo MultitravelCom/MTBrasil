@@ -1,5 +1,3 @@
-let elementToHide = null;
-
 // Función para buscar y ocultar el elemento
 function hideElement() {
     // Encuentra todos los elementos con la clase confirm-booking__field col-sm-6
