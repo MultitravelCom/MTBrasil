@@ -226,6 +226,20 @@ function changeStyleBooking(){
   selectionDuration.style.marginRight = '5rem'
 }
 
+// Funcion para cambiar lebel a 
+
+function changeDocumentText() {
+  const paxFields = document.querySelectorAll('.booking-paxes__pax-field-label');
+
+  paxFields.forEach(label => {
+      const originalText = label.textContent.trim();
+      
+      if (originalText === 'Número do documento') {
+          label.textContent = 'CPF/CNPJ';
+      }
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   if (window.location.href.includes('https://onefiveb2b.juniperbetemp.com/flights/results.aspx')) {
     // Your script code here
@@ -239,4 +253,5 @@ document.addEventListener('DOMContentLoaded', () => {
   }else if (window.location.href.includes('/flights/booking')){
     changeStyleBooking();
   }
+  changeDocumentText();
 });
