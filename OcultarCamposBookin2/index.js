@@ -38,12 +38,12 @@ function modifyFieldsText() {
 
 
 function changeDocumentText() {
-    const paxFields = document.querySelectorAll('.booking-paxes__pax-field');
+    const paxFields = document.querySelector('.booking-paxes__pax-fields');
+    const elementspaxFields = paxFields.querySelectorAll('.booking-paxes__pax-field');
   
-    paxFields.forEach(label => {
-        const originalText = label.textContent.trim();
-        
-        if (originalText === 'Número do documento') {
+    elementspaxFields.forEach(label => {
+        const originalTextLabel = element.querySelector('.booking-paxes__pax-field-label');        
+        if (originalTextLabel && originalTextLabel.textContent.trim() === 'Número do documento') {
             label.textContent = 'CPF/CNPJ';
         }
     });
