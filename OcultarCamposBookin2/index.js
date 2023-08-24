@@ -57,7 +57,6 @@ function changeDocumentText() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("test")
     // hideElement();
     modifyFieldsText();
     changeDocumentText();
