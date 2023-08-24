@@ -41,7 +41,7 @@ function changeDocumentText() {
     const elementspaxFields = paxFields.querySelectorAll('.booking-paxes__pax-field');
   
     elementspaxFields.forEach(label => {
-        const originalTextLabel = element.querySelector('.booking-paxes__pax-field-label');        
+        const originalTextLabel = label.querySelector('.booking-paxes__pax-field-label');        
         if (originalTextLabel && originalTextLabel.textContent.trim() === 'Número do documento') {
             label.textContent = 'CPF/CNPJ';
         }
