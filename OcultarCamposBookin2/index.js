@@ -38,7 +38,7 @@ function modifyFieldsText() {
 
 
 function changeDocumentText() {
-    const paxFields = document.querySelectorAll('.booking-paxes__pax-field-label');
+    const paxFields = document.querySelectorAll('.booking-paxes__pax-field');
   
     paxFields.forEach(label => {
         const originalText = label.textContent.trim();
