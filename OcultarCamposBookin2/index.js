@@ -40,18 +40,23 @@ function modifyFieldsText() {
 }
 
 function changeDocumentText() {
-    const paxFields = document.querySelector('.booking-paxes__pax-fields');
-    const elementspaxFields = paxFields.querySelectorAll('.booking-paxes__pax-field');
-  
-    elementspaxFields.forEach(label => {
-        const originalTextLabel = label.querySelector('.booking-paxes__pax-field-label');        
-        if (originalTextLabel && originalTextLabel.textContent.trim() === 'Número do documento') {
-            label.textContent = 'CPF/CNPJ';
+    console.log('Ejecutando la función changeDocumentText...');
+    // Encuentra todos los elementos con la clase booking-paxes__pax-field
+    const elementsToModify = document.querySelectorAll('.booking-paxes__pax-field');
+
+    // Recorre los elementos y realiza las modificaciones necesarias
+    elementsToModify.forEach(element => {
+        const fieldLabel = element.querySelector('.booking-paxes__pax-field-label');
+        if (fieldLabel) {
+            const labelText = fieldLabel.textContent.trim();
+            if (labelText === 'Número do documento*') {
+                fieldLabel.textContent = 'CPF/CNPJ';
+            }
         }
     });
-  }
+}
 
-  document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
     console.log("test")
     // hideElement();
     modifyFieldsText();
