@@ -17,6 +17,9 @@ function hideElement() {
 }
 
 function modifyFieldsText() {
+    if (window.location.href.includes('/flights')) {
+        return; // No ejecutar la función
+    }
     console.log('Ejecutando la función modifyFieldsText...');
     // Encuentra el contenedor que contiene los campos
     const fieldsContainer = document.querySelector('.confirm-booking__fields');
@@ -51,6 +54,6 @@ function changeDocumentText() {
   document.addEventListener("DOMContentLoaded", function () {
     console.log("test")
     // hideElement();
-    // modifyFieldsText();
+    modifyFieldsText();
     changeDocumentText();
 });
