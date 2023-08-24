@@ -11,6 +11,7 @@ function hideElement() {
         const fieldLabel = element.querySelector('.confirm-booking__field-label');
         if (fieldLabel && fieldLabel.textContent.trim() === 'CUIT/CUIL') {
             element.style.display = 'none';
+            element.style.float = 'inherit';
         }
     });
 }
