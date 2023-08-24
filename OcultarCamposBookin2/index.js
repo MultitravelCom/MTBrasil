@@ -35,9 +35,23 @@ function modifyFieldsText() {
         }
     });
 }
+
+
+function changeDocumentText() {
+    const paxFields = document.querySelectorAll('.booking-paxes__pax-field-label');
+  
+    paxFields.forEach(label => {
+        const originalText = label.textContent.trim();
+        
+        if (originalText === 'Número do documento') {
+            label.textContent = 'CPF/CNPJ';
+        }
+    });
+  }
 // Llama a la función cuando sea necesario
 document.addEventListener("DOMContentLoaded", function () {
     console.log("test")
     // hideElement();
     modifyFieldsText();
+    changeDocumentText();
 });
