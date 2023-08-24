@@ -36,7 +36,6 @@ function modifyFieldsText() {
     });
 }
 
-
 function changeDocumentText() {
     const paxFields = document.querySelector('.booking-paxes__pax-fields');
     const elementspaxFields = paxFields.querySelectorAll('.booking-paxes__pax-field');
@@ -48,10 +47,10 @@ function changeDocumentText() {
         }
     });
   }
-// Llama a la función cuando sea necesario
-document.addEventListener("DOMContentLoaded", function () {
+
+  document.addEventListener("DOMContentLoaded", function () {
     console.log("test")
     // hideElement();
-    modifyFieldsText();
+    // modifyFieldsText();
     changeDocumentText();
 });
