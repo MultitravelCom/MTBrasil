@@ -1,0 +1,3 @@
+.confirm-booking__field.col-sm-6 .confirm-booking__field-label:contains("CUIT/CUIL") {
+    display: none;
+  }

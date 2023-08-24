@@ -39,6 +39,6 @@ function modifyFieldsText() {
 // Llama a la función cuando sea necesario
 document.addEventListener("DOMContentLoaded", function () {
     console.log("test")
-    hideElement();
+    // hideElement();
     modifyFieldsText();
 });
