@@ -15,12 +15,10 @@ function hideElement() {
         }
     });
 }
-
 function modifyFieldsText() {
     if (window.location.href.includes('/flights')) {
         return; // No ejecutar la función
     }
-    console.log('Ejecutando la función modifyFieldsText...');
     // Encuentra el contenedor que contiene los campos
     const fieldsContainer = document.querySelector('.confirm-booking__fields');
 
@@ -38,7 +36,6 @@ function modifyFieldsText() {
         }
     });
 }
-
 function changeDocumentText() {
     console.log('Ejecutando la función changeDocumentText...');
     // Encuentra todos los elementos con la clase booking-paxes__pax-field
@@ -55,9 +52,24 @@ function changeDocumentText() {
         }
     });
 }
+function changeDocumentTextB() {
+    // Encuentra todos los elementos con la clase booking-paxes__pax-field
+    const elementsToModify = document.querySelectorAll('.booking-paxes__pax-field');
 
+    // Recorre los elementos y realiza las modificaciones necesarias
+    elementsToModify.forEach(element => {
+        const fieldLabel = element.querySelector('.booking-paxes__pax-field-label');
+        if (fieldLabel) {
+            const labelText = fieldLabel.textContent.trim();
+            if (labelText === 'Documento de identidade / Passaporte') {
+                fieldLabel.textContent = 'CPF/CNPJ*';
+            }
+        }
+    });
+}
 document.addEventListener("DOMContentLoaded", function () {
     // hideElement();
     modifyFieldsText();
     changeDocumentText();
+    changeDocumentTextB();
 });

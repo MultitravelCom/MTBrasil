@@ -90,7 +90,6 @@ const BannerMensageCardApp = () => {
 };
 
 const checkAndRender = async () => {
-    console.log("checkAndRender");
     let infoCardContents = document.querySelectorAll('.info-card__content');
     let infoCardImgContents = document.querySelectorAll('.info-card__image');
 

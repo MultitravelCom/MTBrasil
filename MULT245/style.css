@@ -459,4 +459,23 @@
   .main__container__iconImg {
     display: none;
   }
+  /*
+  Styles to display map in mobile
+  */
+  .results-list__item {
+    height: fit-content;
+  }
+  .result.hotel-result {
+    height: fit-content;
+  }
+
+  .info-card {
+    height: fit-content;
+    min-height: 495px;
+  }
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .main__container__bannerMensageCard__App {
+    width: 260px;
+  }
 }
