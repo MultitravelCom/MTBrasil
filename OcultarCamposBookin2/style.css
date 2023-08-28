@@ -1,6 +1,6 @@
 #main-content > div:nth-child(2) > div > div > div.booking-data__data > div.confirm-booking__section.confirm-booking__holder-data > fieldset > label:nth-child(6) {
     display: none;
 }
-#main-content > div:nth-child(2) > div > div > div.booking-data__data > div.confirm-booking__section.confirm-booking__holder-data > fieldset{
+/* #main-content > div:nth-child(2) > div > div > div.booking-data__data > div.confirm-booking__section.confirm-booking__holder-data > fieldset{
     display: none;
-}
+} */
