@@ -43,14 +43,13 @@ function modifyFieldsTextBooking() {
 
     // Recorre los elementos y realiza las modificaciones necesarias
     elementsToModify.forEach(element => {
-        const fieldLabel = element.querySelector('.booking-paxes__pax-field-label');
+        const fieldLabel = element.querySelector('.confirm-booking__fields');
         if (fieldLabel) {
             const labelText = fieldLabel.textContent.trim();
             if (labelText === 'Documento de identidade / Passaporte') {
                 fieldLabel.textContent = 'CPF/CNPJ*';
             }
         }else {
-            // Si no se encontró el contenedor, espera un breve período y vuelve a intentarlo
             setTimeout(modifyFieldsTextBooking, 100);
         }
     });
