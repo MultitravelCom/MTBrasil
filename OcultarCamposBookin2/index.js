@@ -53,6 +53,8 @@ function changeDocumentText() {
     });
 }
 function changeDocumentTextB() {
+    console.log('Ejecutando la función changeDocumentTextB...');
+
     // Encuentra todos los elementos con la clase booking-paxes__pax-field
     const elementsToModify = document.querySelectorAll('.booking-paxes__pax-field');
 
