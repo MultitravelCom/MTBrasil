@@ -19,6 +19,8 @@ function modifyFieldsTextFlights() {
     if (window.location.href.includes('/flights')) {
         return; // No ejecutar la función
     }
+    console.log('Ejecutando la función modifyFieldsTextFlights()...');
+
     // Encuentra el contenedor que contiene los campos
     const fieldsContainer = document.querySelector('.confirm-booking__fields');
 
@@ -48,6 +50,10 @@ function modifyFieldsTextBooking() {
 
     // Verifica si se encontró el contenedor
     if (fieldContainer) {
+
+        console.log('Se encontró el campo:', fieldContainer);
+
+
         const fieldLabel = fieldContainer.querySelector('.confirm-booking__field-label');
         if (fieldLabel) {
             const labelContent = fieldLabel.textContent.trim();
