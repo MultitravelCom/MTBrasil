@@ -47,12 +47,12 @@ function modifyFieldsTextBooking() {
 
     // Verifica si se encontró el contenedor
     if (fieldContainer) {
+
         const fieldLabel = fieldContainer.querySelector('.confirm-booking__field-label');
         if (fieldLabel) {
             const labelContent = fieldLabel.textContent.trim();
             if (labelContent === 'Documento de identidade / Passaporte*') {
                 fieldLabel.textContent = 'CPF/CNPJ*';
-                labelContent.style.display = 'block';
                 }
         }
     } else {
