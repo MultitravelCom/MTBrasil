@@ -82,7 +82,7 @@ function changeDocumentText() {
 
 document.addEventListener("DOMContentLoaded", function () {
     // hideElement();
+    changeDocumentText();
     modifyFieldsTextFlights();
     modifyFieldsTextBooking();
-    changeDocumentText();
 });
