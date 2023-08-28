@@ -59,6 +59,12 @@ function modifyFieldsTextBooking() {
             if (labelContent === 'Documento de identidade / Passaporte*') {
                 fieldLabel.textContent = 'CPF/CNPJ*';
                 console.log('Texto modificado:', fieldLabel.textContent);
+
+                // Vuelve a mostrar el forms para evitar que note el cambio de cpy
+                const fieldsContainerForm = document.querySelector('.confirm-booking__fields');
+                if (fieldsContainerForm) {
+                    fieldsContainerForm.style.display = 'flex';
+                }
             }
         }
     } else {
