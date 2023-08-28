@@ -60,7 +60,6 @@ function modifyFieldsTextBooking() {
                 fieldLabel.textContent = 'CPF/CNPJ*';
                 labelContent.style.display = 'block';
                 }
-            }
         }
     } else {
         setTimeout(modifyFieldsTextBooking, 100);
