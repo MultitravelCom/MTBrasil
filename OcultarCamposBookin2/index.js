@@ -37,9 +37,9 @@ function modifyFieldsTextFlights() {
     });
 }7
 function modifyFieldsTextBooking() {
-    if (window.location.href.includes('/confirmBooking')) {
-        return; // No ejecutar la función
-    }
+    // if (window.location.href.includes('/confirmBooking')) {
+    //     return; // No ejecutar la función
+    // }
     // Encuentra el contenedor que contiene los campos
     const fieldsContainer = document.querySelector('.confirm-booking__fields');
 
@@ -52,7 +52,7 @@ function modifyFieldsTextBooking() {
         if (fieldLabel) {
             const labelContent = fieldLabel.textContent.trim();
             if (labelContent === 'Documento de identidade / Passaporte') {
-                fieldLabel.textContent = 'CPF/CNPJ';
+                fieldLabel.textContent = 'CPF/CNPJ*';
             }
         }
     });
