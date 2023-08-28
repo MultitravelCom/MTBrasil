@@ -19,8 +19,6 @@ function modifyFieldsTextFlights() {
     if (window.location.href.includes('/flights')) {
         return; // No ejecutar la función
     }
-    console.log('Ejecutando la función modifyFieldsTextFlights()...');
-
     // Encuentra el contenedor que contiene los campos
     const fieldsContainer = document.querySelector('.confirm-booking__fields');
 
@@ -43,16 +41,12 @@ function modifyFieldsTextBooking() {
     if (window.location.href.includes('/flights')) {
         return; // No ejecutar la función
     }
-    console.log('Ejecutando la función modifyFieldsTextBooking()...');
 
     // Encuentra el contenedor que contiene los campos
     const fieldContainer = document.querySelector('#main-content > div:nth-child(2) > div > div > div.booking-data__data > div.confirm-booking__section.confirm-booking__holder-data > fieldset > label.confirm-booking__field.col-sm-5');
 
     // Verifica si se encontró el contenedor
     if (fieldContainer) {
-
-        console.log('Se encontró el campo:', fieldContainer);
-
         const fieldLabel = fieldContainer.querySelector('.confirm-booking__field-label');
         if (fieldLabel) {
             const labelContent = fieldLabel.textContent.trim();
@@ -67,7 +61,6 @@ function modifyFieldsTextBooking() {
 }
 
 function changeDocumentText() {
-    console.log('Ejecutando la función changeDocumentText...');
     // Encuentra todos los elementos con la clase booking-paxes__pax-field
     const elementsToModify = document.querySelectorAll('.booking-paxes__pax-field');
 
