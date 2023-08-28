@@ -35,7 +35,7 @@ function modifyFieldsTextFlights() {
             }
         }
     });
-}7
+}
 function modifyFieldsTextBooking() {
     // if (window.location.href.includes('/confirmBooking')) {
     //     return; // No ejecutar la función
