@@ -44,23 +44,20 @@ function modifyFieldsTextBooking() {
     console.log('Ejecutando la función modifyFieldsTextBooking()...');
 
     // Encuentra el contenedor que contiene los campos
-    const fieldsContainer = document.querySelector('.confirm-booking__fields');
+    const fieldContainer = document.querySelector('#main-content > div:nth-child(2) > div > div > div.booking-data__data > div.confirm-booking__section.confirm-booking__holder-data > fieldset > label.confirm-booking__field.col-sm-5');
 
-    // Busca todos los elementos con la clase confirm-booking__field col-sm-5
-    const elementsToModify = fieldsContainer.querySelectorAll('.confirm-booking__field.col-sm-5');
-
-    // Recorre los elementos y realiza las modificaciones necesarias
-    elementsToModify.forEach(element => {
-        const fieldLabel = element.querySelector('.confirm-booking__field-label');
+    // Verifica si se encontró el contenedor
+    if (fieldContainer) {
+        const fieldLabel = fieldContainer.querySelector('.confirm-booking__field-label');
         if (fieldLabel) {
             const labelContent = fieldLabel.textContent.trim();
             if (labelContent === 'Documento de identidade / Passaporte') {
                 fieldLabel.textContent = 'CPF/CNPJ';
             }
-        }else {
-            setTimeout(modifyFieldsTextBooking, 100);
         }
-    });
+    } else {
+        setTimeout(modifyFieldsTextBooking, 100);
+    }
 }
 
 function changeDocumentText() {
