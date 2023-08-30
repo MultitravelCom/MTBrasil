@@ -1,5 +1,6 @@
 function checkPaymentMethod() {
     const gatewaySelect = document.querySelector('.js-enhanced-select.pos__field-select');
+    console.log("se encontro, gatewaySelec")
 
     gatewaySelect.addEventListener('change', handleGatewayChange);
 
@@ -7,6 +8,7 @@ function checkPaymentMethod() {
         const selectedOption = event.target.options[event.target.selectedIndex];
         const dataConfigId = selectedOption.getAttribute('data-config-id');
         const configId = parseInt(dataConfigId);
+        console.log("mepe", configId)
 
         setSelectedConfigId(configId);
     }
