@@ -15,7 +15,7 @@ function checkPaymentMethod() {
 const TransferenciaComponent = () => {
     const [selectedConfigId, setSelectedConfigId] = React.useState(null);
 
-    useEffect(() => {
+    React.useEffect(() => {
         const gatewaySelect = document.querySelector('.js-enhanced-select.pos__field-select');
         
         function handleChange(event) {
