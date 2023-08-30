@@ -1,6 +1,6 @@
 function checkPaymentMethod() {
     const gatewaySelect = document.querySelector('.js-enhanced-select.pos__field-select');
-    console.log("se encontro," gatewaySelec)
+    console.log("se encontro", gatewaySelec)
 
     gatewaySelect.addEventListener('change', handleGatewayChange);
 
