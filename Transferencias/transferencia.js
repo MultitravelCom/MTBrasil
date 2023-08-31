@@ -24,6 +24,7 @@ const TransferenciaComponent = () => {
     React.useEffect(() => {
         const configId = checkPaymentMethod();
         setConfigIdFromCheck(configId);
+        console.log(setConfigIdFromCheck);
     }, []);
 
     return (
