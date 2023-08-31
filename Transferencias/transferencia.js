@@ -5,9 +5,9 @@ function checkPaymentMethod() {
         const selectedOption = gatewaySelect.target.options[gatewaySelect.target.selectedIndex];
         const dataConfigId = selectedOption.getAttribute('data-config-id');
         const configId = parseInt(dataConfigId);
+        console.log("se encontro", configId)
     
         setSelectedConfigId(configId);
-        console.log("se encontro", configId)
 
     }
 }
