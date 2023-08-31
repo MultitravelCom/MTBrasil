@@ -101,6 +101,7 @@ ReactDOM.render(<ButtonsPaymentMp />, buttonPaymentMp);
 // const paymentInfoContainer = document.querySelector('.booking-payment__info.pos');
 // ReactDOM.render(<TransferenciaComponent />, paymentInfoContainer);
 
-const posElement = document.querySelector('booking-payment__info.pos');
-const paymentInfoContainer = posElement.nextElementSiblingSibling;
-ReactDOM.render(<TransferenciaComponent />, paymentInfoContainer);
+const posElement = document.querySelector('.booking-payment__info.pos');
+const transferenciaContainer = document.createElement('div');
+ReactDOM.render(<TransferenciaComponent />, transferenciaContainer);
+posElement.appendChild(transferenciaContainer);
