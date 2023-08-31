@@ -106,9 +106,9 @@ const TransferenciaComponent = () => {
 
 const buttonPaymentMp = document.querySelector('.booking-payment__options');
 const posElement = document.querySelector('.booking-payment__info.pos');
+ReactDOM.render(<ButtonsPaymentMp />, buttonPaymentMp);
 
 if (configId === 12) {
-    ReactDOM.render(<ButtonsPaymentMp />, buttonPaymentMp);
     const transferenciaContainer = document.createElement('div');
     ReactDOM.render(<TransferenciaComponent />, transferenciaContainer);
     posElement.appendChild(transferenciaContainer);
