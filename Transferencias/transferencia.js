@@ -1,4 +1,6 @@
 function checkPaymentMethod() {
+    const gatewaySelect = document.querySelector('.js-enhanced-select.pos__field-select');
+    console.log("se encontro", gatewaySelect)
     if (gatewaySelect) {
         const selectedOption = gatewaySelect.target.options[gatewaySelect.target.selectedIndex];
         const dataConfigId = selectedOption.getAttribute('data-config-id');
@@ -8,6 +10,7 @@ function checkPaymentMethod() {
     }
 }
 checkPaymentMethod();
+
 
 const TransferenciaComponent = () => {
     const [selectedConfigId, setSelectedConfigId] = React.useState(null);
