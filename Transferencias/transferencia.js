@@ -1,19 +1,30 @@
 function checkPaymentMethod() {
     const gatewaySelect = document.querySelector('.js-enhanced-select.pos__field-select');
-    console.log("se encontro", gatewaySelect)
-    if (gatewaySelect) {
-        const selectedOption = gatewaySelect.target.options[gatewaySelect.target.selectedIndex];
-        const dataConfigId = selectedOption.getAttribute('data-config-id');
-        const configId = parseInt(dataConfigId);
-        console.log("se encontro", configId)
+    console.log("se encontro", gatewaySelect);
     
-        setSelectedConfigId(configId);
-
+    if (gatewaySelect) {
+        const selectedOption = gatewaySelect.options[gatewaySelect.selectedIndex];
+        const dataConfigId = selectedOption.getAttribute('data-config-id');
+        
+        if (dataConfigId) {
+            const configId = parseInt(dataConfigId);
+            console.log("se encontro", configId);
+            
+            return configId;
+        }
     }
+    
+    return null;
 }
 
 const TransferenciaComponent = () => {
-    const [selectedConfigId, setSelectedConfigId] = React.useState(null);
+    const [configIdFromCheck, setConfigIdFromCheck] = React.useState(null);
+
+    
+    React.useEffect(() => {
+        const configId = checkPaymentMethod();
+        setConfigIdFromCheck(configId);
+    }, []);
 
     return (
         <>
@@ -21,19 +32,19 @@ const TransferenciaComponent = () => {
                 <picture>
                     <source
                         media="(min-width: 1024px)"
-                        srcSet={selectedConfigId === 12 ? "https://multitravelcom.github.io/MT/Secciones/Booking-2/MercadoPago/MercadoPago-Desktop.png" : "https://multitravelcom.github.io/MTBrasil-Img/Booking-2/ComoPagar/ImagenDesktop.webp"}
+                        srcSet={configIdFromCheck === 12 ? "https://multitravelcom.github.io/MT/Secciones/Booking-2/MercadoPago/MercadoPago-Desktop.png" : "https://multitravelcom.github.io/MTBrasil-Img/Booking-2/ComoPagar/ImagenDesktop.webp"}
                     />
                     <source
                         media="(min-width: 768px) and (max-width: 1023px)"
-                        srcSet={selectedConfigId === 12 ? "https://multitravelcom.github.io/MT/Secciones/Booking-2/MercadoPago/MercadoPago-Tablet.png" : "https://multitravelcom.github.io/MTBrasil-Img/Booking-2/ComoPagar/ImagenTablet.webp"}
+                        srcSet={configIdFromCheck === 12 ? "https://multitravelcom.github.io/MT/Secciones/Booking-2/MercadoPago/MercadoPago-Tablet.png" : "https://multitravelcom.github.io/MTBrasil-Img/Booking-2/ComoPagar/ImagenTablet.webp"}
                     />
                     <source
                         media="(max-width: 767px)"
-                        srcSet={selectedConfigId === 12 ? "https://multitravelcom.github.io/MT/Secciones/Booking-2/MercadoPago/MercadoPago-Mobile.png" : "https://multitravelcom.github.io/MTBrasil-Img/Booking-2/ComoPagar/ImagenMobile.webp"}
+                        srcSet={configIdFromCheck === 12 ? "https://multitravelcom.github.io/MT/Secciones/Booking-2/MercadoPago/MercadoPago-Mobile.png" : "https://multitravelcom.github.io/MTBrasil-Img/Booking-2/ComoPagar/ImagenMobile.webp"}
                     />
                     <img
                         alt=""
-                        src={selectedConfigId === 12 ? "https://multitravelcom.github.io/MT/Secciones/Booking-2/MercadoPago/MercadoPago-Desktop.png" : "https://multitravelcom.github.io/MTBrasil-Img/Booking-2/ComoPagar/ImagenDesktop.webp"}
+                        src={configIdFromCheck === 12 ? "https://multitravelcom.github.io/MT/Secciones/Booking-2/MercadoPago/MercadoPago-Desktop.png" : "https://multitravelcom.github.io/MTBrasil-Img/Booking-2/ComoPagar/ImagenDesktop.webp"}
                     />
                 </picture>
             </div>
