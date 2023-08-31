@@ -7,6 +7,8 @@ function checkPaymentMethod() {
         const configId = parseInt(dataConfigId);
     
         setSelectedConfigId(configId);
+        console.log("se encontro", configId)
+
     }
 }
 
