@@ -56,29 +56,13 @@ const ButtonsPaymentMp = () => {
                     </li>
                     <TransferenciaComponent />
                 </>
-            )
-                :
-                <ul className="booking-payment__options" style="display: inline-block;">
-
-                    <li className="booking-payment__options-pos on">
-                        <input type="radio" name="paymentType" value="pos" className="js-paymentType hidden" />
-                        <span className="glyphicon glyphicon-md"></span>
-                        Cartão de crédito
-                    </li>
-
-                    <li className="booking-payment__options-prepayment">
-                        <input type="radio" name="paymentType" value="prepayment" className="js-paymentType hidden" />
-                        <span className="glyphicon glyphicon-md"></span>
-                        Transferência / Dinheiro
-                    </li>
-                </ul>
+            ):null
             }
         </>
     );
 };
 
 const TransferenciaComponent = () => {
-
     return (
         <>
             <div className="main__transferencia">
@@ -106,9 +90,10 @@ const TransferenciaComponent = () => {
 };
 
 const buttonPaymentMp = document.querySelector('.booking-payment__options');
-const posElement = document.querySelector('.booking-payment__info.pos');
 ReactDOM.render(<ButtonsPaymentMp />, buttonPaymentMp);
 
+
+const posElement = document.querySelector('.booking-payment__info.pos');
 const transferenciaContainer = document.createElement('div');
 ReactDOM.render(<TransferenciaComponent />, transferenciaContainer);
 posElement.appendChild(transferenciaContainer);
