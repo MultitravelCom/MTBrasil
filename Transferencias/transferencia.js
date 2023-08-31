@@ -46,8 +46,8 @@ const ButtonsPaymentMp = () => {
                                     </clipPath>
                                 </defs>
                             </svg>
+                            Mercado Pago
                         </span>
-                        Mercado Pago
                     </li>
                     <li className="booking-payment__options-prepayment">
                         <input type="radio" name="paymentType" value="prepayment" className="js-paymentType hidden" />
@@ -76,7 +76,7 @@ const ButtonsPaymentMp = () => {
                                 </defs>
                             </svg>
                         </span>
-                        B Mercado Pago 
+                        B Mercado Pago
                     </li>
                     <li className="booking-payment__options-prepayment">
                         <input type="radio" name="paymentType" value="prepayment" className="js-paymentType hidden" />
@@ -97,19 +97,19 @@ const TransferenciaComponent = () => {
                 <picture>
                     <source
                         media="(min-width: 1024px)"
-                        srcSet={ "https://multitravelcom.github.io/MT/Secciones/Booking-2/MercadoPago/MercadoPago-Desktop.png"}
+                        srcSet={"https://multitravelcom.github.io/MT/Secciones/Booking-2/MercadoPago/MercadoPago-Desktop.png"}
                     />
                     <source
                         media="(min-width: 768px) and (max-width: 1023px)"
-                        srcSet={ "https://multitravelcom.github.io/MT/Secciones/Booking-2/MercadoPago/MercadoPago-Tablet.png" }
+                        srcSet={"https://multitravelcom.github.io/MT/Secciones/Booking-2/MercadoPago/MercadoPago-Tablet.png"}
                     />
                     <source
                         media="(max-width: 767px)"
-                        srcSet={ "https://multitravelcom.github.io/MT/Secciones/Booking-2/MercadoPago/MercadoPago-Mobile.png"}
+                        srcSet={"https://multitravelcom.github.io/MT/Secciones/Booking-2/MercadoPago/MercadoPago-Mobile.png"}
                     />
                     <img
                         alt=""
-                        src={ "https://multitravelcom.github.io/MT/Secciones/Booking-2/MercadoPago/MercadoPago-Desktop.png"}
+                        src={"https://multitravelcom.github.io/MT/Secciones/Booking-2/MercadoPago/MercadoPago-Desktop.png"}
                     />
                 </picture>
             </div>
