@@ -96,10 +96,10 @@ const TransferenciaComponent = () => {
 };
 
 const buttonPaymentMp = document.querySelector('.booking-payment__options');
-ReactDOM.render(<ButtonsPaymentMp />, buttonPaymentMp);
 
-// const paymentInfoContainer = document.querySelector('.booking-payment__info.pos');
-// ReactDOM.render(<TransferenciaComponent />, paymentInfoContainer);
+if (configIdFromCheck === 13) {
+  ReactDOM.render(<ButtonsPaymentMp />, buttonPaymentMp);
+}
 
 const posElement = document.querySelector('.booking-payment__info.pos');
 const transferenciaContainer = document.createElement('div');
