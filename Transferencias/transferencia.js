@@ -1,6 +1,5 @@
 function checkPaymentMethod() {
     const gatewaySelect = document.querySelector('.js-enhanced-select.pos__field-select');
-    console.log("se encontro", gatewaySelect);
 
     if (gatewaySelect) {
         const selectedOption = gatewaySelect.options[gatewaySelect.selectedIndex];
@@ -102,6 +101,6 @@ ReactDOM.render(<ButtonsPaymentMp />, buttonPaymentMp);
 // const paymentInfoContainer = document.querySelector('.booking-payment__info.pos');
 // ReactDOM.render(<TransferenciaComponent />, paymentInfoContainer);
 
-const posElement = document.querySelector('.pos');
+const posElement = document.querySelector('booking-payment__info.pos');
 const paymentInfoContainer = posElement.nextElementSiblingSibling;
 ReactDOM.render(<TransferenciaComponent />, paymentInfoContainer);
