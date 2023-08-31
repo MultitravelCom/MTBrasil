@@ -130,7 +130,7 @@ ReactDOM.render(<ButtonsPaymentMp />, buttonPaymentMp);
 // const paymentInfoContainer = document.querySelector('.booking-payment__info.pos');
 // ReactDOM.render(<TransferenciaComponent />, paymentInfoContainer);
 
-const shouldRenderTransferencia = checkPaymentMethod() === 13;
+const shouldRenderTransferencia = checkPaymentMethod() === 12;
 
 if (shouldRenderTransferencia) {
     const posElement = document.querySelector('.booking-payment__info.pos');
