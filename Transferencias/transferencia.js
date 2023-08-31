@@ -54,6 +54,7 @@ const ButtonsPaymentMp = () => {
                         <span className="glyphicon glyphicon-md" />
                         Transferência / Deposito
                     </li>
+                    <TransferenciaComponent />
                 </>
             )
                 :
@@ -108,8 +109,6 @@ const buttonPaymentMp = document.querySelector('.booking-payment__options');
 const posElement = document.querySelector('.booking-payment__info.pos');
 ReactDOM.render(<ButtonsPaymentMp />, buttonPaymentMp);
 
-if (configId === 12) {
-    const transferenciaContainer = document.createElement('div');
-    ReactDOM.render(<TransferenciaComponent />, transferenciaContainer);
-    posElement.appendChild(transferenciaContainer);
-}
+const transferenciaContainer = document.createElement('div');
+ReactDOM.render(<TransferenciaComponent />, transferenciaContainer);
+posElement.appendChild(transferenciaContainer);
