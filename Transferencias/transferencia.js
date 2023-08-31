@@ -99,5 +99,5 @@ const TransferenciaComponent = () => {
 const buttonPaymentMp = document.querySelector('.booking-payment__options');
 ReactDOM.render(<ButtonsPaymentMp />, buttonPaymentMp);
 
-const paymentInfoContainer = document.querySelector('.booking-payment__info.pos');
+const paymentInfoContainer = document.querySelector('.booking-payment__info.prepayment');
 ReactDOM.render(<TransferenciaComponent />, paymentInfoContainer);
