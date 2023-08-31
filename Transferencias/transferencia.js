@@ -31,7 +31,7 @@ const ButtonsPaymentMp = () => {
                 <>
                     <li className="booking-payment__options-pos on">
                         <input type="radio" name="paymentType" value="pos" className="js-paymentType hidden" />
-                        <span className="glyphicon" >
+                        <span className="icoSvgMp" >
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <g clip-path="url(#clip0_2934_133)">
                                     <path d="M24 11.5437C24 7.21983 18.6277 3.69531 12.0004 3.69531C5.37362 3.69531 0.0014768 7.21983 0.0014768 11.5437C0.0014768 11.6554 0 11.9642 0 12.0032C0 16.5901 4.69577 20.3054 11.999 20.3054C19.3475 20.3054 23.9999 16.5913 23.9999 12.0041V11.5437" fill="#2A3C8E" />
