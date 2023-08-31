@@ -18,22 +18,18 @@ function checkPaymentMethod() {
 
 const ButtonsPaymentMp = () => {
     const [configIdFromCheck, setConfigIdFromCheck] = React.useState(null);
-    const [showPaymentButtons, setShowPaymentButtons] = React.useState(false);
-
+    
 
     React.useEffect(() => {
         const configId = checkPaymentMethod();
         setConfigIdFromCheck(configId);
-        
-        // Aquí decides si mostrar o no los botones de pago
-        const shouldShowPaymentButtons = setShowPaymentButtons(shouldShowPaymentButtons);
     }, []);
 
     return (
         <>
             {configIdFromCheck === 12 ? (
                 <>
-                    <li className="booking-payment__options-pos on">
+                    <li className="booking-payment__options-pos on" style={{ display:'inline-block' }}>
                         <input type="radio" name="paymentType" value="pos" className="js-paymentType hidden" />
                         <span className="icoSvgMp" >
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
