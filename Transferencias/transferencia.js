@@ -26,7 +26,7 @@ const ButtonsPaymentMp = () => {
 
     return (
         <>
-            {configIdFromCheck === 13 ? (
+            {configIdFromCheck === 12 ? (
                 <>
                     <li className="booking-payment__options-pos on">
                         <input type="radio" name="paymentType" value="pos" className="js-paymentType hidden" />
@@ -55,7 +55,23 @@ const ButtonsPaymentMp = () => {
                         Transferência / Deposito
                     </li>
                 </>
-            ) : null}
+            )
+                :
+                <ul className="booking-payment__options" style="display: inline-block;">
+
+                    <li className="booking-payment__options-pos on">
+                        <input type="radio" name="paymentType" value="pos" className="js-paymentType hidden" />
+                        <span className="glyphicon glyphicon-md"></span>
+                        Cartão de crédito
+                    </li>
+
+                    <li className="booking-payment__options-prepayment">
+                        <input type="radio" name="paymentType" value="prepayment" className="js-paymentType hidden" />
+                        <span className="glyphicon glyphicon-md"></span>
+                        Transferência / Dinheiro
+                    </li>
+                </ul>
+            }
         </>
     );
 };
@@ -68,19 +84,19 @@ const TransferenciaComponent = () => {
                 <picture>
                     <source
                         media="(min-width: 1024px)"
-                        srcSet={ "https://multitravelcom.github.io/MT/Secciones/Booking-2/MercadoPago/MercadoPago-Desktop.png"}
+                        srcSet={"https://multitravelcom.github.io/MT/Secciones/Booking-2/MercadoPago/MercadoPago-Desktop.png"}
                     />
                     <source
                         media="(min-width: 768px) and (max-width: 1023px)"
-                        srcSet={ "https://multitravelcom.github.io/MT/Secciones/Booking-2/MercadoPago/MercadoPago-Tablet.png"}
+                        srcSet={"https://multitravelcom.github.io/MT/Secciones/Booking-2/MercadoPago/MercadoPago-Tablet.png"}
                     />
                     <source
                         media="(max-width: 767px)"
-                        srcSet={ "https://multitravelcom.github.io/MT/Secciones/Booking-2/MercadoPago/MercadoPago-Mobile.png"}
+                        srcSet={"https://multitravelcom.github.io/MT/Secciones/Booking-2/MercadoPago/MercadoPago-Mobile.png"}
                     />
                     <img
                         alt=""
-                        src={ "https://multitravelcom.github.io/MT/Secciones/Booking-2/MercadoPago/MercadoPago-Desktop.png"}
+                        src={"https://multitravelcom.github.io/MT/Secciones/Booking-2/MercadoPago/MercadoPago-Desktop.png"}
                     />
                 </picture>
             </div>
@@ -90,10 +106,10 @@ const TransferenciaComponent = () => {
 
 const buttonPaymentMp = document.querySelector('.booking-payment__options');
 
-if (configIdFromCheck === 13) {
-  ReactDOM.render(<ButtonsPaymentMp />, buttonPaymentMp);
-  const posElement = document.querySelector('.booking-payment__info.pos');
-  const transferenciaContainer = document.createElement('div');
-  ReactDOM.render(<TransferenciaComponent />, transferenciaContainer);
-  posElement.appendChild(transferenciaContainer);
+if (configIdFromCheck === 12) {
+    ReactDOM.render(<ButtonsPaymentMp />, buttonPaymentMp);
+    const posElement = document.querySelector('.booking-payment__info.pos');
+    const transferenciaContainer = document.createElement('div');
+    ReactDOM.render(<TransferenciaComponent />, transferenciaContainer);
+    posElement.appendChild(transferenciaContainer);
 }
