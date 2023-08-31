@@ -9,25 +9,9 @@ function checkPaymentMethod() {
         setSelectedConfigId(configId);
     }
 }
-checkPaymentMethod();
-
 
 const TransferenciaComponent = () => {
     const [selectedConfigId, setSelectedConfigId] = React.useState(null);
-
-    React.useEffect(() => {
-        const gatewaySelect = document.querySelector('.js-enhanced-select.pos__field-select');
-        
-        function handleChange(event) {
-            handleGatewayChange(event, setSelectedConfigId);
-        }
-
-        gatewaySelect.addEventListener('change', handleChange);
-        
-        return () => {
-            gatewaySelect.removeEventListener('change', handleChange);
-        };
-    }, []);
 
     return (
         <>
