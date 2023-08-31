@@ -13,6 +13,7 @@ function checkPaymentMethod() {
         setSelectedConfigId(configId);
     }
 }
+checkPaymentMethod();
 
 const TransferenciaComponent = () => {
     const [selectedConfigId, setSelectedConfigId] = React.useState(null);
