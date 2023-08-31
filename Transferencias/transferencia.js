@@ -26,7 +26,7 @@ const ButtonsPaymentMp = () => {
 
     return (
         <>
-            {configIdFromCheck === 13 ? (
+            {configIdFromCheck === 12 ? (
                 <>
                     <li className="booking-payment__options-pos on">
                         <input type="radio" name="paymentType" value="pos" className="js-paymentType hidden" />
@@ -90,13 +90,6 @@ const ButtonsPaymentMp = () => {
 };
 
 const TransferenciaComponent = () => {
-    // const [configIdFromCheck, setConfigIdFromCheck] = React.useState(null);
-
-
-    // React.useEffect(() => {
-    //     const configId = checkPaymentMethod();
-    //     setConfigIdFromCheck(configId);
-    // }, []);
 
     return (
         <>
