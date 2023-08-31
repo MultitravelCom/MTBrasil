@@ -1,15 +1,9 @@
 function checkPaymentMethod() {
-    const gatewaySelect = document.querySelector('.js-enhanced-select.pos__field-select');
-    console.log("se encontro", gatewaySelect)
-
-    gatewaySelect.addEventListener('change', handleGatewayChange);
-
-    function handleGatewayChange(event) {
-        const selectedOption = event.target.options[event.target.selectedIndex];
+    if (gatewaySelect) {
+        const selectedOption = gatewaySelect.target.options[gatewaySelect.target.selectedIndex];
         const dataConfigId = selectedOption.getAttribute('data-config-id');
         const configId = parseInt(dataConfigId);
-        console.log("mepe", configId)
-
+    
         setSelectedConfigId(configId);
     }
 }
