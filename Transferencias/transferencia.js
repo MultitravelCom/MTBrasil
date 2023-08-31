@@ -103,5 +103,5 @@ ReactDOM.render(<ButtonsPaymentMp />, buttonPaymentMp);
 // ReactDOM.render(<TransferenciaComponent />, paymentInfoContainer);
 
 const posElement = document.querySelector('.pos');
-const paymentInfoContainer = posElement.previousSibling;
+const paymentInfoContainer = posElement.nextElementSiblingSibling;
 ReactDOM.render(<TransferenciaComponent />, paymentInfoContainer);
