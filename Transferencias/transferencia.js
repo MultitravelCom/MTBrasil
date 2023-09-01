@@ -136,7 +136,6 @@
 //     bookingPaymentOptions.style.display = 'inline-block';
 // }
 
-
 document.addEventListener('DOMContentLoaded', function () {
     const liElement = document.querySelector('.booking-payment__options-prepayment');
     const bookingPaymentOptions = document.querySelector('.booking-payment__options');
