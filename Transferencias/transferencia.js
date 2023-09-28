@@ -279,7 +279,7 @@ const TransferenciaComponent = () => {
     );
 };
 
-const shouldRenderTransferencia = checkPaymentMethod() === 12;
+const shouldRenderTransferencia = checkPaymentMethod() === 14;
 const paymentInfoContainer = document.querySelector('.booking-payment__info.prepayment');
 
 if (shouldRenderTransferencia) {
