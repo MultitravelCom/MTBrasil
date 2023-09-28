@@ -246,19 +246,19 @@ const TransferenciaComponentMP = () => {
                 <picture>
                     <source
                         media="(min-width: 1024px)"
-                        srcSet={"https://multitravelcom.github.io/MT/Secciones/Booking-2/MercadoPago/MP-IyN-Desktop.png"}
+                        srcSet={"https://multitravelcom.github.io/MTBrasil-Img/Booking-2/MercadoPago/Desktop.png"}
                     />
                     <source
                         media="(min-width: 768px) and (max-width: 1023px)"
-                        srcSet={"https://multitravelcom.github.io/MT/Secciones/Booking-2/MercadoPago/MP-IyN-Tablet.png"}
+                        srcSet={"https://multitravelcom.github.io/MTBrasil-Img/Booking-2/MercadoPago/Tablet.png"}
                     />
                     <source
                         media="(max-width: 767px)"
-                        srcSet={"https://multitravelcom.github.io/MT/Secciones/Booking-2/MercadoPago/MP-IyN-Mobile.png"}
+                        srcSet={"https://multitravelcom.github.io/MTBrasil-Img/Booking-2/MercadoPago/Mobile.png"}
                     />
                     <img
                         alt=""
-                        src={"https://multitravelcom.github.io/MT/Secciones/Booking-2/MercadoPago/MP-IyN-Desktop.png"}
+                        src={"https://multitravelcom.github.io/MTBrasil-Img/Booking-2/MercadoPago/Desktop.png"}
                     />
                 </picture>
             </div>
