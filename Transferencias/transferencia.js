@@ -136,20 +136,6 @@
 //     bookingPaymentOptions.style.display = 'inline-block';
 // }
 
-document.addEventListener('DOMContentLoaded', function () {
-    const liElement = document.querySelector('.booking-payment__options-prepayment');
-    const bookingPaymentOptions = document.querySelector('.booking-payment__options');
-
-    if (liElement) {
-        liElement.childNodes.forEach(node => {
-            if (node.nodeType === Node.TEXT_NODE && node.textContent.trim() === 'Transferir') {
-                node.textContent = 'Transferir / Dinheiro';
-                bookingPaymentOptions.style.display = 'inline-block';
-            }
-        });
-    }
-});
-
 function checkPaymentMethod() {
     const gatewaySelect = document.querySelector('.js-enhanced-select.pos__field-select');
 
