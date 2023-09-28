@@ -1,0 +1,3 @@
+#main-content>div:nth-child(2)>div>div>div.booking-data__data>div.confirm-booking__section.booking-payment>hr{
+    display: none;
+}
