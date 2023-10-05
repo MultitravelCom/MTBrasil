@@ -32,47 +32,47 @@ const BannerTop = () => {
         <>
             <div className="container-fluid main__container__bannerTop scroll-mobile">
                 <div id="bannerTop__left" className="main__container_left">
-                    <a href="#" target="_blank">
-                    <picture>
-                        <source
-                            media="(min-width: 1024px)"
-                            srcSet={
-                                showPackageImages
-                                    ? `${UrlImgPaquetes}/bannerDesktop-1.webp`
-                                    : `${UrlImg}/bannerDesktop-1.webp`
-                            }
-                        />
-                        <source
-                            media="(min-width: 768px) and (max-width: 1023px)"
-                            srcSet={
-                                showPackageImages
-                                    ? `${UrlImgPaquetes}/bannerDesktop-1.webp`
-                                    : `${UrlImg}/bannerDesktop-1.webp`
-                            }
+                    <a href="https://br.multitravel.com/hotels/results.aspx?destinationID=46533&nationality=BR&endDate=2024-01-16&paxs=20&accion=searchhotels&startDate=2024-01-15&secondarySearch=false" target="_blank">
+                        <picture>
+                            <source
+                                media="(min-width: 1024px)"
+                                srcSet={
+                                    showPackageImages
+                                        ? `${UrlImgPaquetes}/bannerDesktop-1.webp`
+                                        : `${UrlImg}/bannerDesktop-1.webp`
+                                }
+                            />
+                            <source
+                                media="(min-width: 768px) and (max-width: 1023px)"
+                                srcSet={
+                                    showPackageImages
+                                        ? `${UrlImgPaquetes}/bannerDesktop-1.webp`
+                                        : `${UrlImg}/bannerDesktop-1.webp`
+                                }
 
-                        />
-                        <source
-                            media="(max-width: 767px)"
-                            srcSet={
-                                showPackageImages
-                                    ? `${UrlImgPaquetes}/bannerDesktop-1.webp`
-                                    : `${UrlImg}/bannerMobile-1.webp`
-                            }
-                        />
-                        <img className="bannerTop__img"
-                            alt=""
-                            srcSet={
-                                showPackageImages
-                                    ? `${UrlImgPaquetes}/bannerDesktop-1.webp`
-                                    : `${UrlImg}/bannerDesktop-1.webp`
-                            }
-                        />
-                    </picture>
+                            />
+                            <source
+                                media="(max-width: 767px)"
+                                srcSet={
+                                    showPackageImages
+                                        ? `${UrlImgPaquetes}/bannerDesktop-1.webp`
+                                        : `${UrlImg}/bannerMobile-1.webp`
+                                }
+                            />
+                            <img className="bannerTop__img"
+                                alt=""
+                                srcSet={
+                                    showPackageImages
+                                        ? `${UrlImgPaquetes}/bannerDesktop-1.webp`
+                                        : `${UrlImg}/bannerDesktop-1.webp`
+                                }
+                            />
+                        </picture>
                     </a>
                     {/* {showPackageImages && (<Button style="btn btnStyleBannerPre" link="#" text="Ver Más" />)} */}
                 </div>
                 <div id="bannerTop__center" className="main__container_center">
-                    <a href="#" target="_blank">
+                    <a href="https://br.multitravel.com/hotels/results.aspx?destinationID=43157&nationality=BR&endDate=2024-01-16&paxs=20&accion=searchhotels&startDate=2024-01-15&secondarySearch=false" target="_blank">
                         <picture>
                             <source
                                 media="(min-width: 1024px)"
@@ -113,40 +113,42 @@ const BannerTop = () => {
 
                 </div>
                 <div id="bannerTop__rigth" className="main__container_right">
-                    <picture>
-                        <source
-                            media="(min-width: 1024px)"
-                            srcSet={
-                                showPackageImages
-                                    ? `${UrlImgPaquetes}/bannerDesktop-3.webp`
-                                    : `${UrlImg}/bannerDesktop-3.webp`
-                            }
-                        />
-                        <source
-                            media="(min-width: 768px) and (max-width: 1023px)"
-                            srcSet={
-                                showPackageImages
-                                    ? `${UrlImgPaquetes}/bannerDesktop-3.webp`
-                                    : `${UrlImg}/bannerDesktop-3.webp`
-                            }
-                        />
-                        <source
-                            media="(max-width: 767px)"
-                            srcSet={
-                                showPackageImages
-                                    ? `${UrlImgPaquetes}/bannerDesktop-3.webp`
-                                    : `${UrlImg}/bannerMobile-3.webp`
-                            }
-                        />
-                        <img className="bannerTop__img"
-                            alt=""
-                            srcSet={
-                                showPackageImages
-                                    ? `${UrlImgPaquetes}/bannerDesktop-3.webp`
-                                    : `${UrlImg}/bannerDesktop-3.webp`
-                            }
-                        />
-                    </picture>
+                    <a href="https://br.multitravel.com/hotels/" target="_blank">
+                        <picture>
+                            <source
+                                media="(min-width: 1024px)"
+                                srcSet={
+                                    showPackageImages
+                                        ? `${UrlImgPaquetes}/bannerDesktop-3.webp`
+                                        : `${UrlImg}/bannerDesktop-3.webp`
+                                }
+                            />
+                            <source
+                                media="(min-width: 768px) and (max-width: 1023px)"
+                                srcSet={
+                                    showPackageImages
+                                        ? `${UrlImgPaquetes}/bannerDesktop-3.webp`
+                                        : `${UrlImg}/bannerDesktop-3.webp`
+                                }
+                            />
+                            <source
+                                media="(max-width: 767px)"
+                                srcSet={
+                                    showPackageImages
+                                        ? `${UrlImgPaquetes}/bannerDesktop-3.webp`
+                                        : `${UrlImg}/bannerMobile-3.webp`
+                                }
+                            />
+                            <img className="bannerTop__img"
+                                alt=""
+                                srcSet={
+                                    showPackageImages
+                                        ? `${UrlImgPaquetes}/bannerDesktop-3.webp`
+                                        : `${UrlImg}/bannerDesktop-3.webp`
+                                }
+                            />
+                        </picture>
+                    </a>
                     {/* {showPackageImages && (<Button style="btn btnStyleBannerPre" link="#" text="Ver Más" />)}; */}
                 </div>
             </div>
