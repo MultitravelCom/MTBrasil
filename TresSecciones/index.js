@@ -7,7 +7,7 @@ const BannerRedes = () => {
                     ¡Não perca nada, siga-nos!
                 </h2>
                 <div className="main_conteiner__s1_medio__paquetes">
-                    <a href="https://www.instagram.com/multitravelcom/" target="_blank">
+                    <a href="https://www.instagram.com/multitravelcom.br/?igshid=OGQ5ZDc2ODk2ZA%3D%3D" target="_blank">
                         <picture>
                             <source media="(min-width: 1024px)" srcSet="
           https://multitravelcom.github.io/MTBrasil-Img/RedesSociales/Banner-MKT-Redes-1.jpg
