@@ -2,7 +2,7 @@ function ButtonBannerResult(props) {
 
   const handleClick = (event) => {
     event.preventDefault();
-    // setShowModal(true);
+    window.location.href = "https://br.multitravel.com/contato";
   }
 
   return (
