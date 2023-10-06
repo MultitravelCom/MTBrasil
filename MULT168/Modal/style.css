@@ -30,7 +30,6 @@
     font-size: 14px;
     line-height: 17px;
     color: #FFFFFF;
-    display: none;
 }
 
 /* ***** Container Modal *** */
@@ -444,6 +443,7 @@
 }
 
 .whatsAppFixes {
+    display: none;
     height: inherit !important;
     width: inherit !important;
 }
