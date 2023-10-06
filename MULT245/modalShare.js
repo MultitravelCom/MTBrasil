@@ -122,7 +122,6 @@ const checkAndRender = async () => {
 };
 
 function observarCambiosCheckAndRender() {
-    console.log("checkAndRender");
     const observerConfig = {
         rootNode: document.documentElement,
         callback: () => {
