@@ -140,6 +140,14 @@ async function changeCopyButton(resultsListPage) {
             // Si el elemento ya existe, cambia su contenido
             changeTaxasInclusa.textContent = 'Taxas Inclusa';
         }
+
+        // Comprobar cada 100ms si !changeTaxasInclusa
+        const intervalId = setInterval(() => {
+            if (!changeTaxasInclusa) {
+                clearInterval(intervalId); // Detener la comprobación cuando se encuentre el elemento
+                console.log('Elemento encontrado'); // Haz lo que necesites cuando se encuentre el elemento
+            }
+        }, 100);
     });
 
     const checkResultsListPage = () => {
