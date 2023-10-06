@@ -129,7 +129,7 @@ async function changeCopyButton(resultsListPage) {
         buttonElement.textContent = 'Comprar';
         buttonElement.style.display = 'block';
 
-        const changeTaxasInclusa = item.querySelector('.bestprice__taxincluded');
+        let changeTaxasInclusa = item.querySelector('.bestprice__taxincluded');
         if (!changeTaxasInclusa) {
             // Si el elemento no existe, créalo y añádalo dentro de '.bestprice__price'
             changeTaxasInclusa = document.createElement('div');
