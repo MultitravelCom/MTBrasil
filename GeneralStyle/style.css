@@ -806,9 +806,9 @@ body.home.home--default .home-v5__searcher,
   display: none;
 }
 
-.footer-col.col-xs-12.col-sm-12.col-md-6 .footer__text:nth-child(3) {
+/* .footer-col.col-xs-12.col-sm-12.col-md-6 .footer__text:nth-child(3) {
     display: none;
-  }
+  } */
 
 /* **** Ocultar Cuponera ****** */
 .confirm-booking__promocodes{
