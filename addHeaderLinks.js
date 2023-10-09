@@ -38,7 +38,7 @@ function addHeaderLinks() {
         bannerTopStyle.rel = "stylesheet";
 
         head.appendChild(bannerTopStyle);
-        head.appendChild(bannerTopScript);
+        // head.appendChild(bannerTopScript);
     }
 
     const recomendadoHotels = path.includes('/hotels/');
