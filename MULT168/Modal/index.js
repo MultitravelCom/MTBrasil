@@ -250,7 +250,7 @@ const App = () => {
 
 
         const checkButtonExistence = setInterval(() => {
-            const openModalButtonNew = document.getElementById('btnBannerSearch');
+            const openModalButtonNew = document.getElementById('btnBannerSearchh');
             if (openModalButtonNew) {
                 openModalButtonNew.addEventListener('click', handleButtonClick);
                 clearInterval(checkButtonExistence);
