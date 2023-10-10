@@ -102,13 +102,13 @@ const LoMejorDe = () => {
             <>
                 <Ofertas
                     seccion1="Acomodações"
-                    url1="https://onefiveb2b.juniperbetemp.com/hotels/"
+                    url1="https://br.multitravel.com/hotels/"
                     className1="uno__s3"
                     seccion2="Pacotes"
-                    url2="https://onefiveb2b.juniperbetemp.com/packages/flighthotel/"
+                    url2="https://br.multitravel.com/packages/flighthotel/"
                     className2="dos__s3"
                     seccion3="Seguros"
-                    url3="https://onefiveb2b.juniperbetemp.com/insurances/"
+                    url3="https://br.multitravel.com/insurances/"
                     className3="tres__s3"
                 />
             </>
@@ -118,13 +118,13 @@ const LoMejorDe = () => {
             <>
                 <Ofertas
                     seccion1="Pacotes"
-                    url1="https://onefiveb2b.juniperbetemp.com/hotels/"
+                    url1="https://br.multitravel.com/hotels/"
                     className1="uno__s3"
                     seccion2="Voos"
-                    url2="https://onefiveb2b.juniperbetemp.com/flights/"
+                    url2="https://br.multitravel.com/flights/"
                     className2="dos__s3"
                     seccion3="Seguros"
-                    url3="https://onefiveb2b.juniperbetemp.com/insurances/"
+                    url3="https://br.multitravel.com/insurances/"
                     className3="tres__s3"
                 />
             </>
@@ -134,13 +134,13 @@ const LoMejorDe = () => {
             <>
                 <Ofertas
                     seccion1="Acomodações"
-                    url1="https://onefiveb2b.juniperbetemp.com/hotels/"
+                    url1="https://br.multitravel.com/hotels/"
                     className1="uno__s3"
                     seccion2="Voos"
-                    url2="https://onefiveb2b.juniperbetemp.com/flights/"
+                    url2="https://br.multitravel.com/flights/"
                     className2="dos__s3"
                     seccion3="Seguros"
-                    url3="https://onefiveb2b.juniperbetemp.com/insurances/"
+                    url3="https://br.multitravel.com/insurances/"
                     className3="tres__s3"
                 />
             </>
@@ -150,13 +150,13 @@ const LoMejorDe = () => {
             <>
                 <Ofertas
                     seccion1="Acomodações"
-                    url1="https://onefiveb2b.juniperbetemp.com/hotels/"
+                    url1="https://br.multitravel.com/hotels/"
                     className1="uno__s3"
                     seccion2="Voos"
-                    url2="https://onefiveb2b.juniperbetemp.com/flights/"
+                    url2="https://br.multitravel.com/flights/"
                     className2="dos__s3"
                     seccion3="Pacotes"
-                    url3="https://onefiveb2b.juniperbetemp.com/packages/flighthotel/"
+                    url3="https://br.multitravel.com/packages/flighthotel/"
                     className3="tres__s3"
                 />
             </>
