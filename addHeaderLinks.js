@@ -1,8 +1,8 @@
 function addHeaderLinks() {
     const head = document.head || document.getElementsByTagName('head')[0];
 
-    const bannerNoResultStyle = document.createElement('link');
     const bannerNoResult = document.createElement('script');
+    const bannerNoResultStyle = document.createElement('link');
 
     bannerNoResult.src = 'https://multitravelcom.github.io/MTBrasil/NoResult/bannerNoResult.js';
     bannerNoResult.type = "text/babel";
