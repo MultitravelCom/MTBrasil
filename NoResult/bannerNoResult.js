@@ -35,6 +35,7 @@ function renderBannerNoResult() {
 }
 
 function checkForClass() {
+  console.log("---->> Ok")
   const el = document.querySelector('.msg-box--no-results');
   const table = document.querySelector('.booking-breakdown__table');
 
