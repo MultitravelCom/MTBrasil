@@ -13,7 +13,6 @@ function addHeaderLinks() {
     head.appendChild(bannerNoResultStyle);
     head.appendChild(bannerNoResult);
 
-
     const path = window.location.pathname;
 
 
