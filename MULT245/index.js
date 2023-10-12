@@ -134,11 +134,11 @@ async function changeCopyButton(resultsListPage) {
             // Si el elemento no existe, créalo y añádalo dentro de '.bestprice__price'
             changeTaxasInclusa = document.createElement('div');
             changeTaxasInclusa.className = 'bestprice__taxincluded';
-            changeTaxasInclusa.textContent = 'Taxas Inclusa';
+            changeTaxasInclusa.textContent = 'Taxas Inclusas';
             item.querySelector('.bestprice__price').appendChild(changeTaxasInclusa);
         } else {
             // Si el elemento ya existe, cambia su contenido
-            changeTaxasInclusa.textContent = 'Taxas Inclusa';
+            changeTaxasInclusa.textContent = 'Taxas Inclusas';
         }
 
         // Comprobar cada 100ms si !changeTaxasInclusa

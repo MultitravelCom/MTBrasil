@@ -1,48 +1,576 @@
-
-<meta name="description" content="La m&#225;s grande variedad de paquetes y ofertas. Eleg&#237; tu destino y empez&#225; a distfrutar de tus vacaciones! No pagues de m&#225;s, eleg&#237; Multitravel." />
-<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js" ></script>
-<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" ></script>
+<script src="https://multitravelcom.github.io/style/General/addHeaderLinks.js"></script>
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-<!-- Estilos generales de la web -->
-<link href="https://multitravelcom.github.io/MTBrasil/GeneralStyle/style.css" rel="stylesheet" />
-<!-- Estilos FlightHotel -->
-<link href="https://multitravelcom.github.io/style/Flighthotel/style.css" rel="stylesheet"  />
-<script src="https://multitravelcom.github.io/style/Flighthotel/main.js"></script>
-<!-- Icons -->
-<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" />
-<link href="https://multitravelcom.github.io/style/Insurances/style.css" rel="stylesheet"/>
-<script src="https://multitravelcom.github.io/style/Insurances/main.js"></script>
-<script src="https://multitravelcom.github.io/MTBrasil/addHeaderLinks.js"></script>
-<script type="text/babel" src="https://multitravelcom.github.io/MTBrasil/MULT168/Modal/index.js" ></script>
-<link href="https://multitravelcom.github.io/MTBrasil/MULT168/Modal/style.css" rel="stylesheet" />
-
-
-<!--  -->
-
-<meta name="description" content="Tickets, excursiones y paseos tur&#237;sticos para disfrutar al m&#225;ximo tu viaje. Contrat&#225; tu tour por los lugares m&#225;s ic&#243;nicos del mundo." />
-<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" />
-<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-<link href="https://multitravelcom.github.io/MTBrasil/GeneralStyle/style.css" rel="stylesheet" />
-<link href="https://multitravelcom.github.io/style/Tours/style.css" rel="stylesheet" />
-<script src="https://multitravelcom.github.io/MTBrasil/addHeaderLinks.js"></script>
-<script type="text/babel" src="https://multitravelcom.github.io/MTBrasil/MULT168/Modal/index.js"></script>
-<link href="https://multitravelcom.github.io/MTBrasil/MULT168/Modal/style.css" rel="stylesheet" />
-
-<!--  -->
-
-<meta name="description" content="Planific&#225; tu viaje contratando las mejores actividades y excursiones. Los mejores destinos y entretenimiento est&#225;n en Multitravel." />
-<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" />
-<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-<link href="https://multitravelcom.github.io/style/Services/style.css" rel="stylesheet" />
-<script src="https://multitravelcom.github.io/style/Services/main.js"></script>
-<link href="https://multitravelcom.github.io/style/Insurances/style.css" rel="stylesheet" />
-<script src="https://multitravelcom.github.io/style/Insurances/main.js"></script>
-<link href="https://multitravelcom.github.io/MTBrasil/GeneralStyle/style.css" rel="stylesheet" />
-<script src="https://multitravelcom.github.io/MTBrasil/addHeaderLinks.js"></script>
-<script src="https://multitravelcom.github.io/MTBrasil/MULT127/index.js"></script>
-<script type="text/babel" src="https://multitravelcom.github.io/MTBrasil/MULT168/Modal/index.js"></script>
-<link href="https://multitravelcom.github.io/MTBrasil/MULT168/Modal/style.css" rel="stylesheet" />
+<script
+  crossorigin
+  src="https://unpkg.com/react@18/umd/react.production.min.js"
+></script>
+<script
+  crossorigin
+  src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+></script>
+<script
+  type="text/babel"
+  src="https://multitravelcom.github.io/components/MULT168/Modal/index.js"
+></script>
+<link
+  href="https://multitravelcom.github.io/components/MULT168/Modal/style.css"
+  rel="stylesheet"
+/>
+<link
+  href="https://multitravelcom.github.io/style/Transfers/style.css"
+  rel="stylesheet"
+/>
+<!-- ICONO -->
+<link
+  href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+  rel="stylesheet"
+/>
+<!-- css -->
+<style>
+  .main__container__widgett {
+    display: none !important;
+  }
+  .whatsAppFixes {
+    display: none;
+  }
+  .upper-menu__login-button {
+    display: none;
+  }
+  /* Variables */
+  :root {
+    --border-radius-divs: 8px 40px 8px 40px;
+    --margin-section: 3rem;
+    --border-solid-card: 2px solid #dddd;
+    --fondo-card: #ffffff;
+    --box-shadow: 10px 10px 6px -5px rgba(0, 0, 0, 0.12);
+    --fondo-btn: #0d4e88;
+    --fondo-btn-hover: #324352;
+  }
+  .glyphicon-agent {
+    font-size: 26px !important;
+  }
+  /* Estilo de los titulos */
+  .main__conteiner__titulo {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-size: 20px;
+    letter-spacing: 0.1px;
+  }
+  /* Estilo seccion Cuentas bancarias. */
+  .main__container__cuentas__bancarias {
+    margin-bottom: 2rem;
+  }
+  /* Estilo Div&#39;s */
+  .divStyle {
+    border: var(--border-solid-card);
+    border-radius: var(--border-radius-divs);
+    padding: 16px;
+    background-color: #ffffff;
+    width: 272px;
+    min-height: 200px;
+    margin: 7px;
+    margin-left: 0;
+  }
+  .container__cuentas__bancarias {
+    display: flex;
+  }
+  .container__cuenta__img {
+    margin-bottom: 15px;
+  }
+  .container__cuenta__img img {
+    width: 120px;
+  }
+  .container__cuenta__texto {
+    line-height: 1.6rem;
+    font-size: 14px;
+  }
+  /* Transacciones Contac Center */
+  /* Estilo acordeon */
+  .main__container__contac__center {
+    margin-bottom: 3rem;
+  }
+  details {
+    background: var(--fondo-card);
+    border-radius: 6px;
+    border: var(--border-solid-card);
+    margin-bottom: 1rem;
+    cursor: pointer;
+    padding: 1rem;
+  }
+  details:hover {
+    cursor: pointer;
+  }
+  i {
+    transition: 300ms;
+    font-size: 1.5rem;
+  }
+  summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+  }
+  details[open] {
+    transition: 300ms;
+  }
+  details[open] i {
+    transform: rotate(180deg);
+    transition: 300ms;
+  }
+  .acordeonStyle {
+    padding-top: 1rem;
+  }
+  .mb-1{
+    margin-bottom: 1rem;
+  }
+  /* SECCION 3 */
+  /* Multitravel.com piensa en todo */
+  .main__conteiner__s3__piensa {
+    height: 248px;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 4rem;
+  }
+  .main__conteiner__s3 > .container {
+    padding: 0;
+  }
+  .uno__s3 {
+    background-image: url(https://www.multitravel.com/images/upload//LandingPage/Vuelos/alojamineto-vuelos.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 8px 8px 8px 40px;
+    height: 100%;
+    padding-inline: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .dos__s3 {
+    background-image: url(https://www.multitravel.com/images/upload//LandingPage/Vuelos/paquetes-vuelos.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    height: 100%;
+    padding-inline: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .tres__s3 {
+    background-image: url(https://www.multitravel.com/images/upload//LandingPage/Vuelos/actividades-vuelos.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 8px 40px 8px 8px;
+    height: 100%;
+    padding-inline: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .hover__s3:hover {
+    box-shadow: var(--box-shadow);
+  }
+  .main__conteiner__s3__piensa__parrafo {
+    background-color: #1b88e7;
+    font-size: 18px;
+    opacity: 90%;
+    width: 100%;
+    height: 61px;
+    text-align: inherit;
+    padding: 1.2rem;
+    color: white;
+    font-weight: 600;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+    padding-left: 40px;
+    letter-spacing: 1px;
+  }
+  /* Mobile */
+  @media (max-width: 564px) {
+    /* SECCION 3 */
+    .main__conteiner__s3__piensa {
+      flex-direction: column;
+    }
+    .uno__s3,
+    .dos__s3,
+    .tres__s3 {
+      border-radius: 8px;
+    }
+    .main__conteiner__s3__piensa__parrafo {
+      width: 200px;
+      height: 100%;
+      left: 0;
+      border-radius: 0px 8px 40px 0px;
+    }
+    .main__conteiner__s3__piensa__parrafo > p {
+      padding: 9px;
+    }
+  }
+  @media screen and (min-width: 0px) and (max-width: 600px) {
+    /* SCROLL HORIZONTAL */
+    .scroll-mobile {
+      max-width: 100%;
+      display: flex;
+      overflow: auto;
+    }
+    .scroll-mobile::-webkit-scrollbar {
+      width: 0;
+    }
+    .scroll-mobile .divStyle {
+      min-width: 258px;
+    }
+  }
+  @media screen and (min-width: 601px) and (max-width: 1022px) {
+    /* ajustes de cuentas bancarias */
+    .container__cuentas__bancarias {
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+  }
+  /* <!-- Banner Promo AR --> */
+  .confirm-booking__section {
+    margin-bottom: 44px;
+  }
+  .banner__promo {
+    display: none;
+    align-items: center;
+    position: relative;
+    border-radius: 4px 4px 40px 4px !important;
+    min-height: 96px;
+    padding: 25px 4px !important;
+  }
+  .promo__ar {
+    width: 100%;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    padding: 7px;
+  }
+  .glyphicon-agent {
+    font-size: 43px;
+    margin: 0 5px;
+  }
+  .promo__ar_parrafo > h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 !important;
+  }
+  .promo__ar__btn {
+    border-radius: 40px;
+    width: 110px;
+    height: 33px;
+    font-size: 14px;
+    margin: auto;
+  }
+  /* Mobile */
+  @media (max-width: 767px) {
+    .promo__ar {
+      flex-direction: column;
+    }
+  }
+</style>
+<div class="row" style="font-size: 16px">
+  <section id="home-sliding-offers-1" class="container home-row">
+    <div class="col-xs-12 static-images" style="margin-bottom: 5rem">
+      <picture data-alt="Imagen contenido 1">
+        <source
+          media="(min-width: 1200px)"
+          srcset="https://multitravelcom.github.io/MTBrasil-Img/MediosPagos/Landing/Banner.webp"
+        />
+        <source
+          media="(min-width: 992px)"
+          srcset="https://multitravelcom.github.io/MTBrasil-Img/MediosPagos/Landing/Banner.webp"
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset="https://multitravelcom.github.io/MTBrasil-Img/MediosPagos/Landing/Banner.webp"
+        />
+        <source
+          srcset="https://multitravelcom.github.io/MTBrasil-Img/MediosPagos/Landing/Banner.webp"
+        />
+        <img
+          src="https://multitravelcom.github.io/MTBrasil-Img/MediosPagos/Landing/Banner.webp"
+          alt="Imagen contenido 1"
+          loading="lazy"
+          class="img-fluid"
+          ;=""
+          style="height: 230px"
+        />
+      </picture>
+    </div>
+    <div class="home-row" style="margin-bottom: 1rem">
+      <section data-preview-id="staticImages">
+        <div class="offer-title">
+          <div class="text-left">
+            <h1 class="main__conteiner__titulo">Transações Web</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-md-6 static-images">
+            <article
+              class="thumbnail text-left"
+              style="
+                padding: 24px;
+                border: 2px solid #ddd;
+                border-radius: 1rem;
+                background-color: #ffffff;
+              "
+            >
+              <h2 style="padding-bottom: 1rem">
+                <strong>Cartão de Débito</strong>
+              </h2>
+              <p>
+                Você pode pagar todos os nossos produtos através do seu cartão
+                de débito. Antes de fazer o pagamento, verifique seu limite em
+                conta. Recomendamos que você entre em contato com seu banco para
+                verificar a disponibilidade de dinheiro.
+              </p>
+            </article>
+          </div>
+          <div class="col-xs-12 col-md-6 static-images">
+            <article
+              class="thumbnail text-left"
+              style="
+                padding: 24px;
+                border: 2px solid #ddd;
+                border-radius: 1rem;
+                background-color: #ffffff;
+                height: 100%;
+              "
+            >
+              <h2 style="padding-bottom: 1rem">
+                <strong>Cartão de Crédito</strong>
+              </h2>
+              <p style="margin-bottom: 32px">
+                Você pode pagar em prestações qualquer um dos nossos produtos.
+                Consulte os detalhes, destinos, restrições de cada cartão de
+                crédito e promoções bancárias.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- Cuentas bancarias de Multitravel.com -->
+    <div class="main__container__cuentas__bancarias">
+      <h2 class="main__conteiner__titulo">Contas bancarias Multitravel.com</h2>
+      <div class="container__cuentas__bancarias scroll-mobile">
+        <!-- Santander -->
+        <div class="container__cuenta__santander divStyle">
+          <div class="container__cuenta__img">
+            <img
+              src="https://www.multitravel.com/images/upload//mediosdepago/BSantanderV5.png"
+              alt="Imagen logo banco Santander"
+            />
+          </div>
+          <div class="container__cuenta__texto">
+            <ul>
+              <li><strong>AGENCIA:</strong>2175</li>
+              <li><strong>CONTA CORRENTE:</strong>13.003708-9</li>
+              <li><strong>CNPJ:</strong>40.052.414/0001-89</li>
+              <li><strong>Moeda:</strong>BRL</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Itau -->
+        <div class="container__cuenta__patagonia divStyle">
+          <div class="container__cuenta__img">
+            <img
+              src="https://multitravelcom.github.io/MTBrasil-Img/MediosPagos/Landing/BItau-BR.webp"
+              alt="Imagen logo banco Itau"
+            />
+          </div>
+          <div class="container__cuenta__texto">
+            <ul>
+              <li><strong>AGENCIA:</strong>8577</li>
+              <li><strong>CONTA CORRENTE:</strong>99622-9</li>
+              <li><strong>CNPJ:</strong> 40.052.414/0001-89</li>
+              <li><strong>Moeda:</strong>BRL</li>
+            </ul>
+          </div>
+        </div>
+        <!-- MERCADO PAGO -->
+        <div class="container__cuenta__comafi divStyle">
+          <div class="container__cuenta__img">
+            <img
+              src="https://multitravelcom.github.io/MTBrasil-Img/MediosPagos/Landing/MPagoV5.png"
+              alt="Imagen logo banco MERCADO PAGO"
+            />
+          </div>
+          <div class="container__cuenta__texto">
+            <ul>
+              <li><strong>AGENCIA:</strong>0001</li>
+              <li><strong>CONTA:</strong>9025450016-2</li>
+              <li><strong>CNPJ:</strong>40.052.414/0001-89</li>
+              <li><strong>Moeda:</strong>BRL</li>
+            </ul>
+          </div>
+        </div>
+        <!-- CHAVE PIX -->
+        <div class="container__cuenta__meli divStyle">
+          <div class="container__cuenta__img">
+            <img
+              src="https://multitravelcom.github.io/MTBrasil-Img/MediosPagos/Landing/BPix-BR.webp"
+              alt="Imagen logo banco CHAVE PIX"
+            />
+          </div>
+          <div class="container__cuenta__texto">
+            <ul>
+              <li><strong>CHAVE PIX:</strong>40.052.414/0001-89</li>
+              <li><strong>MONEDA:</strong>BRL</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Banner Promo AR -->
+    <div class="confirm-booking__section banner__promo">
+      <div class="promo__ar">
+        <div class="promo__ar__icon">
+          <em class="glyphicon glyphicon-agent" aria-hidden="true"></em>
+        </div>
+        <div class="promo__ar_parrafo">
+          <h3>
+            &#191;Sab&#237;as que tenemos 6 cuotas sin inter&#233;s con
+            Aerol&#237;neas Argentinas?
+          </h3>
+          <p>Estas son ofertas exclusivas offline en vuelos por Argentina</p>
+        </div>
+        <button class="btn btn-primary promo__ar__btn">
+          <a
+            style="color: white; text-decoration: none"
+            target="_blank"
+            href="https://wa.link/v9ejqn"
+            >Contactarme</a
+          >
+        </button>
+      </div>
+    </div>
+    <!-- Transacciones Contac Center -->
+    <div class="main__container__contac__center">
+      <h2 class="main__conteiner__titulo">Transacciones Contac Center</h2>
+      <div class="main__container__contac__center__acord">
+        <div class="main__container__contac__center__acord__trasferencia">
+          <details>
+            <summary>
+              <div>Transferência, PIX ou depósitos bancários</div>
+              <div><em class="bx bx-chevron-down"></em></div>
+            </summary>
+            <div class="acordeonStyle">
+              <p>
+                - Você pode pagar todos os nossos produtos pessoalmente no
+                banco, de um caixa eletrônico ou de qualquer dispositivo móvel.
+              </p>
+              <p>
+                - Lembre-se de que o tempo de crédito pode ser entre 48 e 96 hs
+                de acordo com o tipo de modalidade que escolher e do local.
+                Lembre-se também que até que o crédito não seja efetivado, sua
+                reserva não está confirmada, podendo sofrer variação no preço e
+                na disponibilidade.
+              </p>
+              <p>
+                - Se você possui uma conta num dos bancos mencionados abaixo,
+                recomendamos que a utilize para fazer a transferência, porque o
+                crédito é mais rápido entre contas do mesmo banco. Depois de
+                fazer o pagamento, envie aos nossos agentes o comprovante
+                digitalizado com seu nome, sobrenome e código de reserva.
+              </p>
+              <p>&nbsp;</p>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <div>Pagamentos híbridos</div>
+              <div><em class="bx bx-chevron-down"></em></div>
+            </summary>
+            <div class="acordeonStyle">
+              <p>
+                Você pode pagar todos os nossos produtos com dois meios de
+                pagamento diferentes. Seja cartão de crédito, débito,
+                transferência, pix ou depósito. Para isso, você deve se
+                comunicar com nossos agentes para realizá-lo de forma
+                personalizada.
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+    <!-- Beneficios Amex - Multitravel.com -->
+    <div class="home-row" style="margin-bottom: 3rem">
+      <section data-preview-id="staticImages">
+        <div class="row container">
+          <!-- TEXTO -->
+          <div class="col-xs-12 col-md-6 static-images mb-1">
+            <picture data-alt="Imagen contenido 1">
+              <source
+                media="(min-width: 1200px)"
+                srcset="
+                https://multitravelcom.github.io/MTBrasil-Img/MediosPagos/Landing/BannerTarjetas.webp
+                "
+              />
+              <source
+                media="(min-width: 992px)"
+                srcset="
+                https://multitravelcom.github.io/MTBrasil-Img/MediosPagos/Landing/BannerTarjetas.webp
+                "
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="
+                https://multitravelcom.github.io/MTBrasil-Img/MediosPagos/Landing/BannerTarjetas.webp
+                "
+              />
+              <source
+                srcset="
+                https://multitravelcom.github.io/MTBrasil-Img/MediosPagos/Landing/BannerTarjetas.webp
+                "
+              />
+              <img
+                src="https://multitravelcom.github.io/MTBrasil-Img/MediosPagos/Landing/BannerTarjetas.webp"
+                alt="Imagen contenido 1"
+                loading="lazy"
+                style="height: 170px"
+              />
+            </picture>
+          </div>
+          <!-- IMG CON TEXTO -->
+          <div class="col-xs-12 col-md-6 static-images">
+            <picture data-alt="Imagen contenido 2">
+              <source
+                media="(min-width: 1200px)"
+                srcset="
+                  /handlers/ImageRequest.ashx?path=%2fimages%2fupload%2fBackWeb/callphone.jpg&amp;mediaSize=lg&amp;imgSize=original
+                "
+              />
+              <source
+                media="(min-width: 992px)"
+                srcset="
+                  /handlers/ImageRequest.ashx?path=%2fimages%2fupload%2fBackWeb/callphone.jpg&amp;mediaSize=lg&amp;imgSize=originall
+                "
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="
+                  /handlers/ImageRequest.ashx?path=%2fimages%2fupload%2fBackWeb/callphone.jpg&amp;mediaSize=lg&amp;imgSize=original
+                "
+              />
+              <source
+                srcset="
+                  /handlers/ImageRequest.ashx?path=%2fimages%2fupload%2fBackWeb/callphone.jpg&amp;mediaSize=lg&amp;imgSize=original
+                "
+              />
+              <img
+                src="/images/upload/mediosdepago/TarjetasMediodePagoV2.jpg"
+                alt="Imagen contenido 1"
+                loading="lazy"
+                style="height: 170px"
+              />
+            </picture>
+          </div>
+          <!-- Las promociones son exclusivamente -->
+        </div>
+      </section>
+    </div>
+  </section>
+</div>

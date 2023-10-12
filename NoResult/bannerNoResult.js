@@ -35,7 +35,6 @@ function renderBannerNoResult() {
 }
 
 function checkForClass() {
-  console.log("---->> Ok")
   const el = document.querySelector('.msg-box--no-results');
   const table = document.querySelector('.booking-breakdown__table');
 
@@ -43,7 +42,6 @@ function checkForClass() {
     // Si la clase msg-box--no-results está disponible, se renderiza el componente
     renderBannerNoResult();
     table.style.display = 'none';
-
     observer.disconnect();
   }
 }
