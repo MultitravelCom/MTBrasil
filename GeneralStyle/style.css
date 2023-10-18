@@ -818,8 +818,3 @@ body.home.home--default .home-v5__searcher,
 #main-content > div:nth-child(2) > div > div.booking-data__data > div.booking-data__section.booking-data__login{
   display: none;
 }
-
-.booking-data__section.booking-data__login{
-  display: none;
-}
-
