@@ -822,6 +822,7 @@ body.home.home--default .home-v5__searcher,
  margin-bottom: 3rem;
 }
 /* OCULTAR ASISTENCIA */
-#menu-option-insurances {
+
+#main-menu-products > ul > li:nth-child(9){
   display: none;
 }
