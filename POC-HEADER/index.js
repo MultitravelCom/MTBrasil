@@ -119,6 +119,5 @@ const App = () => {
   )
 }
 
-ReactDOM.createRoot(document.getElementById('main-menu')).render(
-  <App />
-)
+ReactDOM.createRoot(document.getElementById('main-menu')).render(<App />)
+console.log("---------> LOAD")
