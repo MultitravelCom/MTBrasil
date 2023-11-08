@@ -86,27 +86,25 @@ const secciones = [
 
 ];
 
-
-const App = () => {
+const NavBar = () => {
   return (
     <>
-      <nav className='navbar-poc'>
-        <nav className="main__container__navbar">
-          {secciones.map(({ id, seccion, iconSvg, url }) => (
-            <a href={url} className={`seccionLi main__container_seccionLi__${seccion}`}>
-              <div className="main__container_seccionLi__svg">
-                {iconSvg}
-              </div>
-              <div className="main__container__seccionLi_seccion">
-                {seccion}
-              </div>
-            </a>
-          ))}
-        </nav>
+
+      <nav className="main__container__navbar">
+        {secciones.map(({ id, seccion, iconSvg, url }) => (
+          <a href={url} className={`seccionLi main__container_seccionLi__${seccion}`}>
+            <div className="main__container_seccionLi__svg">
+              {iconSvg}
+            </div>
+            <div className="main__container__seccionLi_seccion">
+              {seccion}
+            </div>
+          </a>
+        ))}
       </nav>
     </>
   )
 }
 
-ReactDOM.createRoot(document.getElementById('main-menu')).render(<App />)
+ReactDOM.createRoot(document.getElementById('main-menu')).render(<NavBar />)
 console.log("---------> LOAD")
