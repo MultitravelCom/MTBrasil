@@ -811,18 +811,74 @@ body.home.home--default .home-v5__searcher,
   } */
 
 /* **** Ocultar Cuponera ****** */
-.confirm-booking__promocodes{
+.confirm-booking__promocodes {
   display: none;
 }
 
-#main-content > div:nth-child(2) > div > div.booking-data__data > div.booking-data__section.booking-data__login{
+#main-content>div:nth-child(2)>div>div.booking-data__data>div.booking-data__section.booking-data__login {
   display: none;
 }
-.b24-form{
- margin-bottom: 3rem;
+
+.b24-form {
+  margin-bottom: 3rem;
 }
+
 /* OCULTAR ASISTENCIA */
 
-#main-menu-products > ul > li:nth-child(9){
+#main-menu-products>ul>li:nth-child(9) {
   display: none;
+}
+
+/* STYLE NAVBAR-POC */
+.navbar-poc,
+.main__container__seccionLi_seccion {
+  font-family: Nunito Sans, sans-serif
+}
+
+.main__container__navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center
+}
+
+.seccionLi {
+  width: 130px;
+  display: flex;
+  padding-top: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 0;
+  align-self: stretch
+}
+
+.seccionLi:hover {
+  border-radius: 16px;
+  background-color: #eaf3ff;
+  color: #0d4e88
+}
+
+.seccionLi:focus {
+  border-radius: 16px;
+  color: #0d4e88;
+  outline: none;
+  background-color: #e0e0e0;
+  box-shadow: 0 0 5px #0003
+}
+
+#main-menu {
+  margin-top: 1rem
+}
+
+#main-navbar-home {
+  display: none
+}
+
+@media (max-width: 767px) {
+  .navbar-poc {
+    display: flex;
+    overflow-y: auto;
+    white-space: nowrap
+  }
 }
