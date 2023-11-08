@@ -122,5 +122,5 @@ const App = () => {
 ReactDOM.createRoot(document.getElementById('main-menu')).render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
+  </React.StrictMode>
 )

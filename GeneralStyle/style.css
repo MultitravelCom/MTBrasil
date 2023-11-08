@@ -871,9 +871,9 @@ body.home.home--default .home-v5__searcher,
   margin-top: 1rem
 }
 
-#main-navbar-home {
+/* #main-navbar-home {
   display: none
-}
+} */
 
 @media (max-width: 767px) {
   .navbar-poc {
