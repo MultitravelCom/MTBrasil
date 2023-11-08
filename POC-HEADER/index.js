@@ -113,14 +113,12 @@ const App = () => {
   return (
     <>
       <nav className='navbar-poc'>
-          <NavBar/> 
+        <NavBar />
       </nav>
     </>
   )
 }
 
 ReactDOM.createRoot(document.getElementById('main-menu')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <App />
 )
