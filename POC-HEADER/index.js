@@ -89,7 +89,6 @@ const secciones = [
 const NavBar = () => {
   return (
     <>
-
       <nav className="main__container__navbar">
         {secciones.map(({ id, seccion, iconSvg, url }) => (
           <a href={url} className={`seccionLi main__container_seccionLi__${seccion}`}>
@@ -106,5 +105,5 @@ const NavBar = () => {
   )
 }
 
-ReactDOM.createRoot(document.getElementById('main-menu')).render(<NavBar />)
+ReactDOM.createRoot(document.getElementById('main-navbar-home')).render(<NavBar />)
 console.log("---------> LOAD")
