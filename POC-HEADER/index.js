@@ -86,34 +86,23 @@ const secciones = [
 
 ];
 
-const SeccionLi = ({ seccion, iconSvg, url }) => {
-  return (
-    <a href={url} className={`seccionLi main__container_seccionLi__${seccion}`}>
-      <div className="main__container_seccionLi__svg">
-        {iconSvg}
-      </div>
-      <div className="main__container__seccionLi_seccion">
-        {seccion}
-      </div>
-    </a>
-  )
-}
-
-const NavBar = () => {
-  return (
-    <nav className="main__container__navbar">
-      {secciones.map(({ id, seccion, iconSvg, url }) => (
-        <SeccionLi key={id} seccion={seccion} iconSvg={iconSvg} url={url} />
-      ))}
-    </nav>
-  );
-};
 
 const App = () => {
   return (
     <>
       <nav className='navbar-poc'>
-        <NavBar />
+        <nav className="main__container__navbar">
+          {secciones.map(({ id, seccion, iconSvg, url }) => (
+            <a href={url} className={`seccionLi main__container_seccionLi__${seccion}`}>
+              <div className="main__container_seccionLi__svg">
+                {iconSvg}
+              </div>
+              <div className="main__container__seccionLi_seccion">
+                {seccion}
+              </div>
+            </a>
+          ))}
+        </nav>
       </nav>
     </>
   )
