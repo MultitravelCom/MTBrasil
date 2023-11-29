@@ -875,6 +875,10 @@ body.home.home--default .home-v5__searcher,
   display: none
 } */
 
+#main-content > div > article > section.details-content > div.details-card__top > div > div.details-card__product > div > div {
+  display: none;
+}
+
 @media (max-width: 767px) {
   .navbar-poc {
     display: flex;
