@@ -886,3 +886,8 @@ body.home.home--default .home-v5__searcher,
     white-space: nowrap
   }
 }
+
+#main-footer-checkbooking{
+  padding: 0 !important;
+  display: none;
+}
