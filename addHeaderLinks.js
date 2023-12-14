@@ -79,6 +79,16 @@ function addHeaderLinks() {
     const scriptElement = document.createElement('script');
         scriptElement.src = 'https://unpkg.com/styled-components/dist/styled-components.min.js';
         document.body.appendChild(scriptElement);
+// **************************************
+    const linkElement = document.createElement('link');
+  
+    // Establecer los atributos del enlace
+    linkElement.setAttribute('rel', 'alternate');
+    linkElement.setAttribute('hreflang', 'pt-br');
+    linkElement.setAttribute('href', 'https://br.multitravel.com');
+  
+    // Agregar el elemento <link> al head del documento HTML
+    document.head.appendChild(linkElement);
 }
 addHeaderLinks();
 
