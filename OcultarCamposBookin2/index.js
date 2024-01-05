@@ -93,6 +93,6 @@ document.addEventListener("DOMContentLoaded", function () {
     changeDocumentText();
     modifyFieldsTextFlights();
     modifyFieldsTextBooking();
-    hidedocTypeOnClick('.select2-container.select2-container--default.select2-container--below.select2-container--focus', '#select2-pax-document-type-ub-result-467h-2');
+    hidedocTypeOnClick('#select2-pax-document-type-bu-container', '#select2-pax-document-type-ub-result-467h-2');
 
 });
