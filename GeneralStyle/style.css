@@ -891,3 +891,7 @@ body.home.home--default .home-v5__searcher,
   padding: 0 !important;
   display: none;
 }
+/* Ocultar nacionalidad en alojamiento */
+#hotel-searcher > div.row > div.col-xs-12.col-sm-12.col-md-12.col-lg-10 > div:nth-child(1) > div:nth-child(4){
+  display: none;
+}
