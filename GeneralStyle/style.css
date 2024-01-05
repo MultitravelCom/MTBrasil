@@ -895,7 +895,7 @@ body.home.home--default .home-v5__searcher,
 #hotel-searcher > div.row > div.col-xs-12.col-sm-12.col-md-12.col-lg-10 > div:nth-child(1) > div:nth-child(4){
   display: none;
 }
-
+/* Ocultar DNI de vuelos. */
 #main-content > div:nth-child(2) > div > div.booking-data__data > div:nth-child(4) > div.booking.booking-data__section.booking-data__paxes-withLogin > div > div > div.booking-paxes__room > div:nth-child(1) > div.booking-paxes__pax-fields > label:nth-child(6) > select{
   display: none;
 }
