@@ -53,7 +53,7 @@ function modifyFieldsTextBooking() {
             const labelContent = fieldLabel.textContent.trim();
             if (labelContent === 'Documento de identidade / Passaporte*') {
                 fieldLabel.textContent = 'CPF/CNPJ*';
-                }
+            }
         }
     } else {
         setTimeout(modifyFieldsTextBooking, 100);
@@ -75,10 +75,18 @@ function changeDocumentText() {
         }
     });
 }
+function hidedocTypeOnClick(docTypeSelector, docTypeDNIselector) {
+    const docType = document.querySelector(docTypeSelector);
+    const docTypeDNI = document.querySelector(docTypeDNIselector);
 
+    docType.addEventListener('click', function () {
+        docTypeDNI.style.display = 'none';
+    });
+}
 document.addEventListener("DOMContentLoaded", function () {
-    // hideElement();
     changeDocumentText();
     modifyFieldsTextFlights();
     modifyFieldsTextBooking();
+    hidedocTypeOnClick('.select2-container.select2-container--default.select2-container--below.select2-container--focus', '#select2-pax-document-type-ub-result-467h-2');
+
 });
