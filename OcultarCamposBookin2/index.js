@@ -80,10 +80,14 @@ function hidedocTypeOnClick(docTypeSelector, docTypeDNIselector) {
     const docType = document.querySelector(docTypeSelector);
     const docTypeDNI = document.querySelector(docTypeDNIselector);
 
-    docType.addEventListener('click', function () {
-        console.log("click")
-        docTypeDNI.style.display = 'none';
-    });
+    if (docType && docTypeDNI) {
+        docType.addEventListener('click', function () {
+          console.log("click");
+          docTypeDNI.style.display = 'none';
+        });
+      } else {
+        console.error('Los elementos no fueron encontrados en el DOM.');
+      }
 }
 document.addEventListener("DOMContentLoaded", function () {
     changeDocumentText();
