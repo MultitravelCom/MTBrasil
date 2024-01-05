@@ -75,11 +75,13 @@ function changeDocumentText() {
         }
     });
 }
+// Funcion para ocutar DNI del campo pasaporte en B1
 function hidedocTypeOnClick(docTypeSelector, docTypeDNIselector) {
     const docType = document.querySelector(docTypeSelector);
     const docTypeDNI = document.querySelector(docTypeDNIselector);
 
     docType.addEventListener('click', function () {
+        console.log("click")
         docTypeDNI.style.display = 'none';
     });
 }
