@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
     const selectors = [
         ".details-card__amenities .details-card__section",
-        ".details-card__description.details-card__section"
+        ".details-card__description.details-card__section",
+        "details-card__section"
         // Agrega aquí los selectores adicionales que desees
     ];
 
