@@ -1,56 +1,65 @@
 function wait(timeout) {
     return new Promise(resolve => setTimeout(resolve, timeout));
-}
+};
 
-async function removeImageLinks() {
-    let images = document.querySelectorAll('.info-card__image-holder img');
-    images.forEach(function (image) {
-        image.addEventListener('click', function (event) {
-            event.preventDefault();
-        });
-    });
-}
+// async function removeImageLinks() {
+//     let images = document.querySelectorAll('.info-card__image-holder img');
+//     images.forEach(function (image) {
+//         image.addEventListener('click', function (event) {
+//             event.preventDefault();
+//         });
+//     });
+// };
 
-function removeDataTarget(resultsListPage) {
-    const items = resultsListPage.querySelectorAll('.results-list__item');
+function checkURL() {
+    let currentURL = window.location.href;
+    let imageWrappers = document.querySelectorAll(".gallery__image-wrapper");
 
-    items.forEach(item => {
-        const card = item.querySelector('.info-card__image .info-card__image--action');
-
-        if (card) {
-            imageHolder.removeAttribute('data-target');
+    imageWrappers.forEach(imageWrapper => {
+        if (currentURL.includes("/results")) {
+            imageWrapper.style.height = "80vh";
+        } else {
+            imageWrapper.style.height = "inherit";
+            imageWrapper.style.width = "inherit";
         }
     });
-
-    // Volver a verificar después de 100 ms
-    setTimeout(removeDataTarget, 100);
 }
 
 async function cargarEstilosYModales() {
-    const link = document.querySelector('link[href="https://multitravelcom.github.io/MTBrasil/MULT245/style.css"]');
-    const scriptReact = document.querySelector('script[src="https://multitravelcom.github.io/MTBrasil/MULT245/modalShare.js"]');
+    const link = document.querySelector('link[href="https://multitravelcom.github.io/components/MULT245/style.css"]');
+    const scriptReact = document.querySelector('script[src="https://multitravelcom.github.io/components/MULT245/modalShare.js"]');
 
     // Forzar la recarga del archivo CSS
     if (link) {
         link.href = '';
         await wait(1000);
-        link.href = 'https://multitravelcom.github.io/MTBrasil/MULT245/style.css';
+        link.href = 'https://multitravelcom.github.io/components/MULT245/style.css';
     }
 
     // Forzar la recarga del script de los modales de React
     if (scriptReact) {
         scriptReact.src = '';
         await wait(100);
-        scriptReact.src = 'https://multitravelcom.github.io/MTBrasil/MULT245/modalShare.js';
+        scriptReact.src = 'https://multitravelcom.github.io/components/MULT245/modalShare.js';
     }
-}
+};
 
 async function aplicarClaseRecomendada(resultsListPage) {
+
+    if (!resultsListPage || !resultsListPage.querySelectorAll) {
+        console.error('resultsListPage no es válido o no tiene querySelectorAll');
+        return;
+    }
     const items = resultsListPage.querySelectorAll('.results-list__item');
+
+    if (!items || items.length === 0) {
+        console.warn('No se encontraron elementos .results-list__item');
+        return;
+    }
 
     items.forEach(item => {
         const tieneDeals = item.querySelector('.deals') !== null;
-        const hotelResult = item.querySelector('.result.hotel-result');
+        const hotelResult = item.querySelector('.hotel-result');
 
         if (tieneDeals && hotelResult) {
             hotelResult.classList.add('alojamiento-recomendado');
@@ -66,7 +75,7 @@ async function aplicarClaseRecomendada(resultsListPage) {
             });
         }
     });
-}
+};
 
 async function agreeStarIcon(resultsListPage) {
     const items = resultsListPage.querySelectorAll('.results-list__item');
@@ -79,7 +88,7 @@ async function agreeStarIcon(resultsListPage) {
 
         infoCardCategory.insertBefore(newSpaninfoCardCategory, infoCardCategory.firstChild);
     });
-}
+};
 
 async function changeCopyMap(resultsListPage) {
     let items = resultsListPage.querySelectorAll('.results-list__item');
@@ -87,11 +96,11 @@ async function changeCopyMap(resultsListPage) {
     items.forEach(item => {
         let mapLink = item.querySelector('.map-link');
         let locationIcon = mapLink.querySelector('.info-card__location-icon');
-
         mapLink.lastChild.textContent = 'Ver Mapa';
         mapLink.style.display = 'block';
+
     });
-}
+};
 
 async function applyDisplayNoneToAllButLastButton(resultsListPage) {
     const actionsContainer = resultsListPage.querySelector('.info-card__actions');
@@ -117,9 +126,7 @@ async function applyDisplayNoneToAllButLastButton(resultsListPage) {
     for (let i = 0; i < buttonsVerDetalle.length; i++) {
         buttonsVerDetalle[i].textContent = 'Comprar';
     }
-}
-
-
+};
 
 async function changeCopyButton(resultsListPage) {
     const itemsButtonComprar = resultsListPage.querySelectorAll('.results-list__item');
@@ -129,25 +136,6 @@ async function changeCopyButton(resultsListPage) {
         buttonElement.textContent = 'Comprar';
         buttonElement.style.display = 'block';
 
-        let changeTaxasInclusa = item.querySelector('.bestprice__taxincluded');
-        if (!changeTaxasInclusa) {
-            // Si el elemento no existe, créalo y añádalo dentro de '.bestprice__price'
-            changeTaxasInclusa = document.createElement('div');
-            changeTaxasInclusa.className = 'bestprice__taxincluded';
-            changeTaxasInclusa.textContent = 'Taxas Inclusas';
-            item.querySelector('.bestprice__price').appendChild(changeTaxasInclusa);
-        } else {
-            // Si el elemento ya existe, cambia su contenido
-            changeTaxasInclusa.textContent = 'Taxas Inclusas';
-        }
-
-        // Comprobar cada 100ms si !changeTaxasInclusa
-        const intervalId = setInterval(() => {
-            if (!changeTaxasInclusa) {
-                clearInterval(intervalId); // Detener la comprobación cuando se encuentre el elemento
-                console.log('Elemento encontrado'); // Haz lo que necesites cuando se encuentre el elemento
-            }
-        }, 100);
     });
 
     const checkResultsListPage = () => {
@@ -168,17 +156,118 @@ async function changeCopyButton(resultsListPage) {
         }
     };
 
-    checkResultsListPage();
+    // checkResultsListPage();
 };
+
+function aplicarEstiloSegunLongitud() {
+    const isMobile = window.innerWidth <= 768;
+
+    if (isMobile) {
+        const resultsListPage = document.querySelector('.results-list__page');
+        const items = resultsListPage.querySelectorAll('.results-list__item');
+
+        items.forEach(function (item) {
+            const elemento = item.querySelector('.info-card__price');
+            if (elemento) {
+                const longitud = elemento.textContent.trim();
+                const numerosDecimales = longitud.match(/\d+/g).join('');
+                const cantidadPuntos = longitud.split('.').length - 1;
+
+                if (cantidadPuntos >= 2) {
+                    elemento.style.left = '14px';
+                }
+            }
+        });
+    }
+};
+function removeClassResultInHotelResults() {
+
+    const isMobile = window.innerWidth <= 768;
+
+    if (!isMobile) {
+        return;
+    }
+
+    const resultsPage = document.querySelector('.results-list__page');
+    if (!resultsPage) {
+        return;
+    }
+
+    const items = resultsPage.querySelectorAll('.results-list__item');
+    if (items.length === 0) {
+        return;
+    }
+
+    items.forEach(item => {
+        const hotelResult = item.querySelector('.result.hotel-result');
+        if (hotelResult) {
+            hotelResult.classList.remove('result');
+        }
+    });
+};
+
+function agregarClassResultInHotelResults() {
+
+    const isMobile = window.innerWidth <= 768;
+
+    if (!isMobile) {
+        return;
+    }
+
+    const resultsPage = document.querySelector('.results-list__page');
+    if (!resultsPage) {
+        return;
+    }
+
+    const items = resultsPage.querySelectorAll('.results-list__item');
+    if (items.length === 0) {
+        return;
+    }
+
+    items.forEach(item => {
+        const startResult = item.querySelector('.info-card__category');
+        if (startResult) {
+            startResult.classList.add('result');
+        }
+    });
+};
+
+function agregarTagAWithHREF(resultsListPage) {
+
+    const isMobile = window.innerWidth <= 768;
+    if (!isMobile) {
+        return;
+    }
+    const items = resultsListPage.querySelectorAll('.hotel-result');
+    if (items.length === 0) {
+        return;
+    }
+
+    items.forEach(item => {
+        const anchorElement = document.createElement("a");
+        anchorElement.setAttribute("href", "javascript:void(0)");
+        anchorElement.classList.add("js-result-detail-action");
+        anchorElement.addEventListener("click", function (e) {
+            //e.preventDefault(); // Prevent the default link behavior (scrolling to the top)
+            console.log('Link clicked');
+            // Your custom handling code here
+        });
+
+        // Insert the anchor element at the beginning (top) of the target element
+        item.insertBefore(anchorElement, item.firstChild);
+    });
+};
+
 function aplicarModificaciones(resultsListPage) {
-    removeDataTarget(resultsListPage);
-    removeImageLinks(resultsListPage);
     aplicarClaseRecomendada(resultsListPage);
-    agreeStarIcon(resultsListPage);
+    // agreeStarIcon(resultsListPage);
     changeCopyMap(resultsListPage);
     applyDisplayNoneToAllButLastButton(resultsListPage);
     changeCopyButton(resultsListPage);
-}
+    aplicarEstiloSegunLongitud();
+    agregarTagAWithHREF(resultsListPage);
+    checkURL();
+};
 
 function observarCambiosCheckAndRender() {
     const observerConfig = {
@@ -200,9 +289,14 @@ function observarCambiosCheckAndRender() {
     resultsListPages.forEach(resultsListPage => {
         aplicarModificaciones(resultsListPage);
     });
-}
+};
+
 
 document.addEventListener('DOMContentLoaded', async function () {
+    removeClassResultInHotelResults();
     observarCambiosCheckAndRender();
     cargarEstilosYModales();
+    aplicarEstiloSegunLongitud();
+    aplicarClaseRecomendada();
+    checkURL();
 });

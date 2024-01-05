@@ -93,11 +93,11 @@
 
 .info-card__actions {
   display: block;
-  position: absolute;
   padding-right: 0 !important;
   right: 11px;
   width: 100% !important;
   text-align: end;
+  position: absolute;
 }
 
 .info-card__actions>.btn-small {
@@ -173,7 +173,7 @@
 
 .info-card__action-item {
   display: none;
-}
+} 
 
 .info-card__category>.glyphicon .glyphicon-star {
   font-size: 21px;
@@ -227,7 +227,6 @@
   height: 80vh;
   border-radius: 1rem;
   margin: auto;
-  /* position: relative; */
 }
 
 .gallery__image-wrapper img {
@@ -319,7 +318,7 @@
 
 .gallery__control--right {
   right: 45px;
- 
+
 }
 
 .modal-open .modal-gallery__category {
@@ -330,6 +329,612 @@
   padding-left: 0;
 }
 
+/* BANNERTOPTRAVEL */
+
+.main__container__bannerTopHotelResult {
+  color: white;
+  max-width: 1120px;
+  height: 100%;
+  justify-content: center;
+  margin: 1rem auto;
+  align-items: center;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor:  pointer;
+
+}
+.container-BannerTopHotelResult{
+  padding: 5px;
+}
+
+/* Promo AR */
+.banner__promo {
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-radius: 4px 4px 40px 4px !important;
+  min-height: 96px;
+  padding: 25px 4px !important;
+}
+
+.promo__ar {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  padding: 7px;
+}
+
+.glyphicon-agent {
+  margin: 0 5px;
+}
+
+.promo__ar_parrafo>h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 !important;
+}
+
+.promo__ar__btn {
+  border-radius: 40px;
+  width: 110px;
+  height: 33px;
+  font-size: 14px;
+  margin: 0 51px;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .promo__ar {
+    flex-direction: column;
+  }
+}
+
+/* ********************************************* */
+/* MULT-205 */
+.booking-data__data>.confirm-booking__holder-data {
+  margin-bottom: 30px;
+  /* margin-top: 0 !important; */
+}
+
+.confirm-booking__promocodes {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0 !important;
+  border-radius: 8px;
+  border: 2px solid #0D4E88;
+  background-color: #DEE9F5;
+  background-image: url(https://multitravelcom.github.io/style/General/img/cupon%20descuento.svg);
+  height: auto;
+  background-size: 100% auto;
+  position: relative;
+}
+
+.container__conocer__cupones {
+  max-width: 366px;
+  min-height: 130px;
+  background: #2A91EB;
+  border: 1px solid #FFFFFF;
+  border-right: 0;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 16px 0px 0 40px;
+  padding: 16px;
+}
+
+.promocodes__container--image {
+  display: none;
+}
+
+.container__conocer__cupones__btn {
+  text-align: center;
+}
+
+.container__conocer__cupones__p>p {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  margin-bottom: 1.2rem;
+  color: #FFFFFF;
+}
+
+.promocodes__container {
+  position: absolute;
+  left: 15%;
+}
+
+.promocode__apply-button {
+  background: #0D4E88;
+  border-color: #0D4E88;
+  border-radius: 8px;
+  width: 83px;
+  height: 40px;
+  margin-left: 10px;
+}
+
+.cupones__btn__style {
+  background: #2A91EB;
+  border: 1px solid #FFFFFF;
+  box-shadow: 0px 4px 8px rgba(13, 78, 136, 0.25);
+  border-radius: 8px;
+  align-items: center;
+  padding: 10px;
+  color: #FFFFFF;
+}
+
+.promocode__apply-button:hover {
+  background: #0D4E88 !important;
+  border-color: #0D4E88 !important;
+}
+
+.cupones__btn__style:hover {
+  background: #0D4E88 !important;
+  border-color: #0D4E88 !important;
+}
+
+.cupones__btn__style:active {
+  background: #0c3e69 !important;
+  border-color: #0c3e69 !important;
+}
+
+.promocodes__container--title>.glyphicon-info-circle {
+  display: none;
+}
+
+.container__conocer__cupones__p>p {
+  font-size: 14px;
+}
+
+.form-control {
+  border-radius: 8px !important;
+}
+
+@media(max-width: 467px) {
+  .modal__cupones {
+    width: 90%;
+  }
+}
+
+@media(max-width: 767px) {
+
+  .modal__content-title-h3>h2 {
+    font-size: 16px;
+  }
+
+  .container__conocer__cupones {
+    width: 94%;
+    border-radius: 16px 16px 16px 40px;
+    border: 1px solid #FFFFFF;
+    margin: auto;
+    margin-top: 9px;
+  }
+
+  .confirm-booking__promocodes {
+    flex-direction: column;
+    align-items: flex-end;
+    min-height: 285px;
+  }
+
+  .promocodes {
+    margin: auto;
+    text-align: center;
+  }
+
+  .promocodes__container {
+    margin: auto;
+    width: 100%;
+    position: inherit;
+  }
+
+  .close-modal-cupon {
+    top: 16px;
+    right: 21px;
+  }
+
+  .booking-breakdown__table .shopping-basket__line {
+    padding: 0 10px !important;
+  }
+}
+
+
+@media(min-width:768px) and (max-width: 1025px) {
+  .confirm-booking__promocodes {
+    justify-content: flex-end;
+  }
+
+  .container__conocer__cupones {
+    max-width: 275px;
+    height: 130px;
+    position: relative;
+  }
+
+  .cupones__btn__style {
+    position: absolute;
+    left: 28%;
+    bottom: 16px;
+  }
+
+  .promocodes__container {
+    position: absolute;
+    bottom: 16px;
+    left: 15%;
+    margin-left: 0;
+  }
+
+  .promocodes__container td {
+    padding: 4px 10px 0 !important;
+  }
+}
+
+/* Estilos del modal */
+.overlay__cupones {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+}
+
+.modal-content {
+  flex-grow: 1;
+  /* Add this line to allow content to grow and be scrollable */
+  overflow-y: auto;
+  /* Add this line to enable vertical scrolling when content overflows */
+  max-height: 82vh;
+  /* Limit the height of the modal content */
+  scrollbar-width: thin;
+  /* Para navegadores que soportan la propiedad scrollbar-width */
+  scrollbar-color: #c0c0c0 #f0f0f0;
+  border-top: 0 !important;
+}
+
+.modal-content::-webkit-scrollbar {
+  display: none;
+}
+
+.modal__content-title {
+  text-align: center;
+  background-color: #2A91EB;
+  color: white;
+  font-style: normal;
+  font-weight: 600;
+  color: #FFFFFF;
+  padding: 4px;
+  position: sticky;
+  /* Add this line to make the header sticky */
+  top: 0;
+  /* Add this line to position the header at the top */
+  z-index: 2;
+}
+
+.modal__content-title>h2 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  color: #FFFFFF;
+}
+
+.modal__content-title-h3>h2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 40px;
+  margin-bottom: .5rem;
+}
+
+.modal__content-title-circle>p {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  margin: auto;
+  padding: 0 5px 0 0;
+  max-width: 390px;
+}
+
+.modal__content-cupon>h2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 25px;
+  text-align: center;
+  color: #0D4E88;
+  margin: 0px 30px;
+}
+
+.modal__content-cupon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 0 0 36px 0;
+  min-width: 25%;
+  align-items: center;
+  position: relative;
+}
+
+.modal__content-cupon>span {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  color: #CCCCCC;
+
+}
+
+.modal__cupones {
+  max-width: 80%;
+  background: #FFFFFF;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.35);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.35);
+  display: flex;
+  /* Add this line to enable flex layout */
+  flex-direction: column;
+  /* Add this line to set flex direction to column */
+  position: fixed;
+  /* Keep the modal fixed on the screen */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+  /* Center the modal vertically */
+  justify-content: center;
+  /* Center the modal horizontally */
+}
+
+.modal-content__cupones {
+  padding: 20px;
+  flex-grow: 1;
+  /* Add this line to allow content to grow and be scrollable */
+  overflow-y: auto;
+  /* Add this line to enable vertical scrolling when content overflows */
+  max-height: 80vh;
+  /* Limit the height of the modal content */
+}
+
+.modal__content-title-circle,
+.modal__content-title-calendar {
+  display: flex;
+  align-items: center;
+}
+
+.modal__content-title-circle {
+  margin-bottom: 6px;
+}
+
+.modal__content-uno-title {
+  display: flex;
+  width: 100%;
+  min-height: 159px;
+}
+
+.modal-content__cupones-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+  cursor: grab;
+}
+
+.modal-content__cupones-row:active {
+  cursor: grabbing;
+}
+
+.modal__content-uno,
+.modal__content-dos,
+.modal__content-tres {
+  width: 93%;
+  height: 159px;
+  display: flex;
+  margin: 0.5rem;
+  align-items: center;
+  justify-content: space-between;
+  background: #FFFFFF;
+  border: 1px solid #0D4E88;
+  border-radius: 16px;
+}
+
+.modal__content-title-circleCalendar {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  padding: 1rem;
+  border-right: 1px solid #0D4E88;
+  position: relative;
+}
+
+.modal__content-title-circleCalendar p {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  padding: 0 5px 0 0;
+  max-width: 390px;
+  margin: 2px 0 !important;
+}
+
+.modal__content-uno-logo {
+  display: flex;
+  justify-content: center;
+  border-radius: 1rem 0 0 1rem;
+  background: rgba(13, 78, 136, 0.1);
+  border-right: 1px dashed #0D4E88;
+  padding: 1rem;
+  align-items: center;
+}
+
+.modal__content-uno-logo>img {
+  margin: 0 24px;
+}
+
+.close-modal-cupon {
+  background: 0 0;
+  border: 0;
+  color: black;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1em;
+  opacity: .8;
+  padding: 0 5px;
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  background: white;
+  border-radius: 100%;
+}
+
+.glyphicon-calendar {
+  color: #2196F3;
+  font-size: 19px;
+  min-width: 32px;
+}
+
+.booking-steps__item {
+  z-index: 0 !important;
+}
+
+/* BOTONES COPY */
+.main_cardCupon_CuponCode {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  display: none;
+}
+
+.cardCuponButtonStyle-result {
+  width: 101px;
+  height: 38px;
+  position: absolute;
+  display: inline-flex;
+  padding: 10px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 40px;
+  background: #0D4E88;
+  color: white;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  bottom: 0px;
+  border: 0;
+}
+
+.cardCuponButtonStyle-result:hover {
+  background: #FDCE07;
+  color: #6E37D0;
+}
+
+.cardCuponButtonStyle-result:active {
+  border-radius: 40px;
+  border: 2px solid #6E37D0;
+  background: #FFF;
+}
+
+.main_ToolTipButton {
+  width: 67px;
+  height: 26px;
+  position: absolute;
+  display: inline-flex;
+  padding: 4px 10px;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 20px;
+  background: #6E37D0;
+  right: 10px;
+  bottom: -15px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.main_ToolTipButton.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.main_ToolTipButton>p {
+  color: #FFFFFF;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: -0.12px;
+}
+
+@media(max-width: 1024px) {
+  .modal__content-title {
+    padding: 0;
+  }
+
+  .modal__content-title>h2 {
+    font-size: 13px;
+    text-align: left;
+    width: 79%;
+    padding: 8px 16px;
+  }
+
+  .modal__content-uno-logo {
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+    border-right: 0;
+    padding: 6px;
+  }
+
+  .modal__content-cupon {
+    padding: 5px;
+    width: 100%;
+    height: 63px;
+  }
+
+  .modal-content__cupones-row {
+    margin: 0 1rem;
+  }
+
+  .modal__content-title-h3>h2 {
+    font-size: 19px;
+    line-height: 12px;
+    text-align: center;
+    line-height: 24px;
+  }
+
+  .modal__content-uno,
+  .modal__content-dos,
+  .modal__content-tres {
+    height: 100%;
+    flex-direction: column;
+  }
+
+  .modal__content-uno-title {
+    flex-direction: column;
+  }
+
+  .modal__content-title-circleCalendar {
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px dashed #0D4E88;
+    border-left: 0px dashed #0D4E88;
+    border-right: 0;
+  }
+
+  .modal__content-dos-logo,
+  .modal__content-tres-logo {
+    height: 67px;
+  }
+
+  .cardCuponButtonStyle-result {
+    right: inherit;
+    bottom: -23px;
+  }
+}
 
 @media (max-width: 767px) {
   .share__icon {
@@ -460,12 +1065,14 @@
   .main__container__iconImg {
     display: none;
   }
+
   /*
   Styles to display map in mobile
   */
   .results-list__item {
     height: fit-content;
   }
+
   .result.hotel-result {
     height: fit-content;
   }
@@ -474,7 +1081,17 @@
     height: fit-content;
     min-height: 495px;
   }
+
+  .gallery__image-wrapper {
+    height: inherit;
+  }
+
+  /* TRAVELSALEBANNER */
+  .main__container__bannerTopHotelResult {
+    margin: 16px;
+  }
 }
+
 @media (min-width: 767px) and (max-width: 1024px) {
   .main__container__bannerMensageCard__App {
     width: 260px;
