@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
             section.appendChild(icon);
 
             section.addEventListener("click", function () {
+                console.log("Element clicked. Classes:", section.className);
                 if (content.style.display === "none") {
                     content.style.display = "block";
                     icon.style.transform = "rotate(180deg)";
