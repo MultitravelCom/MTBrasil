@@ -14,6 +14,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Establecer un valor predeterminado para content.style.display
             content.style.display = "none";
+            
+            const icon = document.createElement('div');
+            icon.className = "glyphicon glyphicon-chevron-down chevron-down-hotels";
+            section.appendChild(icon);
 
             section.addEventListener("click", function () {
                 if (content.style.display === "none") {
@@ -25,9 +29,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             });
 
-            const icon = document.createElement('div');
-            icon.className = "glyphicon glyphicon-chevron-down chevron-down-hotels";
-            section.appendChild(icon);
         });
     });
 });
