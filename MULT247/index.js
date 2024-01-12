@@ -17,8 +17,10 @@ document.addEventListener("DOMContentLoaded", function () {
             // Establecer un valor predeterminado para content.style.display
             content.style.display = "none";
 
+            let icon = null;
+
             if (!elementsWithIcon.has(section)) {
-                const icon = document.createElement('div');
+                icon = document.createElement('div');
                 icon.className = "glyphicon glyphicon-chevron-down chevron-down-hotels";
                 section.appendChild(icon);
 
@@ -28,10 +30,14 @@ document.addEventListener("DOMContentLoaded", function () {
             section.addEventListener("click", function () {
                 if (content.style.display === "none") {
                     content.style.display = "block";
-                    icon.style.transform = "rotate(180deg)";
+                    if (icon) {
+                        icon.style.transform = "rotate(180deg)";
+                    }
                 } else {
                     content.style.display = "none";
-                    icon.style.transform = "rotate(0deg)";
+                    if (icon) {
+                        icon.style.transform = "rotate(0deg)";
+                    }
                 }
             });
         });
