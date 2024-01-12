@@ -6,7 +6,9 @@ document.addEventListener("DOMContentLoaded", function () {
         ".details-card__section.details-card__section"
     ];
 
-    selectors.forEach(function (selector, index) {
+    const elementsWithIcon = new Set();
+
+    selectors.forEach(function (selector) {
         const sections = document.querySelectorAll(selector);
 
         sections.forEach(function (section) {
@@ -15,13 +17,12 @@ document.addEventListener("DOMContentLoaded", function () {
             // Establecer un valor predeterminado para content.style.display
             content.style.display = "none";
 
-            const icon = document.createElement('div');
-            icon.className = "glyphicon glyphicon-chevron-down chevron-down-hotels";
-            section.appendChild(icon);
+            if (!elementsWithIcon.has(section)) {
+                const icon = document.createElement('div');
+                icon.className = "glyphicon glyphicon-chevron-down chevron-down-hotels";
+                section.appendChild(icon);
 
-            // Excluir la clase details-card__section solo para el primer selector
-            if (index === 0 && section.classList.contains('details-card__section')) {
-                section.classList.remove('details-card__section');
+                elementsWithIcon.add(section);
             }
 
             section.addEventListener("click", function () {
