@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ".details-card__section.details-card__section"
     ];
 
-    selectors.forEach(function (selector) {
+    selectors.forEach(function (selector, index) {
         const sections = document.querySelectorAll(selector);
 
         sections.forEach(function (section) {
@@ -19,8 +19,12 @@ document.addEventListener("DOMContentLoaded", function () {
             icon.className = "glyphicon glyphicon-chevron-down chevron-down-hotels";
             section.appendChild(icon);
 
+            // Excluir la clase details-card__section solo para el primer selector
+            if (index === 0 && section.classList.contains('details-card__section')) {
+                section.classList.remove('details-card__section');
+            }
+
             section.addEventListener("click", function () {
-                console.log("Element clicked. Classes:", section.className);
                 if (content.style.display === "none") {
                     content.style.display = "block";
                     icon.style.transform = "rotate(180deg)";
@@ -29,7 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     icon.style.transform = "rotate(0deg)";
                 }
             });
-
         });
     });
 });
