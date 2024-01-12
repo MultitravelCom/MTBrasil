@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ".details-card__description",
         ".details-card__amenities.details-card__section",
         ".details-card__description.details-card__section",
-        ".details-card__section"
+        ".details-card__section.details-card__section"
     ];
 
     selectors.forEach(function (selector) {
