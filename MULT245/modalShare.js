@@ -268,7 +268,7 @@ const zonasTravelSale = [
 //   *************************************************************
 // ********************** Timer *****************************
 function shouldShowEvent() {
-    const startDate = new Date("2023-08-27T22:00:00");|
+    const startDate = new Date("2023-08-27T22:00:00");
     const endDate = new Date("2023-11-15T23:30:00");
     const now = new Date();
 
@@ -377,15 +377,15 @@ const BannerMensageCardApp = () => {
     return (
         <>
             {showFreezePriceMessageA && (
-                <BannerMensageCard text_p={ "Pague em até 12 x sem juros"} />
+                <BannerMensageCard text_p={"Pague em até 12 x sem juros"} />
             )}
 
             {showFreezePriceMessageB && (
-                <BannerMensageCard text_p={ "Pague em até 12 x sem juros"} />
+                <BannerMensageCard text_p={"Pague em até 12 x sem juros"} />
             )}
 
             {showFreezePriceMessageC && (
-                <BannerMensageCard text_p={ "Pague em até 12 x sem juros"} />
+                <BannerMensageCard text_p={"Pague em até 12 x sem juros"} />
             )}
         </>
     );
