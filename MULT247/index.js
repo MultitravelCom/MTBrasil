@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
     const selectors = [
+        "#main-content > div > article > section.details-content > div.details-card__section.details-card__description",
         ".details-card__amenities.details-card__section",
-        ".details-card__description",
+        ".details-card__description.details-card__section",
         ".details-card__section.details-card__section"
     ];
 
