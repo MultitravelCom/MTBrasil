@@ -25,7 +25,7 @@ function cambiarUrlImg() {
 const BannerTop = () => {
 
     const showPackageImages = window.location.pathname.includes('/packages');
-    const UrlImg = cambiarUrlImg();
+    const UrlImgPaquetes = cambiarUrlImg();
     const UrlImgPaquetes = cambiarUrlImg();
 
     return (
@@ -39,7 +39,7 @@ const BannerTop = () => {
                                 srcSet={
                                     showPackageImages
                                         ? `${UrlImgPaquetes}/bannerDesktop-1.webp`
-                                        : `${UrlImg}/bannerDesktop-1.webp`
+                                        : `${UrlImgPaquetes}/bannerDesktop-1.webp`
                                 }
                             />
                             <source
@@ -47,7 +47,7 @@ const BannerTop = () => {
                                 srcSet={
                                     showPackageImages
                                         ? `${UrlImgPaquetes}/bannerDesktop-1.webp`
-                                        : `${UrlImg}/bannerDesktop-1.webp`
+                                        : `${UrlImgPaquetes}/bannerDesktop-1.webp`
                                 }
 
                             />
@@ -56,7 +56,7 @@ const BannerTop = () => {
                                 srcSet={
                                     showPackageImages
                                         ? `${UrlImgPaquetes}/bannerDesktop-1.webp`
-                                        : `${UrlImg}/bannerMobile-1.webp`
+                                        : `${UrlImgPaquetes}/bannerMobile-1.webp`
                                 }
                             />
                             <img className="bannerTop__img"
@@ -64,7 +64,7 @@ const BannerTop = () => {
                                 srcSet={
                                     showPackageImages
                                         ? `${UrlImgPaquetes}/bannerDesktop-1.webp`
-                                        : `${UrlImg}/bannerDesktop-1.webp`
+                                        : `${UrlImgPaquetes}/bannerDesktop-1.webp`
                                 }
                             />
                         </picture>
@@ -79,7 +79,7 @@ const BannerTop = () => {
                                 srcSet={
                                     showPackageImages
                                         ? `${UrlImgPaquetes}/bannerDesktop-2.webp`
-                                        : `${UrlImg}/bannerDesktop-2.webp`
+                                        : `${UrlImgPaquetes}/bannerDesktop-2.webp`
                                 }
                             />
                             <source
@@ -87,7 +87,7 @@ const BannerTop = () => {
                                 srcSet={
                                     showPackageImages
                                         ? `${UrlImgPaquetes}/bannerDesktop-2.webp`
-                                        : `${UrlImg}/bannerDesktop-2.webp`
+                                        : `${UrlImgPaquetes}/bannerDesktop-2.webp`
                                 }
                             />
                             <source
@@ -96,7 +96,7 @@ const BannerTop = () => {
                                     showPackageImages
 
                                         ? `${UrlImgPaquetes}/bannerDesktop-2.webp`
-                                        : `${UrlImg}/bannerMobile-2.webp`
+                                        : `${UrlImgPaquetes}/bannerMobile-2.webp`
                                 }
                             />
                             <img className="bannerTop__img"
@@ -104,7 +104,7 @@ const BannerTop = () => {
                                 srcSet={
                                     showPackageImages
                                         ? `${UrlImgPaquetes}/bannerDesktop-2.webp`
-                                        : `${UrlImg}/bannerDesktop-2.webp`
+                                        : `${UrlImgPaquetes}/bannerDesktop-2.webp`
                                 }
                             />
                         </picture>
@@ -120,7 +120,7 @@ const BannerTop = () => {
                                 srcSet={
                                     showPackageImages
                                         ? `${UrlImgPaquetes}/bannerDesktop-3.webp`
-                                        : `${UrlImg}/bannerDesktop-3.webp`
+                                        : `${UrlImgPaquetes}/bannerDesktop-3.webp`
                                 }
                             />
                             <source
@@ -128,7 +128,7 @@ const BannerTop = () => {
                                 srcSet={
                                     showPackageImages
                                         ? `${UrlImgPaquetes}/bannerDesktop-3.webp`
-                                        : `${UrlImg}/bannerDesktop-3.webp`
+                                        : `${UrlImgPaquetes}/bannerDesktop-3.webp`
                                 }
                             />
                             <source
@@ -136,7 +136,7 @@ const BannerTop = () => {
                                 srcSet={
                                     showPackageImages
                                         ? `${UrlImgPaquetes}/bannerDesktop-3.webp`
-                                        : `${UrlImg}/bannerMobile-3.webp`
+                                        : `${UrlImgPaquetes}/bannerMobile-3.webp`
                                 }
                             />
                             <img className="bannerTop__img"
@@ -144,7 +144,7 @@ const BannerTop = () => {
                                 srcSet={
                                     showPackageImages
                                         ? `${UrlImgPaquetes}/bannerDesktop-3.webp`
-                                        : `${UrlImg}/bannerDesktop-3.webp`
+                                        : `${UrlImgPaquetes}/bannerDesktop-3.webp`
                                 }
                             />
                         </picture>
