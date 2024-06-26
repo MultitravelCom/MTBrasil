@@ -26,7 +26,7 @@ const BannerTop = () => {
 
     const showPackageImages = window.location.pathname.includes('/packages');
     const UrlImgPaquetes = cambiarUrlImg();
-    const UrlImgPaquetes = cambiarUrlImg();
+    // const UrlImg = cambiarUrlImg();
 
     return (
         <>
