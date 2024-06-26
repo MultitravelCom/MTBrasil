@@ -16,9 +16,9 @@ function cambiarUrlImg() {
     const esAntesDeLaFechaLimite = fechaActual < fechaLimite;
 
     if (esAntesDeLaFechaLimite) {
-        return 'https://multitravelcom.github.io/MTBrasil-Img/Secciones/BannerPrincipal/BannerB'; // Se va a mostrar. 
+        return 'https://multitravelcom.github.io/MTBrasil-Img/Secciones/BannerPrincipal/BannerA'; // Se va a mostrar. 
     } else {
-        return 'https://multitravelcom.github.io/MTBrasil-Img/Secciones/BannerPrincipal/BannerB'; // Se esta mostrando.
+        return 'https://multitravelcom.github.io/MTBrasil-Img/Secciones/BannerPrincipal/BannerA'; // Se esta mostrando.
     }
 }
 
