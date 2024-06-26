@@ -30,8 +30,8 @@ function addHeaderLinks() {
         const bannerTopStyle = document.createElement('link');
         const bannerTopScript = document.createElement('script');
 
-        bannerTopScript.src = 'https://multitravelcom.github.io/style/General/components/BannerTop.js';
-        bannerTopScript.type = "text/babel";
+        // bannerTopScript.src = 'https://multitravelcom.github.io/style/General/components/BannerTop.js';
+        // bannerTopScript.type = "text/babel";
 
         bannerTopStyle.href = "https://multitravelcom.github.io/style/General/components/styleBannerTop.css";
         bannerTopStyle.rel = "stylesheet";
