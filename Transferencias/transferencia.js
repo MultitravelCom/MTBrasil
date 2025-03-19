@@ -1,5 +1,4 @@
 
-
 function checkPaymentMethod() {
     const gatewaySelect = document.querySelector('.js-enhanced-select.pos__field-select');
 
@@ -56,11 +55,7 @@ const TransferenciaComponentMP = () => {
 };
 
 const TransferenciaComponent = () => {
-
     const hostParts = window.location.hostname.split('.')[0].toLowerCase();
-    console.log("🚀 ~ TransferenciaComponentMP ~ hostParts:", hostParts)
-
-
     const basePaths = {
         br: 'https://multitravelcom.github.io/MTBrasil-Img/Booking-2/ComoPagar/',
         cl: 'https://multitravelcom.github.io/MTBrasil-Img/Booking-2/ComoPagar/Chile/',
