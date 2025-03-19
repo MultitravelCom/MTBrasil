@@ -29,7 +29,7 @@ const TransferenciaComponentMP = () => {
         uy: 'https://multitravelcom.github.io/MTBrasil-Img/Booking-2/MercadoPago/Chile/'
     };
 
-    const basePath = basePaths[subdomain]
+    const basePath = basePaths[hostParts]
 
     return (
         <div className="main__transferencia">
@@ -67,7 +67,7 @@ const TransferenciaComponent = () => {
         uy: 'https://multitravelcom.github.io/MTBrasil-Img/Booking-2/ComoPagar/Chile/'
     };
 
-    const basePath = basePaths[subdomain]
+    const basePath = basePaths[hostParts]
 
     return (
         <>
