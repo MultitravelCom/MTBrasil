@@ -25,8 +25,8 @@ const TransferenciaComponentMP = () => {
 
     const basePaths = {
         br: 'https://multitravelcom.github.io/MTBrasil-Img/Booking-2/MercadoPago/',
-        cl: 'https://multitravelcom.github.io/MTBrasil-Img/Booking-2/MercadoPago/',
-        uy: 'https://multitravelcom.github.io/MTBrasil-Img/Booking-2/MercadoPago/'
+        cl: 'https://multitravelcom.github.io/MTBrasil-Img/Booking-2/MercadoPago/Chile/',
+        uy: 'https://multitravelcom.github.io/MTBrasil-Img/Booking-2/MercadoPago/Chile/'
     };
 
     const basePath = basePaths[subdomain]
@@ -63,8 +63,8 @@ const TransferenciaComponent = () => {
 
     const basePaths = {
         br: 'https://multitravelcom.github.io/MTBrasil-Img/Booking-2/ComoPagar/',
-        cl: 'https://multitravelcom.github.io/MTBrasil-Img/Booking-2/ComoPagar/',
-        uy: 'https://multitravelcom.github.io/MTBrasil-Img/Booking-2/ComoPagar/'
+        cl: 'https://multitravelcom.github.io/MTBrasil-Img/Booking-2/ComoPagar/Chile/',
+        uy: 'https://multitravelcom.github.io/MTBrasil-Img/Booking-2/ComoPagar/Chile/'
     };
 
     const basePath = basePaths[subdomain]
