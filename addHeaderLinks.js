@@ -4,22 +4,25 @@ function getSubdomain() {
 
 function addHeaderLinks() {
     const head = document.head || document.getElementsByTagName('head')[0];
-    const path = window.location.pathname;
     const subdomain = getSubdomain();
 
     if (subdomain === 'br') {
         const bannerNoResult = document.createElement('script');
         const bannerNoResultStyle = document.createElement('link');
-
+    
         bannerNoResult.src = 'https://multitravelcom.github.io/MTBrasil/NoResult/bannerNoResult.js';
         bannerNoResult.type = "text/babel";
-
+    
         bannerNoResultStyle.href = "https://multitravelcom.github.io/MTBrasil/NoResult/noResultStyle.css";
         bannerNoResultStyle.rel = "stylesheet";
-
+    
         head.appendChild(bannerNoResultStyle);
         head.appendChild(bannerNoResult);
     }
+
+
+    const path = window.location.pathname;
+
 
     const priceFinalFlight = path.includes('/results');
     if (priceFinalFlight) {
@@ -82,19 +85,20 @@ function addHeaderLinks() {
     }
 
     const scriptElement = document.createElement('script');
-    scriptElement.src = 'https://unpkg.com/styled-components/dist/styled-components.min.js';
-    document.body.appendChild(scriptElement);
-    // **************************************
+        scriptElement.src = 'https://unpkg.com/styled-components/dist/styled-components.min.js';
+        document.body.appendChild(scriptElement);
+// **************************************
     const linkElement = document.createElement('link');
-
+  
     // Establecer los atributos del enlace
     linkElement.setAttribute('rel', 'alternate');
     linkElement.setAttribute('hreflang', 'pt-br');
     linkElement.setAttribute('href', 'https://br.multitravel.com');
-
+  
     // Agregar el elemento <link> al head del documento HTML
     document.head.appendChild(linkElement);
 }
 addHeaderLinks();
+getSubdomain();
 
 
