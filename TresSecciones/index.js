@@ -142,7 +142,7 @@ const LoMejorDe = () => {
         cl: {
             hotels: 'Alojamientos',
             flighthotel: 'Paquetes',
-            insurances: 'Asistencias',
+            insurances: 'Asistencias    ',
             flights: 'Vuelos'
         }
     };
