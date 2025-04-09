@@ -479,3 +479,7 @@
 .footer__text .glyphicon.glyphicon-whatsapp-bottomless {
     background: transparent;
 }
+
+.uppermenu-v2-language-selector-btn {
+    display: none;
+}
