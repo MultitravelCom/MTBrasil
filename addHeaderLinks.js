@@ -84,9 +84,9 @@ function addHeaderLinks() {
         headElement.appendChild(metaTag);
     }
 
-    const scriptElement = document.createElement('script');
-        scriptElement.src = 'https://unpkg.com/styled-components/dist/styled-components.min.js';
-        document.body.appendChild(scriptElement);
+    // const scriptElement = document.createElement('script');
+    //     scriptElement.src = 'https://unpkg.com/styled-components/dist/styled-components.min.js';
+    //     document.body.appendChild(scriptElement);
 // **************************************
     const linkElement = document.createElement('link');
   
